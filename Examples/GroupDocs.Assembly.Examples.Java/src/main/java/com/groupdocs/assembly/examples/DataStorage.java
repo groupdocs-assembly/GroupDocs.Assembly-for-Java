@@ -1,10 +1,13 @@
 package com.groupdocs.assembly.examples;
 
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import com.groupdocs.assembly.DocumentTable;
+import com.groupdocs.assembly.DocumentTableOptions;
 import com.groupdocs.assembly.examples.BusinessEntities.Client;
 import com.groupdocs.assembly.examples.BusinessEntities.Contract;
 import com.groupdocs.assembly.examples.BusinessEntities.Manager;

@@ -74,95 +74,120 @@ public class MainClass {
 		// GenerateReport.GenerateInTableListWithAlternateContent("presentation");
 		// endregion
 
-		// region Generating In-Table List with Filtering, Grouping, and Ordering
-		// Generate in table list with filtering, grouping and order report in document format
-		//GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("document");
-		// Generate in table list with filtering, grouping and order report in spreadsheet format
-		//GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("spreadsheet");
-		// Generate in table list with filtering, grouping and order report in presentation format
-		//GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("presentation");
+		// region Generating In-Table List with Filtering, Grouping, and
+		// Ordering
+		// Generate in table list with filtering, grouping and order report in
+		// document format
+		// GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("document");
+		// Generate in table list with filtering, grouping and order report in
+		// spreadsheet format
+		// GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("spreadsheet");
+		// Generate in table list with filtering, grouping and order report in
+		// presentation format
+		// GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("presentation");
 		// endregion
-		
+
 		// region In-Table List with Highlighted Rows
-		// Generate In-Table List with Highlighted Rows report in document format
-		//GenerateReport.GenerateInTableListWithHighlightedRows("document");
-		// Generate In-Table List with Highlighted Rows report in spreadsheet format
-		//GenerateReport.GenerateInTableListWithHighlightedRows("spreadsheet");
-		// Generate In-Table List with Highlighted Rows report in presentation format
-		//GenerateReport.GenerateInTableListWithHighlightedRows("presentation");
+		// Generate In-Table List with Highlighted Rows report in document
+		// format
+		// GenerateReport.GenerateInTableListWithHighlightedRows("document");
+		// Generate In-Table List with Highlighted Rows report in spreadsheet
+		// format
+		// GenerateReport.GenerateInTableListWithHighlightedRows("spreadsheet");
+		// Generate In-Table List with Highlighted Rows report in presentation
+		// format
+		// GenerateReport.GenerateInTableListWithHighlightedRows("presentation");
 		// endregion
-		
+
 		// region In-Table List
 		// Generate in table lsit report in document format
-		//GenerateReport.GenerateInTableList("document");
+		// GenerateReport.GenerateInTableList("document");
 		// Generate in table list report in spreadsheet format
-		//GenerateReport.GenerateInTableList("spreadsheet");
-		// Generate in table list report in presentation format 
-		//GenerateReport.GenerateInTableList("presentation");
+		// GenerateReport.GenerateInTableList("spreadsheet");
+		// Generate in table list report in presentation format
+		// GenerateReport.GenerateInTableList("presentation");
 		// endregion
-		
+
 		// region In-Table Master-Detail
-		//Generate In-Table Master-Detail report in document format
-		//GenerateReport.GenerateInTableMasterDetail("document");
-		//Generate In-Table Master-Detail report in spreadsheet format
-		//GenerateReport.GenerateInTableMasterDetail("spreadsheet");
-		//Generate In-Table Master-Detail report in presentation format
-		//GenerateReport.GenerateInTableMasterDetail("presentation");
+		// Generate In-Table Master-Detail report in document format
+		// GenerateReport.GenerateInTableMasterDetail("document");
+		// Generate In-Table Master-Detail report in spreadsheet format
+		// GenerateReport.GenerateInTableMasterDetail("spreadsheet");
+		// Generate In-Table Master-Detail report in presentation format
+		// GenerateReport.GenerateInTableMasterDetail("presentation");
 		// endregion
-		
+
 		// region Multicolored Numbered List
-		//Generate Multicolored numbered list report in document format
-		//GenerateReport.GenerateMulticoloredNumberedList("document");
-		//Generate Multicolored numbered list report in spreadsheet format
-		//GenerateReport.GenerateMulticoloredNumberedList("spreadsheet");
-		//Generate Multicolored numbered list report in presentation format
-		//GenerateReport.GenerateMulticoloredNumberedList("presentation");
+		// Generate Multicolored numbered list report in document format
+		// GenerateReport.GenerateMulticoloredNumberedList("document");
+		// Generate Multicolored numbered list report in spreadsheet format
+		// GenerateReport.GenerateMulticoloredNumberedList("spreadsheet");
+		// Generate Multicolored numbered list report in presentation format
+		// GenerateReport.GenerateMulticoloredNumberedList("presentation");
 		// endregion
-		
+
 		// region Numbered List
 		// Generate Numbered List report in document format
-		//GenerateReport.GenerateNumberedList("document");
+		// GenerateReport.GenerateNumberedList("document");
 		// Generate Numbered list report in spreadsheet format
-		//GenerateReport.GenerateNumberedList("spreadsheet");
+		// GenerateReport.GenerateNumberedList("spreadsheet");
 		// Generate Numbered list report in presentation format
-		//GenerateReport.GenerateNumberedList("presentation");
+		// GenerateReport.GenerateNumberedList("presentation");
 		// endregion
-		
+
 		// region Pie Chart
 		// Generate pie chart report in document format
-		//GenerateReport.GeneratePieChart("document");
+		// GenerateReport.GeneratePieChart("document");
 		// Generate pie chart report in spreadsheet format
-		//GenerateReport.GeneratePieChart("spreadsheet");
+		// GenerateReport.GeneratePieChart("spreadsheet");
 		// Generate pie char report presentation format
-		//GenerateReport.GeneratePieChart("presentation");
+		// GenerateReport.GeneratePieChart("presentation");
 		// endregion
-		
+
 		// region Scatter Chart
 		// Generate scatter chart report in document format
-		//GenerateReport.GenerateScatterChart("document");
+		// GenerateReport.GenerateScatterChart("document");
 		// Generate scatter chart report in spreadsheet format
-		//GenerateReport.GenerateScatterChart("spreadsheet");
+		// GenerateReport.GenerateScatterChart("spreadsheet");
 		// Generate scatter chart report in presentation format
-		//GenerateReport.GenerateScatterChart("presentation");
+		// GenerateReport.GenerateScatterChart("presentation");
 		// endregion
-		
+
 		// region single row
 		// Generate single row in document format
-		//GenerateReport.GenerateSingleRow("document");
+		// GenerateReport.GenerateSingleRow("document");
 		// Generate single row in spreadsheet format
-		//GenerateReport.GenerateSingleRow("spreadsheet");
+		// GenerateReport.GenerateSingleRow("spreadsheet");
 		// Generate single row in presentation format
-		//GenerateReport.GenerateSingleRow("presentation");
+		// GenerateReport.GenerateSingleRow("presentation");
 		// endregion
-		
+
 		// Region Barcode Insertion
 		// Generate barcode in document format
-		//GenerateReport.AddBarCodes("document");
+		// GenerateReport.AddBarCodes("document");
 		// Generate barcode in spreadsheet format
-		//GenerateReport.AddBarCodes("spreadsheet");
+		// GenerateReport.AddBarCodes("spreadsheet");
 		// Generate barcode in presetnation format
-		//GenerateReport.AddBarCodes("presentation");
+		// GenerateReport.AddBarCodes("presentation");
 		// endregion
+
+		// region Template syntax formatting
+		// Generate template syntax formatting report in document format
+		//GenerateReport.TemplateSyntaxFormatting("document");
+		// endregion
+		
+		// retion outer document insertion
+		// Generate report with outer document insertion
+		//GenerateReport.OuterDocumentInsertion("document");
+		// endregion
+		
+		// region update field
+		//GenerateReport.UpdateWordDocFields("spreadsheet");
+		// endregion
+		
+		// region Using next
+		//GenerateReport.usingNext("document");
+		// endregion 
 	}
 
 }
