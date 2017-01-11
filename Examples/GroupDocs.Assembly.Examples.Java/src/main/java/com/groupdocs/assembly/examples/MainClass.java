@@ -26,168 +26,186 @@ public class MainClass {
 		// region Generating Chart report with Filtering, Grouping, and Ordering
 		// Generate chart with filtering grouping and ordering in document word
 		// processing format
-		// GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("document");
+		// GenerateReport.generateChartWithFilteringGroupingAndOrdering("document");
 		// Generate chart with filtering grouping and ordering in document
 		// spreadsheet format
-		// GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("spreadsheet");
+		// GenerateReport.generateChartWithFilteringGroupingAndOrdering("spreadsheet");
 		// Generate chart with filtering grouping and ordering in presentation
 		// format
-		// GenerateReport.GenerateChartWithFilteringGroupingAndOrdering("presentation");
+		// GenerateReport.generateChartWithFilteringGroupingAndOrdering("presentation");
 		// endregion
 
 		// region Generating Common List Report
 		// Generate a Common List Report in document processing format
-		// GenerateReport.GenerateCommonList("document");
+		// GenerateReport.generateCommonList("document");
 		// Generate a Common List Report in spreadsheet format
-		// GenerateReport.GenerateCommonList("spreadsheet");
+		// GenerateReport.generateCommonList("spreadsheet");
 		// Generate a Common List Report in presentation format
-		// GenerateReport.GenerateCommonList("presentation");
+		// GenerateReport.generateCommonList("presentation");
 		// endregion
 
 		// region Generating Common Master-Detail Report
 		// Generate common master detail report in document processing format
-		// GenerateReport.GenerateCommonMasterDetail("document");
+		// GenerateReport.generateCommonMasterDetail("document");
 		// Generate common master detail report in spreadsheet format
-		// GenerateReport.GenerateCommonMasterDetail("spreadsheet");
+		// GenerateReport.generateCommonMasterDetail("spreadsheet");
 		// Generate common master detail report in presentation format
-		// GenerateReport.GenerateCommonMasterDetail("presentation");
+		// GenerateReport.generateCommonMasterDetail("presentation");
 		// endregion
 
 		// region Generating In-Paragraph List Report
 		// Generate in paragraph list report in document format
-		// GenerateReport.GenerateInParagraphList("document");
+		// GenerateReport.generateInParagraphList("document");
 		// Generate in paragraph list report in spreadsheet format
-		// GenerateReport.GenerateInParagraphList("spreadsheet");
+		// GenerateReport.generateInParagraphList("spreadsheet");
 		// Generate in paragraph list report in presentation format
-		// GenerateReport.GenerateInParagraphList("presentation");
+		// GenerateReport.generateInParagraphList("presentation");
 		// endregion
 
 		// region Generating In-Table with Alternate Content Report
 		// Generate in table list with alternate content report in document
 		// format
-		// GenerateReport.GenerateInTableListWithAlternateContent("document");
+		// GenerateReport.generateInTableListWithAlternateContent("document");
 		// Generate in table list with alternate content report in spreadsheet
 		// format
-		// GenerateReport.GenerateInTableListWithAlternateContent("spreadsheet");
+		// GenerateReport.generateInTableListWithAlternateContent("spreadsheet");
 		// Generate in table list with alternate content report in presentation
 		// format
-		// GenerateReport.GenerateInTableListWithAlternateContent("presentation");
+		// GenerateReport.generateInTableListWithAlternateContent("presentation");
 		// endregion
 
 		// region Generating In-Table List with Filtering, Grouping, and
 		// Ordering
 		// Generate in table list with filtering, grouping and order report in
 		// document format
-		// GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("document");
+		// GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("document");
 		// Generate in table list with filtering, grouping and order report in
 		// spreadsheet format
-		// GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("spreadsheet");
+		// GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("spreadsheet");
 		// Generate in table list with filtering, grouping and order report in
 		// presentation format
-		// GenerateReport.GenerateInTableListWithFilteringGroupingAndOrdering("presentation");
+		// GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("presentation");
 		// endregion
 
 		// region In-Table List with Highlighted Rows
 		// Generate In-Table List with Highlighted Rows report in document
 		// format
-		// GenerateReport.GenerateInTableListWithHighlightedRows("document");
+		// GenerateReport.generateInTableListWithHighlightedRows("document");
 		// Generate In-Table List with Highlighted Rows report in spreadsheet
 		// format
-		// GenerateReport.GenerateInTableListWithHighlightedRows("spreadsheet");
+		// GenerateReport.generateInTableListWithHighlightedRows("spreadsheet");
 		// Generate In-Table List with Highlighted Rows report in presentation
 		// format
-		// GenerateReport.GenerateInTableListWithHighlightedRows("presentation");
+		// GenerateReport.generateInTableListWithHighlightedRows("presentation");
 		// endregion
 
 		// region In-Table List
 		// Generate in table lsit report in document format
-		// GenerateReport.GenerateInTableList("document");
+		// GenerateReport.generateInTableList("document");
 		// Generate in table list report in spreadsheet format
-		// GenerateReport.GenerateInTableList("spreadsheet");
+		// GenerateReport.generateInTableList("spreadsheet");
 		// Generate in table list report in presentation format
-		// GenerateReport.GenerateInTableList("presentation");
+		// GenerateReport.generateInTableList("presentation");
 		// endregion
 
 		// region In-Table Master-Detail
 		// Generate In-Table Master-Detail report in document format
-		// GenerateReport.GenerateInTableMasterDetail("document");
+		// GenerateReport.generateInTableMasterDetail("document");
 		// Generate In-Table Master-Detail report in spreadsheet format
-		// GenerateReport.GenerateInTableMasterDetail("spreadsheet");
+		// GenerateReport.generateInTableMasterDetail("spreadsheet");
 		// Generate In-Table Master-Detail report in presentation format
-		// GenerateReport.GenerateInTableMasterDetail("presentation");
+		// GenerateReport.generateInTableMasterDetail("presentation");
 		// endregion
 
 		// region Multicolored Numbered List
 		// Generate Multicolored numbered list report in document format
-		// GenerateReport.GenerateMulticoloredNumberedList("document");
+		// GenerateReport.generateMulticoloredNumberedList("document");
 		// Generate Multicolored numbered list report in spreadsheet format
-		// GenerateReport.GenerateMulticoloredNumberedList("spreadsheet");
+		// GenerateReport.generateMulticoloredNumberedList("spreadsheet");
 		// Generate Multicolored numbered list report in presentation format
-		// GenerateReport.GenerateMulticoloredNumberedList("presentation");
+		// GenerateReport.generateMulticoloredNumberedList("presentation");
 		// endregion
 
 		// region Numbered List
 		// Generate Numbered List report in document format
-		// GenerateReport.GenerateNumberedList("document");
+		// GenerateReport.generateNumberedList("document");
 		// Generate Numbered list report in spreadsheet format
-		// GenerateReport.GenerateNumberedList("spreadsheet");
+		// GenerateReport.generateNumberedList("spreadsheet");
 		// Generate Numbered list report in presentation format
-		// GenerateReport.GenerateNumberedList("presentation");
+		// GenerateReport.generateNumberedList("presentation");
 		// endregion
 
 		// region Pie Chart
 		// Generate pie chart report in document format
-		// GenerateReport.GeneratePieChart("document");
+		// GenerateReport.generatePieChart("document");
 		// Generate pie chart report in spreadsheet format
-		// GenerateReport.GeneratePieChart("spreadsheet");
+		// GenerateReport.generatePieChart("spreadsheet");
 		// Generate pie char report presentation format
-		// GenerateReport.GeneratePieChart("presentation");
+		// GenerateReport.generatePieChart("presentation");
 		// endregion
 
 		// region Scatter Chart
 		// Generate scatter chart report in document format
-		// GenerateReport.GenerateScatterChart("document");
+		// GenerateReport.generateScatterChart("document");
 		// Generate scatter chart report in spreadsheet format
-		// GenerateReport.GenerateScatterChart("spreadsheet");
+		// GenerateReport.generateScatterChart("spreadsheet");
 		// Generate scatter chart report in presentation format
-		// GenerateReport.GenerateScatterChart("presentation");
+		// GenerateReport.generateScatterChart("presentation");
 		// endregion
 
 		// region single row
 		// Generate single row in document format
-		// GenerateReport.GenerateSingleRow("document");
+		// GenerateReport.generateSingleRow("document");
 		// Generate single row in spreadsheet format
-		// GenerateReport.GenerateSingleRow("spreadsheet");
+		// GenerateReport.generateSingleRow("spreadsheet");
 		// Generate single row in presentation format
-		// GenerateReport.GenerateSingleRow("presentation");
+		// GenerateReport.generateSingleRow("presentation");
 		// endregion
 
 		// Region Barcode Insertion
 		// Generate barcode in document format
-		// GenerateReport.AddBarCodes("document");
+		// GenerateReport.addBarCodes("document");
 		// Generate barcode in spreadsheet format
-		// GenerateReport.AddBarCodes("spreadsheet");
+		// GenerateReport.addBarCodes("spreadsheet");
 		// Generate barcode in presetnation format
-		// GenerateReport.AddBarCodes("presentation");
+		// GenerateReport.addBarCodes("presentation");
 		// endregion
 
 		// region Template syntax formatting
 		// Generate template syntax formatting report in document format
-		//GenerateReport.TemplateSyntaxFormatting("document");
+		//GenerateReport.templateSyntaxFormatting("document");
 		// endregion
 		
 		// retion outer document insertion
 		// Generate report with outer document insertion
-		//GenerateReport.OuterDocumentInsertion("document");
+		//GenerateReport.outerDocumentInsertion("document");
 		// endregion
 		
 		// region update field
-		//GenerateReport.UpdateWordDocFields("spreadsheet");
+		//GenerateReport.updateWordDocFields("spreadsheet");
 		// endregion
 		
 		// region Using next
 		//GenerateReport.usingNext("document");
 		// endregion 
+		
+		// region generate report from other data sources
+		//Generate report from spreadsheet data source 
+		//GenerateReport.useSpreadsheetAsDataSource();
+		//Generate report from word data source
+		//GenerateReport.importingWordProcessingTableIntoPresentation();
+		//Generate report from presentation data source
+		//GenerateReport.usePresentationTableAsDataSource();
+		// endregion 
+		
+		// region Multiple Data sources
+		//Generate word document from multiple data sources 
+		//GenerateReport.generateReportUsingMultipleDS("document");
+		//Generate spreadsheet document  from multiple data sources
+		//GenerateReport.generateReportUsingMultipleDS("spreadsheet");
+		//Generate presentation document from multiple data sources
+		//GenerateReport.generateReportUsingMultipleDS("presentation");
+		// endregion
 	}
 
 }

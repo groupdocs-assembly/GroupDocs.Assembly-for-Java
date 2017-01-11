@@ -17,9 +17,9 @@ public class CommonUtilities {
 	public static final Path outputPath = getProjectBaseDir().resolve("Data/Output/");
 	public static final Path image = getProjectBaseDir().resolve("Data/Images/");
 	public static final Path outerDoc = getProjectBaseDir().resolve("Data/OuterDocument/");
-	public static final Path wordDataFile = getProjectBaseDir().resolve("Data/Data Sources/Word DataSource/Managers Data.docx");
+	public static final Path wordDataFile = getProjectBaseDir().resolve("Data/Data Sources/Word DataSource/");
 	public static final Path excelDataFile = getProjectBaseDir().resolve("Data/Data Sources/Excel DataSource/");
-	public static final Path presentationDataFile = getProjectBaseDir().resolve("Data/Data Sources/Word DataSource/Managers Data.pptx");
+	public static final Path presentationDataFile = getProjectBaseDir().resolve("Data/Data Sources/Presentation DataSource/");
 	//ExEnd:commonPaths
 
 	public static void applyLicense() {
