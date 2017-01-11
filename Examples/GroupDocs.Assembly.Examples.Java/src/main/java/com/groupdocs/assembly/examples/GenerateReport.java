@@ -90,7 +90,7 @@ public class GenerateReport {
 	}
 
 	// Generate Chart With Filtering Grouping And Ordering
-	public static void GenerateChartWithFilteringGroupingAndOrdering(String documentFormat) {
+	public static void generateChartWithFilteringGroupingAndOrdering(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:chartwithfilteringgroupingandorderingdocument
 			String srcDocument = "/Word Templates/Chart with Filtering, Grouping, and Ordering.docx";
@@ -131,7 +131,7 @@ public class GenerateReport {
 	}
 
 	// Generate Common List
-	public static void GenerateCommonList(String documentFormat) {
+	public static void generateCommonList(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:commonlistdocument
 			String srcDocument = "/Word Templates/Common List.docx";
@@ -173,7 +173,7 @@ public class GenerateReport {
 	}
 
 	// Generate Common Master Detail
-	public static void GenerateCommonMasterDetail(String documentFormat) {
+	public static void generateCommonMasterDetail(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:commonmasterdetaildocument
 			String srcDocument = "/Word Templates/Common Master-Detail.docx";
@@ -215,7 +215,7 @@ public class GenerateReport {
 	}
 
 	// Generate In-Paragraph list report
-	public static void GenerateInParagraphList(String documentFormat) {
+	public static void generateInParagraphList(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:inparagraphlistdocument
 			String srcDocument = "/Word Templates/In-Paragraph List.docx";
@@ -257,7 +257,7 @@ public class GenerateReport {
 	}
 
 	// Generate Generate In Table List With Alternate Content
-	public static void GenerateInTableListWithAlternateContent(String documentFormat) {
+	public static void generateInTableListWithAlternateContent(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:intablelistwithalternatecontentdocument
 			String srcDocument = "/Word Templates/In-Table List with Alternate Content.docx";
@@ -299,7 +299,7 @@ public class GenerateReport {
 	}
 
 	// Generate In Table List With Filtering Grouping And Ordering
-	public static void GenerateInTableListWithFilteringGroupingAndOrdering(String documentFormat) {
+	public static void generateInTableListWithFilteringGroupingAndOrdering(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:intablelistwithfilteringroupingandorderingdocument
 			String srcDocument = "/Word Templates/In-Table List with Filtering, Grouping, and Ordering.docx";
@@ -341,7 +341,7 @@ public class GenerateReport {
 	}
 
 	// Generate in table list with highlighted rows
-	public static void GenerateInTableListWithHighlightedRows(String documentFormat) {
+	public static void generateInTableListWithHighlightedRows(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:intablelistwithhighllightedrowsdocument
 			String srcDocument = "/Word Templates/In-Table List with Highlighted Rows.docx";
@@ -383,7 +383,7 @@ public class GenerateReport {
 	}
 
 	// Generate in table list
-	public static void GenerateInTableList(String documentFormat) {
+	public static void generateInTableList(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:intablelistdocument
 			String srcDocument = "/Word Templates/In-Table List.docx";
@@ -425,7 +425,7 @@ public class GenerateReport {
 	}
 
 	// Generate in table master detail
-	public static void GenerateInTableMasterDetail(String documentFormat) {
+	public static void generateInTableMasterDetail(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:intablemasterdetaildocument
 			String srcDocument = "/Word Templates/In-Table Master-Detail.docx";
@@ -467,7 +467,7 @@ public class GenerateReport {
 	}
 
 	// Generate multicolored numbered list
-	public static void GenerateMulticoloredNumberedList(String documentFormat) {
+	public static void generateMulticoloredNumberedList(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:multicolorednumberedlistdocument
 			String srcDocument = "/Word Templates/Multicolored Numbered List.docx";
@@ -509,7 +509,7 @@ public class GenerateReport {
 	}
 
 	// Generate Numbered list report
-	public static void GenerateNumberedList(String documentFormat) {
+	public static void generateNumberedList(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:numberedlistdocument
 			String srcDocument = "/Word Templates/Numbered List.docx";
@@ -551,7 +551,7 @@ public class GenerateReport {
 	}
 
 	// Generate pie chart
-	public static void GeneratePieChart(String documentFormat) {
+	public static void generatePieChart(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:piechartdocument
 			String srcDocument = "/Word Templates/Pie Chart.docx";
@@ -593,7 +593,7 @@ public class GenerateReport {
 	}
 
 	// Generate scatter chart
-	public static void GenerateScatterChart(String documentFormat) {
+	public static void generateScatterChart(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:scatterchartdocument
 			String srcDocument = "/Word Templates/Scatter Chart.docx";
@@ -635,7 +635,7 @@ public class GenerateReport {
 	}
 
 	// Generate single row
-	public static void GenerateSingleRow(String documentFormat) {
+	public static void generateSingleRow(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:singlerowdocument
 			String srcDocument = "/Word Templates/Single Row.docx";
@@ -678,8 +678,8 @@ public class GenerateReport {
 		}
 	}
 
-	// Generate barcode
-	public static void AddBarCodes(String documentFormat) {
+		// Generate barcode
+		public static void addBarCodes(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:barcodedocument
 			String srcDocument = "/Word Templates/Barcode.docx";
@@ -696,7 +696,7 @@ public class GenerateReport {
 		} else if (documentFormat == "spreadsheet") {
 			// ExStart:barcodespreadsheet
 			String srcDocument = "/Spreadsheet Templates/Barcode.xlsx";
-			String docReport = "/Spreadsheet Reports/Barcode.xlsx";
+			String docReport = "/Spreadsheet Reports/Barcode_report.xlsx";
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
@@ -722,8 +722,8 @@ public class GenerateReport {
 		}
 	}
 
-	// Generate report with upper and numeric properties
-	public static void TemplateSyntaxFormatting(String documentFormat) {
+		// Generate report with upper and numeric properties
+		public static void templateSyntaxFormatting(String documentFormat) {
 		if (documentFormat == "document") {
 			// ExStart:TemplateSyntaxFormatting
 			String srcDocument = "/Word Templates/Numeric Upper.docx";
@@ -740,7 +740,7 @@ public class GenerateReport {
 		}
 	}
 		// Generate report with outer doc insertion
-		public static void OuterDocumentInsertion(String documentFormat) {
+		public static void outerDocumentInsertion(String documentFormat) {
 			if (documentFormat == "document") {
 				// ExStart:OuterDocumentInsertion
 				String srcDocument = "/Word Templates/OuterDocInsertion.docx";
@@ -757,7 +757,7 @@ public class GenerateReport {
 			}
 		}
 		// Generate report and update field
-		public static void UpdateWordDocFields(String documentFormat){
+		public static void updateWordDocFields(String documentFormat){
 			if (documentFormat == "document") {
 				// ExStart:UpdateWordDocFieldsindocument
 				String srcDocument = "/Word Templates/Update field.docx";
@@ -806,5 +806,104 @@ public class GenerateReport {
 				}
 				// ExEnd:usingNext
 			}
+		}
+		//Generate report from excel data source
+		public static void useSpreadsheetAsDataSource() throws Throwable{
+			//ExStart:useSpreadsheetAsDataSource
+			String srcDocument = "/Word Templates/Using Spreadsheet as Table of Data.docx";
+			String docReport = "/Word Reports/Using Spreadsheet as Table of Data_report.docx";
+			try {
+				Manager manager = new DataStorage().getManagers().iterator().next();
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getTestDataPath(srcDocument),
+						CommonUtilities.getTestOutPath(docReport), DataStorage.excelData(), "contracts");
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			//ExEnd:useSpreadsheetAsDataSource
+		}
+		// Generate report from word table data source
+		public static void importingWordProcessingTableIntoPresentation() throws Throwable{
+			//ExStart:ImportingWordProcessingTableIntoPresentation
+			String srcDocument = "/Presentation Templates/Importing Word Processing Table into Presentation.pptx";
+			String docReport = "/Presentation Reports/Importing Word Processing Table into Presentation_report.pptx";
+			try {
+				Manager manager = new DataStorage().getManagers().iterator().next();
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getTestDataPath(srcDocument),
+						CommonUtilities.getTestOutPath(docReport), DataStorage.importingWordProcessingTableIntoPresentation(), "table");
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			//ExEnd:ImportingWordProcessingTableIntoPresentation
+		}
+		// Generate report from presentation data source 
+		public static void usePresentationTableAsDataSource() throws Throwable{
+			//ExStart:UsePresentationTableAsDataSource
+			String srcDocument = "/Presentation Templates/Using Presentation as Table of Data.pptx";
+			String docReport = "/Presentation Reports/Using Presentation as Table of Data_report.pptx";
+			try {
+				Manager manager = new DataStorage().getManagers().iterator().next();
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getTestDataPath(srcDocument),
+						CommonUtilities.getTestOutPath(docReport), DataStorage.presentationData(), "table");
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			//ExEnd:UsePresentationTableAsDataSource
+		}
+		//Multiple data sources
+		public static void generateReportUsingMultipleDS(String documentFormat) throws Throwable{
+		//ExStart:generateReportUsingMultipleDS
+			if (documentFormat == "document") {
+				// ExStart:barcodedocument
+				String srcDocument = "/Word Templates/Multiple DS.docx";
+				String docReport = "/Word Reports/Multiple DS_report.docx";
+				try {
+					 //Create an array of data source objects
+                    Object[] dataSourceObj = new Object[] { new DataStorage(), DataStorage.excelData() };
+                    //Create an array of data source string
+                    String[] dataSourceString = new String[] { null, "contracts" };
+					DocumentAssembler assembler = new DocumentAssembler();
+					assembler.assembleDocument(CommonUtilities.getTestDataPath(srcDocument),
+							CommonUtilities.getTestOutPath(docReport), dataSourceObj, dataSourceString);
+				} catch (Exception exp) {
+					System.out.println("Exception: " + exp.getMessage());
+				}
+				// ExEnd:barcodedocument
+			} else if (documentFormat == "spreadsheet") {
+				// ExStart:barcodespreadsheet
+				String srcDocument = "/Spreadsheet Templates/Multiple DS.xlsx";
+				String docReport = "/Spreadsheet Reports/Multiple DS_report.xlsx";
+				try {
+					 //Create an array of data source objects
+                    Object[] dataSourceObj = new Object[] { new DataStorage(), DataStorage.excelData() };
+                    //Create an array of data source string
+                    String[] dataSourceString = new String[] { null, "contracts" };
+					DocumentAssembler assembler = new DocumentAssembler();
+					assembler.assembleDocument(CommonUtilities.getTestDataPath(srcDocument),
+							CommonUtilities.getTestOutPath(docReport), dataSourceObj, dataSourceString);
+				} catch (Exception exp) {
+					System.out.println("Exception: " + exp.getMessage());
+				}
+				// ExEnd:barcodespreadsheet
+			} else if (documentFormat == "presentation") {
+				// ExStart:barcodepresentation
+				String srcDocument = "/Presentation Templates/Multiple DS.pptx";
+				String docReport = "/Presentation Reports/Multiple DS_report.pptx";
+				try {
+					 //Create an array of data source objects
+                    Object[] dataSourceObj = new Object[] { new DataStorage(), DataStorage.excelData() };
+                    //Create an array of data source string
+                    String[] dataSourceString = new String[] { null, "contracts" };
+					DocumentAssembler assembler = new DocumentAssembler();
+					assembler.assembleDocument(CommonUtilities.getTestDataPath(srcDocument),
+							CommonUtilities.getTestOutPath(docReport), dataSourceObj, dataSourceString);
+				} catch (Exception exp) {
+					System.out.println("Exception: " + exp.getMessage());
+				}
+				// ExEnd:barcodepresentation
+			}
+		//ExEnd:generateReportUsingMultipleDS
 		}
 }
