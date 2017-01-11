@@ -22,6 +22,9 @@ public class BusinessEntities {
 		public String getPhoto() throws Exception {
 			return CommonUtilities.image + "/no-photo.jpg";
 		}
+		public String getOuterDoc() throws Exception{
+			return CommonUtilities.outerDoc + "/OuterDoc.docx";
+		}
 
 		public Iterable<Contract> getContracts() {
 			return mContracts;

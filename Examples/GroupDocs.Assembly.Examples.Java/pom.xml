@@ -4,11 +4,23 @@
 	<groupId>GroupDocs.Assembly.Examples.Java</groupId>
 	<artifactId>GroupDocs.Assembly.Examples.Java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.8.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.4.1.3</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<resources>
 			<resource>
