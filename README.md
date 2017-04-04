@@ -1,4 +1,4 @@
-##GroupDocs.Assembly for Java
+# GroupDocs.Assembly for Java
 
 This package contains [Examples](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/tree/master/Examples), [Showcases](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/tree/master/Showcases) for [GroupDocs.Assembly for Java](#) that will help you in understanding the API's working and writing your own applications.
 
@@ -15,7 +15,7 @@ Directory | Description
 --------- | -----------
 [Examples](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/tree/master/Examples)  | Contains the package of all Java examples and sample files that will help you learn how to use product features. 
 
-## Resources
+#  Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com/)
 + **Product Home:** [GroupDocs.Assembly for Java](https://www.groupdocs.com/products/assembly/java)

@@ -1,4 +1,4 @@
-##GroupDocs.Assembly for Java Examples
+# GroupDocs.Assembly for Java Examples
 
 This package contains Java Examples Solutions for [GroupDocs.Assembly for Java](https://www.groupdocs.com/products/assembly/java) and sample input templates used in the examples.
 
@@ -7,7 +7,7 @@ This package contains Java Examples Solutions for [GroupDocs.Assembly for Java](
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
-## How to Run the Examples?
+#  How to Run the Examples?
 
 It is assumed that maven is installed and configured in your system path. You can edit the project by opening in your favorite IDE like NetBeans, Eclipse, and IntelliJ IDEA.
 
