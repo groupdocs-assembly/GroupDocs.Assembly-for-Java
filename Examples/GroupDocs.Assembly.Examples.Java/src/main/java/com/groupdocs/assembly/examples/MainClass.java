@@ -206,6 +206,20 @@ public class MainClass {
 		//Generate presentation document from multiple data sources
 		//GenerateReport.generateReportUsingMultipleDS("presentation");
 		// endregion
+		
+		//loading document tables
+		//GenerateReport.loadDocTableSet("/Word Templates/Multiple Tables Data.docx");
+		
+		//loading document table with custom options
+		//GenerateReport.loadDocTableSetWithCustomOptions("/Word Templates/Multiple Tables Data.docx");
+		
+		//use document table set as data source
+		//GenerateReport.useDocumentTableSetAsDataSource("/Word Templates/Multiple Tables Data.docx", "/Presentation Templates/Using Document Table Set as Data Source.pptx");
+		
+		//define relations between doc table instances
+		//GenerateReport.definingDocumentTableRelations("/Spreadsheet Templates/Related Tables Data.xlsx","/Word Templates/Using Document Table Relations.docx");
+		
+		//GenerateReport.changingDocumentTableColumnType("/Presentation Templates/Changing Document Table Column Type.pptx");
 	}
 
 }
