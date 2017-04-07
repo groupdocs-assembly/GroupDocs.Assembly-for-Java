@@ -48,13 +48,13 @@ public class CommonUtilities {
 		//ExEnd:getProjectBaseDir
 	}
 
-	public static String getTestDataPath(String fileName) throws Exception {
+	public static String getDataPath(String fileName) throws Exception {
 		//ExStart:getTestDataPath
 		return storagePath + fileName;
 		//ExEnd:getTestDataPath
 	}
 
-	public static String getTestOutPath(String fileName) throws Exception {
+	public static String getOutPath(String fileName) throws Exception {
 		//ExStart:getTestOutPath
 		return outputPath + fileName;
 		//ExEnd:getTestOutPath
