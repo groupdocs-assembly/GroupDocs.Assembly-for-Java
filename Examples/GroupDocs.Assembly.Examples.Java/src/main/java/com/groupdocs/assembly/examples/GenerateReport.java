@@ -11,10 +11,10 @@ import com.groupdocs.assembly.examples.BusinessEntities.Manager;
 
 public class GenerateReport {
 	
-	public static void loadDocTableSet(String srcDocument) throws Exception{
+	public static void loadDocTableSet(String dataSource) throws Exception{
 		//ExStart:loadDocTableSet
 		// Load all document tables using default options.
-		DocumentTableSet tableSet = new DocumentTableSet(CommonUtilities.getDataPath(srcDocument));
+		DocumentTableSet tableSet = new DocumentTableSet(CommonUtilities.wordDataFile + dataSource);
 		 
 		// Check loading.
 		assert tableSet.getTables().getCount() == 3;
@@ -23,10 +23,10 @@ public class GenerateReport {
 		assert tableSet.getTables().get(2).getName().equals("Table3");
 		//ExEnd:loadDocTableSet
 	}
-	public static void loadDocTableSetWithCustomOptions(String srcDocument) throws Throwable{
+	public static void loadDocTableSetWithCustomOptions(String dataSource) throws Throwable{
 		//ExStart:loadDocTableSetWithCustomOptions
 		// Load document tables using custom options.
-		DocumentTableSet tableSet = new DocumentTableSet(CommonUtilities.getDataPath(srcDocument), new CustomDocumentTableLoadHandler());
+		DocumentTableSet tableSet = new DocumentTableSet((CommonUtilities.wordDataFile + dataSource), new CustomDocumentTableLoadHandler());
 		 
 		// Ensure that the second table is not loaded.
 		assert tableSet.getTables().getCount() == 2;
@@ -44,10 +44,10 @@ public class GenerateReport {
 		assert tableSet.getTables().get(1).getColumns().get(1).getName().equals("Address");
 		//ExEnd:loadDocTableSetWithCustomOptions
 	}
-	public static void useDocumentTableSetAsDataSource(String srcDocument, String slideDoc) throws Throwable{
+	public static void useDocumentTableSetAsDataSource(String dataSource, String slideDoc) throws Throwable{
 		//ExStart:useDocumentTableSetAsDataSource
 		// Set table column names to be extracted from the document.
-		DocumentTableSet tableSet = new DocumentTableSet(CommonUtilities.getDataPath(srcDocument), new ColumnNameExtractingDocumentTableLoadHandler());
+		DocumentTableSet tableSet = new DocumentTableSet((CommonUtilities.wordDataFile + dataSource), new ColumnNameExtractingDocumentTableLoadHandler());
 		 
 		// Set table names for conveniency.
 		tableSet.getTables().get(0).setName("Planets");
@@ -62,7 +62,7 @@ public class GenerateReport {
 	public static void definingDocumentTableRelations(String relatedTables, String docTableRelations) throws Exception{
 		//ExStart:definingDocumentTableRelations
 		// Set table column names to be extracted from the document.
-		DocumentTableSet tableSet = new DocumentTableSet(CommonUtilities.getDataPath(relatedTables), new ColumnNameExtractingDocumentTableLoadHandler());
+		DocumentTableSet tableSet = new DocumentTableSet(CommonUtilities.excelDataFile + relatedTables, new ColumnNameExtractingDocumentTableLoadHandler());
 		 
 		// Define relations between tables.
 		// NOTE: For Spreadsheet documents, table names are extracted from sheet names.
