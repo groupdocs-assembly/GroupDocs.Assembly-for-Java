@@ -3,7 +3,7 @@ package com.groupdocs.assembly.examples;
 public class MainClass {
 	public static void main(String[] args) throws Throwable {
 		// Apply license
-		CommonUtilities.applyLicense();
+		//CommonUtilities.applyLicense();
 
 		// region Generating Bubble Chart
 		// Generate bubble chart report in document processing format
@@ -164,7 +164,7 @@ public class MainClass {
 
 		// Region Barcode Insertion
 		// Generate barcode in document format
-		 GenerateReport.addBarCodes("document");
+		// GenerateReport.addBarCodes("document");
 		// Generate barcode in spreadsheet format
 		// GenerateReport.addBarCodes("spreadsheet");
 		// Generate barcode in presetnation format
