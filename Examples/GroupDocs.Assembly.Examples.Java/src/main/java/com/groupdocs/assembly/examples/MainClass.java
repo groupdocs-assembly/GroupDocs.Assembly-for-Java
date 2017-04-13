@@ -21,6 +21,10 @@ public class MainClass {
 		// GenerateReport.generateBulletedList("spreadsheet");
 		// Generate bulleted list report in presentation format
 		// GenerateReport.generateBulletedList("presentation");
+		// Generate bulleted list report in html format
+		// GenerateReport.generateBulletedList("html");
+		// Generate bulleted list report in text format
+		// GenerateReport.generateBulletedList("txt");
 		// endregion
 
 		// region Generating Chart report with Filtering, Grouping, and Ordering
@@ -42,6 +46,10 @@ public class MainClass {
 		// GenerateReport.generateCommonList("spreadsheet");
 		// Generate a Common List Report in presentation format
 		// GenerateReport.generateCommonList("presentation");
+		// Generate a common list report in html format
+		// GenerateReport.generateCommonList("html");
+		// Generate a common list report in text format 
+		// GenerateReport.generateCommonList("txt");
 		// endregion
 
 		// region Generating Common Master-Detail Report
@@ -51,6 +59,10 @@ public class MainClass {
 		// GenerateReport.generateCommonMasterDetail("spreadsheet");
 		// Generate common master detail report in presentation format
 		// GenerateReport.generateCommonMasterDetail("presentation");
+		//Generate common master detail report in html format
+		 //GenerateReport.generateCommonMasterDetail("html");
+		// Generate common master detail report in text format
+		//GenerateReport.generateCommonMasterDetail("txt");
 		// endregion
 
 		// region Generating In-Paragraph List Report
@@ -60,6 +72,10 @@ public class MainClass {
 		// GenerateReport.generateInParagraphList("spreadsheet");
 		// Generate in paragraph list report in presentation format
 		// GenerateReport.generateInParagraphList("presentation");
+		// Generate in paragraph list report in html format
+		// GenerateReport.generateInParagraphList("html");
+		 // Geneerate in paragraph list report in text format
+		//GenerateReport.generateInParagraphList("txt");
 		// endregion
 
 		// region Generating In-Table with Alternate Content Report
@@ -72,6 +88,8 @@ public class MainClass {
 		// Generate in table list with alternate content report in presentation
 		// format
 		// GenerateReport.generateInTableListWithAlternateContent("presentation");
+		// Generate in table list with alternate content report in html format
+		//GenerateReport.generateInTableListWithAlternateContent("html"); 
 		// endregion
 
 		// region Generating In-Table List with Filtering, Grouping, and
@@ -85,6 +103,8 @@ public class MainClass {
 		// Generate in table list with filtering, grouping and order report in
 		// presentation format
 		// GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("presentation");
+		// Generate in table list with filtering, grouping and order report in html format
+		//GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("html");
 		// endregion
 
 		// region In-Table List with Highlighted Rows
@@ -94,9 +114,10 @@ public class MainClass {
 		// Generate In-Table List with Highlighted Rows report in spreadsheet
 		// format
 		// GenerateReport.generateInTableListWithHighlightedRows("spreadsheet");
-		// Generate In-Table List with Highlighted Rows report in presentation
-		// format
+		// Generate In-Table List with Highlighted Rows report in presentation format
 		// GenerateReport.generateInTableListWithHighlightedRows("presentation");
+		// Generate In-Table List with Highlighted Rows report in html format
+		//GenerateReport.generateInTableListWithHighlightedRows("html");
 		// endregion
 
 		// region In-Table List
@@ -106,6 +127,8 @@ public class MainClass {
 		// GenerateReport.generateInTableList("spreadsheet");
 		// Generate in table list report in presentation format
 		// GenerateReport.generateInTableList("presentation");
+		// Generate in table list report in html format
+		//GenerateReport.generateInTableList("html");
 		// endregion
 
 		// region In-Table Master-Detail
@@ -115,6 +138,8 @@ public class MainClass {
 		// GenerateReport.generateInTableMasterDetail("spreadsheet");
 		// Generate In-Table Master-Detail report in presentation format
 		// GenerateReport.generateInTableMasterDetail("presentation");
+		// Generate In-Table Master-Detail report in html format
+		 //GenerateReport.generateInTableMasterDetail("html");
 		// endregion
 
 		// region Multicolored Numbered List
@@ -124,6 +149,8 @@ public class MainClass {
 		// GenerateReport.generateMulticoloredNumberedList("spreadsheet");
 		// Generate Multicolored numbered list report in presentation format
 		// GenerateReport.generateMulticoloredNumberedList("presentation");
+		// Generate Multicolored numbered list report in html format
+		 //GenerateReport.generateMulticoloredNumberedList("html");
 		// endregion
 
 		// region Numbered List
@@ -133,6 +160,10 @@ public class MainClass {
 		// GenerateReport.generateNumberedList("spreadsheet");
 		// Generate Numbered list report in presentation format
 		// GenerateReport.generateNumberedList("presentation");
+		// Generate Numbered list report in html format
+		//GenerateReport.generateNumberedList("html");
+		// Generate Numbered list report in text format
+		//GenerateReport.generateNumberedList("txt");
 		// endregion
 
 		// region Pie Chart
@@ -160,6 +191,10 @@ public class MainClass {
 		// GenerateReport.generateSingleRow("spreadsheet");
 		// Generate single row in presentation format
 		// GenerateReport.generateSingleRow("presentation");
+		// Generate single row in html format
+		//GenerateReport.generateSingleRow("html");
+		// Generate single row in text format
+		//GenerateReport.generateSingleRow("txt");
 		// endregion
 
 		// Region Barcode Insertion
@@ -173,53 +208,61 @@ public class MainClass {
 
 		// region Template syntax formatting
 		// Generate template syntax formatting report in document format
-		//GenerateReport.templateSyntaxFormatting("document");
+		// GenerateReport.templateSyntaxFormatting("document");
 		// endregion
-		
+
 		// retion outer document insertion
 		// Generate report with outer document insertion
-		//GenerateReport.outerDocumentInsertion("document");
+		// GenerateReport.outerDocumentInsertion("document");
 		// endregion
-		
+
 		// region update field
-		//GenerateReport.updateWordDocFields("spreadsheet");
+		// GenerateReport.updateWordDocFields("spreadsheet");
 		// endregion
-		
+
 		// region Using next
-		//GenerateReport.usingNext("document");
-		// endregion 
-		
-		// region generate report from other data sources
-		//Generate report from spreadsheet data source 
-		//GenerateReport.useSpreadsheetAsDataSource();
-		//Generate report from word data source
-		//GenerateReport.importingWordProcessingTableIntoPresentation();
-		//Generate report from presentation data source
-		//GenerateReport.usePresentationTableAsDataSource();
-		// endregion 
-		
-		// region Multiple Data sources
-		//Generate word document from multiple data sources 
-		//GenerateReport.generateReportUsingMultipleDS("document");
-		//Generate spreadsheet document  from multiple data sources
-		//GenerateReport.generateReportUsingMultipleDS("spreadsheet");
-		//Generate presentation document from multiple data sources
-		//GenerateReport.generateReportUsingMultipleDS("presentation");
+		// GenerateReport.usingNext("document");
 		// endregion
-		
-		//loading document tables
-		//GenerateReport.loadDocTableSet("/Multiple Tables Data.docx");
-		
-		//loading document table with custom options
-		//GenerateReport.loadDocTableSetWithCustomOptions("/Multiple Tables Data.docx");
-		
-		//use document table set as data source
-		//GenerateReport.useDocumentTableSetAsDataSource("/Multiple Tables Data.docx", "/Presentation Templates/Using Document Table Set as Data Source.pptx");
-		
-		//define relations between doc table instances
-		//GenerateReport.definingDocumentTableRelations("/Related Tables Data.xlsx","/Word Templates/Using Document Table Relations.docx");
-		
-		//GenerateReport.changingDocumentTableColumnType("/Presentation Templates/Changing Document Table Column Type.pptx");
+
+		// region generate report from other data sources
+		// Generate report from spreadsheet data source
+		// GenerateReport.useSpreadsheetAsDataSource();
+		// Generate report from word data source
+		// GenerateReport.importingWordProcessingTableIntoPresentation();
+		// Generate report from presentation data source
+		// GenerateReport.usePresentationTableAsDataSource();
+		// endregion
+
+		// region Multiple Data sources
+		// Generate word document from multiple data sources
+		// GenerateReport.generateReportUsingMultipleDS("document");
+		// Generate spreadsheet document from multiple data sources
+		// GenerateReport.generateReportUsingMultipleDS("spreadsheet");
+		// Generate presentation document from multiple data sources
+		// GenerateReport.generateReportUsingMultipleDS("presentation");
+		// endregion
+
+		// loading document tables
+		// GenerateReport.loadDocTableSet("/Multiple Tables Data.docx");
+
+		// loading document table with custom options
+		// GenerateReport.loadDocTableSetWithCustomOptions("/Multiple Tables
+		// Data.docx");
+
+		// use document table set as data source
+		// GenerateReport.useDocumentTableSetAsDataSource("/Multiple Tables
+		// Data.docx", "/Presentation Templates/Using Document Table Set as Data
+		// Source.pptx");
+
+		// define relations between doc table instances
+		// GenerateReport.definingDocumentTableRelations("/Related Tables
+		// Data.xlsx","/Word Templates/Using Document Table Relations.docx");
+
+		// GenerateReport.changingDocumentTableColumnType("/Presentation
+		// Templates/Changing Document Table Column Type.pptx");
+
+		// Html Reports
+		//GenerateReport.importingSpreadsheetIntoHtml("/Contracts Data.xlsx","/Html Templates/Importing Spreadsheet into HTML Document.html");
 	}
 
 }

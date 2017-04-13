@@ -1,0 +1,8 @@
+<html>
+<body>
+&lt;&lt;foreach [in getManagers()]&gt;&gt;
+<img height="100" width="100" src="data:image/jpeg;base64,&lt;&lt;[FileUtil.getBytesAsBase64(getPhoto())]&gt;&gt;"/>
+<h2>&lt;&lt;[getName()]&gt;&gt;</h2>
+&lt;&lt;/foreach&gt;&gt;
+</body>
+</html>

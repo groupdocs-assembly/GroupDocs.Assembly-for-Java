@@ -1,0 +1,4 @@
+<<foreach [in getManagers()]>><<[getName()]>>
+Clients: <<foreach [in getContracts()]>><<[indexOf() != 0 ? ", " : ""]>><<[getClient().getName()]>><</foreach>>
+
+<</foreach>>
