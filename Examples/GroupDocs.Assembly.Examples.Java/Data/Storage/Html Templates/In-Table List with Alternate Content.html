@@ -1,0 +1,39 @@
+<html>
+<body>
+<table>
+<tr>
+<th>
+Client
+</th>
+<th>
+Contract Price
+</th>
+</tr>
+&lt;&lt;if [!getContracts().any()]&gt;&gt;
+<tr> <!-- Alternate row. -->
+<td colspan="2" style="text-align:center">
+<b>No data</b>
+</td>
+</tr>
+&lt;&lt;else&gt;&gt;&lt;&lt;foreach [in getContracts()]&gt;&gt;
+<tr> <!-- Repeated row. -->
+<td>
+<b>&lt;&lt;[getClient().getName()]&gt;&gt;</b>
+</td>
+<td>
+&lt;&lt;[getPrice()]&gt;&gt;
+</td>
+</tr>
+&lt;&lt;/foreach&gt;&gt;
+<tr> <!-- Footer row. -->
+<td>
+<b>Total:</b>
+</td>
+<td>
+&lt;&lt;[getContracts().sum(c =&gt; c.getPrice())]&gt;&gt;
+</td>
+</tr>
+&lt;&lt;/if&gt;&gt;
+</table>
+</body>
+</html>

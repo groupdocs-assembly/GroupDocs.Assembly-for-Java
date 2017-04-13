@@ -1,0 +1,33 @@
+<html>
+<body>
+<table>
+<tr>
+<th>
+Client
+</th>
+<th>
+Contract Price
+</th>
+</tr>
+&lt;&lt;foreach [in getContracts()]&gt;&gt;
+<tr &lt;&lt;if [getPrice() &gt;= 1000000]&gt;&gt;style="background-color:#FFF8DC"&lt;&lt;/if&gt;&gt;> <!-- Repeated row. -->
+<td>
+<b>&lt;&lt;[getClient().getName()]&gt;&gt;</b>
+</td>
+<td>
+&lt;&lt;[getPrice()]&gt;&gt;
+</td>
+</tr>
+&lt;&lt;/foreach&gt;&gt;
+<tr> <!-- Footer row. -->
+<td>
+<b>Total:</b>
+</td>
+<td>
+&lt;&lt;[getContracts().sum(c =&gt; c.getPrice())]&gt;&gt;
+</td>
+</tr>
+
+</table>
+</body>
+</html>

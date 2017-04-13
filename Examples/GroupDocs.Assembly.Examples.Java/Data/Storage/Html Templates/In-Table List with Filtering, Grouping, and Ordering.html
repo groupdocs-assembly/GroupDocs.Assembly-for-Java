@@ -1,0 +1,27 @@
+<html>
+<body>
+<table>
+<tr>
+<th>
+Manager
+</th>
+<th>
+Contract Price
+</th>
+</tr>
+&lt;&lt;foreach [in getContracts()
+    .where(c =&gt; c.getDate().getYear() + 1900 == 2015)
+    .groupBy(c =&gt; c.getManager())
+    .orderBy(g =&gt; g.key.getName())]&gt;&gt;
+<tr>
+<td>
+<b>&lt;&lt;[key.getName()]&gt;&gt;</b>
+</td>
+<td>
+&lt;&lt;[sum(c =&gt; c.getPrice())]&gt;&gt;
+</td>
+</tr>
+&lt;&lt;/foreach&gt;&gt;
+</table>
+</body>
+</html>

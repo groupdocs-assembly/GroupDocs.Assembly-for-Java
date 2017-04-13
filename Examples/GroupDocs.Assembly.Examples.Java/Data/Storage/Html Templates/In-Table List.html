@@ -1,0 +1,34 @@
+<html>
+<body>
+<table>
+<tr>
+<th>
+Manager
+</th>
+<th>
+Contract Price
+</th>
+</tr>
+&lt;&lt;foreach [in getManagers()]&gt;&gt;
+<tr> <!-- Repeated row. -->
+<td>
+<b>&lt;&lt;[getName()]&gt;&gt;</b>
+</td>
+<td>
+&lt;&lt;[getContracts().sum(c =&gt; c.getPrice())]&gt;&gt;
+</td>
+</tr>
+&lt;&lt;/foreach&gt;&gt;
+<tr> <!-- Footer row. -->
+<td>
+<b>Total:</b>
+</td>
+<td>
+&lt;&lt;[getManagers().sum(
+  m =&gt; m.getContracts().sum(
+    c =&gt; c.getPrice()))]&gt;&gt;
+</td>
+</tr>
+</table>
+</body>
+</html>

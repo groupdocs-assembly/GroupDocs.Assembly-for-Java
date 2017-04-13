@@ -1,0 +1,3 @@
+We provide support for the following clients:
+<<foreach [in getClients()]>><<[numberOf()]>>. <<[getName()]>>
+<</foreach>>

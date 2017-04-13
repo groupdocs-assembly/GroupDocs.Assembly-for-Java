@@ -11,6 +11,7 @@ import com.groupdocs.assembly.examples.BusinessEntities.Manager;
 
 public class GenerateReport {
 	
+	
 	public static void loadDocTableSet(String dataSource) throws Exception{
 		//ExStart:loadDocTableSet
 		// Load all document tables using default options.
@@ -179,7 +180,32 @@ public class GenerateReport {
 				System.out.println("Exception: " + exp.getMessage());
 			}
 			// ExEnd:bulletedlistpresentation
+		}else if (documentFormat == "html") {
+			// ExStart:bulletedlisthtml
+			String srcDocument = "/Html Templates/Bulleted List.html";
+			String docReport = "/Html Reports/Bulleted List_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:bulletedlisthtml
+		}else if (documentFormat == "txt") {
+			// ExStart:bulletedlisttxt
+			String srcDocument = "/Text Templates/Bulleted List.txt";
+			String docReport = "/Text Reports/Bulleted List_report.txt";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:bulletedlisttxt
 		}
+		
 	}
 
 	// Generate Chart With Filtering Grouping And Ordering
@@ -263,6 +289,34 @@ public class GenerateReport {
 			}
 			// ExEnd:commonlistpresentation
 		}
+		else if (documentFormat == "html") {
+			// ExStart:commonlisthtml
+			String srcDocument = "/Html Templates/Common List.html";
+			String docReport = "/Html Reports/Common List_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				// This is needed solely for images in HTML documents.
+		        assembler.getKnownTypes().add(FileUtil.class);
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:commonlisthtml
+		}
+		else if (documentFormat == "txt") {
+			// ExStart:commonlisttxt
+			String srcDocument = "/Text Templates/Common List.txt";
+			String docReport = "/Text Reports/Common List_report.txt";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:commonlisttxt
+		}
 	}
 
 	// Generate Common Master Detail
@@ -304,6 +358,32 @@ public class GenerateReport {
 				System.out.println("Exception: " + exp.getMessage());
 			}
 			// ExEnd:commonmasterdetailpresentation
+		}else if (documentFormat == "html") {
+			// ExStart:commonmasterdetailhtml
+			String srcDocument = "/Html Templates/Common Master-Detail.html";
+			String docReport = "/Html Reports/Common Master-Detail_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				 // This is needed solely for images in HTML documents.
+		        assembler.getKnownTypes().add(FileUtil.class);
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:commonmasterdetailhtml
+		}else if (documentFormat == "txt") {
+			// ExStart:commonmasterdetailtxt
+			String srcDocument = "/Text Templates/Common Master-Detail.txt";
+			String docReport = "/Text Reports/Common Master-Detail_report.txt";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:commonmasterdetailtxt
 		}
 	}
 
@@ -346,6 +426,30 @@ public class GenerateReport {
 				System.out.println("Exception: " + exp.getMessage());
 			}
 			// ExEnd:inparagraphlistpresentation
+		}else if (documentFormat == "html") {
+			// ExStart:inparagraphlisthtml
+			String srcDocument = "/Html Templates/In-Paragraph List.html";
+			String docReport = "/Html Reports/In-Paragraph List_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:inparagraphlisthtml
+		}else if (documentFormat == "txt") {
+			// ExStart:inparagraphlisttxt
+			String srcDocument = "/Text Templates/In-Paragraph List.txt";
+			String docReport = "/Text Reports/In-Paragraph List_report.txt";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:inparagraphlisttxt
 		}
 	}
 
@@ -388,6 +492,18 @@ public class GenerateReport {
 				System.out.println("Exception: " + exp.getMessage());
 			}
 			// ExEnd:intablelistwithalternatecontentpresentation
+		}else if (documentFormat == "html") {
+			// ExStart:intablelistwithalternatecontenthtml
+			String srcDocument = "/Html Templates/In-Table List with Alternate Content.html";
+			String docReport = "/Html Reports/In-Table List with Alternate Content_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:intablelistwithalternatecontenthtml
 		}
 	}
 
@@ -430,6 +546,18 @@ public class GenerateReport {
 				System.out.println("Exception: " + exp.getMessage());
 			}
 			// ExEnd:intablelistwithfilteringroupingandorderingpresentation
+		}else if (documentFormat == "html") {
+			// ExStart:intablelistwithfilteringroupingandorderinghtml
+			String srcDocument = "/Html Templates/In-Table List with Filtering, Grouping, and Ordering.html";
+			String docReport = "/Html Reports/In-Table List with Filtering, Grouping, and Ordering_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:intablelistwithfilteringroupingandorderinghtml
 		}
 	}
 
@@ -472,6 +600,18 @@ public class GenerateReport {
 				System.out.println("Exception: " + exp.getMessage());
 			}
 			// ExEnd:intablelistwithhighllightedrowspresentation
+		}else if (documentFormat == "html") {
+			// ExStart:intablelistwithhighllightedrowshtml
+			String srcDocument = "/Html Templates/In-Table List with Highlighted Rows.html";
+			String docReport = "/Html Reports/In-Table List with Highlighted Rows_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:intablelistwithhighllightedrowshtml
 		}
 	}
 
@@ -513,8 +653,21 @@ public class GenerateReport {
 			} catch (Exception exp) {
 				System.out.println("Exception: " + exp.getMessage());
 			}
+			// ExEnd:intablelistpresentation
+		}else if (documentFormat == "html") {
+			// ExStart:intablelisthtml
+			String srcDocument = "/Html Templates/In-Table List.html";
+			String docReport = "/Html Reports/In-Table List_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:intablelisthtml
 		}
-		// ExEnd:intablelistpresentation
+		
 	}
 
 	// Generate in table master detail
@@ -556,6 +709,18 @@ public class GenerateReport {
 				System.out.println("Exception: " + exp.getMessage());
 			}
 			// ExEnd:intablemasterdetailpresentation
+		}else if (documentFormat == "html") {
+			// ExStart:intablemasterdetailhtml
+			String srcDocument = "/Html Templates/In-Table Master-Detail.html";
+			String docReport = "/Html Reports/In-Table Master-Detail_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:intablemasterdetailhtml
 		}
 	}
 
@@ -599,6 +764,19 @@ public class GenerateReport {
 			}
 			// ExEnd:multicolorednumberedlistpresentation
 		}
+		else if (documentFormat == "html") {
+			// ExStart:multicolorednumberedlisthtml
+			String srcDocument = "/Html Templates/Multicolored Numbered List.html";
+			String docReport = "/Html Reports/Multicolored Numbered List_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:multicolorednumberedlisthtml
+		}
 	}
 
 	// Generate Numbered list report
@@ -640,6 +818,31 @@ public class GenerateReport {
 				System.out.println("Exception: " + exp.getMessage());
 			}
 			// ExEnd:numberedlistpresentation
+		}
+		else if (documentFormat == "html") {
+			// ExStart:numberedlisthtml
+			String srcDocument = "/Html Templates/Numbered List.html";
+			String docReport = "/Html Reports/Numbered List_report.html";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:numberedlisthtml
+		}else if (documentFormat == "txt") {
+			// ExStart:numberedlisttxt
+			String srcDocument = "/Text Templates/Numbered List.txt";
+			String docReport = "/Text Reports/Numbered List_report.txt";
+			try {
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:numberedlisttxt
 		}
 	}
 
@@ -769,8 +972,37 @@ public class GenerateReport {
 			}
 			// ExEnd:singlerowpresentation
 		}
-	}
-
+		else if (documentFormat == "html") {
+			// ExStart:singlerowhtml
+			String srcDocument = "/Html Templates/Single Row.html";
+			String docReport = "/Html Reports/Single Row_report.html";
+			try {
+				Manager manager = new DataStorage().getManagers().iterator().next();
+				DocumentAssembler assembler = new DocumentAssembler();
+				 // This is needed solely for images in HTML documents.
+		        assembler.getKnownTypes().add(FileUtil.class);
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), manager, "manager");
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:singlerowhtml
+		}
+		else if (documentFormat == "txt") {
+			// ExStart:singlerowtxt
+			String srcDocument = "/Text Templates/Single Row.txt";
+			String docReport = "/Text Reports/Single Row_report.txt";
+			try {
+				Manager manager = new DataStorage().getManagers().iterator().next();
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport), manager, "manager");
+			} catch (Exception exp) {
+				System.out.println("Exception: " + exp.getMessage());
+			}
+			// ExEnd:singlerowtxt
+		}
+	} 
 		// Generate barcode
 		public static void addBarCodes(String documentFormat) {
 		if (documentFormat == "document") {
@@ -999,4 +1231,27 @@ public class GenerateReport {
 			}
 		//ExEnd:generateReportUsingMultipleDS
 		}
+
+		public static void importingSpreadsheetIntoHtml(String dataSource, String sourceTemplate) throws Throwable{
+			//ExStart:generateHtmlReport  
+		        // Use data of the _first_ worksheet.
+		        // Do not extract column names from the first row, so the names to be imported as well.
+		        DocumentTable table = new DocumentTable(CommonUtilities.excelDataFile + dataSource, 0);
+		        // Check column count, names, and types.
+		        assert table.getColumns().getCount() == 3;
+		        assert table.getColumns().get(0).getName().equals("A");
+		        assert table.getColumns().get(0).getType() == String.class;
+		        assert table.getColumns().get(1).getName().equals("B");
+		        assert table.getColumns().get(1).getType() == String.class;
+		        assert table.getColumns().get(2).getName().equals("C");
+		        assert table.getColumns().get(2).getType() == String.class;
+		        //testCore(sourceTemplate, table, "table");
+		        DocumentAssembler assembler = new DocumentAssembler();
+		        // This is needed solely for images in HTML documents.
+		        assembler.getKnownTypes().add(FileUtil.class);
+		        assembler.assembleDocument(CommonUtilities.getDataPath(sourceTemplate), CommonUtilities.getOutPath("/Html Reports/out.html"), table, "table");
+		        //DocumentAssembler assembler = new DocumentAssembler();
+				//ExEnd:generateHtmlReport
+		}
+		
 }

@@ -1,0 +1,9 @@
+John Smith
+Clients: A Company, B Ltd., C & D
+
+Tony Anderson
+Clients: E Corp., F & Partners
+
+July James
+Clients: G & Co., H Group, I & Sons, J Ent.
+
