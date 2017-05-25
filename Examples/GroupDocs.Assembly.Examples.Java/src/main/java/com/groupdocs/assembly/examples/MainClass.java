@@ -3,7 +3,7 @@ package com.groupdocs.assembly.examples;
 public class MainClass {
 	public static void main(String[] args) throws Throwable {
 		// Apply license
-		//CommonUtilities.applyLicense();
+		CommonUtilities.applyLicense();
 
 		// region Generating Bubble Chart
 		// Generate bubble chart report in document processing format
@@ -16,7 +16,7 @@ public class MainClass {
 
 		// region Generating Bulleted List
 		// Generate bulleted list report in document processing format
-		// GenerateReport.generateBulletedList("document");
+		 GenerateReport.generateBulletedList("document");
 		// Generate bulleted list report in spreadsheet format
 		// GenerateReport.generateBulletedList("spreadsheet");
 		// Generate bulleted list report in presentation format
@@ -150,7 +150,7 @@ public class MainClass {
 		// Generate Multicolored numbered list report in presentation format
 		// GenerateReport.generateMulticoloredNumberedList("presentation");
 		// Generate Multicolored numbered list report in html format
-		 //GenerateReport.generateMulticoloredNumberedList("html");
+		// GenerateReport.generateMulticoloredNumberedList("html");
 		// endregion
 
 		// region Numbered List
