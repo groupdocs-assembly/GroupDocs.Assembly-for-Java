@@ -1,0 +1,125 @@
+Message-ID: <a82a0eb9a19a4e53bac765974208e02d>
+From: "Example Sender" <sender@example.com>
+Subject: In-Table List with Alternate Content
+To: "Named Recipient" <named@example.com>, unnamed@example.com
+Cc: cc@example.com
+X-Unsent: 1
+Date: Thu, 10 Aug 2017 18:22:23 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--_=_NextPart1_e50445dc-2c58-41a3-b4dc-4da22e161f56"
+
+This is a multi-part message in MIME format.
+
+----_=_NextPart1_e50445dc-2c58-41a3-b4dc-4da22e161f56
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dkoi8-r" /><meta http-equiv=3D"Content-Style-Type" content=3D"text/css" /=
+><meta name=3D"generator" content=3D"Aspose=2EWords for Java 17=2E5" /><tit=
+le></title></head><body><div><table cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"border-collapse:collapse"><tr><td style=3D"width:241=2E95pt; border-t=
+op:1pt solid #999999; border-right:1pt solid #999999; border-left:1pt solid=
+ #999999; border-bottom:1=2E5pt solid #666666; padding-right:5=2E4pt; paddi=
+ng-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bot=
+tom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight:bo=
+ld">Client</span></p></td><td style=3D"width:242pt; border-top:1pt solid #9=
+99999; border-right:1pt solid #999999; border-bottom:1=2E5pt solid #666666;=
+ padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=
+=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-=
+family:Calibri; font-weight:bold">Contract Price</span></p></td></tr><tr><t=
+d style=3D"width:241=2E95pt; border-right:1pt solid #999999; border-left:1p=
+t solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; pa=
+dding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-=
+bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight=
+:bold">A Company</span></p></td><td style=3D"width:242pt; border-right:1pt =
+solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padd=
+ing-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bo=
+ttom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">1200000=2E0</=
+span></p></td></tr><tr><td style=3D"width:241=2E95pt; border-right:1pt soli=
+d #999999; border-left:1pt solid #999999; border-bottom:1pt solid #999999; =
+padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=
+=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-=
+family:Calibri; font-weight:bold">B Ltd=2E</span></p></td><td style=3D"widt=
+h:242pt; border-right:1pt solid #999999; border-bottom:1pt solid #999999; p=
+adding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"=
+margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-fami=
+ly:Calibri">750000=2E0</span></p></td></tr><tr><td style=3D"width:241=2E95p=
+t; border-right:1pt solid #999999; border-left:1pt solid #999999; border-bo=
+ttom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertic=
+al-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt=
+"><span style=3D"font-family:Calibri; font-weight:bold">C &amp; D</span></p=
+></td><td style=3D"width:242pt; border-right:1pt solid #999999; border-bott=
+om:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical=
+-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt">=
+<span style=3D"font-family:Calibri">350000=2E0</span></p></td></tr><tr><td =
+style=3D"width:241=2E95pt; border-right:1pt solid #999999; border-left:1pt =
+solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padd=
+ing-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bo=
+ttom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight:b=
+old">E Corp=2E</span></p></td><td style=3D"width:242pt; border-right:1pt so=
+lid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; paddin=
+g-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bott=
+om:0pt; font-size:11pt"><span style=3D"font-family:Calibri">650000=2E0</spa=
+n></p></td></tr><tr><td style=3D"width:241=2E95pt; border-right:1pt solid #=
+999999; border-left:1pt solid #999999; border-bottom:1pt solid #999999; pad=
+ding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"m=
+argin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-famil=
+y:Calibri; font-weight:bold">F &amp; Partners</span></p></td><td style=3D"w=
+idth:242pt; border-right:1pt solid #999999; border-bottom:1pt solid #999999=
+; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=
+=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-=
+family:Calibri">550000=2E0</span></p></td></tr><tr><td style=3D"width:241=
+=2E95pt; border-right:1pt solid #999999; border-left:1pt solid #999999; bor=
+der-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; =
+vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-siz=
+e:11pt"><span style=3D"font-family:Calibri; font-weight:bold">G &amp; Co=2E<=
+/span></p></td><td style=3D"width:242pt; border-right:1pt solid #999999; bo=
+rder-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt;=
+ vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-si=
+ze:11pt"><span style=3D"font-family:Calibri">350000=2E0</span></p></td></tr=
+><tr><td style=3D"width:241=2E95pt; border-right:1pt solid #999999; border-=
+left:1pt solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4=
+pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; m=
+argin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-=
+weight:bold">H Group</span></p></td><td style=3D"width:242pt; border-right:=
+1pt solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; =
+padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margi=
+n-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">250000=2E0=
+</span></p></td></tr><tr><td style=3D"width:241=2E95pt; border-right:1pt so=
+lid #999999; border-left:1pt solid #999999; border-bottom:1pt solid #999999=
+; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=
+=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-=
+family:Calibri; font-weight:bold">I &amp; Sons</span></p></td><td style=3D"=
+width:242pt; border-right:1pt solid #999999; border-bottom:1pt solid #99999=
+9; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p styl=
+e=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font=
+-family:Calibri">100000=2E0</span></p></td></tr><tr><td style=3D"width:241=
+=2E95pt; border-right:1pt solid #999999; border-left:1pt solid #999999; bor=
+der-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; =
+vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-siz=
+e:11pt"><span style=3D"font-family:Calibri; font-weight:bold">J Ent=2E</spa=
+n></p></td><td style=3D"width:242pt; border-right:1pt solid #999999; border=
+-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; ver=
+tical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:1=
+1pt"><span style=3D"font-family:Calibri">100000=2E0</span></p></td></tr><tr=
+><td style=3D"width:241=2E95pt; border-right:1pt solid #999999; border-left=
+:1pt solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt;=
+ padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; marg=
+in-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-wei=
+ght:bold">Total:</span></p></td><td style=3D"width:242pt; border-right:1pt =
+solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padd=
+ing-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bo=
+ttom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">4300000=2E0</=
+span></p></td></tr></table><p style=3D"margin-top:0pt; margin-bottom:0pt; f=
+ont-size:11pt"><span style=3D"font-family:Calibri">&#xa0;</span></p></div><=
+/body></html>
+----_=_NextPart1_e50445dc-2c58-41a3-b4dc-4da22e161f56
+Content-Type: application/octet-stream; name="ExampleAttachment.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment
+
+U3ViamVjdDogSW4tVGFibGUgTGlzdCB3aXRoIEFsdGVybmF0ZSBDb250ZW50
+----_=_NextPart1_e50445dc-2c58-41a3-b4dc-4da22e161f56--
+

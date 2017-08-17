@@ -3,7 +3,7 @@ package com.groupdocs.assembly.examples;
 public class MainClass {
 	public static void main(String[] args) throws Throwable {
 		// Apply license
-		CommonUtilities.applyLicense();
+		//CommonUtilities.applyLicense();
 
 		// region Generating Bubble Chart
 		// Generate bubble chart report in document processing format
@@ -12,11 +12,12 @@ public class MainClass {
 		// GenerateReport.generateBubbleChart("spreadsheet");
 		// Generate bubble chart report in presentation format
 		// GenerateReport.generateBubbleChart("presentation");
+		//GenerateReport.generateBubbleChart("email"); 
 		// endregion
 
 		// region Generating Bulleted List
 		// Generate bulleted list report in document processing format
-		 GenerateReport.generateBulletedList("document");
+		// GenerateReport.generateBulletedList("document");
 		// Generate bulleted list report in spreadsheet format
 		// GenerateReport.generateBulletedList("spreadsheet");
 		// Generate bulleted list report in presentation format
@@ -25,6 +26,7 @@ public class MainClass {
 		// GenerateReport.generateBulletedList("html");
 		// Generate bulleted list report in text format
 		// GenerateReport.generateBulletedList("txt");
+		//GenerateReport.generateBulletedList("email");
 		// endregion
 
 		// region Generating Chart report with Filtering, Grouping, and Ordering
@@ -37,6 +39,7 @@ public class MainClass {
 		// Generate chart with filtering grouping and ordering in presentation
 		// format
 		// GenerateReport.generateChartWithFilteringGroupingAndOrdering("presentation");
+		//GenerateReport.generateChartWithFilteringGroupingAndOrdering("email");
 		// endregion
 
 		// region Generating Common List Report
@@ -50,6 +53,7 @@ public class MainClass {
 		// GenerateReport.generateCommonList("html");
 		// Generate a common list report in text format 
 		// GenerateReport.generateCommonList("txt");
+		//GenerateReport.generateCommonList("email");
 		// endregion
 
 		// region Generating Common Master-Detail Report
@@ -63,6 +67,7 @@ public class MainClass {
 		 //GenerateReport.generateCommonMasterDetail("html");
 		// Generate common master detail report in text format
 		//GenerateReport.generateCommonMasterDetail("txt");
+		//GenerateReport.generateCommonMasterDetail("email");
 		// endregion
 
 		// region Generating In-Paragraph List Report
@@ -76,6 +81,7 @@ public class MainClass {
 		// GenerateReport.generateInParagraphList("html");
 		 // Geneerate in paragraph list report in text format
 		//GenerateReport.generateInParagraphList("txt");
+		//GenerateReport.generateInParagraphList("email");
 		// endregion
 
 		// region Generating In-Table with Alternate Content Report
@@ -90,6 +96,7 @@ public class MainClass {
 		// GenerateReport.generateInTableListWithAlternateContent("presentation");
 		// Generate in table list with alternate content report in html format
 		//GenerateReport.generateInTableListWithAlternateContent("html"); 
+		//GenerateReport.generateInTableListWithAlternateContent("email"); 
 		// endregion
 
 		// region Generating In-Table List with Filtering, Grouping, and
@@ -105,6 +112,7 @@ public class MainClass {
 		// GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("presentation");
 		// Generate in table list with filtering, grouping and order report in html format
 		//GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("html");
+		//GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("email");
 		// endregion
 
 		// region In-Table List with Highlighted Rows
@@ -118,6 +126,7 @@ public class MainClass {
 		// GenerateReport.generateInTableListWithHighlightedRows("presentation");
 		// Generate In-Table List with Highlighted Rows report in html format
 		//GenerateReport.generateInTableListWithHighlightedRows("html");
+		//GenerateReport.generateInTableListWithHighlightedRows("email");
 		// endregion
 
 		// region In-Table List
@@ -129,6 +138,7 @@ public class MainClass {
 		// GenerateReport.generateInTableList("presentation");
 		// Generate in table list report in html format
 		//GenerateReport.generateInTableList("html");
+		//GenerateReport.generateInTableList("email");
 		// endregion
 
 		// region In-Table Master-Detail
@@ -140,6 +150,7 @@ public class MainClass {
 		// GenerateReport.generateInTableMasterDetail("presentation");
 		// Generate In-Table Master-Detail report in html format
 		 //GenerateReport.generateInTableMasterDetail("html");
+		//GenerateReport.generateInTableMasterDetail("email");
 		// endregion
 
 		// region Multicolored Numbered List
@@ -151,6 +162,7 @@ public class MainClass {
 		// GenerateReport.generateMulticoloredNumberedList("presentation");
 		// Generate Multicolored numbered list report in html format
 		// GenerateReport.generateMulticoloredNumberedList("html");
+		//GenerateReport.generateMulticoloredNumberedList("email");
 		// endregion
 
 		// region Numbered List
@@ -164,6 +176,7 @@ public class MainClass {
 		//GenerateReport.generateNumberedList("html");
 		// Generate Numbered list report in text format
 		//GenerateReport.generateNumberedList("txt");
+		//GenerateReport.generateNumberedList("email");
 		// endregion
 
 		// region Pie Chart
@@ -173,6 +186,7 @@ public class MainClass {
 		// GenerateReport.generatePieChart("spreadsheet");
 		// Generate pie char report presentation format
 		// GenerateReport.generatePieChart("presentation");
+		//GenerateReport.generatePieChart("email");
 		// endregion
 
 		// region Scatter Chart
@@ -182,6 +196,7 @@ public class MainClass {
 		// GenerateReport.generateScatterChart("spreadsheet");
 		// Generate scatter chart report in presentation format
 		// GenerateReport.generateScatterChart("presentation");
+		//GenerateReport.generateScatterChart("email");
 		// endregion
 
 		// region single row
@@ -195,6 +210,7 @@ public class MainClass {
 		//GenerateReport.generateSingleRow("html");
 		// Generate single row in text format
 		//GenerateReport.generateSingleRow("txt");
+		//GenerateReport.generateSingleRow("email");
 		// endregion
 
 		// Region Barcode Insertion

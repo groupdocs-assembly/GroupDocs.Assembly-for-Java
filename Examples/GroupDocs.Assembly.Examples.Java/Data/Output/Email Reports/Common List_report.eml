@@ -1,0 +1,39 @@
+Message-ID: <402f0ae063e2450d9b63ceac526d0b8a>
+From: "Example Sender" <sender@example.com>
+Subject: Common List
+To: "Named Recipient" <named@example.com>, unnamed@example.com
+Cc: cc@example.com
+X-Unsent: 1
+Date: Thu, 10 Aug 2017 18:22:23 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--_=_NextPart1_0ec4b703-3fd5-407d-a0e1-405c1cff690a"
+
+This is a multi-part message in MIME format.
+
+----_=_NextPart1_0ec4b703-3fd5-407d-a0e1-405c1cff690a
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dkoi8-r" /><meta http-equiv=3D"Content-Style-Type" content=3D"text/css" /=
+><meta name=3D"generator" content=3D"Aspose=2EWords for Java 17=2E5" /><tit=
+le></title></head><body><div><p style=3D"margin-top:0pt; margin-bottom:0pt;=
+ font-size:11pt"><span style=3D"font-family:Calibri; color:#ff0000">NOTE: D=
+ynamic inserting of images is not supported yet=2E</span></p><p style=3D"ma=
+rgin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family=
+:Calibri; font-weight:bold">John Smith</span></p><p style=3D"margin-top:0pt=
+; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; fo=
+nt-weight:bold">Tony Anderson</span></p><p style=3D"margin-top:0pt; margin-=
+bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight=
+:bold">July James</span></p><p style=3D"margin-top:0pt; margin-bottom:0pt; =
+font-size:11pt"><span style=3D"font-family:Calibri">&#xa0;</span></p></div>=
+</body></html>
+----_=_NextPart1_0ec4b703-3fd5-407d-a0e1-405c1cff690a
+Content-Type: application/octet-stream; name="ExampleAttachment.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment
+
+U3ViamVjdDogQ29tbW9uIExpc3Q=
+----_=_NextPart1_0ec4b703-3fd5-407d-a0e1-405c1cff690a--
+

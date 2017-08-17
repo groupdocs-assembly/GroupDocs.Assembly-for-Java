@@ -144,5 +144,40 @@ public class DataStorage {
 		 return table;
 		//ExEnd:presentationData
 	}
+	
+	public static Object[] emailDataSourceObject(String srcDocument, String documentFormat){
+		//ExStart:emailDataSourceObject
+		Object[] dataSources;
+		if (documentFormat == ".eml" || documentFormat == ".msg") {
+			ArrayList<String> recipients = new ArrayList();
+			recipients.add("Named Recipient <named@example.com>");
+			recipients.add("unnamed@example.com");
+			
+			final int extensionLength = 4;
+			String subject = srcDocument.substring(0, srcDocument.length() - extensionLength);
+			Manager manager = new DataStorage().getManagers().iterator().next();
+			dataSources = new Object[] { new DataStorage(), "Example Sender <sender@example.com>", recipients,
+					"cc@example.com", subject, manager };
+
+		
+			return dataSources;
+		} else {
+			dataSources = new Object[] { new DataStorage() }; 
+			return dataSources;
+		}
+		//ExEnd:emailDataSourceObject
+	}
+	public static String[] emailDataSourceName(String documentFormat){ 
+		//ExStart:emailDataSourceName
+		String[] dataSourceNames;
+		if (documentFormat == ".eml" || documentFormat == ".msg") {
+			dataSourceNames = new String[] { null, "sender", "recipients", "cc", "subject", "manager" };
+			return dataSourceNames;
+		}else { 
+			dataSourceNames = new String[] { null };
+			return dataSourceNames;
+		}
+		//ExEnd:emailDataSourceName
+	}
 	//ExEnd:DataStorage
 }
