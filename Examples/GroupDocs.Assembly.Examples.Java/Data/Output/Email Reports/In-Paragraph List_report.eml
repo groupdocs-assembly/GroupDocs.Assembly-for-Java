@@ -1,0 +1,42 @@
+Message-ID: <7686e64124354c5887ef8c7acca9a4bc>
+From: "Example Sender" <sender@example.com>
+Subject: In-Paragraph List
+To: "Named Recipient" <named@example.com>, unnamed@example.com
+Cc: cc@example.com
+X-Unsent: 1
+Date: Thu, 10 Aug 2017 18:22:23 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--_=_NextPart1_af84208c-6152-4e6d-b5a2-ddf41d548c07"
+
+This is a multi-part message in MIME format.
+
+----_=_NextPart1_af84208c-6152-4e6d-b5a2-ddf41d548c07
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dkoi8-r" /><meta http-equiv=3D"Content-Style-Type" content=3D"text/css" /=
+><meta name=3D"generator" content=3D"Aspose=2EWords for Java 17=2E5" /><tit=
+le></title></head><body><div><p style=3D"margin-top:0pt; margin-bottom:0pt;=
+ font-size:11pt"><span style=3D"font-family:Calibri">We provide support for=
+ the following clients: </span><span style=3D"font-family:Calibri">A Compan=
+y</span><span style=3D"font-family:Calibri">, </span><span style=3D"font-fa=
+mily:Calibri">B Ltd=2E</span><span style=3D"font-family:Calibri">, </span><=
+span style=3D"font-family:Calibri">C &amp; D</span><span style=3D"font-fami=
+ly:Calibri">, </span><span style=3D"font-family:Calibri">E Corp=2E</span><s=
+pan style=3D"font-family:Calibri">, </span><span style=3D"font-family:Calib=
+ri">F &amp; Partners</span><span style=3D"font-family:Calibri">, </span><sp=
+an style=3D"font-family:Calibri">G &amp; Co=2E</span><span style=3D"font-fa=
+mily:Calibri">, </span><span style=3D"font-family:Calibri">H Group</span><s=
+pan style=3D"font-family:Calibri">, </span><span style=3D"font-family:Calib=
+ri">I &amp; Sons</span><span style=3D"font-family:Calibri">, </span><span s=
+tyle=3D"font-family:Calibri">J Ent=2E</span></p></div></body></html>
+----_=_NextPart1_af84208c-6152-4e6d-b5a2-ddf41d548c07
+Content-Type: application/octet-stream; name="ExampleAttachment.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment
+
+U3ViamVjdDogSW4tUGFyYWdyYXBoIExpc3Q=
+----_=_NextPart1_af84208c-6152-4e6d-b5a2-ddf41d548c07--
+

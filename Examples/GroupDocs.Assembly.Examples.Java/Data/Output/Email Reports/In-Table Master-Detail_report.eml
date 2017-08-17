@@ -1,0 +1,167 @@
+Message-ID: <ba975389d3b64458a778b84b43e388e8>
+From: "Example Sender" <sender@example.com>
+Subject: In-Table Master-Detail
+To: "Named Recipient" <named@example.com>, unnamed@example.com
+Cc: cc@example.com
+X-Unsent: 1
+Date: Thu, 10 Aug 2017 18:22:23 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--_=_NextPart1_02adb9c3-fb49-4cd1-a977-5b7e400fdf4e"
+
+This is a multi-part message in MIME format.
+
+----_=_NextPart1_02adb9c3-fb49-4cd1-a977-5b7e400fdf4e
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dkoi8-r" /><meta http-equiv=3D"Content-Style-Type" content=3D"text/css" /=
+><meta name=3D"generator" content=3D"Aspose=2EWords for Java 17=2E5" /><tit=
+le></title></head><body><div><table cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"border-collapse:collapse"><tr><td style=3D"width:304=2E55pt; border-t=
+op:1pt solid #999999; border-right:1pt solid #999999; border-left:1pt solid=
+ #999999; border-bottom:1=2E5pt solid #666666; padding-right:5=2E4pt; paddi=
+ng-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bot=
+tom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight:bo=
+ld">Manager/Client</span></p></td><td style=3D"width:233=2E85pt; border-top=
+:1pt solid #999999; border-right:1pt solid #999999; border-bottom:1=2E5pt s=
+olid #666666; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:t=
+op"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span st=
+yle=3D"font-family:Calibri; font-weight:bold">Contract Price</span></p></td=
+></tr><tr><td style=3D"width:304=2E55pt; border-right:1pt solid #999999; bo=
+rder-left:1pt solid #999999; border-bottom:1pt solid #999999; padding-right=
+:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:=
+0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri;=
+ font-weight:bold">John Smith</span></p></td><td style=3D"width:233=2E85pt;=
+ border-right:1pt solid #999999; border-bottom:1pt solid #999999; padding-r=
+ight:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-=
+top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Cali=
+bri">2300000=2E0</span></p></td></tr><tr><td style=3D"width:304=2E55pt; bor=
+der-right:1pt solid #999999; border-left:1pt solid #999999; border-bottom:1=
+pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-ali=
+gn:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><spa=
+n style=3D"font-family:Calibri; font-style:italic">&#xa0;</span><span style=
+=3D"font-family:Calibri; font-style:italic"> </span><span style=3D"font-fam=
+ily:Calibri; font-style:italic">A Company</span></p></td><td style=3D"width=
+:233=2E85pt; border-right:1pt solid #999999; border-bottom:1pt solid #99999=
+9; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p styl=
+e=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font=
+-family:Calibri">1200000=2E0</span></p></td></tr><tr><td style=3D"width:304=
+=2E55pt; border-right:1pt solid #999999; border-left:1pt solid #999999; bor=
+der-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; =
+vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-siz=
+e:11pt"><span style=3D"font-family:Calibri; font-style:italic">&#xa0;</span=
+><span style=3D"font-family:Calibri; font-style:italic"> </span><span style=
+=3D"font-family:Calibri; font-style:italic">B Ltd=2E</span></p></td><td sty=
+le=3D"width:233=2E85pt; border-right:1pt solid #999999; border-bottom:1pt s=
+olid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:t=
+op"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span st=
+yle=3D"font-family:Calibri">750000=2E0</span></p></td></tr><tr><td style=3D"=
+width:304=2E55pt; border-right:1pt solid #999999; border-left:1pt solid #99=
+9999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:=
+5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt;=
+ font-size:11pt"><span style=3D"font-family:Calibri; font-style:italic">&#x=
+a0;</span><span style=3D"font-family:Calibri; font-style:italic"> </span><s=
+pan style=3D"font-family:Calibri; font-style:italic">C &amp; D</span></p></=
+td><td style=3D"width:233=2E85pt; border-right:1pt solid #999999; border-bo=
+ttom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertic=
+al-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt=
+"><span style=3D"font-family:Calibri">350000=2E0</span></p></td></tr><tr><t=
+d style=3D"width:304=2E55pt; border-right:1pt solid #999999; border-left:1p=
+t solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; pa=
+dding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-=
+bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight=
+:bold">Tony Anderson</span></p></td><td style=3D"width:233=2E85pt; border-r=
+ight:1pt solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4=
+pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; m=
+argin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">12000=
+00=2E0</span></p></td></tr><tr><td style=3D"width:304=2E55pt; border-right:=
+1pt solid #999999; border-left:1pt solid #999999; border-bottom:1pt solid #=
+999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p=
+ style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"=
+font-family:Calibri; font-style:italic">&#xa0;</span><span style=3D"font-fa=
+mily:Calibri; font-style:italic"> </span><span style=3D"font-family:Calibri=
+; font-style:italic">E Corp=2E</span></p></td><td style=3D"width:233=2E85pt=
+; border-right:1pt solid #999999; border-bottom:1pt solid #999999; padding-=
+right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin=
+-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Cal=
+ibri">650000=2E0</span></p></td></tr><tr><td style=3D"width:304=2E55pt; bor=
+der-right:1pt solid #999999; border-left:1pt solid #999999; border-bottom:1=
+pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-ali=
+gn:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><spa=
+n style=3D"font-family:Calibri; font-style:italic">&#xa0;</span><span style=
+=3D"font-family:Calibri; font-style:italic"> </span><span style=3D"font-fam=
+ily:Calibri; font-style:italic">F &amp; Partners</span></p></td><td style=
+=3D"width:233=2E85pt; border-right:1pt solid #999999; border-bottom:1pt sol=
+id #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top=
+"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span styl=
+e=3D"font-family:Calibri">550000=2E0</span></p></td></tr><tr><td style=3D"w=
+idth:304=2E55pt; border-right:1pt solid #999999; border-left:1pt solid #999=
+999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=
+=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; =
+font-size:11pt"><span style=3D"font-family:Calibri; font-weight:bold">July =
+James</span></p></td><td style=3D"width:233=2E85pt; border-right:1pt solid =
+#999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-le=
+ft:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0=
+pt; font-size:11pt"><span style=3D"font-family:Calibri">800000=2E0</span></=
+p></td></tr><tr><td style=3D"width:304=2E55pt; border-right:1pt solid #9999=
+99; border-left:1pt solid #999999; border-bottom:1pt solid #999999; padding=
+-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margi=
+n-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Ca=
+libri; font-style:italic">&#xa0;</span><span style=3D"font-family:Calibri; =
+font-style:italic"> </span><span style=3D"font-family:Calibri; font-style:i=
+talic">G &amp; Co=2E</span></p></td><td style=3D"width:233=2E85pt; border-r=
+ight:1pt solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4=
+pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; m=
+argin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">35000=
+0=2E0</span></p></td></tr><tr><td style=3D"width:304=2E55pt; border-right:1=
+pt solid #999999; border-left:1pt solid #999999; border-bottom:1pt solid #9=
+99999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p =
+style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"=
+font-family:Calibri; font-style:italic">&#xa0;</span><span style=3D"font-fa=
+mily:Calibri; font-style:italic"> </span><span style=3D"font-family:Calibri=
+; font-style:italic">H Group</span></p></td><td style=3D"width:233=2E85pt; =
+border-right:1pt solid #999999; border-bottom:1pt solid #999999; padding-ri=
+ght:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-t=
+op:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calib=
+ri">250000=2E0</span></p></td></tr><tr><td style=3D"width:304=2E55pt; borde=
+r-right:1pt solid #999999; border-left:1pt solid #999999; border-bottom:1pt=
+ solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align=
+:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span =
+style=3D"font-family:Calibri; font-style:italic">&#xa0;</span><span style=
+=3D"font-family:Calibri; font-style:italic"> </span><span style=3D"font-fam=
+ily:Calibri; font-style:italic">I &amp; Sons</span></p></td><td style=3D"wi=
+dth:233=2E85pt; border-right:1pt solid #999999; border-bottom:1pt solid #99=
+9999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p s=
+tyle=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"f=
+ont-family:Calibri">100000=2E0</span></p></td></tr><tr><td style=3D"width:3=
+04=2E55pt; border-right:1pt solid #999999; border-left:1pt solid #999999; b=
+order-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt=
+; vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-s=
+ize:11pt"><span style=3D"font-family:Calibri; font-style:italic">&#xa0;</sp=
+an><span style=3D"font-family:Calibri; font-style:italic"> </span><span sty=
+le=3D"font-family:Calibri; font-style:italic">J Ent=2E</span></p></td><td s=
+tyle=3D"width:233=2E85pt; border-right:1pt solid #999999; border-bottom:1pt=
+ solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align=
+:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span =
+style=3D"font-family:Calibri">100000=2E0</span></p></td></tr><tr><td style=
+=3D"width:304=2E55pt; border-right:1pt solid #999999; border-left:1pt solid=
+ #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-l=
+eft:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:=
+0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight:bold">=
+Total:</span></p></td><td style=3D"width:233=2E85pt; border-right:1pt solid=
+ #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-l=
+eft:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:=
+0pt; font-size:11pt"><span style=3D"font-family:Calibri">4300000=2E0</span>=
+</p></td></tr></table><p style=3D"margin-top:0pt; margin-bottom:0pt; font-s=
+ize:11pt"><span style=3D"font-family:Calibri">&#xa0;</span></p></div></body=
+></html>
+----_=_NextPart1_02adb9c3-fb49-4cd1-a977-5b7e400fdf4e
+Content-Type: application/octet-stream; name="ExampleAttachment.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment
+
+U3ViamVjdDogSW4tVGFibGUgTWFzdGVyLURldGFpbA==
+----_=_NextPart1_02adb9c3-fb49-4cd1-a977-5b7e400fdf4e--
+

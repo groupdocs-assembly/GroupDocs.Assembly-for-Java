@@ -1,0 +1,68 @@
+Message-ID: <87513841a3c04b81b3f8bf9bf05c3bd2>
+From: "Example Sender" <sender@example.com>
+Subject: In-Table List with Filtering, Grouping, and Ordering
+To: "Named Recipient" <named@example.com>, unnamed@example.com
+Cc: cc@example.com
+X-Unsent: 1
+Date: Thu, 10 Aug 2017 18:22:23 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--_=_NextPart1_cbee7861-744d-45f2-9b4f-97d53ae35604"
+
+This is a multi-part message in MIME format.
+
+----_=_NextPart1_cbee7861-744d-45f2-9b4f-97d53ae35604
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dkoi8-r" /><meta http-equiv=3D"Content-Style-Type" content=3D"text/css" /=
+><meta name=3D"generator" content=3D"Aspose=2EWords for Java 17=2E5" /><tit=
+le></title></head><body><div><table cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"border-collapse:collapse"><tr><td style=3D"width:290=2E35pt; border-t=
+op:1pt solid #999999; border-right:1pt solid #999999; border-left:1pt solid=
+ #999999; border-bottom:1=2E5pt solid #666666; padding-right:5=2E4pt; paddi=
+ng-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bot=
+tom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight:bo=
+ld">Manager</span></p></td><td style=3D"width:193=2E6pt; border-top:1pt sol=
+id #999999; border-right:1pt solid #999999; border-bottom:1=2E5pt solid #66=
+6666; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p s=
+tyle=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"f=
+ont-family:Calibri; font-weight:bold">Contract Price</span></p></td></tr><t=
+r><td style=3D"width:290=2E35pt; border-right:1pt solid #999999; border-lef=
+t:1pt solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt=
+; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; mar=
+gin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-we=
+ight:bold">John Smith</span></p></td><td style=3D"width:193=2E6pt; border-r=
+ight:1pt solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4=
+pt; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; m=
+argin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">23000=
+00=2E0</span></p></td></tr><tr><td style=3D"width:290=2E35pt; border-right:=
+1pt solid #999999; border-left:1pt solid #999999; border-bottom:1pt solid #=
+999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p=
+ style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"=
+font-family:Calibri; font-weight:bold">July James</span></p></td><td style=
+=3D"width:193=2E6pt; border-right:1pt solid #999999; border-bottom:1pt soli=
+d #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"=
+><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=
+=3D"font-family:Calibri">800000=2E0</span></p></td></tr><tr><td style=3D"wi=
+dth:290=2E35pt; border-right:1pt solid #999999; border-left:1pt solid #9999=
+99; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=
+=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; =
+font-size:11pt"><span style=3D"font-family:Calibri; font-weight:bold">Tony =
+Anderson</span></p></td><td style=3D"width:193=2E6pt; border-right:1pt soli=
+d #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-=
+left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom=
+:0pt; font-size:11pt"><span style=3D"font-family:Calibri">1200000=2E0</span=
+></p></td></tr></table><p style=3D"margin-top:0pt; margin-bottom:0pt; font-=
+size:11pt"><span style=3D"font-family:Calibri">&#xa0;</span></p></div></bod=
+y></html>
+----_=_NextPart1_cbee7861-744d-45f2-9b4f-97d53ae35604
+Content-Type: application/octet-stream; name="ExampleAttachment.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment
+
+U3ViamVjdDogSW4tVGFibGUgTGlzdCB3aXRoIEZpbHRlcmluZywgR3JvdXBpbmcsIGFuZCBPcmRl
+cmluZw==
+----_=_NextPart1_cbee7861-744d-45f2-9b4f-97d53ae35604--
+

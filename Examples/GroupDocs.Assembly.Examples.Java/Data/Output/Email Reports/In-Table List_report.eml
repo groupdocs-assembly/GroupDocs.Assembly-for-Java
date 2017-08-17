@@ -1,0 +1,75 @@
+Message-ID: <c984834876ae4afb8f989ce0c78e559c>
+From: "Example Sender" <sender@example.com>
+Subject: In-Table List
+To: "Named Recipient" <named@example.com>, unnamed@example.com
+Cc: cc@example.com
+X-Unsent: 1
+Date: Thu, 10 Aug 2017 18:22:23 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--_=_NextPart1_a1e32402-0f25-4800-b0c8-ecef1699581a"
+
+This is a multi-part message in MIME format.
+
+----_=_NextPart1_a1e32402-0f25-4800-b0c8-ecef1699581a
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3Dkoi8-r" /><meta http-equiv=3D"Content-Style-Type" content=3D"text/css" /=
+><meta name=3D"generator" content=3D"Aspose=2EWords for Java 17=2E5" /><tit=
+le></title></head><body><div><table cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"border-collapse:collapse"><tr><td style=3D"width:241=2E95pt; border-t=
+op:1pt solid #999999; border-right:1pt solid #999999; border-left:1pt solid=
+ #999999; border-bottom:1=2E5pt solid #666666; padding-right:5=2E4pt; paddi=
+ng-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-bot=
+tom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight:bo=
+ld">Manager</span></p></td><td style=3D"width:242pt; border-top:1pt solid #=
+999999; border-right:1pt solid #999999; border-bottom:1=2E5pt solid #666666=
+; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=
+=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-=
+family:Calibri; font-weight:bold">Contract Price</span></p></td></tr><tr><t=
+d style=3D"width:241=2E95pt; border-right:1pt solid #999999; border-left:1p=
+t solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; pa=
+dding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-=
+bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight=
+:bold">John Smith</span></p></td><td style=3D"width:242pt; border-right:1pt=
+ solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; pad=
+ding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-b=
+ottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">2300000=2E0<=
+/span></p></td></tr><tr><td style=3D"width:241=2E95pt; border-right:1pt sol=
+id #999999; border-left:1pt solid #999999; border-bottom:1pt solid #999999;=
+ padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p style=
+=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-=
+family:Calibri; font-weight:bold">Tony Anderson</span></p></td><td style=3D"=
+width:242pt; border-right:1pt solid #999999; border-bottom:1pt solid #99999=
+9; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p styl=
+e=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font=
+-family:Calibri">1200000=2E0</span></p></td></tr><tr><td style=3D"width:241=
+=2E95pt; border-right:1pt solid #999999; border-left:1pt solid #999999; bor=
+der-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; =
+vertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-siz=
+e:11pt"><span style=3D"font-family:Calibri; font-weight:bold">July James</s=
+pan></p></td><td style=3D"width:242pt; border-right:1pt solid #999999; bord=
+er-bottom:1pt solid #999999; padding-right:5=2E4pt; padding-left:5=2E4pt; v=
+ertical-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size=
+:11pt"><span style=3D"font-family:Calibri">800000=2E0</span></p></td></tr><=
+tr><td style=3D"width:241=2E95pt; border-right:1pt solid #999999; border-le=
+ft:1pt solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4p=
+t; padding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; ma=
+rgin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-w=
+eight:bold">Total:</span></p></td><td style=3D"width:242pt; border-right:1p=
+t solid #999999; border-bottom:1pt solid #999999; padding-right:5=2E4pt; pa=
+dding-left:5=2E4pt; vertical-align:top"><p style=3D"margin-top:0pt; margin-=
+bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">4300000=2E0=
+</span></p></td></tr></table><p style=3D"margin-top:0pt; margin-bottom:0pt;=
+ font-size:11pt"><span style=3D"font-family:Calibri">&#xa0;</span></p></div=
+></body></html>
+----_=_NextPart1_a1e32402-0f25-4800-b0c8-ecef1699581a
+Content-Type: application/octet-stream; name="ExampleAttachment.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment
+
+U3ViamVjdDogSW4tVGFibGUgTGlzdA==
+----_=_NextPart1_a1e32402-0f25-4800-b0c8-ecef1699581a--
+
