@@ -279,6 +279,10 @@ public class MainClass {
 
 		// Html Reports
 		//GenerateReport.importingSpreadsheetIntoHtml("/Contracts Data.xlsx","/Html Templates/Importing Spreadsheet into HTML Document.html");
+
+		// Ability to remove selective chart series
+		GenerateReport.removeSelectiveChartSeries();
+
 	}
 
 }

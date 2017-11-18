@@ -1443,4 +1443,19 @@ public class GenerateReport {
 		// ExEnd:generateHtmlReport
 	}
 
+    public static void removeSelectiveChartSeries() {
+		// ExStart:removeSelectiveChartSeries
+		String srcDocument = "/Word Templates/Chart with Filtering, Grouping, and Ordering_RemoveIf.docx";
+		String docReport = "/Word Reports/Chart with Filtering, Grouping, and Ordering_report_RemoveIf.docx";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			//Set mode 1 or 2 to remove 1st or 2nd Quarter data
+			int mode = 1;
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), new Object[]{new DataStorage(), mode}, new String[]{"orders", "mode"});
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+		// ExEnd:removeSelectiveChartSeries
+    }
 }
