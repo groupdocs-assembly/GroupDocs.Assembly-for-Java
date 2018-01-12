@@ -1458,4 +1458,34 @@ public class GenerateReport {
 		}
 		// ExEnd:removeSelectiveChartSeries
     }
+
+	public static void dynamicChartAxisTitle() {
+		// ExStart:dynamicChartAxisTitle
+		String srcDocument = "/Word Templates/Chart with Filtering, Grouping, and Ordering_dynamic_title.docx";
+		String docReport = "/Word Reports/Chart with Filtering, Grouping, and Ordering_dynamic_title.docx";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			String title = "Total Order Quantity by Quarters";
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), new Object[]{new DataStorage(), title}, new String[]{"orders", "title"});
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+		// ExEnd:dynamicChartAxisTitle
+	}
+
+	public static void dynamicColor() {
+		// ExStart:dynamicChartAxisTitle
+		String srcDocument = "/Word Templates/In-Table List_BackgroundColor.docx";
+		String docReport = "/Word Reports/In-Table List_BackgroundColor.docx";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			String color = "red";
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), new Object[]{new DataStorage(), color}, new String[]{"orders", "color"});
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+		// ExEnd:dynamicChartAxisTitle
+	}
 }
