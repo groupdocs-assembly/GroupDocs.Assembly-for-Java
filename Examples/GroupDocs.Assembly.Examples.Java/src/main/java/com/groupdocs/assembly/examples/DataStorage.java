@@ -167,11 +167,45 @@ public class DataStorage {
 		}
 		//ExEnd:emailDataSourceObject
 	}
-	public static String[] emailDataSourceName(String documentFormat){ 
+	public static Object[] emailDataSourceObject(String srcDocument, String documentFormat,String title){
+		//ExStart:emailDataSourceObject
+		Object[] dataSources;
+		if (documentFormat == ".eml" || documentFormat == ".msg") {
+			ArrayList<String> recipients = new ArrayList();
+			recipients.add("Named Recipient <named@example.com>");
+			recipients.add("unnamed@example.com");
+
+			final int extensionLength = 4;
+			String subject = srcDocument.substring(0, srcDocument.length() - extensionLength);
+			Manager manager = new DataStorage().getManagers().iterator().next();
+			dataSources = new Object[] { new DataStorage(), "Example Sender <sender@example.com>", recipients,
+					"cc@example.com", subject, manager, title };
+
+
+			return dataSources;
+		} else {
+			dataSources = new Object[] { new DataStorage() };
+			return dataSources;
+		}
+		//ExEnd:emailDataSourceObject
+	}
+	public static String[] emailDataSourceName(String documentFormat){
 		//ExStart:emailDataSourceName
 		String[] dataSourceNames;
 		if (documentFormat == ".eml" || documentFormat == ".msg") {
-			dataSourceNames = new String[] { null, "sender", "recipients", "cc", "subject", "manager" };
+			dataSourceNames = new String[] { null, "sender", "recipients", "cc", "subject", "manager"};
+			return dataSourceNames;
+		}else {
+			dataSourceNames = new String[] { null };
+			return dataSourceNames;
+		}
+		//ExEnd:emailDataSourceName
+	}
+	public static String[] emailDataSourceName(String documentFormat, String title){
+		//ExStart:emailDataSourceName
+		String[] dataSourceNames;
+		if (documentFormat == ".eml" || documentFormat == ".msg") {
+			dataSourceNames = new String[] { null, "sender", "recipients", "cc", "subject", "manager", title };
 			return dataSourceNames;
 		}else { 
 			dataSourceNames = new String[] { null };

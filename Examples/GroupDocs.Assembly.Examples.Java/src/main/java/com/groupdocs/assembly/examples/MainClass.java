@@ -284,7 +284,16 @@ public class MainClass {
 		// GenerateReport.removeSelectiveChartSeries();
 
 		// Dynamic Chart Axis Title
-		// GenerateReport.dynamicChartAxisTitle();
+		//GenerateReport.dynamicChartAxisTitle();
+
+		//Dynamic Chart Axis Title in Presentation Document
+		//GenerateReport.dynamicChartAxisTitlePPt();
+
+		//Dynamic Chart Axis Title in Spreadsheet Document
+		//GenerateReport.dynamicChartAxisTitleSpreadSheet();
+
+		//Dynamic Chart Axis Title in Presentation Document
+		//GenerateReport.dynamicChartAxisTitleEmail();
 
 		// Dynamic Color in wordpressing document
 		// GenerateReport.dynamicColor();

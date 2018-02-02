@@ -1488,4 +1488,53 @@ public class GenerateReport {
 		}
 		// ExEnd:dynamicChartAxisTitle
 	}
+
+	public static void dynamicChartAxisTitlePPt() {
+		// ExStart:dynamicChartAxisTitlePPt
+		String srcDocument = "\\Presentation Templates\\Chart with Filtering, Grouping, and Ordering_Dynamic_Title.pptx";
+		String docReport = "\\Presentation Reports\\Chart with Filtering, Grouping, and Ordering_Dynamic_Title.pptx";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			String title = "Total Order Quantity by Quarters";
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), new Object[]{new DataStorage(), title}, new String[]{"orders", "title"});
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+		// ExEnd:dynamicChartAxisTitlePPt
+	}
+
+	public static void dynamicChartAxisTitleSpreadSheet() {
+		// ExStart:dynamicChartAxisTitleSpreadSheet
+		String srcDocument = "\\Spreadsheet Templates\\Chart with Filtering, Grouping, and Ordering_Dynamic_Title.xlsx";
+		String docReport = "\\Spreadsheet Reports\\Chart with Filtering, Grouping, and Ordering_Dynamic_Title.xlsx";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			String title = "Total Order Quantity by Quarters";
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), new Object[]{new DataStorage(), title}, new String[]{"orders", "title"});
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+		// ExEnd:dynamicChartAxisTitleSpreadSheet
+	}
+
+	public static void dynamicChartAxisTitleEmail() {
+		// ExStart:dynamicChartAxisTitleEmail
+		String srcDocument = "\\Email Templates\\Chart with Filtering, Grouping, and Ordering.msg";
+		String docReport = "\\Email Reports\\Chart with Filtering, Grouping, and Ordering_report.msg";
+		try{
+			String title = "Total Order Quantity by Quarters";
+			Object[] getDataSourceDetails = DataStorage.emailDataSourceObject("Chart with Filtering, Grouping, and Ordering.msg", ".msg",title );
+			String[] dataSourceNames = DataStorage.emailDataSourceName(".msg", title);
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), getDataSourceDetails,
+					dataSourceNames);
+		}catch ( Exception exp){
+			System.out.println("Exception: " + exp.getMessage());
+		}
+
+		// ExEnd:dynamicChartAxisTitleEmail
+	}
 }
