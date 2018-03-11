@@ -298,6 +298,16 @@ public class MainClass {
 		// Dynamic Color in wordpressing document
 		// GenerateReport.dynamicColor();
 
+        // Working With Table Row DataBands in Word Processing Document
+        // GenerateReport.workingWithTableRowDataBandsWord();
+
+        // Working With Table Row DataBands in SpreadSheet Document
+        // GenerateReport.workingWithTableRowDataBandsSpreadSheet();
+        // Working With Table Row DataBands in Presentation Document
+        // GenerateReport.workingWithTableRowDataBandsPresentation();
+        // Working With Table Row DataBands in Email Format
+        // GenerateReport.workingWithTableRowDataBandsEmail();
+
 
 	}
 

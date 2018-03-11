@@ -1186,16 +1186,18 @@ public class GenerateReport {
 	}
 
 	// Generate barcode
-	public static void addBarCodes(String documentFormat) {
+	public static void addBarCodes(String documentFormat) throws Exception {
 		if (documentFormat == "document") {
 			// ExStart:barcodedocument
-			String srcDocument = "/Word Templates/Barcode.docx";
-			String docReport = "/Word Reports/Barcode_report.docx";
+
+			//Setting up data set, Method DataStorage().getManagers().iterator().next()  is defined here : https://docs.groupdocs.com/display/assemblyjava/The+Business+Layer#TheBusinessLayer-DataStorageClass
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+			//Call AssembleDocument to generate   Report in open document format
+			assembler.assembleDocument("D:\\Word Templates\\Barcode.docx", "D:\\Word Reports\\Barcode_report.docx",  new DataStorage().getManagers().iterator().next(), "value");
+
 			try {
-				Manager manager = new DataStorage().getManagers().iterator().next();
-				DocumentAssembler assembler = new DocumentAssembler();
-				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
-						CommonUtilities.getOutPath(docReport), "854283", "value");
+
 			} catch (Exception exp) {
 				System.out.println("Exception: " + exp.getMessage());
 			}
@@ -1536,5 +1538,69 @@ public class GenerateReport {
 		}
 
 		// ExEnd:dynamicChartAxisTitleEmail
+	}
+
+	public static void workingWithTableRowDataBandsWord() throws Throwable {
+        String srcDocument = "/Word Templates/Working With Table Row Data Bands.docx";
+        String docReport = "/Word Reports/Working With Table Row Data Bands.docx";
+        try {
+            // Create an array of data source objects
+            Object[] dataSourceObj = new Object[] { new DataStorage(), DataStorage.excelData() };
+            // Create an array of data source string
+            String[] dataSourceString = new String[] { null, "ds" };
+            DocumentAssembler assembler = new DocumentAssembler();
+            assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+                    CommonUtilities.getOutPath(docReport), dataSourceObj, dataSourceString);
+        } catch (Exception exp) {
+            System.out.println("Exception: " + exp.getMessage());
+        }
+	}
+
+	public static void workingWithTableRowDataBandsSpreadSheet() throws Throwable {
+		String srcDocument = "/Spreadsheet Templates/Working With Table Row Data Bands.xlsx";
+		String docReport = "/Spreadsheet Reports/Working With Table Row Data Bands.xlsx";
+		try {
+			// Create an array of data source objects
+			Object[] dataSourceObj = new Object[] { new DataStorage(), DataStorage.excelData() };
+			// Create an array of data source string
+			String[] dataSourceString = new String[] { null, "ds" };
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), dataSourceObj, dataSourceString);
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
+
+	public static void workingWithTableRowDataBandsPresentation() throws Throwable {
+		String srcDocument = "/Presentation Templates/Working With Table Row Data Bands.pptx";
+		String docReport = "/Presentation Reports/Working With Table Row Data Bands.pptx";
+		try {
+			// Create an array of data source objects
+			Object[] dataSourceObj = new Object[] { new DataStorage(), DataStorage.excelData() };
+			// Create an array of data source string
+			String[] dataSourceString = new String[] { null, "ds" };
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), dataSourceObj, dataSourceString);
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
+
+	public static void workingWithTableRowDataBandsEmail() throws Throwable {
+		String srcDocument = "/Email Templates/Working With Table Row Data Bands.msg";
+		String docReport = "/Email Reports/Working With Table Row Data Bands.msg";
+		try {
+			// Create an array of data source objects
+			Object[] dataSourceObj = new Object[] { new DataStorage(), DataStorage.excelData() };
+			// Create an array of data source string
+			String[] dataSourceString = new String[] { null, "ds" };
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), dataSourceObj, dataSourceString);
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
 	}
 }
