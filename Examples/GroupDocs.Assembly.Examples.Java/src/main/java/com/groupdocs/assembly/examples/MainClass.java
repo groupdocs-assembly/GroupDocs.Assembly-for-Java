@@ -308,6 +308,8 @@ public class MainClass {
         // Working With Table Row DataBands in Email Format
         // GenerateReport.workingWithTableRowDataBandsEmail();
 
+		GenerateReport.usingStringTemplate();
+
 
 	}
 

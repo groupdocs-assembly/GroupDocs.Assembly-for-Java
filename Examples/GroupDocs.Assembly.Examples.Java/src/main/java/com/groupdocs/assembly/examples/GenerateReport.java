@@ -1,6 +1,10 @@
 package com.groupdocs.assembly.examples;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.Console;
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 import com.groupdocs.assembly.DocumentAssembler;
@@ -1600,6 +1604,25 @@ public class GenerateReport {
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(docReport), dataSourceObj, dataSourceString);
 		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
+
+	public static void usingStringTemplate() {
+		try{
+			DocumentAssembler assembler = new DocumentAssembler();
+			String sourceString = "<<[yourValue]>>";
+			byte[] sourceBytes = sourceString.getBytes();
+			byte[] targetBytes;
+			ByteArrayInputStream sourceStream = new ByteArrayInputStream(sourceBytes);
+			ByteArrayOutputStream targetStream = new ByteArrayOutputStream();
+			assembler.assembleDocument(sourceStream, targetStream, "Hello, World!", "yourValue");
+			targetBytes = targetStream.toByteArray();
+			String targetString = new String(targetBytes, StandardCharsets.UTF_8);
+			System.out.println(targetString);
+
+		}
+		catch (Exception exp){
 			System.out.println("Exception: " + exp.getMessage());
 		}
 	}
