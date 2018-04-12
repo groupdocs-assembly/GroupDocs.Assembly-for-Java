@@ -1,6 +1,6 @@
 # GroupDocs.Assembly for Java Examples
 
-This package contains Java Examples Solutions for [GroupDocs.Assembly for Java](https://www.groupdocs.com/products/assembly/java) and sample input templates used in the examples.
+This package contains Java Examples Solutions for [GroupDocs.Assembly for Java](https://products.groupdocs.com/assembly/java) and sample input templates used in the examples.
 
 <p align="center">
   <a title="Download complete GroupDocs.Assembly for Java source code" href="https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-java/archive/master.zip">
