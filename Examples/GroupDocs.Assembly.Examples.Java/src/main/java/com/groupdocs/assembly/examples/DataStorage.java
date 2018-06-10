@@ -20,20 +20,20 @@ public class DataStorage {
 
 	private static List<Manager> createManagers() {
 		return Arrays.asList(
-				createManager("John Smith", 37, new String[] { "A Company", "B Ltd.", "C & D" },
+				createManager("John Smith", 37,"red", new String[] { "A Company", "B Ltd.", "C & D" },
 						new float[] { 1200000, 750000, 350000 },
 						new Date[] { getDate(2015, 1, 1), getDate(2015, 4, 1), getDate(2015, 7, 1) }),
-				createManager("Tony Anderson", 37, new String[] { "E Corp.", "F & Partners" },
+				createManager("Tony Anderson", 37,"green", new String[] { "E Corp.", "F & Partners" },
 						new float[] { 650000, 550000 }, new Date[] { getDate(2015, 2, 1), getDate(2015, 8, 1) }),
-				createManager("July James", 37, new String[] { "G & Co.", "H Group", "I & Sons", "J Ent." },
+				createManager("July James", 37,"blue", new String[] { "G & Co.", "H Group", "I & Sons", "J Ent." },
 						new float[] { 350000, 250000, 100000, 100000 }, new Date[] { getDate(2015, 2, 1),
 								getDate(2015, 5, 1), getDate(2015, 7, 1), getDate(2015, 8, 1) }));
 	}
 
-	private static Manager createManager(String name, int age, String[] clientNames, float[] contractPrices,
+	private static Manager createManager(String name, int age,String color, String[] clientNames, float[] contractPrices,
 			Date[] contractDates) {
 		List<Contract> contracts = new ArrayList();
-		Manager manager = new Manager(name, age, contracts);
+		Manager manager = new Manager(name, age,color, contracts);
 
 		for (int i = 0; i < clientNames.length; i++)
 			contracts.add(new Contract(manager, new Client(clientNames[i]), contractPrices[i], contractDates[i]));

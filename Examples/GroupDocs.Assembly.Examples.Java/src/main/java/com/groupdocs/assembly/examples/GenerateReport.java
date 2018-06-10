@@ -1626,4 +1626,136 @@ public class GenerateReport {
 			System.out.println("Exception: " + exp.getMessage());
 		}
 	}
+
+	public static void dynamicChartSeriesColor() {
+		try {
+			String srcDocument = "/Word Templates/Dynamic Chart Series Color.docx";
+			String outDocument = "/Word Reports/Dynamic Chart Series Color.docx";
+			//Define series color
+			String color1 = "blue";
+			String color2 = "red";
+			// Set table column names to be extracted from the document.
+			DocumentTableOptions options = new DocumentTableOptions();
+			options.setFirstRowContainsColumnNames(true);
+
+			DocumentTable table = new DocumentTable(CommonUtilities.wordDataFile + "/Managers Data.docx", 1, options);
+
+			// NOTE: For non-Spreadsheet documents, the type of a document table
+			// column is always string by default.
+			assert table.getColumns().get("Total_Contract_Price").getType() == String.class;
+
+			// Change the column's type to double thus enabling to use arithmetic
+			// operations on values of the column
+			// such as summing in templates.
+			table.getColumns().get("Total_Contract_Price").setType(double.class);
+
+			// Pass DocumentTable as a data source.
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+                    CommonUtilities.getOutPath(outDocument), new Object[]{table,color1, color2}, new String[]{"managers","color1", "color2"});
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void dynamicChartSeriesColorSpreadsheet() {
+		try {
+			String srcDocument = "/Spreadsheet Templates/Dynamic Chart Series Color.xlsx";
+			String outDocument = "/Spreadsheet Reports/Dynamic Chart Series Color.xlsx";
+			//Define series color
+			String color1 = "blue";
+			String color2 = "red";
+			// Set table column names to be extracted from the document.
+			DocumentTableOptions options = new DocumentTableOptions();
+			options.setFirstRowContainsColumnNames(true);
+
+			DocumentTable table = new DocumentTable(CommonUtilities.wordDataFile + "/Managers Data.docx", 1, options);
+
+			// NOTE: For non-Spreadsheet documents, the type of a document table
+			// column is always string by default.
+			assert table.getColumns().get("Total_Contract_Price").getType() == String.class;
+
+			// Change the column's type to double thus enabling to use arithmetic
+			// operations on values of the column
+			// such as summing in templates.
+			table.getColumns().get("Total_Contract_Price").setType(double.class);
+
+			// Pass DocumentTable as a data source.
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(outDocument), new Object[]{table,color1, color2}, new String[]{"managers","color1", "color2"});
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void dynamicChartSeriesColorPresentation() {
+		try {
+			String srcDocument = "/Presentation Templates/Dynamic Chart Series Color.pptx";
+			String outDocument = "/Presentation Reports/Dynamic Chart Series Color.pptx";
+			//Define series color
+			String color1 = "blue";
+			String color2 = "red";
+			// Set table column names to be extracted from the document.
+			DocumentTableOptions options = new DocumentTableOptions();
+			options.setFirstRowContainsColumnNames(true);
+
+			DocumentTable table = new DocumentTable(CommonUtilities.wordDataFile + "/Managers Data.docx", 1, options);
+
+			// NOTE: For non-Spreadsheet documents, the type of a document table
+			// column is always string by default.
+			assert table.getColumns().get("Total_Contract_Price").getType() == String.class;
+
+			// Change the column's type to double thus enabling to use arithmetic
+			// operations on values of the column
+			// such as summing in templates.
+			table.getColumns().get("Total_Contract_Price").setType(double.class);
+
+			// Pass DocumentTable as a data source.
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(outDocument), new Object[]{table,color1, color2}, new String[]{"managers","color1", "color2"});
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void dynamicChartSeriesPointColor() {
+		String srcDocument = "/Word Templates/Dynamic Chart Point Series Color.docx";
+		String docReport = "/Word Reports/Dynamic Chart Point Series Color.docx";
+		try {
+			Manager manager = new DataStorage().getManagers().iterator().next();
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
+
+	public static void dynamicChartSeriesPointColorSpreadsheet() {
+		String srcDocument = "/Spreadsheet Templates/Dynamic Chart Point Series Color.xlsx";
+		String docReport = "/Spreadsheet Reports/Dynamic Chart Point Series Color.xlsx";
+		try {
+			Manager manager = new DataStorage().getManagers().iterator().next();
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
+
+	public static void dynamicChartSeriesPointColorPresentation() {
+		String srcDocument = "/Presentation Templates/Dynamic Chart Point Series Color.pptx";
+		String docReport = "/Presentation Reports/Dynamic Chart Point Series Color.pptx";
+		try {
+			Manager manager = new DataStorage().getManagers().iterator().next();
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
 }
