@@ -17,9 +17,11 @@ Directory | Description
 
 #  Resources
 
-+ **Website:** [www.groupdocs.com](http://www.groupdocs.com/)
++ **Website:** [www.groupdocs.com](https://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Assembly for Java](https://products.groupdocs.com/assembly/java)
-+ **Download:** [Download GroupDocs.Assembly for Java](https://downloads.groupdocs.com/assembly/java)
++ **API Reference:** [GroupDocs.Assembly for Java API Reference](https://apireference.groupdocs.com/java/assembly)
++ **Download:** [Download GroupDocs.Assembly for Java](https://artifact.groupdocs.com/repo/com/groupdocs/groupdocs-assembly/)
 + **Documentation:** [GroupDocs.Assembly for Java Documentation](https://docs.groupdocs.com/display/assemblyjava/Home)
-+ **Forum:** [GroupDocs.Assembly for Java Forum](https://forum.groupdocs.com/c/assembly)
++ **Free Support:** [GroupDocs.Assembly for Java Free Support Forum](https://forum.groupdocs.com/c/assembly)
++ **Paid Support:** [GroupDocs.Assembly for Java Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
 + **Blog:** [GroupDocs.Assembly for Java Blog](https://blog.groupdocs.com/category/groupdocs-assembly-product-family/)
