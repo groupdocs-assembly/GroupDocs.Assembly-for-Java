@@ -1,6 +1,6 @@
 # GroupDocs.Assembly for Java
 
-This package contains [Examples](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/tree/master/Examples) for [GroupDocs.Assembly for Java](https://www.groupdocs.com/products/assembly/java) that will help you in understanding the API's working and writing your own applications.
+This package contains [Examples](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/tree/master/Examples) for [GroupDocs.Assembly for Java](https://products.groupdocs.com/assembly/java) that will help you in understanding the API's working and writing your own applications.
 
 GroupDocs.Assembly for Java is designed to generate documents based on templates. In essence, the engine accepts a template document and some data, assembles data with the template document as per syntax defined by the template document and then, generates the output document in the same format as of the template document format.
 
@@ -18,7 +18,7 @@ Directory | Description
 #  Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com/)
-+ **Product Home:** [GroupDocs.Assembly for Java](https://www.groupdocs.com/products/assembly/java)
++ **Product Home:** [GroupDocs.Assembly for Java](https://products.groupdocs.com/assembly/java)
 + **Download:** [Download GroupDocs.Assembly for Java](https://downloads.groupdocs.com/assembly/java)
 + **Documentation:** [GroupDocs.Assembly for Java Documentation](https://docs.groupdocs.com/display/assemblyjava/Home)
 + **Forum:** [GroupDocs.Assembly for Java Forum](https://forum.groupdocs.com/c/assembly)
