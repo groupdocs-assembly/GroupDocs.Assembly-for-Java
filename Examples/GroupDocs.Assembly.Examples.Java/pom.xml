@@ -4,25 +4,24 @@
 	<groupId>GroupDocs.Assembly.Examples.Java</groupId>
 	<artifactId>GroupDocs.Assembly.Examples.Java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
+    <repositories>
+        <repository>
+            <id>GroupDocsJavaAPI</id>
+            <name>GroupDocs Java API</name>
+            <url>https://artifact.groupdocs.com/repo/</url>
+        </repository>
+    </repositories>
 	<dependencies>
-		<dependency>
-			<groupId>com.groupdocs</groupId>
-			<artifactId>groupdocs-assembly</artifactId>
-			<version>18.2</version>
-		</dependency>
+        <dependency>
+            <groupId>com.groupdocs</groupId>
+            <artifactId>groupdocs-assembly</artifactId>
+            <version>18.5</version>
+        </dependency>
 	</dependencies>
-        <repositories>
-		<repository>
-			<id>GroupDocsJavaAPI</id>
-			<name>GroupDocs Java API</name>
-			<url>http://artifact.groupdocs.com/repo/</url>
-		</repository>
-	</repositories>
 	<build>
 		<resources>
 			<resource>

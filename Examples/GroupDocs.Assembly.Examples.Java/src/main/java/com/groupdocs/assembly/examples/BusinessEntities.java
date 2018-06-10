@@ -5,10 +5,12 @@ import java.util.Date;
 public class BusinessEntities {
 	//ExStart:BusinessEntities
 	public static class Manager {
-		public Manager(String name, int age, Iterable<Contract> contracts) {
+		public Manager(String name, int age, String color,Iterable<Contract> contracts) {
 			mName = name;
 			mAge = age;
+			mColor = color;
 			mContracts = contracts;
+
 		}
 
 		public String getName() {
@@ -17,6 +19,10 @@ public class BusinessEntities {
 
 		public int getAge() {
 			return mAge;
+		}
+
+		public String getColor() {
+			return mColor;
 		}
 
 		public String getPhoto() throws Exception {
@@ -33,6 +39,7 @@ public class BusinessEntities {
 		private final String mName;
 		private final int mAge;
 		private final Iterable<Contract> mContracts;
+		private final String mColor;
 	}
 
 	public static class Contract {
