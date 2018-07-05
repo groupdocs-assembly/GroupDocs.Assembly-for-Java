@@ -4,7 +4,6 @@
 	<groupId>GroupDocs.Assembly.Examples.Java</groupId>
 	<artifactId>GroupDocs.Assembly.Examples.Java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
@@ -20,8 +19,12 @@
         <dependency>
             <groupId>com.groupdocs</groupId>
             <artifactId>groupdocs-assembly</artifactId>
+<<<<<<< HEAD
             <version>18.6</version>
 
+=======
+            <version>18.5</version>
+>>>>>>> 8a4e1b9c4038701f32bce73674d0099cf4994287
         </dependency>
 	</dependencies>
 	<build>
