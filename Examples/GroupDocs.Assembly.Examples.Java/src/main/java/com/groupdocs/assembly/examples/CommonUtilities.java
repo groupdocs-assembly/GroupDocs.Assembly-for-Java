@@ -12,7 +12,7 @@ import com.groupdocs.assembly.License;
 //ExStart:CommonUtilities
 public class CommonUtilities {
 	//ExStart:commonPaths
-	public static final String licensePath = "D:/GroupDocs.Assembly Product Family.lic";
+	public static final String licensePath = "D:/GroupDocs.Total.Java.lic";
 	public static final Path storagePath = getProjectBaseDir().resolve("Data/Storage/");
 	public static final Path outputPath = getProjectBaseDir().resolve("Data/Output/");
 	public static final Path image = getProjectBaseDir().resolve("Data/Images/");

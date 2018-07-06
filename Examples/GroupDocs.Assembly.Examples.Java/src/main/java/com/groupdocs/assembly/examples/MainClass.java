@@ -315,6 +315,8 @@ public class MainClass {
 		//GenerateReport.dynamicChartSeriesColorSpreadsheet();
 		// Sets colors of chart series dynamically based upon expressions presentation document
 		//GenerateReport.dynamicChartSeriesColorPresentation();
+		// Sets colors of chart series dynamically based upon expressions email document
+		//GenerateReport.dynamicChartSeriesColorEmail();
 
 		// Sets colors of chart series point color dynamically based upon expressions word processing document
 		//GenerateReport.dynamicChartSeriesPointColor();
@@ -322,6 +324,8 @@ public class MainClass {
 		//GenerateReport.dynamicChartSeriesPointColorSpreadsheet();
 		// Sets colors of chart series point color dynamically based upon expressions presentation document
 		//GenerateReport.dynamicChartSeriesPointColorPresentation();
+		// Sets colors of chart series point color dynamically based upon expressions email document
+		//GenerateReport.dynamicChartSeriesPointColorEmail();
 
 
 	}

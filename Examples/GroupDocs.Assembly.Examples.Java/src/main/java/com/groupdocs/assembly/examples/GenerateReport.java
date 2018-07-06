@@ -125,6 +125,7 @@ public class GenerateReport {
 			String srcDocument = "/Word Templates/Bubble Chart.docx";
 			String docReport = "/Word Reports/Bubble Chart_report.docx";
 			try {
+				DocumentAssembler.setUseReflectionOptimization(false);
 				DocumentAssembler assembler = new DocumentAssembler();
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
@@ -176,6 +177,7 @@ public class GenerateReport {
 			String srcDocument = "/Word Templates/Bulleted List.docx";
 			String docReport = "/Word Reports/Bulleted List_report.docx";
 			try {
+				DocumentAssembler.setUseReflectionOptimization(false);
 				DocumentAssembler assembler = new DocumentAssembler();
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
@@ -238,6 +240,7 @@ public class GenerateReport {
 			Object[] getDataSourceDetails = DataStorage.emailDataSourceObject("Bulleted List.msg", ".msg");
 			String[] dataSourceNames = DataStorage.emailDataSourceName(".msg");
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(docReport), getDataSourceDetails,
 					dataSourceNames);
@@ -252,6 +255,7 @@ public class GenerateReport {
 			String srcDocument = "/Word Templates/Chart with Filtering, Grouping, and Ordering.docx";
 			String docReport = "/Word Reports/Chart with Filtering, Grouping, and Ordering_report.docx";
 			try {
+				DocumentAssembler.setUseReflectionOptimization(false);
 				DocumentAssembler assembler = new DocumentAssembler();
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
@@ -289,6 +293,7 @@ public class GenerateReport {
 			String docReport = "/Email Reports/Chart with Filtering, Grouping, and Ordering_report.msg";
 			Object[] getDataSourceDetails = DataStorage.emailDataSourceObject("Chart with Filtering, Grouping, and Ordering.msg", ".msg");
 			String[] dataSourceNames = DataStorage.emailDataSourceName(".msg");
+			DocumentAssembler.setUseReflectionOptimization(false);
 			DocumentAssembler assembler = new DocumentAssembler();
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(docReport), getDataSourceDetails,
@@ -305,6 +310,7 @@ public class GenerateReport {
 			String docReport = "/Word Reports/Common List_report.docx";
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				DocumentAssembler assembler = new DocumentAssembler();
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
@@ -384,6 +390,7 @@ public class GenerateReport {
 			String docReport = "/Word Reports/Common Master-Detail_report.docx";
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				DocumentAssembler assembler = new DocumentAssembler();
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
@@ -463,6 +470,7 @@ public class GenerateReport {
 			String docReport = "/Word Reports/In-Paragraph List_report.docx";
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				DocumentAssembler assembler = new DocumentAssembler();
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
@@ -541,6 +549,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -606,6 +615,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -671,6 +681,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -736,6 +747,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -801,6 +813,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -866,6 +879,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -931,6 +945,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -1008,6 +1023,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -1061,6 +1077,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -1114,6 +1131,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), manager, "manager");
 			} catch (Exception exp) {
@@ -1197,6 +1215,7 @@ public class GenerateReport {
 			//Setting up data set, Method DataStorage().getManagers().iterator().next()  is defined here : https://docs.groupdocs.com/display/assemblyjava/The+Business+Layer#TheBusinessLayer-DataStorageClass
 			//Instantiate DocumentAssembler class
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			//Call AssembleDocument to generate   Report in open document format
 			assembler.assembleDocument("D:\\Word Templates\\Barcode.docx", "D:\\Word Reports\\Barcode_report.docx",  new DataStorage().getManagers().iterator().next(), "value");
 
@@ -1244,6 +1263,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -1262,6 +1282,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -1280,6 +1301,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.setOptions(DocumentAssemblyOptions.UPDATE_FIELDS_AND_FORMULAS);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
@@ -1313,6 +1335,7 @@ public class GenerateReport {
 			try {
 				Manager manager = new DataStorage().getManagers().iterator().next();
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 			} catch (Exception exp) {
@@ -1330,6 +1353,7 @@ public class GenerateReport {
 		try {
 			Manager manager = new DataStorage().getManagers().iterator().next();
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument), CommonUtilities.getOutPath(docReport),
 					DataStorage.excelData(), "contracts");
 		} catch (Exception exp) {
@@ -1383,6 +1407,7 @@ public class GenerateReport {
 				// Create an array of data source string
 				String[] dataSourceString = new String[] { null, "contracts" };
 				DocumentAssembler assembler = new DocumentAssembler();
+				DocumentAssembler.setUseReflectionOptimization(false);
 				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 						CommonUtilities.getOutPath(docReport), dataSourceObj, dataSourceString);
 			} catch (Exception exp) {
@@ -1455,6 +1480,7 @@ public class GenerateReport {
 		String docReport = "/Word Reports/Chart with Filtering, Grouping, and Ordering_report_RemoveIf.docx";
 		try {
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			//Set mode 1 or 2 to remove 1st or 2nd Quarter data
 			int mode = 1;
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
@@ -1471,6 +1497,7 @@ public class GenerateReport {
 		String docReport = "/Word Reports/Chart with Filtering, Grouping, and Ordering_dynamic_title.docx";
 		try {
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			String title = "Total Order Quantity by Quarters";
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(docReport), new Object[]{new DataStorage(), title}, new String[]{"orders", "title"});
@@ -1486,6 +1513,7 @@ public class GenerateReport {
 		String docReport = "/Word Reports/In-Table List_BackgroundColor.docx";
 		try {
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			String color = "red";
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(docReport), new Object[]{new DataStorage(), color}, new String[]{"orders", "color"});
@@ -1534,6 +1562,7 @@ public class GenerateReport {
 			Object[] getDataSourceDetails = DataStorage.emailDataSourceObject("Chart with Filtering, Grouping, and Ordering.msg", ".msg",title );
 			String[] dataSourceNames = DataStorage.emailDataSourceName(".msg", title);
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(docReport), getDataSourceDetails,
 					dataSourceNames);
@@ -1553,6 +1582,7 @@ public class GenerateReport {
             // Create an array of data source string
             String[] dataSourceString = new String[] { null, "ds" };
             DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
             assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
                     CommonUtilities.getOutPath(docReport), dataSourceObj, dataSourceString);
         } catch (Exception exp) {
@@ -1601,6 +1631,7 @@ public class GenerateReport {
 			// Create an array of data source string
 			String[] dataSourceString = new String[] { null, "ds" };
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(docReport), dataSourceObj, dataSourceString);
 		} catch (Exception exp) {
@@ -1648,6 +1679,7 @@ public class GenerateReport {
 			// operations on values of the column
 			// such as summing in templates.
 			table.getColumns().get("Total_Contract_Price").setType(double.class);
+			DocumentAssembler.setUseReflectionOptimization(false);
 
 			// Pass DocumentTable as a data source.
 			DocumentAssembler assembler = new DocumentAssembler();
@@ -1682,6 +1714,7 @@ public class GenerateReport {
 
 			// Pass DocumentTable as a data source.
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(outDocument), new Object[]{table,color1, color2}, new String[]{"managers","color1", "color2"});
 		} catch (Exception e) {
@@ -1713,8 +1746,39 @@ public class GenerateReport {
 
 			// Pass DocumentTable as a data source.
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(outDocument), new Object[]{table,color1, color2}, new String[]{"managers","color1", "color2"});
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void dynamicChartSeriesColorEmail() {
+		try {
+			String srcDocument = "/Email Templates/Dynamic Chart Series Color.msg";
+			String outDocument = "/Email Reports/Dynamic Chart Series Color.msg";
+			//Define series color
+			String color = "blue";
+			// Set table column names to be extracted from the document.
+			DocumentTableOptions options = new DocumentTableOptions();
+			options.setFirstRowContainsColumnNames(true);
+
+			DocumentTable table = new DocumentTable(CommonUtilities.wordDataFile + "/Managers Data.docx", 1, options);
+
+			// NOTE: For non-Spreadsheet documents, the type of a document table
+			// column is always string by default.
+			assert table.getColumns().get("Total_Contract_Price").getType() == String.class;
+
+			// Change the column's type to double thus enabling to use arithmetic
+			// operations on values of the column
+			// such as summing in templates.
+			table.getColumns().get("Total_Contract_Price").setType(double.class);
+
+			// Pass DocumentTable as a data source.
+			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(outDocument), new Object[]{table,color}, new String[]{"managers","color"});
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -1726,6 +1790,7 @@ public class GenerateReport {
 		try {
 			Manager manager = new DataStorage().getManagers().iterator().next();
 			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
 			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
 					CommonUtilities.getOutPath(docReport), new DataStorage(), null);
 		} catch (Exception exp) {
@@ -1758,4 +1823,21 @@ public class GenerateReport {
 			System.out.println("Exception: " + exp.getMessage());
 		}
 	}
+	public static void dynamicChartSeriesPointColorEmail() {
+		String srcDocument = "/Email Templates/Dynamic Chart Point Series Color.msg";
+		String docReport = "/Email Reports/Dynamic Chart Point Series Color.msg";
+		try {
+			Manager manager = new DataStorage().getManagers().iterator().next();
+			DocumentAssembler assembler = new DocumentAssembler();
+			DocumentAssembler.setUseReflectionOptimization(false);
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport), new DataStorage(), null);
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
+
+
+
+
 }
