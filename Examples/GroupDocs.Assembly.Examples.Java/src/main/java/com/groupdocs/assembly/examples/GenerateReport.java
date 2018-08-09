@@ -1838,6 +1838,108 @@ public class GenerateReport {
 	}
 
 
+		// Insert Hyperlink Dynamically in Word Document
+		// Feature is supported by version 18.7 or greater
+		public static void dynamicHyperlinkInsertionWord()
+		{
+			//setting up source 
+			String strDocumentTemplate = "/Word Templates/Dynamic Hyperlink.docx";
+			//Setting up destination 
+			String strDocumentReport = "/Word Reports/Dynamic Hyperlink.docx";
+			//Setting up Uri Expression
+			String uriExpression = "https://www.groupdocs.com/";
+			//Setting up Display Text Expression
+			String displayTextExpression = "GroupDocs";
+			try
+			{	
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				//Call AssembleDocument to assemble document 
+				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate), CommonUtilities.getOutPath(strDocumentReport), 
+				new Object[] { uriExpression, displayTextExpression },new String[] { "uriExpression", "displayTextExpression" });
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+		}
+		// Insert Hyperlink Dynamically in Email Document
+		// Feature is supported by version 18.7 or greater
+		public static void dynamicHyperlinkInsertionEmail()
+		{
+			//setting up source 
+			String strDocumentTemplate = "/Email Templates/Dynamic Hyperlink.msg";
+			//Setting up destination 
+			String strDocumentReport = "/Email Reports/Dynamic Hyperlink.msg";
+			//Setting up Uri Expression
+			String uriExpression = "https://www.groupdocs.com/";
+			//Setting up Display Text Expression
+			String displayTextExpression = "GroupDocs";
+			try
+			{
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				//Call AssembleDocument to assemble document 
+				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate), CommonUtilities.getOutPath(strDocumentReport), 
+				new Object[] { uriExpression, displayTextExpression }, new String[] { "uriExpression", "displayTextExpression" });
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+		}
+		// Insert Hyperlink Dynamically in Spreadsheet Document
+		// Feature is supported by version 18.7 or greater
+		public static void dynamicHyperlinkInsertionSpreadsheet()
+		{
+			//setting up source 
+			String strDocumentTemplate = "/Spreadsheet Templates/Dynamic Hyperlink.xlsx";
+			//Setting up destination 
+			String strDocumentReport = "/Spreadsheet Reports/Dynamic Hyperlink.xlsx";
+			//Setting up Uri Expression
+			String uriExpression = "https://www.groupdocs.com/";
+			//Setting up Display Text Expression
+			String displayTextExpression = "GroupDocs";
+			try
+			{
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				//Call AssembleDocument to assemble document 
+				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate), CommonUtilities.getOutPath(strDocumentReport), 
+				new Object[] { uriExpression, displayTextExpression }, new String[] { "uriExpression", "displayTextExpression" });
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+		}
+		/// Insert Hyperlink Dynamically in Presentaion Document
+		/// Feature is supported by version 18.7 or greater
+		public static void dynamicHyperlinkInsertionPresentation()
+		{
+			//setting up source 
+			String strDocumentTemplate = "/Presentation Templates/Dynamic Hyperlink.pptx";
+			//Setting up destination 
+			String strDocumentReport = "/Presentation Reports/Dynamic Hyperlink.pptx";
+			//Setting up Uri Expression
+			String uriExpression = "https://www.groupdocs.com/";
+			//Setting up Display Text Expression
+			String displayTextExpression = "GroupDocs";
+			try
+			{
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				//Call AssembleDocument to assemble document 
+				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate), CommonUtilities.getOutPath(strDocumentReport), 
+				new Object[] { uriExpression, displayTextExpression }, new String[] { "uriExpression", "displayTextExpression" });
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+		}
+
+
 
 
 }
