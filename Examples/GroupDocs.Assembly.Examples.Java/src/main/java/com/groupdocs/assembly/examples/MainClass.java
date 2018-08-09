@@ -327,6 +327,15 @@ public class MainClass {
 		// Sets colors of chart series point color dynamically based upon expressions email document
 		//GenerateReport.dynamicChartSeriesPointColorEmail();
 
+		//Insert Hyperlink Dynamically in Word Document
+		//GenerateReport.dynamicHyperlinkInsertionWord();
+		//Insert Hyperlink Dynamically in Presentation Document
+		//GenerateReport.dynamicHyperlinkInsertionPresentation();
+		//Insert Hyperlink Dynamically in Spreadsheet Document
+		//GenerateReport.dynamicHyperlinkInsertionSpreadsheet();
+		//Insert Hyperlink Dynamically in Email Document
+		//GenerateReport.dynamicHyperlinkInsertionEmail();
+
 
 	}
 
