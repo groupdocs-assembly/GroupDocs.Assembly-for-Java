@@ -4,15 +4,20 @@ public class MainClass {
 	public static void main(String[] args) throws Throwable {
 		// Apply license
 		//CommonUtilities.applyLicense();
+		//Change target file format using the file extension
+		GenerateReport.changeTargetFileFormat();
+
+		//Change target file format using explicit specifying
+		GenerateReport.changeTargetFileFormatUsingExplicitSpecifying();
 
 		// region Generating Bubble Chart
 		// Generate bubble chart report in document processing format
-		 //GenerateReport.generateBubbleChart("document");
+		 GenerateReport.generateBubbleChart("document");
 		// Generate bubble chart report in spreadsheet format
 		// GenerateReport.generateBubbleChart("spreadsheet");
 		// Generate bubble chart report in presentation format
 		// GenerateReport.generateBubbleChart("presentation");
-		//GenerateReport.generateBubbleChart("email"); 
+		// GenerateReport.generateBubbleChart("email"); 
 		// endregion
 
 		// region Generating Bulleted List
