@@ -2012,7 +2012,56 @@ public class GenerateReport {
 			}
 		}
 
+	/**
+	 * Supports removal of paragraphs becoming empty after template syntax tags are removed or replaced with empty values for Word Processing documents
+	 * This feature is supported by version 18.10 or higher
+	 */
+    public static void emptyParagraphInWordProcessing() {
+		String srcDocument = "/Word Templates/Empty Paragraph.docx";
+		String docReport = "/Word Reports/Empty Paragraph.docx";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.setOptions(DocumentAssemblyOptions.REMOVE_EMPTY_PARAGRAPHS);
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+										CommonUtilities.getOutPath(docReport),
+										new DataSourceInfo("dummy", "dummy"));
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+    }
+	/**
+	 * Supports removal of paragraphs becoming empty after template syntax tags are removed or replaced with empty values for Presentation documents
+	 * This feature is supported by version 18.10 or higher
+	 */
+	public static void emptyParagraphInPresentation() {
+		String srcDocument = "/Presentation Templates/Empty Paragraph.pptx";
+		String docReport = "/Presentation Reports/Empty Paragraph.pptx";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.setOptions(DocumentAssemblyOptions.REMOVE_EMPTY_PARAGRAPHS);
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport),
+					new DataSourceInfo("dummy", "dummy"));
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
 
-
-
+	/**
+	 * Supports removal of paragraphs becoming empty after template syntax tags are removed or replaced with empty values for Email documents
+	 * This feature is supported by version 18.10 or higher
+	 */
+	public static void emptyParagraphInEmail() {
+		String srcDocument = "/Email Templates/Empty Paragraph.msg";
+		String docReport = "/Email Reports/Empty Paragraph.msg";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.setOptions(DocumentAssemblyOptions.REMOVE_EMPTY_PARAGRAPHS);
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport),
+					new DataSourceInfo("dummy", "dummy"));
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
 }

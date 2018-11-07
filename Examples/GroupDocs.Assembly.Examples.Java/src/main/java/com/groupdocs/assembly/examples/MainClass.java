@@ -5,14 +5,14 @@ public class MainClass {
 		// Apply license
 		//CommonUtilities.applyLicense();
 		//Change target file format using the file extension
-		GenerateReport.changeTargetFileFormat();
+		//GenerateReport.changeTargetFileFormat();
 
 		//Change target file format using explicit specifying
-		GenerateReport.changeTargetFileFormatUsingExplicitSpecifying();
+		//GenerateReport.changeTargetFileFormatUsingExplicitSpecifying();
 
 		// region Generating Bubble Chart
 		// Generate bubble chart report in document processing format
-		 GenerateReport.generateBubbleChart("document");
+		// GenerateReport.generateBubbleChart("document");
 		// Generate bubble chart report in spreadsheet format
 		// GenerateReport.generateBubbleChart("spreadsheet");
 		// Generate bubble chart report in presentation format
@@ -341,6 +341,14 @@ public class MainClass {
 		//Insert Hyperlink Dynamically in Email Document
 		//GenerateReport.dynamicHyperlinkInsertionEmail();
 
+		//Working with word processing document
+		//GenerateReport.emptyParagraphInWordProcessing();
+
+		//Working with presentation document
+		//GenerateReport.emptyParagraphInPresentation();
+
+		//Working with email documents
+		//GenerateReport.emptyParagraphInEmail();
 
 	}
 
