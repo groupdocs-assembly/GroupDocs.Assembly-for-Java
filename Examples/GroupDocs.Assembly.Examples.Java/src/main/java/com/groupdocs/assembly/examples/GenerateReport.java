@@ -2064,4 +2064,35 @@ public class GenerateReport {
 			System.out.println("Exception: " + exp.getMessage());
 		}
 	}
+
+	/**
+	 * This method inserts nested external documents in word document
+	 */
+    public static void insertNestedExternalDocumentsInWord() {
+
+		String srcDocument = "/Word Templates/Nested External Document.docx";
+		String docReport = "/Word Reports/Nested External Document.docx";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport),new DataSourceInfo( new DataStorage(), null));
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+    }
+	/**
+	 * This method inserts nested external documents in email document
+	 */
+	public static void insertNestedExternalDocumentsInEmail() {
+
+		String srcDocument = "/Email Templates/Nested External Document.msg";
+		String docReport = "/Email Reports/Nested External Document.msg";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport),new DataSourceInfo( new DataStorage(), null));
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
 }

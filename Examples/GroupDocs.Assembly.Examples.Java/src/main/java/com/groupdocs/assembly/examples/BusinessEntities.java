@@ -31,6 +31,9 @@ public class BusinessEntities {
 		public String getOuterDoc() throws Exception{
 			return CommonUtilities.outerDoc + "/OuterDoc.docx";
 		}
+		public String getNestedOuterDoc() throws Exception{
+			return CommonUtilities.outerDoc + "/NestedOuterDocument.docx";
+		}
 
 		public Iterable<Contract> getContracts() {
 			return mContracts;
