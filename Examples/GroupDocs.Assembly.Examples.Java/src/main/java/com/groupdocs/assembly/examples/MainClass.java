@@ -4,6 +4,7 @@ public class MainClass {
 	public static void main(String[] args) throws Throwable {
 		// Apply license
 		//CommonUtilities.applyLicense();
+		
 		//Change target file format using the file extension
 		//GenerateReport.changeTargetFileFormat();
 
@@ -234,7 +235,14 @@ public class MainClass {
 
 		// retion outer document insertion
 		// Generate report with outer document insertion
-		// GenerateReport.outerDocumentInsertion("document");
+		//GenerateReport.outerDocumentInsertion("document");
+
+		//Insert nested external output documents in word
+		//GenerateReport.insertNestedExternalDocumentsInWord();
+
+		//Insert nested external output documents in email
+		//GenerateReport.insertNestedExternalDocumentsInEmail();
+
 		// endregion
 
 		// region update field
