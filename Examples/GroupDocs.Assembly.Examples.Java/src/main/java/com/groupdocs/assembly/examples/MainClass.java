@@ -369,7 +369,7 @@ public class MainClass {
          //GenerateReport.tableCellsMergingInSpreadsheets();
 
          // Merging table cells dynamically in Email
-          GenerateReport.tableCellsMergingInEmails();
+          //GenerateReport.tableCellsMergingInEmails();
         
 
 	}
