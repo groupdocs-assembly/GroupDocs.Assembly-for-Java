@@ -3,7 +3,7 @@ package com.groupdocs.assembly.examples;
 public class MainClass {
 	public static void main(String[] args) throws Throwable {
 		// Apply license
-		//CommonUtilities.applyLicense();
+		CommonUtilities.applyLicense();
 		
 		//Change target file format using the file extension
 		//GenerateReport.changeTargetFileFormat();
@@ -137,7 +137,7 @@ public class MainClass {
 
 		// region In-Table List
 		// Generate in table lsit report in document format
-		// GenerateReport.generateInTableList("document");
+		 //GenerateReport.generateInTableList("document");
 		// Generate in table list report in spreadsheet format
 		// GenerateReport.generateInTableList("spreadsheet");
 		// Generate in table list report in presentation format
@@ -192,7 +192,7 @@ public class MainClass {
 		// GenerateReport.generatePieChart("spreadsheet");
 		// Generate pie char report presentation format
 		// GenerateReport.generatePieChart("presentation");
-		//GenerateReport.generatePieChart("email");
+		// GenerateReport.generatePieChart("email");
 		// endregion
 
 		// region Scatter Chart
@@ -202,7 +202,7 @@ public class MainClass {
 		// GenerateReport.generateScatterChart("spreadsheet");
 		// Generate scatter chart report in presentation format
 		// GenerateReport.generateScatterChart("presentation");
-		//GenerateReport.generateScatterChart("email");
+		// GenerateReport.generateScatterChart("email");
 		// endregion
 
 		// region single row
@@ -213,10 +213,10 @@ public class MainClass {
 		// Generate single row in presentation format
 		// GenerateReport.generateSingleRow("presentation");
 		// Generate single row in html format
-		//GenerateReport.generateSingleRow("html");
+		// GenerateReport.generateSingleRow("html");
 		// Generate single row in text format
-		//GenerateReport.generateSingleRow("txt");
-		//GenerateReport.generateSingleRow("email");
+		// GenerateReport.generateSingleRow("txt");
+		// GenerateReport.generateSingleRow("email");
 		// endregion
 
 		// Region Barcode Insertion
@@ -357,6 +357,20 @@ public class MainClass {
 
 		//Working with email documents
 		//GenerateReport.emptyParagraphInEmail();
+		 
+		
+         // Merging table cells dynamically in Word Processing
+         //GenerateReport.tableCellsMergingInWordProcessing();
+
+         // Merging table cells dynamically in Presentations
+         //GenerateReport.tableCellsMergingInPresentations();
+
+         // Merging table cells dynamically in Spreadsheets
+         //GenerateReport.tableCellsMergingInSpreadsheets();
+
+         // Merging table cells dynamically in Email
+          GenerateReport.tableCellsMergingInEmails();
+        
 
 	}
 

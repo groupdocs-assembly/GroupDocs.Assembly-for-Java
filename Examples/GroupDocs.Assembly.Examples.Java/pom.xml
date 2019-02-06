@@ -19,7 +19,7 @@
         <dependency>
             <groupId>com.groupdocs</groupId>
             <artifactId>groupdocs-assembly</artifactId>
-            <version>18.12</version>
+            <version>19.1</version>
         </dependency>
 	</dependencies>
 	<build>

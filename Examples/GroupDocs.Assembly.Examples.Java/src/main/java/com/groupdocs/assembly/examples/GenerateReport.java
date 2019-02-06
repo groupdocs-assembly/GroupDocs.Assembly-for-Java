@@ -2095,4 +2095,120 @@ public class GenerateReport {
 			System.out.println("Exception: " + exp.getMessage());
 		}
 	}
+	/**
+	 * Table Cell Merging in Word Processing Documents
+	 * Features is supported by version 19.1 or greater
+	 */
+	public static void tableCellsMergingInWordProcessing()
+    {
+		//ExStart:tableCellsMergingInWordProcessing
+        //Setting up source document template
+         String strDocumentTemplate = "/Word Templates/Merging Cells Dynamically.docx";
+        //Setting up destination PDF report 
+         String strDocumentReport = "/PDF Reports/Merging Cells Dynamically Report.pdf";
+        try
+        {
+            //Instantiate DocumentAssembler class
+            DocumentAssembler assembler = new DocumentAssembler();
+            //Create sample data source object
+            Manager manager = new DataStorage().getManagers().iterator().next();
+            //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
+            assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+            		CommonUtilities.getOutPath(strDocumentReport), new LoadSaveOptions(FileFormat.PDF), new DataSourceInfo( manager, "manager"));
+        }
+        catch (Exception exp)
+        {
+        	System.out.println("Exception: " + exp.getMessage());
+        }
+        //ExEnd:tableCellsMergingInWordProcessing
+    }
+	/**
+	 * Table Cell Merging in Presentations
+	 * Features is supported by version 19.1 or greater
+	 */
+	public static void tableCellsMergingInPresentations()
+    {
+		//ExStart:tableCellsMergingInPresentations
+        //Setting up source document template
+         String strDocumentTemplate = "/Presentation Templates/Merging Cells Dynamically.pptx";
+        //Setting up destination PDF report 
+         String strDocumentReport = "/PDF Reports/Merging Cells Dynamically Report.pdf";
+        try
+        {
+            //Instantiate DocumentAssembler class
+            DocumentAssembler assembler = new DocumentAssembler();
+            //Create sample data source object
+            Manager manager = new DataStorage().getManagers().iterator().next();
+            //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
+            assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+            		CommonUtilities.getOutPath(strDocumentReport), new LoadSaveOptions(FileFormat.PDF), new DataSourceInfo( manager, "manager"));
+        }
+        catch (Exception exp)
+        {
+        	System.out.println("Exception: " + exp.getMessage());
+        }
+        //ExEnd:tableCellsMergingInPresentations
+    }
+	/**
+	 * Table Cell Merging in Spreadsheets
+	 * Features is supported by version 19.1 or greater
+	 */
+	public static void tableCellsMergingInSpreadsheets()
+    {
+		//ExStart:tableCellsMergingInSpreadsheets
+        //Setting up source document template
+         String strDocumentTemplate = "/Spreadsheet Templates/Merging Cells Dynamically.xlsx";
+        //Setting up destination PDF report 
+         String strDocumentReport = "/PDF Reports/Merging Cells Dynamically Report.pdf";
+        try
+        {
+            //Instantiate DocumentAssembler class
+            DocumentAssembler assembler = new DocumentAssembler();
+            //Create sample data source object
+            Manager manager = new DataStorage().getManagers().iterator().next();
+            //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
+            assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+            		CommonUtilities.getOutPath(strDocumentReport), new LoadSaveOptions(FileFormat.PDF), new DataSourceInfo( manager, "manager"));
+        }
+        catch (Exception exp)
+        {
+        	System.out.println("Exception: " + exp.getMessage());
+        }
+        //ExEnd:tableCellsMergingInSpreadsheets
+    }
+	/**
+	 * Table Cell Merging in Emails
+	 * Features is supported by version 19.1 or greater
+	 */
+	public static void tableCellsMergingInEmails()
+    {
+		//ExStart:tableCellsMergingInSpreadsheets
+        //Setting up source document template
+         String strDocumentTemplate = "/Email Templates/Merging Cells Dynamically.msg";
+        //Setting up destination PDF report 
+         String strDocumentReport = "/Email Reports/Merging Cells Dynamically Report.msg";
+        try
+        {
+            //Instantiate DocumentAssembler class
+            DocumentAssembler assembler = new DocumentAssembler();
+            //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
+           			
+            EmailDataSourcesObjects getDataSourceDetails = DataStorage.emailDataSourceObject("Merging Cells Dynamically.msg", ".msg");
+			EmailDataSourcesNames dataSourceNames = DataStorage.emailDataSourceName(".msg");
+			assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+				CommonUtilities.getOutPath(strDocumentReport),
+				new DataSourceInfo(getDataSourceDetails.getDataSource(), dataSourceNames.getDataSource()),
+				new DataSourceInfo(getDataSourceDetails.getSender(), dataSourceNames.getSender()),
+				new DataSourceInfo(getDataSourceDetails.getRecipients(), dataSourceNames.getRecipients()),
+				new DataSourceInfo(getDataSourceDetails.getCC(), dataSourceNames.getCC()),
+				new DataSourceInfo(getDataSourceDetails.getSubject(), dataSourceNames.getSubject()),
+				new DataSourceInfo(getDataSourceDetails.getManager(), dataSourceNames.getManager()));
+        }
+        catch (Exception exp)
+        {
+        	System.out.println("Exception: " + exp.getMessage());
+        }
+        //ExEnd:tableCellsMergingInSpreadsheets
+    }
+
 }
