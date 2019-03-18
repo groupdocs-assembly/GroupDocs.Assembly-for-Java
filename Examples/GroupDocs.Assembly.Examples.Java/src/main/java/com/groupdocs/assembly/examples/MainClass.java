@@ -370,8 +370,9 @@ public class MainClass {
 
          // Merging table cells dynamically in Email
           //GenerateReport.tableCellsMergingInEmails();
-        
-
+		
+        //Demonstrate how to enable in-line syntax errors in the template without throw any exception
+		//GenerateReport.demoInLineSyntaxError();
 	}
 
 }

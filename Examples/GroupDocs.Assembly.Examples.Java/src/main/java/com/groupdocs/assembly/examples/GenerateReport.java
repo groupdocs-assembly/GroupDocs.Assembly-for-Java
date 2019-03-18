@@ -2210,5 +2210,46 @@ public class GenerateReport {
         }
         //ExEnd:tableCellsMergingInSpreadsheets
     }
+	/**
+	 * Table Cell Merging in Word Processing Documents
+	 * Features is supported by version 19.1 or greater
+	 */
+	public static void demoInLineSyntaxError()
+    {
+		 try
+	        {
+		///ExStart:DemoInLineSyntaxError_19.3
+        //Setting up source document template
+         String strDocumentTemplate = "/Word Templates/Inline Error Demo.docx";
+        //Setting up destination PDF report 
+         String strDocumentReport = "/PDF Reports/Inline Error Demo.pdf.pdf";
+       
+            //Instantiate DocumentAssembler class
+            DocumentAssembler assembler = new DocumentAssembler();
+            //Enable the In-line error messaging
+            assembler.setOptions(DocumentAssemblyOptions.INLINE_ERROR_MESSAGES);
+            //Create sample data source object
+            Manager manager = new DataStorage().getManagers().iterator().next();
+            
+            //Call AssembleDocument to show the demo Report and save the report in PDF format
+            //The AssembleDocument will return a boolean value to indicate the success or failed with inline error.
+            if(assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+            		CommonUtilities.getOutPath(strDocumentReport), new LoadSaveOptions(FileFormat.PDF), new DataSourceInfo( manager, "manager")))
+            {
+            	System.out.println("No error found in the template.");
+            }
+            else
+            {
+            	System.out.println("Do something with a report containing a template syntax error.");
+            }
+          //ExEnd:tableCellsMergingInWordProcessing
+            
+        }
+        catch (Exception exp)
+        {
+        	System.out.println("Exception: " + exp.getMessage());
+        }
+        
+    }
 
 }
