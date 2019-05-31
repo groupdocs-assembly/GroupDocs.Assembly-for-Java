@@ -13,6 +13,7 @@ import com.groupdocs.assembly.License;
 public class CommonUtilities {
 	//ExStart:commonPaths
 	public static final String licensePath = "D:/GroupDocs.Total.Java.lic";
+	public static final Path dataPath = getProjectBaseDir().resolve("Data/");
 	public static final Path storagePath = getProjectBaseDir().resolve("Data/Storage/");
 	public static final Path outputPath = getProjectBaseDir().resolve("Data/Output/");
 	public static final Path image = getProjectBaseDir().resolve("Data/Images/");
@@ -46,6 +47,11 @@ public class CommonUtilities {
 		}
 		return FileSystems.getDefault().getPath(props.getProperty("project.basedir"));
 		//ExEnd:getProjectBaseDir
+	}
+	public static String getSourceFolder(String FolderName) throws Exception {
+		
+		return dataPath + FolderName+"\\";
+		
 	}
 
 	public static String getDataPath(String fileName) throws Exception {

@@ -2211,8 +2211,8 @@ public class GenerateReport {
         //ExEnd:tableCellsMergingInSpreadsheets
     }
 	/**
-	 * Table Cell Merging in Word Processing Documents
-	 * Features is supported by version 19.1 or greater
+	 * In-lining syntax error messages into templates
+	 * Features is supported by version 19.3 or greater
 	 */
 	public static void demoInLineSyntaxError()
     {
@@ -2243,6 +2243,121 @@ public class GenerateReport {
 				System.out.println("Do something with a report containing a template syntax error.");
 			}
 			//ExEnd:DemoInLineSyntaxError_19.3
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }
+	/**
+	 * Loading of template documents from HTML with resources
+	 * Features is supported by version 19.5 or greater
+	 */
+	public static void loadDocFromHTMLWithResource()
+    {
+		try
+		{
+			//ExStart:LoadDocFromHTMLWithResource_19.5
+			//Setting up resource directory for input template and output
+            String strDirectoryPath = CommonUtilities.getSourceFolder("\\ResourceLoad\\");
+			
+
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+					  
+			assembler.assembleDocument(strDirectoryPath + "TestWordsResourceLoad.htm", 
+					strDirectoryPath + "TestWordsResourceLoad Out.docx", 
+					new DataSourceInfo("It should be a jeep image.", "value"));
+			//ExEnd:LoadDocFromHTMLWithResource_19.5
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }
+	/**
+	 * Loading of template documents from HTML with resources from an explicitly specified folder
+	 * Features is supported by version 19.5 or greater
+	 */
+	public static void  loadDocFromHTMLWithResource_ExplicitFolder()
+    {
+		try
+		{
+			//ExStart:LoadDocFromHTMLWithResource_ExplicitFolder_19.5
+			//Setting up resource directory for input template and output
+            String strDirectoryPath = CommonUtilities.getSourceFolder("\\ResourceLoad\\");
+			
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+			
+			LoadSaveOptions loadSaveOptions = new LoadSaveOptions();
+			loadSaveOptions.setResourceLoadBaseUri(strDirectoryPath + "Alternative");
+			  
+			assembler.assembleDocument(strDirectoryPath + "TestWordsResourceLoad.htm", strDirectoryPath + 
+					"TestWordsResourceLoad Out.docx", 
+					loadSaveOptions, new DataSourceInfo("It should be a sport car image.", "value"));
+			//ExEnd:LoadDocFromHTMLWithResource_ExplicitFolder_19.5
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }
+	/**
+	 *  Saving of external resource files at relative path while an assembled document loaded from a non-HTML format is being saved to HTML
+	 * Features is supported by version 19.5 or greater
+	 */
+	public static void saveDocToHTMLWithResource()
+    {
+		try
+		{
+			//ExStart:SaveDocToHTMLWithResource_19.5
+			//Setting up resource directory for input template and output
+            String strDirectoryPath = CommonUtilities.getSourceFolder("\\ResourceSave\\");
+			
+
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+					  
+			assembler.assembleDocument(strDirectoryPath + "TestWordsResourceSave.docx", 
+					strDirectoryPath + "TestWordsResourceSave Out.htm", new DataSourceInfo("Hello!", "value"));
+			//ExEnd:SaveDocToHTMLWithResource_19.5
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }
+	/**
+	 * Loading of template documents from HTML with resources from an explicitly specified folder
+	 * Features is supported by version 19.5 or greater
+	 */
+	public static void  saveDocToHTMLWithResource_ExplicitFolder()
+    {
+		try
+		{
+			//ExStart:SaveDocToHTMLWithResource_ExplicitFolder_19.5
+			//Setting up resource directory for input template and output
+            String strDirectoryPath = CommonUtilities.getSourceFolder("\\ResourceSave\\");
+			
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+			
+			LoadSaveOptions loadSaveOptions = new LoadSaveOptions();
+			loadSaveOptions.setResourceSaveFolder(strDirectoryPath + "Alternative");
+			  
+			assembler.assembleDocument(strDirectoryPath + "TestWordsResourceSave.docx",
+					strDirectoryPath + "TestWordsResourceSave Out.htm", loadSaveOptions,
+					new DataSourceInfo("Hello!", "value"));
+			//ExEnd:SaveDocToHTMLWithResource_ExplicitFolder_19.5
 
 		}
 		catch (Exception exp)

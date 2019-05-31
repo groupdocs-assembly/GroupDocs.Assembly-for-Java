@@ -373,6 +373,19 @@ public class MainClass {
 		
         //Demonstrate how to enable in-line syntax errors in the template without throw any exception
 		//GenerateReport.demoInLineSyntaxError();
+		
+		//Loading of template documents from HTML with resources
+		//GenerateReport.loadDocFromHTMLWithResource();
+		
+		//Loading of template documents from HTML with resources from an explicitly specified folder
+		//GenerateReport.loadDocFromHTMLWithResource_ExplicitFolder();
+		
+	
+        //Saving of external resource files at relative path 
+        //GenerateReport.saveDocToHTMLWithResource();
+
+        // Saving of external resource files in a specified folder at relative path while saving output to HTML
+        GenerateReport.saveDocToHTMLWithResource_ExplicitFolder();
 	}
 
 }
