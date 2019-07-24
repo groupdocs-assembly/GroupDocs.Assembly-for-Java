@@ -1072,6 +1072,35 @@ public class GenerateReport {
 		} 
 	}
 
+	//Generate a Nested Numbered List Report with restartNum in Emails
+	public static void generateNumberedListWithRestart_Emails(){
+		// ExStart:numberedListWithRestart_Documents
+		String srcDocument = "/Email Templates/Numbered List_RestartNum.msg";
+		String docReport = "/Email Reports/Numbered List_RestartNum.msg";
+		try {
+			//Manager manager = new DataStorage().getManagers().iterator().next();
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport),new DataSourceInfo( new DataStorage(),null));
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+		// ExEnd:numberedListWithRestart_Documents
+	}
+	public static void generateNumberedListWithRestart_Documents(){
+		// ExStart:numberedListWithRestart_Documents
+		String srcDocument = "/Word Templates/Numbered List_RestartNum.docx";
+		String docReport = "/Word Reports/Numbered List_RestartNum.docx";
+		try {
+			//Manager manager = new DataStorage().getManagers().iterator().next();
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport),new DataSourceInfo( new DataStorage(),null));
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+		// ExEnd:numberedListWithRestart_Documents
+	}
 	// Generate pie chart
 	public static void generatePieChart(String documentFormat) throws Throwable {
 		if (documentFormat == "document") {

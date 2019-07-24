@@ -11,6 +11,7 @@ import com.groupdocs.assembly.DocumentTableOptions;
 import com.groupdocs.assembly.examples.BusinessEntities.Client;
 import com.groupdocs.assembly.examples.BusinessEntities.Contract;
 import com.groupdocs.assembly.examples.BusinessEntities.Manager;
+import com.groupdocs.assembly.examples.BusinessEntities.Service;
 
 public class DataStorage {
 	//ExStart:DataStorage
@@ -22,21 +23,25 @@ public class DataStorage {
 		return Arrays.asList(
 				createManager("John Smith", 37,"red", new String[] { "A Company", "B Ltd.", "C & D" },
 						new float[] { 1200000, 750000, 350000 },
-						new Date[] { getDate(2015, 1, 1), getDate(2015, 4, 1), getDate(2015, 7, 1) }),
+						new Date[] { getDate(2015, 1, 1), getDate(2015, 4, 1), getDate(2015, 7, 1) }, new String[]{"Regular Cleaning","Oven Cleaning"}),
 				createManager("Tony Anderson", 37,"green", new String[] { "E Corp.", "F & Partners" },
-						new float[] { 650000, 550000 }, new Date[] { getDate(2015, 2, 1), getDate(2015, 8, 1) }),
+						new float[] { 650000, 550000 }, new Date[] { getDate(2015, 2, 1), getDate(2015, 8, 1) },new String[]{"Regular Cleaning","Oven Cleaning","Carpet Cleaning"}),
 				createManager("July James", 37,"blue", new String[] { "G & Co.", "H Group", "I & Sons", "J Ent." },
 						new float[] { 350000, 250000, 100000, 100000 }, new Date[] { getDate(2015, 2, 1),
-								getDate(2015, 5, 1), getDate(2015, 7, 1), getDate(2015, 8, 1) }));
+								getDate(2015, 5, 1), getDate(2015, 7, 1), getDate(2015, 8, 1) },new String[]{"Regular Cleaning","Carpet Cleaning"}));
 	}
 
 	private static Manager createManager(String name, int age,String color, String[] clientNames, float[] contractPrices,
-			Date[] contractDates) {
+			Date[] contractDates, String[] services) {
 		List<Contract> contracts = new ArrayList();
+		List<Service> mServices = new ArrayList(); 
 		Manager manager = new Manager(name, age,color, contracts);
-
+		
+		for (int j = 0; j < services.length; j++)
+			mServices.add(new Service(services[j]));
+		
 		for (int i = 0; i < clientNames.length; i++)
-			contracts.add(new Contract(manager, new Client(clientNames[i]), contractPrices[i], contractDates[i]));
+			contracts.add(new Contract(manager, new Client(clientNames[i]), contractPrices[i], contractDates[i],mServices));
 
 		return manager;
 	}

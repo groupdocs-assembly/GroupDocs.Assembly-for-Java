@@ -173,7 +173,7 @@ public class MainClass {
 
 		// region Numbered List
 		// Generate Numbered List report in document format
-		// GenerateReport.generateNumberedList("document");
+		//GenerateReport.generateNumberedList("document");
 		// Generate Numbered list report in spreadsheet format
 		// GenerateReport.generateNumberedList("spreadsheet");
 		// Generate Numbered list report in presentation format
@@ -183,6 +183,10 @@ public class MainClass {
 		// Generate Numbered list report in text format
 		//GenerateReport.generateNumberedList("txt");
 		//GenerateReport.generateNumberedList("email");
+		//Generate a Nested Numbered List Report with restartNum in Documents
+		//GenerateReport.generateNumberedListWithRestart_Documents();
+		//Generate a Nested Numbered List Report with restartNum in Emails
+		//GenerateReport.generateNumberedListWithRestart_Emails();
 		// endregion
 
 		// region Pie Chart
@@ -385,7 +389,7 @@ public class MainClass {
         //GenerateReport.saveDocToHTMLWithResource();
 
         // Saving of external resource files in a specified folder at relative path while saving output to HTML
-        GenerateReport.saveDocToHTMLWithResource_ExplicitFolder();
+        //GenerateReport.saveDocToHTMLWithResource_ExplicitFolder();
 	}
 
 }
