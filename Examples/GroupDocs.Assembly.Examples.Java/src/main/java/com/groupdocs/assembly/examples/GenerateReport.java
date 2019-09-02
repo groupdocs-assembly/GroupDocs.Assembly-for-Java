@@ -4,6 +4,10 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.Console;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
@@ -2367,7 +2371,7 @@ public class GenerateReport {
     }
 	/**
 	 * Loading of template documents from HTML with resources from an explicitly specified folder
-	 * Features is supported by version 19.5 or greater
+	 * Feature is supported by version 19.5 or greater
 	 */
 	public static void  saveDocToHTMLWithResource_ExplicitFolder()
     {
@@ -2395,5 +2399,113 @@ public class GenerateReport {
 		}
         
     }
+	/**
+	 * Saving an assembled Markdown document to a Word Processing format using file extension.
+	 * Feature is supported by version 19.8 or greater
+	 */
+	public static void saveMdtoWord_UsingExtension()
+    {
+		try
+		{
+			//ExStart:saveMdtoWord_UsingExtension_19.8
+			//Setting up source document template
+			String strDocumentTemplate = "/Markdown Templates/ReadMe.md";
+			//Setting up destination PDF report 
+			String strDocumentReport = "/Word Reports/ReadMe Out.docx";
+			
+			String description = "GroupDocs.Assembly for Java is a class library that enables you to generate documents in popular " +
+				    "office and email file formats based upon template documents and data obtained from various sources " +
+				    "including databases, XML, JSON, OData, objects of custom Java types, external documents, and more.";
 
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+			
+					  
+			assembler.assembleDocument(
+					CommonUtilities.getDataPath(strDocumentTemplate),
+					CommonUtilities.getOutPath(strDocumentReport),
+			    new DataSourceInfo("GroupDocs.Assembly for Java", "product"),
+			    new DataSourceInfo(description, "description"));
+			//ExEnd:saveMdtoWord_UsingExtension_19.8
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }
+	/**
+	 * Saving an assembled Word Processing document or email to Markdown using file extension.
+	 * Feature is supported by version 19.8 or greater
+	 */
+	public static void saveWordOrEmailtoMD_UsingExtension()
+    {
+		try
+		{
+			//ExStart:saveWordOrEmailtoMD_UsingExtension_19.8
+			//Setting up source document template
+			String strDocumentTemplate = "/Word Templates/ReadMe.docx";
+			//Setting up destination PDF report 
+			String strDocumentReport = "/Markdown Reports/ReadMe Out.md";
+			
+			String description = "GroupDocs.Assembly for Java is a class library that enables you to generate documents in popular " +
+				    "office and email file formats based upon template documents and data obtained from various sources " +
+				    "including databases, XML, JSON, OData, objects of custom Java types, external documents, and more.";
+
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+								  
+			assembler.assembleDocument(
+					CommonUtilities.getDataPath(strDocumentTemplate),
+					CommonUtilities.getOutPath(strDocumentReport),
+			    new DataSourceInfo("GroupDocs.Assembly for Java", "product"),
+			    new DataSourceInfo(description, "description"));
+			//ExEnd:saveWordOrEmailtoMD_UsingExtension_19.8
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }
+	/**
+	 * Saving an assembled Word Processing document or email to Markdown using explicit specifying.
+	 * Feature is supported by version 19.8 or greater
+	 */
+	public static void saveWordOrEmailtoMD_Explicit()
+    {
+		try
+		{
+			//ExStart:saveWordOrEmailtoMD_Explicit_19.8
+			//Setting up source document template
+			InputStream sourceStream = new FileInputStream(CommonUtilities.getDataPath("/Word Templates/ReadMe.docx"));
+			//Setting up destination PDF report 
+			File outFile = new File(CommonUtilities.getOutPath("/Markdown Reports/ReadMe Out.md"));
+			outFile.createNewFile();
+			OutputStream  targetStream = new FileOutputStream(outFile, false);
+			
+			String description = "GroupDocs.Assembly for Java is a class library that enables you to generate documents in popular " +
+				    "office and email file formats based upon template documents and data obtained from various sources " +
+				    "including databases, XML, JSON, OData, objects of custom Java types, external documents, and more.";
+
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+			
+					  
+			DataSourceInfo dataSourceInfo1 = new DataSourceInfo("The GroupDocs.Assembly for Java","product");
+			DataSourceInfo dataSourceInfo2 = new DataSourceInfo(description,"description");
+			
+			  
+			assembler.assembleDocument(sourceStream, targetStream, new LoadSaveOptions(FileFormat.MARKDOWN), dataSourceInfo1,dataSourceInfo2);
+			//ExEnd:saveWordOrEmailtoMD_Explicit_19.8
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }
 }

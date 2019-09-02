@@ -390,6 +390,19 @@ public class MainClass {
 
         // Saving of external resource files in a specified folder at relative path while saving output to HTML
         //GenerateReport.saveDocToHTMLWithResource_ExplicitFolder();
+	
+		/*#region-Working with Markdown*/
+		//Saving an assembled Word Processing document or email to Markdown using file extension.
+		//GenerateReport.saveWordOrEmailtoMD_UsingExtension();
+		//Saving an assembled Markdown document to a Word Processing format using file extension.
+		//GenerateReport.saveMdtoWord_UsingExtension();
+		//Saving an assembled Word Processing document or email to Markdown using explicit specifying.
+		//GenerateReport.saveWordOrEmailtoMD_Explicit();
+		
+		
+		
+		/*#endRegion*/
+		System.out.println("All Done..");
 	}
 
 }
