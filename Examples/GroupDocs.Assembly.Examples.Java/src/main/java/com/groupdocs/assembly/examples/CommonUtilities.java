@@ -20,6 +20,7 @@ public class CommonUtilities {
 	public static final Path image = getProjectBaseDir().resolve("Data/Images/");
 	public static final Path outerDoc = getProjectBaseDir().resolve("Data/OuterDocument/");
 	public static final Path wordDataFile = getProjectBaseDir().resolve("Data/Data Sources/Word DataSource/");
+	public static final Path XMLDataFile = getProjectBaseDir().resolve("Data/Data Sources/XML DataSource/");
 	public static final Path excelDataFile = getProjectBaseDir().resolve("Data/Data Sources/Excel DataSource/");
 	public static final Path presentationDataFile = getProjectBaseDir().resolve("Data/Data Sources/Presentation DataSource/");
 	 public static String publicKey = "[Your Dynabic.Metered public key]";

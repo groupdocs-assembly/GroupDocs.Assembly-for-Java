@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import javax.xml.crypto.Data;
 
 import com.groupdocs.assembly.DataSourceInfo;
+import com.groupdocs.assembly.XmlDataSource;
+import com.groupdocs.assembly.CsvDataLoadOptions;
+import com.groupdocs.assembly.CsvDataSource;
 import com.groupdocs.assembly.DocumentAssembler;
 import com.groupdocs.assembly.DocumentAssemblyOptions;
 import com.groupdocs.assembly.DocumentTable;
@@ -2500,6 +2503,89 @@ public class GenerateReport {
 			  
 			assembler.assembleDocument(sourceStream, targetStream, new LoadSaveOptions(FileFormat.MARKDOWN), dataSourceInfo1,dataSourceInfo2);
 			//ExEnd:saveWordOrEmailtoMD_Explicit_19.8
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }
+	/**
+	 * Working with XML data sources.
+	 * Feature is supported by version 19.10 or greater
+	 */
+	public static void simpleXMLDS_Demo()
+    {
+		try
+		{
+			//ExStart:SimpleXMLDS_Demo_19.10
+			
+			//Setting up source document template
+			String strDocumentTemplate = "/Word Templates/SimpleDatasetDemo.docx";
+			
+			//Setting up destination report 
+			String strDocumentReport = "/Word Reports/SimpleXMLDSDemo Out.docx";
+			
+			//Setting up data source file
+             String strDataSource = "\\Managers.xml";
+			
+
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+			
+			//Instantiate XML data source
+			XmlDataSource datasource= new XmlDataSource(CommonUtilities.XMLDataFile + strDataSource);
+					  
+			DataSourceInfo dataSourceInfo = new DataSourceInfo(datasource,"managers");
+			
+			
+			 //Assemble document 
+			assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+					CommonUtilities.getOutPath(strDocumentReport),dataSourceInfo);
+			
+			//ExEnd:SimpleXMLDS_Demo_19.10
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }
+	/**
+	 * Working with csv data sources.
+	 * Feature is supported by version 19.10 or greater
+	 */
+	public static void simpleCsvDS_Demo()
+    {
+		try
+		{
+			//ExStart:SimpleCsvDS_Demo_19.10
+			
+			//Setting up source document template
+			String strDocumentTemplate = "/Text Templates/CsvDatasetDemo.txt";
+			
+			//Setting up destination report 
+			String strDocumentReport = "/Word Reports/SimpleCsvDSDemo Out.docx";
+			
+			//Setting up data source file
+             String strDataSource = "\\Person.csv";
+								
+			//set load csv by column name
+			CsvDataLoadOptions options = new CsvDataLoadOptions(true);
+			
+			CsvDataSource datasource= new CsvDataSource(CommonUtilities.excelDataFile + strDataSource,options);
+					  
+			DataSourceInfo dataSourceInfo = new DataSourceInfo(datasource,"persons");
+			
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+			  
+			assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+					CommonUtilities.getOutPath(strDocumentReport),dataSourceInfo);
+			
+			//ExEnd:SimpleCsvDS_Demo_19.10
 
 		}
 		catch (Exception exp)

@@ -394,10 +394,21 @@ public class MainClass {
 		/*#region-Working with Markdown*/
 		//Saving an assembled Word Processing document or email to Markdown using file extension.
 		//GenerateReport.saveWordOrEmailtoMD_UsingExtension();
+		
 		//Saving an assembled Markdown document to a Word Processing format using file extension.
 		//GenerateReport.saveMdtoWord_UsingExtension();
+				
 		//Saving an assembled Word Processing document or email to Markdown using explicit specifying.
 		//GenerateReport.saveWordOrEmailtoMD_Explicit();
+		
+		/*#endregion-Working with Markdown*/
+		
+		
+		// Working with XML data sources.
+		//GenerateReport.simpleXMLDS_Demo();
+		
+		// Working with CSV data sources.
+		GenerateReport.simpleCsvDS_Demo();
 		
 		
 		
