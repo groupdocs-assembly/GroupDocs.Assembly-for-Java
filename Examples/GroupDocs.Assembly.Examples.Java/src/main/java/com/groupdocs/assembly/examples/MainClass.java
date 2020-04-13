@@ -408,7 +408,26 @@ public class MainClass {
 		//GenerateReport.simpleXMLDS_Demo();
 		
 		// Working with CSV data sources.
-		GenerateReport.simpleCsvDS_Demo();
+		//GenerateReport.simpleCsvDS_Demo();
+		
+		//Working with Json Data Source
+		//GenerateReport.simpleJsonDS_Demo();
+		
+		//Insert Bookmarks Dynamically in Word Document
+		//GenerateReport.dynamicBookmarkInsertionWord();
+		
+		//Insert Bookmarks Dynamically in Excel Document
+		//GenerateReport.dynamicBookmarkInsertionExcel();
+		
+		//Insert Image Dynamically in Word Document
+		//GenerateReport.insertImageDynamicallyInWord();
+		
+		//Insert Document Dynamically in Word Document
+		//GenerateReport.insertDocumentDynamicallyInWord();
+		
+		//Set checkbox value dynamically in Word document
+		GenerateReport.setCheckboxValueDynamicallyInWord(true);
+		
 		
 		
 		

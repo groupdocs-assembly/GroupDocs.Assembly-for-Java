@@ -21,6 +21,7 @@ public class CommonUtilities {
 	public static final Path outerDoc = getProjectBaseDir().resolve("Data/OuterDocument/");
 	public static final Path wordDataFile = getProjectBaseDir().resolve("Data/Data Sources/Word DataSource/");
 	public static final Path XMLDataFile = getProjectBaseDir().resolve("Data/Data Sources/XML DataSource/");
+	public static final Path JsonDataFile = getProjectBaseDir().resolve("Data/Data Sources/JSON DataSource/");
 	public static final Path excelDataFile = getProjectBaseDir().resolve("Data/Data Sources/Excel DataSource/");
 	public static final Path presentationDataFile = getProjectBaseDir().resolve("Data/Data Sources/Presentation DataSource/");
 	 public static String publicKey = "[Your Dynabic.Metered public key]";
@@ -78,6 +79,16 @@ public class CommonUtilities {
 	public static String getDataPath(String fileName) throws Exception {
 		//ExStart:getTestDataPath
 		return storagePath + fileName;
+		//ExEnd:getTestDataPath
+	}
+	public static String getImagePath(String fileName) throws Exception {
+		//ExStart:getTestDataPath
+		return image + fileName;
+		//ExEnd:getTestDataPath
+	}
+	public static String getOuterDoc(String fileName) throws Exception {
+		//ExStart:getTestDataPath
+		return outerDoc + fileName;
 		//ExEnd:getTestDataPath
 	}
 

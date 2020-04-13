@@ -23,6 +23,7 @@ import com.groupdocs.assembly.DocumentTable;
 import com.groupdocs.assembly.DocumentTableOptions;
 import com.groupdocs.assembly.DocumentTableSet;
 import com.groupdocs.assembly.FileFormat;
+import com.groupdocs.assembly.JsonDataSource;
 import com.groupdocs.assembly.LoadSaveOptions;
 import com.groupdocs.assembly.examples.BusinessEntities.Manager;
 import com.groupdocs.assembly.examples.DataStorage.EmailDataSourcesNames;
@@ -2594,4 +2595,212 @@ public class GenerateReport {
 		}
         
     }
+	 /* Working with csv data sources.
+	 * Feature is supported by version 19.10 or greater
+	 */
+	public static void simpleJsonDS_Demo()
+    {
+		try
+		{
+			//ExStart:simpleJsonDS_Demo_19.11
+			
+			//Setting up source document template
+			String strDocumentTemplate = "/Word Templates/SimpleDatasetDemo.docx";
+			
+			//Setting up destination report 
+			String strDocumentReport = "/Word Reports/SimpleJsonDSDemo Out.docx";
+			
+			//Setting up data source file
+             String strDataSource = "\\ManagerData.json";
+								
+           //Instantiate Json data source
+ 			JsonDataSource datasource= new JsonDataSource(CommonUtilities.JsonDataFile + strDataSource);
+ 					  
+ 			DataSourceInfo dataSourceInfo = new DataSourceInfo(datasource,"managers");
+			
+			//Instantiate DocumentAssembler class
+			DocumentAssembler assembler = new DocumentAssembler();
+			  
+			assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+					CommonUtilities.getOutPath(strDocumentReport),dataSourceInfo);
+			
+			//ExEnd:simpleJsonDS_Demo_19.11
+
+		}
+		catch (Exception exp)
+		{
+			System.out.println("Exception: " + exp.getMessage());
+		}
+        
+    }	
+	 	/* Insert Bookmarks Dynamically in Word Document.
+		 * Feature is supported by version 20.3 or greater
+		 */
+		public static void dynamicBookmarkInsertionWord()
+	    {
+			try
+			{
+				//ExStart:dynamicBookmarkInsertionWord_20.3
+				
+				//Setting up source document template
+				String strDocumentTemplate = "/Word Templates/Dynamic bookmarks.docx";
+				
+				//Setting up destination report 
+				String strDocumentReport = "/Word Reports/Dynamic_bookmarks Out.docx";
+				
+				//Setting up Uri Expression
+	            String bookmark_expression = "gd_bookmark";
+	            //Setting up Display Text Expression
+	            String displayTextExpression = "GroupDocs";
+									
+	     				
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				  
+				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+						CommonUtilities.getOutPath(strDocumentReport),
+						new DataSourceInfo(bookmark_expression, "bookmark_expression"), 
+						new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+				
+				//ExEnd:dynamicBookmarkInsertionWord_20.3
+
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	        
+	    }
+		/* Insert Bookmarks Dynamically in Excel Document.
+		 * Feature is supported by version 20.3 or greater
+		 */
+		public static void dynamicBookmarkInsertionExcel()
+	    {
+			try
+			{
+				//ExStart:dynamicBookmarkInsertionExcel_20.3
+				
+				//Setting up source document template
+				String strDocumentTemplate = "/Spreadsheet Templates/Dynamic Cell Range.xlsx";
+				
+				//Setting up destination report 
+				String strDocumentReport = "/Spreadsheet Reports/Dynamic_Cell_Range out.xlsx";
+				
+				//Setting up Uri Expression
+	            String bookmark_expression = "gd_bookmark";
+	            //Setting up Display Text Expression
+	            String displayTextExpression = "GroupDocs";
+									
+	     				
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				  
+				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+						CommonUtilities.getOutPath(strDocumentReport),
+						new DataSourceInfo(bookmark_expression, "bookmark_expression"), 
+						new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+				
+				//ExEnd:dynamicBookmarkInsertionExcel_20.3
+
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	        
+	    }
+		/* Insert Image Dynamically in Word Document.
+		 * Feature is supported by version 20.3 or greater
+		 */
+		public static void insertImageDynamicallyInWord()
+	    {
+			try
+			{
+				//ExStart:insertImageDynamicallyInWord_20.3
+				
+				//Setting up source document template (Email or Word Document)
+                String strDocumentTemplate = "/Word Templates/DynamicImageDemo.docx";
+
+                //Setting up destination for reports 
+                String strDocumentReport = "/Word Reports/DynamicImageDemo Out.docx";
+						
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				  
+				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+						CommonUtilities.getOutPath(strDocumentReport),
+						new DataSourceInfo(CommonUtilities.getImagePath("no-photo.jpg"),"image_expression"));
+				
+				//ExEnd:insertImageDynamicallyInWord_20.3
+
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	        
+	    }
+		/* Insert Document Dynamically in Word Document.
+		 * Feature is supported by version 20.3 or greater
+		 */
+		public static void insertDocumentDynamicallyInWord()
+	    {
+			try
+			{
+				//ExStart:insertDocumentDynamicallyInWord_20.3
+				
+				//Setting up source document template (Email or Word Document)
+                String strDocumentTemplate = "/Word Templates/DynamicDocInsert.docx";
+
+                //Setting up destination for reports 
+                String strDocumentReport = "/Word Reports/DynamicDocInsert Out.docx";
+						
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				  
+				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+						CommonUtilities.getOutPath(strDocumentReport),
+						new DataSourceInfo(CommonUtilities.getOuterDoc("OuterDoc.docx"),"document_expression"));
+				
+				//ExEnd:insertDocumentDynamicallyInWord_20.3
+
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	        
+	    }
+		/* Set checkbox value dynamically in Word document
+		 * Feature is supported by version 20.3 or greater
+		 */
+		public static void setCheckboxValueDynamicallyInWord(Boolean boolVal)
+	    {
+			try
+			{
+				//ExStart:setCheckboxValueDynamicallyInWord_20.3
+				
+				//Setting up source document template (Email or Word Document)
+                String strDocumentTemplate = "/Word Templates/CheckBoxValueSetDemo.docx";
+
+                //Setting up destination for reports 
+                String strDocumentReport = "/Word Reports/CheckBoxValueSetDemo Out.docx";
+						
+				//Instantiate DocumentAssembler class
+				DocumentAssembler assembler = new DocumentAssembler();
+				  
+				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
+						CommonUtilities.getOutPath(strDocumentReport),
+						new DataSourceInfo(boolVal, "conditional_expression"));
+				
+				//ExEnd:setCheckboxValueDynamicallyInWord_20.3
+
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	        
+	    }
+		
 }
