@@ -32,7 +32,7 @@ This release adds abilities to insert hyperlinks dynamically for the majority of
 
 You can insert hyperlinks to your reports dynamically using link tags. The syntax of a link tag is defined as follows:
 
-```csharp
+```java
 <<link [uri_expression][display_text_expression]>>
 
 ```

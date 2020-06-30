@@ -34,7 +34,7 @@ Since version 19.8, the GroupDocs.Assembly provides abilities for saving of asse
 
 **Java**
 
-```csharp
+```java
 /**
   * Specifies the Markdown format.
   */
@@ -47,7 +47,7 @@ public static final int MARKDOWN;
 
 **Java**
 
-```csharp
+```java
 final String description =
     "GroupDocs.Assembly for Java is a class library that enables you to generate documents in popular " +
     "office and email file formats based upon template documents and data obtained from various sources " +
@@ -68,7 +68,7 @@ assembler.assembleDocument(
 
 **Java**
 
-```csharp
+```java
 final String description =
     "GroupDocs.Assembly for Java is a class library that enables you to generate documents in popular " +
     "office and email file formats based upon template documents and data obtained from various sources " +
@@ -89,7 +89,7 @@ assembler.assembleDocument(
 
 **Java**
 
-```csharp
+```java
 InputStream sourceStream = ...;
 OutputStream targetStream = ...;
  

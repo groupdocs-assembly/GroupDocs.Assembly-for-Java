@@ -34,7 +34,7 @@ From now on, when using metered licensing, GroupDocs.Assembly consumes one credi
 
 The following method was added.
 
-```csharp
+```java
 /**
  * Returns the currently consumed number of credits.
  *
@@ -49,7 +49,7 @@ You can restart list numbering within your documents dynamically using restartNu
 
 Assume that you have the Order and Service classes defined in your application as follows.
 
-```csharp
+```java
 public class Order
 {
     public String getClientName() {... }
@@ -70,7 +70,7 @@ public class Service
 
 Given that orders is an enumeration of Order instances, you could try to use the following template to output information on several orders in one document.
 
-```csharp
+```java
 <<foreach [order in orders]>><<[order.getClientName()]>> (<<[order.getClientAddress()]>>)
 1. <<foreach [service in order.getServices()]>><<[service.getName()]>>
 <</foreach>><</foreach>>
@@ -88,7 +88,7 @@ John Smith (43 Vogel Street Roslyn Palmerston North 4414)
 
 That is, there would be a single numbered list across all orders, which is not applicable for this scenario. However, you can make list numbering to restart for every order by putting a restartNum tag into your template before a corresponding foreach tag as follows.
 
-```csharp
+```java
 <<foreach [order in orders]>><<[order.getClientName()]>> (<<[order.getClientAddress()]>>)
 1. <<restartNum>><<foreach [service in order.getServices()]>><<[service.getName()]>>
 <</foreach>><</foreach>>

@@ -39,7 +39,7 @@ hideChildren: False
 
 ### Supported access to related DataTable using relation name
 
-The Document Assembly Engine enables you to access a data associated with a particular *DataRow* instance in template expressions using the "." operator. See "[Working with DataRow Objects](https://docs.groupdocs.com/display/assemblyjava/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-DataTableRowObjects)" for more information.
+The Document Assembly Engine enables you to access a data associated with a particular *DataRow* instance in template expressions using the "." operator. See "[Working with DataRow Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-row-objects" >}})" for more information.
 
 ### Supported unordered lists for Markdown
 
@@ -49,7 +49,7 @@ From now on, unordered lists (see chapter 5.3 of [Markdown specification](https
 
 You can insert bookmarks to your reports dynamically using bookmark tags. Syntax of a bookmark tag is defined as follows.
 
-```csharp
+```java
 <<bookmark [bookmark_expression]>>
 bookmarked_content
 <</bookmark>>
@@ -71,7 +71,7 @@ You can insert contents of outer documents to your reports dynamically using doc
 
 Syntax of a doc tag is defined as follows.
 
-```csharp
+```java
 <<doc [document_expression]>>
 ```
 
@@ -90,7 +90,7 @@ While building a report, an expression declared within a doc tag is evaluated an
 
 By default, a document being inserted is not checked against template syntax and is not populated with data. However, you can enable this by using a build switch as follows.
 
-```csharp
+```java
 <<doc [document_expression] -build>>
 ```
 
@@ -111,7 +111,7 @@ You can insert images to your reports dynamically using image tags. To declare a
 2.  Set common image attributes such as frame, size, and others for the textbox, making the textbox look like a blank inserted image.
 3.  Specify an image tag within the textbox using the following syntax.
 
-```csharp
+```java
 <<image [image_expression]>>
 ```
 
@@ -134,25 +134,25 @@ By default, the assembler stretches an image filling a textbox to the size of th
 
 *   To keep the width of the textbox and change its height preserving the ratio of the image, use the fitHeight switch as follows.
 
-```csharp
+```java
 <<image [image_expression] -fitHeight>>
 ```
 
 *   To keep the height of the textbox and change its width preserving the ratio of the image, use the fitWidth switch as follows.
 
-```csharp
+```java
 <<image [image_expression] -fitWidth>>
 ```
 
 *   To change the size of the textbox according to the size of the image, use the fitSize switch as follows.
 
-```csharp
+```java
 <<image [image_expression] -fitSize>>
 ```
 
 *   To change the size of the textbox according to the size of the image without increasing the size of the textbox, use the fitSizeLim switch as follows.
 
-```csharp
+```java
 <<image [image_expression] -fitSizeLim>>
 ```
 
@@ -165,7 +165,7 @@ You can set checkbox values to either checked or unchecked in your reports dynam
 1.  Add a checkbox content control to your template at a place where you want it to appear in a result document.
 2.  By editing content control properties, add a check tag to the title of the checkbox content control using the following syntax.
 
-```csharp
+```java
 <<check [conditional_expression]>>
 ```
 

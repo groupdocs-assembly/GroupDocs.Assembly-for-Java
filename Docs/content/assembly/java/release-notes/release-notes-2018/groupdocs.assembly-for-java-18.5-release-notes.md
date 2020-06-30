@@ -33,7 +33,7 @@ For a chart with dynamic data, you can set colors of chart series dynamically 
 *   Declare a chart with dynamic data in the usual way
 *   For chart series to be colored dynamically, define corresponding color expressions in names of these series using **seriesColor** tags having the following syntax:
     
-    ```csharp
+    ```java
     <<seriesColor [color_expression]>>
     ```
     
@@ -45,6 +45,6 @@ For a chart with dynamic data, you can set colors of individual chart series poi
 *   Declare a chart with dynamic data in the usual way
 *   For chart series with points to be colored dynamically, define corresponding color expressions in names of these series using **pointColor** tags having the following syntax:
     
-    ```csharp
+    ```java
     <<pointColor [color_expression]>>
     ```

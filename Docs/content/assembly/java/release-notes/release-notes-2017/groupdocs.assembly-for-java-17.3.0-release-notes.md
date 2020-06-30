@@ -44,7 +44,7 @@ The following table provides information on those GroupDocs.Assembly features th
 
 GroupDocs.Assembly treats HTML and XML tags in template documents as common text. That is, to output HTML or XML tags using a data band or conditional block, these tags must be included to the body of the corresponding data band or conditional block as in the following example. Given that items is an enumeration of strings "Item1", "Item2", and "Item3", you can use the following HTML template to output the items in a bulleted list.
 
-```csharp
+```java
 <html>
 <body>
 <ul>
@@ -59,7 +59,7 @@ GroupDocs.Assembly treats HTML and XML tags in template documents as common text
 
 In this case, GroupDocs.Assembly produces the following result document.
 
-```csharp
+```java
 <html>
 <body>
 <ul>
@@ -88,14 +88,14 @@ GroupDocs.Assembly does not require you to escape special characters such as '<'
 
 **Fragment 1**
 
-```csharp
+```java
 <<[value]>>
 
 ```
 
 **Fragment 2**
 
-```csharp
+```java
 &lt;&lt;[value]&gt;&gt;
 
 ```
@@ -110,7 +110,7 @@ You can insert images into HTML documents dynamically using a combination of HTM
 
 To specify an image URL dynamically, you can use the following syntax.
 
-```csharp
+```java
 <img src="<<[url_expression]>>"/>
 
 ```
@@ -121,14 +121,14 @@ Here, `url_expression` stands for an expression returning a URL string like "/
 
 To embed an image into an HTML document, you can use syntax as in the following example.
 
-```csharp
+```java
 <img src="data:image_mime_type;base64,<<[ImageUtil.GetBytesAsBase64(path)]>>"/>
 
 ```
 
 Here, `image_mime_type` stands for an image mime type like "image/png", `path` stands for the local path to an image file to be embedded, and `ImageUtil` stands for an external class defined in your application as follows.
 
-```csharp
+```java
 public class ImageUtil
 {
     public static String GetBytesAsBase64(String path) throws Exception
@@ -145,7 +145,7 @@ public class ImageUtil
 
 To make this example work, the type of ImageUtil must be set known for a `DocumentAssembler` instance before assembling a document like in the following code snippet.
 
-```csharp
+```java
 DocumentAssembler assembler = new DocumentAssembler();
 assembler.getKnownTypes().add(ImageUtil.class);
 assembler.assembleDocument(...);

@@ -40,13 +40,13 @@ However, when dealing with complex templates containing a large number of tags, 
 
 Consider the following template.
 
-```csharp
+```java
 <<var [name]>>
 ```
 
 By default, such a template causes the engine to throw an exception while building a report. However, when* DocumentAssemblyOptions.INLINE\_ERROR\_MESSAGES* is applied, no exception is thrown and the report looks as follows then.
 
-```csharp
+```java
 <<var [name] Error! An assignment operator is expected. >>
 
 ```
@@ -55,7 +55,7 @@ By default, such a template causes the engine to throw an exception while buildi
 
 When* DocumentAssemblyOptions.INLINE\_ERROR\_MESSAGES* is applied, a Boolean value returned by a *DocumentAssembler.assembleDocument* overload indicates whether building of a report was finished successfully or was interrupted because of a template syntax error. This enables you to process reports which building succeeded or failed differently as shown in the following code snippet.
 
-```csharp
+```java
 DocumentAssembler assembler= new DocumentAssembler();
 
 assembler.setOptions(DocumentAssemblyOptions.INLINE_ERROR_MESSAGES);

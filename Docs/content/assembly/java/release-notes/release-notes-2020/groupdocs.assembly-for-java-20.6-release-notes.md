@@ -32,21 +32,21 @@ Support for loading of template POT and OTP Presentation documents and saving of
 
 #### Loading of a POT (or OTP) template for Presentation document assembly:
 
-```csharp
+```java
 DocumentAssembler assembler = new DocumentAssembler();
 assembler.assembleDocument("template.pot", "result.pptx", ...); // For OTP, it might be "template.otp".
 ```
 
 #### Saving an assembled Presentation document to the POT (or OTP) format using file extension:
 
-```csharp
+```java
 DocumentAssembler assembler = new DocumentAssembler();
 assembler.assembleDocument("template.pptx", "result.pot", ...); // For OTP, it might be "result.otp".
 ```
 
 #### Saving an assembled Presentation document to the POT (or OTP) format using explicit specifying:
 
-```csharp
+```java
 InputStream sourceStream = ...;
 OutputStream targetStream = ...;
  

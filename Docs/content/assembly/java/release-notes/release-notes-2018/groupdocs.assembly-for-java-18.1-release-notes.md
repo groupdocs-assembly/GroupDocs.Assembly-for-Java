@@ -30,7 +30,7 @@ Extended support of dynamic chart axis title setting for more file formats.
 
 From now, template syntax expressions are supported in chart axis titles. Thus, to set a chart axis title dynamically, you can put an expression tag into it like in the following example: 
 
-```csharp
+```java
 <<[axis_title_expression]>>
 ```
 

@@ -10,8 +10,6 @@ hideChildren: False
 ---
 {{< alert style="info" >}}In this article, we will discuss the behavior of GroupDocs.Assembly APIs.{{< /alert >}}
 
-<table class="sectionMacro" border="0" cellpadding="5" cellspacing="0" width="100%"><tbody><tr><td valign="top" width="50%"><div class="panel" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;"><div class="panelHeader" style="border-bottom-width: 1px; background-color: rgb(176, 196, 222);"><b>Contents Summary</b></div><div class="panelContent"><style type="text/css">div.rbtoc1593026731883 { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }div.rbtoc1593026731883 ul { list-style-type: none; list-style-image: none; margin-left: 0px; }div.rbtoc1593026731883 li { margin-left: 0px; padding-left: 0px; }</style><div class="toc rbtoc1593026731883"><ul class="toc-indentation"><li><span class="TOCOutline">1</span> <a href="#GroupDocs.AssemblyEngineAPIs-OverviewoftheAPI">Overview of the API</a><ul class="toc-indentation"><li><span class="TOCOutline">1.1</span> <a href="#GroupDocs.AssemblyEngineAPIs-BuildingReports">Building Reports</a></li><li><span class="TOCOutline">1.2</span> <a href="#GroupDocs.AssemblyEngineAPIs-SettingupKnownExternalTypes">Setting up Known External Types</a></li><li><span class="TOCOutline">1.3</span> <a href="#GroupDocs.AssemblyEngineAPIs-OptimizingReflectionCalls">Optimizing Reflection Calls</a></li></ul></li><li><span class="TOCOutline">2</span> <a href="#GroupDocs.AssemblyEngineAPIs-TechnicalConsiderations">Technical Considerations</a><ul class="toc-indentation"><li><span class="TOCOutline">2.1</span> <a href="#GroupDocs.AssemblyEngineAPIs-ImplicitEnumerationDetermination">Implicit Enumeration Determination</a></li></ul></li></ul></div></div></div></td><td valign="top" width="15%">&nbsp;</td><td valign="top" width="35%">&nbsp;</td></tr></tbody></table>
-
 ## Overview of the API
 
 Classes of GroupDocs.Assembly are located within the GroupDocs.Assembly namespace. The main of the classes is [DocumentAssembler](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly/DocumentAssembler). All the functionality required to build a report from a template is assembled within the class.
@@ -30,7 +28,7 @@ To build a report from a template, you can use one of the [com.groupdocs.assembl
 
 Given a template to be populated with a data from a [DataSet](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly.system.data/DataSet) instance that is identified as "ds" within the template, you can use the following code to build the corresponding report.
 
-```csharp
+```java
 //Setting up source document template
 const String strDocumentTemplate = "Template Folder/wordTemplate.docx";
 //Setting up destination document report
@@ -45,7 +43,7 @@ assembler.assembleDocument(strDocumentTemplate, strDocumentReport, new DataSourc
 
 Given a visible `Person` class defined in your application and a template to be populated with a data about a single Person instance using the contextual object member access, you can use the following code to build the corresponding report.
 
-```csharp
+```java
 //Setting up source document template
 const String strDocumentTemplate = "Template Folder/wordTemplate.docx";
 //Setting up destination document report
@@ -66,7 +64,7 @@ GroupDocs.Assembly Engine must be aware of custom external types that you refere
 
 Consider the following example. Given an ImageUtil class declared at your application and a template accessing a static member of this class, you can use the following code to make the engine be aware of the class before processing the template.
 
-```csharp
+```java
 DocumentAssembler assembler = new DocumentAssembler;
 assembler.knownTypes.add(typeof(ImageUtil));
 assembler.assembleDocument(...);

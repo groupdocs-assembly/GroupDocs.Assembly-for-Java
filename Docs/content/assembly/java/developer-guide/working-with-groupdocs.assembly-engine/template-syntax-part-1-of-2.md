@@ -10,8 +10,6 @@ hideChildren: False
 ---
 {{< alert style="info" >}}This article is the first part of the Template Syntax series of articles. For second part, please visit Template Syntax - Part 2 of 2.{{< /alert >}}
 
-<table class="sectionMacro" border="0" cellpadding="5" cellspacing="0" width="100%"><tbody><tr><td valign="top" width="50%"><div class="panel" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;"><div class="panelHeader" style="border-bottom-width: 1px; background-color: rgb(176, 196, 222);"><b>Contents Summary</b></div><div class="panelContent"><style type="text/css">div.rbtoc1593026731701 { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }div.rbtoc1593026731701 ul { list-style-type: none; list-style-image: none; margin-left: 0px; }div.rbtoc1593026731701 li { margin-left: 0px; padding-left: 0px; }</style><div class="toc rbtoc1593026731701"><ul class="toc-indentation"><li><span class="TOCOutline">1</span> <a href="#TemplateSyntax-Part1of2-ComposingTemplate">Composing Template</a></li><li><span class="TOCOutline">2</span> <a href="#TemplateSyntax-Part1of2-ComposingExpressions">Composing Expressions</a><ul class="toc-indentation"><li><span class="TOCOutline">2.1</span> <a href="#TemplateSyntax-Part1of2-UsingLexicalTokens">Using Lexical Tokens</a></li><li><span class="TOCOutline">2.2</span> <a href="#TemplateSyntax-Part1of2-UsingTypes">Using Types</a><ul class="toc-indentation"><li><span class="TOCOutline">2.2.1</span> <a href="#TemplateSyntax-Part1of2-TypeMembers">Type Members</a></li></ul></li><li><span class="TOCOutline">2.3</span> <a href="#TemplateSyntax-Part1of2-UsingExtensionMethods">Using Extension Methods</a></li><li><span class="TOCOutline">2.4</span> <a href="#TemplateSyntax-Part1of2-UsingOperators">Using Operators</a></li><li><span class="TOCOutline">2.5</span> <a href="#TemplateSyntax-Part1of2-UsingLambdaFunctions">Using Lambda Functions</a></li><li><span class="TOCOutline">2.6</span> <a href="#TemplateSyntax-Part1of2-UsingDataSources">Using Data Sources</a><ul class="toc-indentation"><li><span class="TOCOutline">2.6.1</span> <a href="#TemplateSyntax-Part1of2-DataSetObjects">DataSet Objects</a></li><li><span class="TOCOutline">2.6.2</span> <a href="#TemplateSyntax-Part1of2-DataTableObjects">DataTable Objects</a></li><li><span class="TOCOutline">2.6.3</span> <a href="#TemplateSyntax-Part1of2-DataTableRowObjects">DataTable Row Objects</a></li></ul></li><li><span class="TOCOutline">2.7</span> <a href="#TemplateSyntax-Part1of2-UsingImages">Using Images</a></li><li><span class="TOCOutline">2.8</span> <a href="#TemplateSyntax-Part1of2-UsingHyperlinks">Using Hyperlinks&nbsp;</a><ul class="toc-indentation"><li><span class="TOCOutline">2.8.1</span> <a href="#TemplateSyntax-Part1of2-WordProcessingandEmails">Word Processing and Emails</a></li><li><span class="TOCOutline">2.8.2</span> <a href="#TemplateSyntax-Part1of2-Spreadsheets">Spreadsheets</a></li><li><span class="TOCOutline">2.8.3</span> <a href="#TemplateSyntax-Part1of2-Presentations">Presentations</a></li></ul></li><li><span class="TOCOutline">2.9</span> <a href="#TemplateSyntax-Part1of2-UsingContextualObjectMemberAccess">Using Contextual Object Member Access</a></li><li><span class="TOCOutline">2.10</span> <a href="#TemplateSyntax-Part1of2-UsingConditionalBlocks">Using Conditional Blocks</a><ul class="toc-indentation"><li><span class="TOCOutline">2.10.1</span> <a href="#TemplateSyntax-Part1of2-CommonConditionalBlocks">Common Conditional Blocks</a></li><li><span class="TOCOutline">2.10.2</span> <a href="#TemplateSyntax-Part1of2-Table-RowConditionalBlock">Table-Row Conditional Block</a></li></ul></li></ul></li></ul></div></div></div></td><td valign="top" width="15%">&nbsp;</td><td valign="top" width="35%">&nbsp;</td></tr></tbody></table>
-
 ## Composing Template
 
 A typical template for [GroupDocs.Assembly](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly/package-frame) Engine is composed of common document contents and tags that describe the template's structure and data bindings. You can form these tags using just running text that can occupy multiple paragraphs to be more descriptive.
@@ -28,13 +26,13 @@ A tag body typically consists of the following elements:
 *   An expression surrounded by brackets
 *   A set of switches available for the tag, each of which is preceded by the "-" character
 
-```csharp
+```java
 <<tag_name [expression] -switch1 -switch2 ...>>
 ```
 
 An optional comment can be written to provide a human-readable explanation.
 
-```csharp
+```java
 <<tag_name [expression] –switch1 –switch2 ... // optional_comment >>
 ```
 
@@ -42,7 +40,7 @@ An optional comment can be written to provide a human-readable explanation.
 
 Particular tags can have additional elements. Some tags require closing counterparts. A closing tag has the "/" character that precedes its name. This tag's name must match to the name of the corresponding opening tag.
 
-```csharp
+```java
 <</tag_name>>
 ```
 
@@ -73,9 +71,9 @@ The following table describes lexical tokens that you can use in template expres
 You can use the following identifiers that are not preceded by a member access operator in template expressions:
 
 *   The name of a passed data source object
-*   The name of an iteration variable within its scope (see [Outputting Sequential Data](Template%2BSyntax%2B-%2BPart%2B2%2Bof%2B2.html#TemplateSyntax-Part2of2-OutputtingSequentialData) for more information)
+*   The name of an iteration variable within its scope (see [Outputting Sequential Data]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}) for more information)
 *   The name of a lambda function parameter within the scope of the lambda function
-*   A fully or partially qualified name of a type that is known by the engine (see [Setting up Known External Types](GroupDocs.Assembly%2BEngine%2BAPIs.html#GroupDocs.AssemblyEngineAPIs-SettingupKnownExternalTypes) for more information)
+*   A fully or partially qualified name of a type that is known by the engine (see [Setting up Known External Types]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/groupdocs.assembly-engine-apis.md#settingup-known-external-types" >}}) for more information)
 *   The name of a member of an object that is determined as follows:
     *   Inside a data band body, the object is resolved to the innermost iteration variable.
     *   Outside a data band body, the object is resolved to a passed data source.
@@ -92,7 +90,7 @@ However, you can use the identifier of a visible type in template expressions on
 *   The type does not represent an array.
 *   The type is not an open or closed generic type.
 
-Also, the engine enables you to use anonymous types in template expressions. Such types are useful while composing expressions with grouping by multiple keys. See [Enumeration Extension Methods](Template%2BSyntax%2B-%2BPart%2B2%2Bof%2B2.html#TemplateSyntax-Part2of2-EnumerationExtensionMethods) for the examples.
+Also, the engine enables you to use anonymous types in template expressions. Such types are useful while composing expressions with grouping by multiple keys. See [Enumeration Extension Methods]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for the examples.
 
 #### Type Members
 
@@ -116,8 +114,8 @@ The engine supports the following features when dealing with functional members:
 
 GroupDocs.Assembly Engine enables you to use the following built-in extension methods in template expressions:
 
-*   Extension methods mimicking the ones for `IEnumerable<T>` (see [Enumeration Extension Methods](Template%2BSyntax%2B-%2BPart%2B2%2Bof%2B2.html#TemplateSyntax-Part2of2-EnumerationExtensionMethods) for more information)
-*   Extension methods for iteration variables (see [Extension Methods of Iteration Variables](Template%2BSyntax%2B-%2BPart%2B2%2Bof%2B2.html#TemplateSyntax-Part2of2-ExtensionMethodsofIterationVariables) for more information)
+*   Extension methods mimicking the ones for `IEnumerable<T>` (see [Enumeration Extension Methods]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for more information)
+*   Extension methods for iteration variables (see [Extension Methods of Iteration Variables]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#extension-methodsof-iteration-variables" >}}) for more information)
 
 ### Using Operators
 
@@ -125,25 +123,25 @@ The following list contains predefined operators that GroupDocs.Assembly Engine
 
 *   **Primary:**
     
-    ```csharp
+    ```java
     x.y f(x) a[x] new
     ```
     
 *   **Unary:**
     
-    ```csharp
+    ```java
     - ! ~ (T)x
     ```
     
 *   **Binary:**
     
-    ```csharp
+    ```java
     * / % + - << >> < > <= >= == != & ^ | && || ??
     ```
     
 *   **Ternary:**
     
-    ```csharp
+    ```java
     ?:
     ```
     
@@ -157,7 +155,7 @@ Also, the engine enables you to use lifted operators in template expressions. In
 
 ### Using Lambda Functions
 
-GroupDocs.Assembly Engine enables you to use lambda functions only as arguments of built-in enumeration extension methods in template expressions. See [Enumeration Extension Methods](Template%2BSyntax%2B-%2BPart%2B2%2Bof%2B2.html#TemplateSyntax-Part2of2-EnumerationExtensionMethods) for more information.
+GroupDocs.Assembly Engine enables you to use lambda functions only as arguments of built-in enumeration extension methods in template expressions. See [Enumeration Extension Methods]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for more information.
 
 You can use both explicit and implicit lambda function signatures in template expressions. If you do not specify the type of a parameter of a lambda function explicitly, the type is determined implicitly by the engine depending on the type of the corresponding enumeration.
 
@@ -169,7 +167,7 @@ You can use both explicit and implicit lambda function signatures in template ex
 
 GroupDocs.Assembly Engine enables you to access `DataTable` objects contained within a particular `DataSet` instance by table names using the "." operator in template expressions. That is, for example, given that `ds` is a `DataSet` instance that contains a `DataTable` named "Persons", you can access the table using the following syntax.
 
-```csharp
+```java
 ds.Persons
 
 ```
@@ -178,11 +176,11 @@ ds.Persons
 
 #### DataTable Objects
 
-GroupDocs.Assembly Engine enables you to treat [`DataTable`](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly.system.data/DataTable) objects in template expressions as enumerations of their rows. That is, you can use template expressions evaluated to such objects in `foreach` tags (see [Outputting Sequential Data](Template%2BSyntax%2B-%2BPart%2B2%2Bof%2B2.html#TemplateSyntax-Part2of2-OutputtingSequentialData) for more information).
+GroupDocs.Assembly Engine enables you to treat [`DataTable`](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly.system.data/DataTable) objects in template expressions as enumerations of their rows. That is, you can use template expressions evaluated to such objects in `foreach` tags (see [Outputting Sequential Data]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}) for more information).
 
-Also, you can normally apply enumeration extension methods (see [Enumeration Extension Methods](Template%2BSyntax%2B-%2BPart%2B2%2Bof%2B2.html#TemplateSyntax-Part2of2-EnumerationExtensionMethods) for more information) to `DataTable` objects in template expressions. For example, given that persons is a `DataTable` instance, you can count its rows using the following syntax.
+Also, you can normally apply enumeration extension methods (see [Enumeration Extension Methods]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for more information) to `DataTable` objects in template expressions. For example, given that persons is a `DataTable` instance, you can count its rows using the following syntax.
 
-```csharp
+```java
 persons.count()
 
 ```
@@ -194,7 +192,7 @@ GroupDocs.Assembly Engine enables you to access a data associated with a particu
 | Data Kind | Identifier | Examples of Template Expressions |
 | --- | --- | --- |
 | **Field Value** | Field name | Given that r is a row that has a field named "Name", you can access the field's value using the following syntax.
-```csharp
+```java
 r.Name
 ```
 
@@ -203,13 +201,13 @@ r.Name
  |
 | **Parent Row** | Parent table name | Given that r is a row of a DataTable that has a parent DataTable named "City", you can access the parent row of r using the following syntax.
 
-```csharp
+```java
 r.City
 ```
 
 Given that the "City" DataTable has a field named "Name", you can access the field's value for the parent row using the following syntax.
 
-```csharp
+```java
 r.City.Name
 ```
 
@@ -218,13 +216,13 @@ r.City.Name
  |
 | **Child Rows** | Child table name | Given that r is a row of a DataTable that has a child DataTable named "Persons", you can access the enumeration of the child rows of r using the following syntax.
 
-```csharp
+```java
 r.Persons
 ```
 
 Given that the "Persons" DataTable has a field named "Age", you can count the child rows that correspond to persons over thirty years old using the following syntax.
 
-```csharp
+```java
 r.Persons.count(p => p.Age > 30)
 ```
 
@@ -246,7 +244,7 @@ You can insert images to your reports dynamically using image tags. To declare a
 2.  Set common image attributes such as frame, size, and others for the textbox, making the textbox look like a blank inserted image.
 3.  Specify an image tag within the textbox using the following syntax.
     
-    ```csharp
+    ```java
     <<image [image_expression]>>
     
     ```
@@ -271,28 +269,28 @@ By default, the engine stretches an image filling a textbox to the size of the t
 
 *   *   To keep the size of the textbox and stretch the image within bounds of the textbox preserving the ratio of the image, use the *keepRatio* switch as follows:
         
-        ```csharp
+        ```java
         <<image [image_expression] -keepRatio>>
         ```
         
 
 *   *   To keep the width of the textbox and change its height preserving the ratio of the image, use the fitHeight switch as follows:
         
-        ```csharp
+        ```java
         <<image [image_expression] -fitHeight>>
         
         ```
         
     *   To keep the height of the textbox and change its width preserving the ratio of the image, use the fitWidth switch as follows:
         
-        ```csharp
+        ```java
         <<image [image_expression] -fitWidth>>
         
         ```
         
     *   To change the size of the textbox according to the size of the image, use the fitSize switch as follows:
         
-        ```csharp
+        ```java
         <<image [image_expression] -fitSize>>
         
         ```
@@ -304,7 +302,7 @@ Using GroupDocs.Assembly, you can insert hyperlinks to URI or Bookmarks to your 
 
 #### Word Processing and Emails
 
-```csharp
+```java
 <<link [uri_or_bookmark_expression][display_text_expression]>>
 ```
 
@@ -312,13 +310,13 @@ Using GroupDocs.Assembly, you can insert hyperlinks to URI or Bookmarks to your 
 
 If the insertion of the link to cell A1 is required: 
 
-```csharp
+```java
 <<link ["A1"] ["Home"]>>
 ```
 
 #### Presentations
 
-```csharp
+```java
 <<link ["Slide1"] ["Home"]>>
 ```
 
@@ -338,7 +336,7 @@ Consider the following example. Given that `ds` is a `DataSet` instance containi
 | No. | Name | Age |
 | --- | --- | --- |
 | 
-```csharp
+```java
 <<foreach [p
         in ds.Persons]>><<[
     p.numberOf()]>>
@@ -348,7 +346,7 @@ Consider the following example. Given that `ds` is a `DataSet` instance containi
 
  | 
 
-```csharp
+```java
 <<[p.Name]>>
 ```
 
@@ -356,7 +354,7 @@ Consider the following example. Given that `ds` is a `DataSet` instance containi
 
  | 
 
-```csharp
+```java
 <<[p.Age]>><</
 foreach>>
 ```
@@ -366,7 +364,7 @@ foreach>>
  |
 | 
 
-```csharp
+```java
 Count: <<[ds.Persons.count()]>>
 ```
 
@@ -383,7 +381,7 @@ Alternatively, you can use the following template involving the contextual objec
 | No. | Name | Age |
 | --- | --- | --- |
 | 
-```csharp
+```java
  <<foreach [
         in Persons]>><<[
     numberOf()]>>
@@ -393,7 +391,7 @@ Alternatively, you can use the following template involving the contextual objec
 
  | 
 
-```csharp
+```java
 <<[Name]>> 
 ```
 
@@ -401,7 +399,7 @@ Alternatively, you can use the following template involving the contextual objec
 
  | 
 
-```csharp
+```java
 <<[Age]>><</
 foreach>> 
 ```
@@ -411,7 +409,7 @@ foreach>>
  |
 | 
 
-```csharp
+```java
 Count: <<[Persons.count()]>> 
 ```
 
@@ -430,7 +428,7 @@ A conditional block can have a default template option that is not bound with a 
 
 You can use the following syntax to declare a conditional block:
 
-```csharp
+```java
 <<if [conditional_expression1]>>
 template_option1
 <<elseif [conditional_expression2]>>
@@ -451,7 +449,7 @@ default_template_option
 A common conditional block is a conditional block which body starts and ends within paragraphs that belong to a single story or table cell.  
 If a conditional block belongs to a single paragraph, it can be used as a replacement for an expression tag that involves the ternary "?:" operator. For example, given that items is an enumeration, you can use the following template to represent the count of elements in the enumeration:
 
-```csharp
+```java
 You have chosen <<if [!items.any()]>>no items<<else>><<[items.count()]>> item(s)<</if>>.
 
 ```
@@ -472,7 +470,7 @@ item3
 
 You can use data bands within common conditional blocks as well. For example, given the previous declaration of items, you can check whether the enumeration contains any elements before outputting their list:
 
-```csharp
+```java
 <<if [!items.any()]>>No data.
 <<else>><<foreach [item in items]>><<[item]>>
 <</foreach>><</if>>
@@ -492,7 +490,7 @@ td { border-bottom-color: rgb(0, 0, 0); border-bottom-style: solid; border-botto
 
 The following examples in this section are given using client, an instance of the Client class, and clients, an enumeration of instances of the Client class that is defined as follows:
 
-```csharp
+```java
 public class Client
 {
     public String getName { ... }

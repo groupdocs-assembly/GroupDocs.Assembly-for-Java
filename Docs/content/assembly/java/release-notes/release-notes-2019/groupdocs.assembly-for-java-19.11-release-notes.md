@@ -44,7 +44,7 @@ Using of *JsonDataSource* enables you to work with typed values of JSON elements
 *   Date
 *   String
 
-In template documents, if a top-level JSON element is an array or an object having only one property of an array type, a JsonDataSource instance should be treated in the same way as if it was a DataTable instance (see "[Working with DataTable and DataView Objects](https://docs.groupdocs.com/display/assemblyjava/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-DataTableObjects)" for more information) as shown in the following example.
+In template documents, if a top-level JSON element is an array or an object having only one property of an array type, a JsonDataSource instance should be treated in the same way as if it was a DataTable instance (see "[Working with DataTable and DataView Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information) as shown in the following example.
 
 #### **JSON**
 
@@ -96,7 +96,7 @@ Average age: <<\[persons.average(p => p.Age)\]>>
 
 #### Source code
 
-```csharp
+```java
 String template_doc_path = ... // Path for template doc
 String report_doc_path = ... // path for report doc
 JsonDataSource dataSource = ... // Loading JSON.
@@ -114,7 +114,7 @@ Average age: 36
 {{< alert style="warning" >}}Using of the custom date-time format becomes possible, because text values of Birth properties are automatically converted to Date.{{< /alert >}}
 
   
-If a top-level JSON element represents an object, a *JsonDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects](https://docs.groupdocs.com/display/assemblyjava/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-DataTableObjects)" for more information). If a top-level JSON object has a single property that is also an object, then this nested object is accessed by the assembler instead. To see how it works, consider the following example.
+If a top-level JSON element represents an object, a *JsonDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information). If a top-level JSON object has a single property that is also an object, then this nested object is accessed by the assembler instead. To see how it works, consider the following example.
 
 #### JSON
 
@@ -152,7 +152,7 @@ Children:
 
 #### Source code
 
-```csharp
+```java
 String template_doc_path = ... // Path for template doc
 String report_doc_path = ... // path for report doc
 JsonDataSource dataSource = ... // Loading JSON.
@@ -255,7 +255,7 @@ Contracts:
 
 #### Source code
 
-```csharp
+```java
 String template_doc_path = ... // Path for template doc
 String report_doc_path = ... // path for report doc
 JsonDataSource dataSource = ... // Loading JSON.
@@ -294,7 +294,7 @@ From now on, the following Markdown features are supported when saving assembled
 
 You can also insert links to bookmarks to your reports dynamically using link tags. The syntax of a link tag is defined as follows:
 
-```csharp
+```java
 <<link [uri_or_bookmark_expression][display_text_expression]>>
 
 ```
@@ -318,7 +318,7 @@ The following table describes supported formats of cell and cell range reference
 
 Following is sample syntax, If the link to cell A1 is required to be inserted:
 
-```csharp
+```java
 <<link ["A1"] ["Home"]>>
 ```
 
@@ -328,6 +328,6 @@ For Presentation documents, behavior of link tags is changed as follows. If an
 
 See the example of the syntax as follows:
 
-```csharp
+```java
 <<link ["Slide1"] ["Home"]>>
 ```

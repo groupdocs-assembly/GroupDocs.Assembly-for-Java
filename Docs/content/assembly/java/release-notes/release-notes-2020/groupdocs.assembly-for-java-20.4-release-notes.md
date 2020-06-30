@@ -27,7 +27,7 @@ Provided an option to fit an image within textbox bounds while maintaining ratio
 
 To keep the size of the textbox and stretch the image within bounds of the textbox preserving the ratio of the image, use the *keepRatio* switch as follows.
 
-```csharp
+```java
 <<image [image_expression] -keepRatio>>
 
 ```

@@ -32,7 +32,7 @@ This release of GroupDocs.Assembly extends abilities of dynamic manipulation ove
 
 From now, template syntax expressions are supported in chart axis titles. Thus, to set a chart axis title dynamically, you can put an expression tag into it like in the following example: 
 
-```csharp
+```java
 <<[axis_title_expression]>>
 ```
 
@@ -42,7 +42,7 @@ All common template syntax expression features are supported for chart axis titl
 
 You can set text background color for document contents dynamically using backColor tags. The syntax of a backColor tag is defined as follows.
 
-```csharp
+```java
 <<backColor[color_expression]>>
 content_to_be_colored
 <</backColor>>

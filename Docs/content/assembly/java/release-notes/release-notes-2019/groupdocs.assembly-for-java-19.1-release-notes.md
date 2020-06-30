@@ -34,7 +34,7 @@ Supported dynamic merging of table cells with equal text contents.
 
 You can merge table cells with equal textual contents within your reports dynamically using cellMerge tags. Syntax of a cellMerge tag is defined as follows.
 
-```csharp
+```java
 <<cellMerge -horz>>
 
 ```
@@ -65,6 +65,6 @@ If value1 and value2 have different values, say "Hello" and "World", table cells
 
 An optional comment providing a human-readable explanation ignored by the engine
 
-```csharp
+```java
 <<tag_name [expression] –switch1 –switch2 ... // optional_comment >>
 ```

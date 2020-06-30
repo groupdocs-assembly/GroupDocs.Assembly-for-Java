@@ -10,8 +10,6 @@ hideChildren: False
 ---
 {{< alert style="info" >}}This article is the second part of the Template Syntax series of articles. For first part, please visit Template Syntax - Part 1 of 2.{{< /alert >}}
 
-<table class="sectionMacro" border="0" cellpadding="5" cellspacing="0" width="100%"><tbody><tr><td valign="top" width="50%"><div class="panel" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;"><div class="panelHeader" style="border-bottom-width: 1px; background-color: rgb(176, 196, 222);"><b>Contents Summary</b></div><div class="panelContent"><style type="text/css">div.rbtoc1593026731817 { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }div.rbtoc1593026731817 ul { list-style-type: none; list-style-image: none; margin-left: 0px; }div.rbtoc1593026731817 li { margin-left: 0px; padding-left: 0px; }</style><div class="toc rbtoc1593026731817"><ul class="toc-indentation"><li><span class="TOCOutline">1</span> <a href="#TemplateSyntax-Part2of2-OutputtingExpressionResults">Outputting Expression Results</a></li><li><span class="TOCOutline">2</span> <a href="#TemplateSyntax-Part2of2-OutputtingSequentialData">Outputting Sequential Data</a><ul class="toc-indentation"><li><span class="TOCOutline">2.1</span> <a href="#TemplateSyntax-Part2of2-CommonDataBands">Common Data Bands</a></li><li><span class="TOCOutline">2.2</span> <a href="#TemplateSyntax-Part2of2-NumberedLists">Numbered Lists</a><ul class="toc-indentation"><li><span class="TOCOutline">2.2.1</span> <a href="#TemplateSyntax-Part2of2-Dynamiclistnumberingrestart">Dynamic list numbering restart</a></li></ul></li><li><span class="TOCOutline">2.3</span> <a href="#TemplateSyntax-Part2of2-Table-RowDataBands">Table-Row Data Bands</a></li><li><span class="TOCOutline">2.4</span> <a href="#TemplateSyntax-Part2of2-ExtensionMethodsofIterationVariables">Extension Methods of Iteration Variables</a></li><li><span class="TOCOutline">2.5</span> <a href="#TemplateSyntax-Part2of2-ChartsRepresentingSequentialData">Charts Representing Sequential Data</a></li></ul></li><li><span class="TOCOutline">3</span> <a href="#TemplateSyntax-Part2of2-EnumerationExtensionMethods">Enumeration Extension Methods</a><ul class="toc-indentation"><li><span class="TOCOutline">3.1</span> <a href="#TemplateSyntax-Part2of2-TheEnumeration">The Enumeration</a></li><li><span class="TOCOutline">3.2</span> <a href="#TemplateSyntax-Part2of2-TheEnumerationExtension">The Enumeration Extension</a></li></ul></li></ul></div></div></div></td><td valign="top" width="15%">&nbsp;</td><td valign="top" width="35%">&nbsp;</td></tr></tbody></table>
-
 ## Outputting Expression Results
 
 You can output expression results to your reports using expression tags. An expression tag denotes a placeholder for an expression result within a template. While building a report, the corresponding expression is evaluated, and this placeholder is replaced with the formatted result of the expression.
@@ -22,7 +20,7 @@ An expression tag has no name and consists of the following elements:
 *   An optional format string enclosed by double quotes and preceded by the ":" character
 *   An optional `html` switch
 
-```csharp
+```java
 <<[expression]:"format" -html>>
 ```
 
@@ -30,13 +28,13 @@ If `html` switch is not present, the result of the corresponding expression is
 
 If `html` switch is present, the expression result is considered to be a HTML block and is written as such. This feature is useful, when you need to format text parts of an expression result in different ways. For example, the following tag is replaced with a content like "**Bold** and *italic* text" at runtime.
 
-```csharp
+```java
 <<["<b>Bold</b> and <i>italic</i> text"] -html>>
 ```
 
 To format a numeric or date-time expression result, you can specify a format string as an element of the corresponding expression tag. Such format strings are the same as the ones that you pass to DecimalFormat or SimpleDateFormat constructors. That is, for example, given that `d` is a `DateTime` value, you can use the following template to format the value using the "yyyy.MM.dd" pattern.
 
-```csharp
+```java
 <<[d]:"yyyy.MM.dd">>
 ```
 
@@ -51,7 +49,7 @@ You can output a sequence of elements of the same type to your report using a da
 
 A data band body is defined between the corresponding opening and closing `foreach` tags within a template as follows.
 
-```csharp
+```java
 <<foreach ...>>
 data_band_body
 <</foreach>>
@@ -74,7 +72,7 @@ If you do not specify the name, you can access the variable's members using the 
 
 The complete syntax of a `foreach` tag (including optional elements) is as follows.
 
-```csharp
+```java
 <<foreach [variable_type variable_name in sequence_expression]>>
 data_band_body
 <</foreach>>
@@ -89,14 +87,14 @@ A common data band is a data band which body starts and ends within paragraphs t
 
 In particular, a common data band can be entirely located within a single paragraph. In this case, while building a report, the band is replaced with contents that are entirely located within the same paragraph as well. The following example illustrates such a scenario. Given that items is an enumeration of the strings "item1", "item2", and "item3", you can use the following template to enumerate them with commas in a single paragraph.
 
-```csharp
+```java
 The items are: <<foreach [item in items]>><<[item]>>, <</foreach>>and others.
 
 ```
 
 In this case, the engine produces a report as follows.
 
-```csharp
+```java
 The items are: item1, item2, item3, and others.
 ```
 
@@ -107,7 +105,7 @@ When the body of a common data band starts and ends within different paragraphs,
 | Template | Report |
 | --- | --- |
 | 
-```csharp
+```java
 prefix <<foreach [item in items]>><<[item]>>¶
 <</foreach>>suffix
 ```
@@ -116,7 +114,7 @@ prefix <<foreach [item in items]>><<[item]>>¶
 
  | 
 
-```csharp
+```java
 prefix item1¶
 item2¶
 item3¶
@@ -128,7 +126,7 @@ suffix
  |
 | 
 
-```csharp
+```java
 prefix<<foreach [item in items]>>¶
 <<[item]>><</foreach>> suffix
 ```
@@ -137,7 +135,7 @@ prefix<<foreach [item in items]>>¶
 
  | 
 
-```csharp
+```java
 prefix¶
 item1¶
 item2¶
@@ -149,7 +147,7 @@ item3 suffix
  |
 | 
 
-```csharp
+```java
 prefix¶
 <<foreach [item in items]>><<[item]>>¶
 <</foreach>>suffix
@@ -159,7 +157,7 @@ prefix¶
 
  | 
 
-```csharp
+```java
 prefix¶
 item1¶
 item2¶
@@ -172,7 +170,7 @@ suffix
  |
 | 
 
-```csharp
+```java
 prefix<<foreach [item in items]>>¶
 <<[item]>><</foreach>>¶
 suffix
@@ -182,7 +180,7 @@ suffix
 
  | 
 
-```csharp
+```java
 prefix¶
 item1¶
 item2¶
@@ -195,7 +193,7 @@ suffix
  |
 | 
 
-```csharp
+```java
 prefix¶
 <<foreach [item in items]>>¶
 <<[item]>>¶
@@ -207,7 +205,7 @@ suffix
 
  | 
 
-```csharp
+```java
 prefix¶
 ¶
 item1¶
@@ -229,7 +227,7 @@ While building a report, duplicated paragraph breaks derive common attributes fr
 
  "1. " in the template stands for a numbered list label.
 
-```csharp
+```java
 1. <<foreach [item in items]>><<[item]>>
 <</foreach>>
 
@@ -237,7 +235,7 @@ While building a report, duplicated paragraph breaks derive common attributes fr
 
 In this case, the engine produces a report as follows.
 
-```csharp
+```java
 1. item1
 2. item2
 3. item3
@@ -250,7 +248,7 @@ This feature is useful when working with a nested numbered list within a data ba
 
 Assume that you have the Order and Service classes defined in your application as follows:
 
-```csharp
+```java
 public class Order
 {
     public String getClientName() {... }
@@ -271,7 +269,7 @@ public class Service
 
 Given that orders is an enumeration of Order instances, you could try to use the following template to output information on several orders in one document.
 
-```csharp
+```java
 <<foreach [order in orders]>><<[order.getClientName()]>> (<<[order.getClientAddress()]>>)
 1. <<foreach [service in order.getServices()]>><<[service.getName()]>>
 <</foreach>><</foreach>>
@@ -289,7 +287,7 @@ John Smith (43 Vogel Street Roslyn Palmerston North 4414)
 
 That is, there would be a single numbered list across all orders, which is not applicable for this scenario. However, you can make list numbering to restart for every order by putting a restartNum tag into your template before a corresponding foreach tag as follows:
 
-```csharp
+```java
 <<foreach [order in orders]>><<[order.getClientName()]>> (<<[order.getClientAddress()]>>)
 1. <<restartNum>><<foreach [service in order.getServices()]>><<[service.getName()]>>
 <</foreach>><</foreach>>
@@ -328,7 +326,7 @@ The most common use case of a table-row data band is the building of a document 
 | Client | Manager | Contract Price |
 | --- | --- | --- |
 | 
-```csharp
+```java
 <<foreach [
     c in ds.Contracts
 ]>><<[c.Clients.Name]>>
@@ -338,7 +336,7 @@ The most common use case of a table-row data band is the building of a document 
 
  | 
 
-```csharp
+```java
 <<[c.Managers.Name]>>
 ```
 
@@ -346,7 +344,7 @@ The most common use case of a table-row data band is the building of a document 
 
  | 
 
-```csharp
+```java
 <<[c.Price]>><</
 foreach>>
 ```
@@ -358,7 +356,7 @@ foreach>>
 
  | 
 
-```csharp
+```java
 <<[ds
     .Contracts
     .sum(c =>
@@ -390,7 +388,7 @@ To populate a document table with a master-detail data, you can use nested table
 | Manager/Client | Contract Price |
 | --- | --- |
 | 
-```csharp
+```java
 <<foreach [
     m in ds.Managers
 ]>><<[m.Name]>>
@@ -400,7 +398,7 @@ To populate a document table with a master-detail data, you can use nested table
 
  | 
 
-```csharp
+```java
 <<[m.Contracts.sum(
     c => c.Price)]>>
 ```
@@ -410,7 +408,7 @@ To populate a document table with a master-detail data, you can use nested table
  |
 | 
 
-```csharp
+```java
 <<foreach [
     c in m.Contracts
 ]>> <<[c.Clients.Name]>>
@@ -420,7 +418,7 @@ To populate a document table with a master-detail data, you can use nested table
 
  | 
 
-```csharp
+```java
 <<[c.Price]>><</
 foreach>><</
 foreach>>
@@ -431,7 +429,7 @@ foreach>>
  |
 | Total: | 
 
-```csharp
+```java
 <<[ds
     .Contracts
     .sum(c =>
@@ -465,7 +463,7 @@ You can normally use common data bands nested to table-row data bands as well li
 | Manager | Clients |
 | --- | --- |
 | 
-```csharp
+```java
 <<foreach [
     m in ds.Managers
 ]>><<[m.Name]>>
@@ -475,7 +473,7 @@ You can normally use common data bands nested to table-row data bands as well li
 
  | 
 
-```csharp
+```java
 <<foreach [
     c in m.Contracts
 ]>><<[c.Clients.Name]>>
@@ -510,7 +508,7 @@ GroupDocs.Assembly Engine provides special extension methods for iteration varia
 
 Returns the zero-based index of a sequence item that is represented by the corresponding iteration variable. You can use this extension method to distinguish sequence items with different indexes and then handle them in different ways. For example, given that `items` is an enumeration of the strings "item1", "item2", and "item3", you can use the following template to enumerate them prefixing all of them but the first one with commas.
 
-```csharp
+```java
 The items are: <<foreach [
     item in items]>><<[item.indexOf() != 0
         ? ", "
@@ -520,7 +518,7 @@ The items are: <<foreach [
 
 In this case, the engine produces a report as follows.
 
-```csharp
+```java
 The items are: item1, item2, item3.
 
 ```
@@ -532,7 +530,7 @@ Returns the one-based index of a sequence item that is represented by the corres
 | No. | Item |
 | --- | --- |
 | 
-```csharp
+```java
 <<foreach [item
 in items]>><<[
 item.numberOf()]>>
@@ -542,7 +540,7 @@ item.numberOf()]>>
 
  | 
 
-```csharp
+```java
 <<[item]>><</foreach>>
 ```
 
@@ -571,7 +569,7 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
 5.  Add an opening foreach tag to the chart title.
 6.  Depending on the type of the chart, add x tags to the chart title or chart series' names as follows.
     
-    ```csharp
+    ```java
     <<x [x_value_expression]>>
     
     ```
@@ -583,7 +581,7 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
     2.  For a chart of another type, add a single x tag to the chart title after the corresponding foreach tag. In this case, an x-value expression must return a numeric, date, or string value.
 7.  For a chart of any type, add y tags to chart series' names as follows.
     
-    ```csharp
+    ```java
     <<y [y_value_expression]>>
     
     ```
@@ -592,7 +590,7 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
     
 8.  For a bubble chart, add size tags to chart series' names as follows.
     
-    ```csharp
+    ```java
     <<size [bubble_size_expression]>>
     
     ```
@@ -604,7 +602,7 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
     1.  Declare a chart with dynamic data in the usual way
     2.  For series to be removed from the chart based upon conditions dynamically, define the conditions in names of these series using removeif tags having the following syntax
     
-    ```csharp
+    ```java
     <<removeif [conditional_expression]>>
     
     ```
@@ -624,7 +622,7 @@ During runtime, a chart with a foreach tag in its title is processed by the engi
 4.  All foreach, x, y, and size tags are removed from the chart title and chart series' names.  
     Consider the following example. Assume that you have the Manager and Contract classes defined in your application as follows.
     
-    ```csharp
+    ```java
     public class Manager
     {
         public String getName() { ... }
@@ -659,7 +657,7 @@ Below table describes the built-in extension methods. The following notation con
 
 Examples in this table are given using `persons` and `otherPersons`, enumerations of instances of the `Person` class that is defined as follows.
 
-```csharp
+```java
 public class Person
 {
     public String getName { ... }
@@ -673,7 +671,7 @@ public class Person
 | Extension Method | Examples and Notes |
 | --- | --- |
 | `all(Predicate)` | 
-```csharp
+```java
 persons.all(p => p.getAge < 50)
 ```
 
@@ -682,7 +680,7 @@ persons.all(p => p.getAge < 50)
  |
 | `any()` | 
 
-```csharp
+```java
 persons.any()
 ```
 
@@ -691,7 +689,7 @@ persons.any()
  |
 | `any(Predicate)` | 
 
-```csharp
+```java
 persons.any(p => p.getName == "John Smith")
 ```
 
@@ -700,21 +698,21 @@ persons.any(p => p.getName == "John Smith")
  |
 | `average(Selector)` | 
 
-```csharp
+```java
 persons.average(p => p.getAge)
 ```
 
 The input selector must return a value of any type that has predefined addition and division operators. |
 | `concat(Iterable)` | 
 
-```csharp
+```java
 persons.concat(otherPersons)
 ```
 
 An implicit reference conversion must exist between types of items of concatenated enumerations. |
 | `contains(Object)` | 
 
-```csharp
+```java
 persons.contains(otherPersons.first())
 ```
 
@@ -723,7 +721,7 @@ persons.contains(otherPersons.first())
  |
 | `count()` | 
 
-```csharp
+```java
 persons.count()
 ```
 
@@ -732,7 +730,7 @@ persons.count()
  |
 | `count(Predicate)` | 
 
-```csharp
+```java
 persons.count(p => p.getAge > 30)
 ```
 
@@ -741,7 +739,7 @@ persons.count(p => p.getAge > 30)
  |
 | `distinct()` | 
 
-```csharp
+```java
 persons.distinct()
 ```
 
@@ -750,7 +748,7 @@ persons.distinct()
  |
 | `first()` | 
 
-```csharp
+```java
 persons.first()
 ```
 
@@ -759,7 +757,7 @@ persons.first()
  |
 | `first(Predicate)` | 
 
-```csharp
+```java
 persons.first(p => p.getAge > 30)
 ```
 
@@ -768,7 +766,7 @@ persons.first(p => p.getAge > 30)
  |
 | `firstOrDefault()` | 
 
-```csharp
+```java
 persons.firstOrDefault()
 ```
 
@@ -777,7 +775,7 @@ persons.firstOrDefault()
  |
 | `firstOrDefault(Predicate)` | 
 
-```csharp
+```java
 persons.firstOrDefault(p => p.getAge > 30)
 ```
 
@@ -786,13 +784,13 @@ persons.firstOrDefault(p => p.getAge > 30)
  |
 | `groupBy(Selector)` | 
 
-```csharp
+```java
 persons.groupBy(p => p.getAge)
 ```
 
 Or
 
-```csharp
+```java
 persons.groupBy(
     p => new
     {
@@ -804,7 +802,7 @@ persons.groupBy(
 This method returns an enumeration of group objects. Each group has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the Key property. You can treat a group itself as an enumeration of items that the group contains. |
 | `last()` | 
 
-```csharp
+```java
 persons.last()
 ```
 
@@ -813,7 +811,7 @@ persons.last()
  |
 | `last(Predicate)` | 
 
-```csharp
+```java
 persons.last(p => p.getAge > 100)
 ```
 
@@ -822,7 +820,7 @@ persons.last(p => p.getAge > 100)
  |
 | `lastOrDefault()` | 
 
-```csharp
+```java
 persons.lastOrDefault()
 ```
 
@@ -831,7 +829,7 @@ persons.lastOrDefault()
  |
 | `lastOrDefault(Predicate)` | 
 
-```csharp
+```java
 persons.lastOrDefault(p => p.getAge > 100)
 ```
 
@@ -840,7 +838,7 @@ persons.lastOrDefault(p => p.getAge > 100)
  |
 | `max(ComparableSelector)` | 
 
-```csharp
+```java
 persons.max(p => p.getAge)
 ```
 
@@ -849,7 +847,7 @@ persons.max(p => p.getAge)
  |
 | `min(ComparableSelector)` | 
 
-```csharp
+```java
 persons.min(p => p.getAge)
 ```
 
@@ -858,20 +856,20 @@ persons.min(p => p.getAge)
  |
 | `orderBy(ComparableSelector)` | 
 
-```csharp
+```java
 persons.orderBy(p => p.getAge)
 ```
 
 Or
 
-```csharp
+```java
 persons.orderBy(p => p.getAge)
     .thenByDescending(p => p.getName)
 ```
 
 Or
 
-```csharp
+```java
 persons.orderBy(p => p.getAge)
     .thenByDescending(p => p.getName)
     .thenBy(p => p.getChildren.count())
@@ -885,20 +883,20 @@ This method returns an enumeration ordered by a single key. To specify additiona
  |
 | `orderByDescending(ComparableSelector)` | 
 
-```csharp
+```java
 persons.orderByDescending(p => p.getAge)
 ```
 
 Or
 
-```csharp
+```java
 persons.orderByDescending(p => p.getAge)
     .thenByDescending(p => p.getName)
 ```
 
 Or
 
-```csharp
+```java
 persons.orderByDescending(p => p.getAge)
     .thenByDescending(p => p.getName)
     .thenBy(p => p.getChildren.count())
@@ -907,7 +905,7 @@ persons.orderByDescending(p => p.getAge)
 See the previous note. |
 | `single()` | 
 
-```csharp
+```java
 persons.single()
 ```
 
@@ -916,7 +914,7 @@ persons.single()
  |
 | `single(Predicate)` | 
 
-```csharp
+```java
 persons.single(
     p => p.getName == "John Smith")
 ```
@@ -926,7 +924,7 @@ persons.single(
  |
 | `singleOrDefault()` | 
 
-```csharp
+```java
 persons.singleOrDefault()
 ```
 
@@ -935,7 +933,7 @@ persons.singleOrDefault()
  |
 | `singleOrDefault(Predicate)` | 
 
-```csharp
+```java
 persons.singleOrDefault(
     p => p.getName == "John Smith")
 ```
@@ -945,7 +943,7 @@ persons.singleOrDefault(
  |
 | `skip(int)` | 
 
-```csharp
+```java
 persons.skip(10)
 ```
 
@@ -954,7 +952,7 @@ persons.skip(10)
  |
 | `skipWhile(Predicate)` | 
 
-```csharp
+```java
 persons.skipWhile(p => p.getAge < 21)
 ```
 
@@ -963,14 +961,14 @@ persons.skipWhile(p => p.getAge < 21)
  |
 | `sum(Selector)` | 
 
-```csharp
+```java
 persons.sum(p => p.getChildren.count())
 ```
 
 The input selector must return a value of any type that has a predefined addition operator. |
 | `take(int)` | 
 
-```csharp
+```java
 persons.take(5)
 ```
 
@@ -979,7 +977,7 @@ persons.take(5)
  |
 | `takeWhile(Predicate)` | 
 
-```csharp
+```java
 persons.takeWhile(p => p.getAge < 50)
 ```
 
@@ -988,14 +986,14 @@ persons.takeWhile(p => p.getAge < 50)
  |
 | `union(Iterable)` | 
 
-```csharp
+```java
 persons.union(otherPersons)
 ```
 
 An implicit reference conversion must exist between types of items of united enumerations. |
 | `where(Predicate)` | 
 
-```csharp
+```java
 persons.where(p => p.getAge > 18)
 ```
 

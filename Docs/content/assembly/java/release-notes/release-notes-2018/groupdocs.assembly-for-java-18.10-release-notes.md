@@ -32,7 +32,7 @@ The following new member was added to **DocumentAssemblyOptions**:
 
 **Java**
 
-```csharp
+```java
 **
   * Specifies that the assembler should remove paragraphs becoming empty after template syntax tags are removed or replaced with empty values.
   * At the moment, this option is supported only for templates of Word Processing, Presentation, and Email file formats.
@@ -46,7 +46,7 @@ When the new option is applied to **DocumentAssembler **options through **Doc
 
 Template document.
 
-```csharp
+```java
 Prefix
 <<[""]>>
 Suffix
@@ -54,7 +54,7 @@ Suffix
 
 Result document without the new option applied.
 
-```csharp
+```java
 Prefix
  
 Suffix
@@ -62,7 +62,7 @@ Suffix
 
 Result document with the new option applied.
 
-```csharp
+```java
 Prefix
 Suffix
 ```
@@ -71,7 +71,7 @@ Suffix
 
 Template document.
 
-```csharp
+```java
 Prefix
 <<if [false]>>
 Text to be removed
@@ -81,7 +81,7 @@ Suffix
 
 Result document without the new option applied.
 
-```csharp
+```java
 Prefix
  
 Suffix
@@ -89,7 +89,7 @@ Suffix
 
 Result document with the new option applied.
 
-```csharp
+```java
 Prefix
 Suffix
 ```
@@ -101,7 +101,7 @@ Suffix
   
 Template document.
 
-```csharp
+```java
 Prefix
 <<foreach [in persons]>>
 <<[Name]>>
@@ -111,7 +111,7 @@ Suffix
 
 Result document without the new option applied.
 
-```csharp
+```java
 Prefix
  
 John Doe
@@ -125,7 +125,7 @@ Suffix
 
 Result document with the new option applied.
 
-```csharp
+```java
 Prefix
 John Doe
 Jane Doe

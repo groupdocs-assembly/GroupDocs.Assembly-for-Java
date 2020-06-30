@@ -30,7 +30,7 @@ Supported document assembly of external documents being dynamically inserted for
 
 You can insert contents of outer documents to your reports dynamically using doc tags. A doc tag denotes a placeholder within a template for a document to be inserted during runtime. The syntax of a doc tag is defined as follows.
 
-```csharp
+```java
 <<doc [document_expression]>>
 
 ```
@@ -49,7 +49,7 @@ While building a report, an expression declared within a doc tag is evaluated an
 
 By default, a document being inserted is not checked against template syntax and is not populated with data. However, you can enable this by using a build switch as follows.
 
-```csharp
+```java
 <<doc [document_expression] -build>>
 
 ```

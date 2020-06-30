@@ -42,7 +42,7 @@ From now, the GroupDocs.Assembly supports loading of HTML template documents ref
 
 From now, when loading an HTML document from a file, its containing folder is used as a base URI to resolve external resource files' relative URIs to absolute ones by default as shown in the following example.
 
-```csharp
+```java
 String myDir = ...
 DocumentAssembler assembler = new DocumentAssembler();
  
@@ -55,7 +55,7 @@ After running the code, the TestWordsResourceLoad Out.docx contains an image, w
 
 The following property was added.
 
-```csharp
+```java
 /**
   * Gets a base URI to resolve external resource files' relative URIs to absolute ones while loading an HTML template document to be assembled and saved to a non-HTML format. The default value is an empty string.
   * <p>
@@ -101,7 +101,7 @@ public void setResourceLoadBaseUri(String value)
 
 In the following example, the default folder used to resolve external resource files' relative URIs is overridden by an explicitly specified folder.
 
-```csharp
+```java
 String myDir = ...
 DocumentAssembler assembler = new DocumentAssembler();
  
@@ -123,7 +123,7 @@ From now, the GroupDocs.Assembly supports saving of external resource files whil
 
 From now, when saving an assembled document to an HTML file, by default, external resource files are stored to a folder having the same name as the HTML file without extension plus the "\_files" suffix. This folder is located in the same folder as the HTML file. The following example illustrates the scenario.
 
-```csharp
+```java
 String myDir = ...
 DocumentAssembler assembler = new DocumentAssembler();
  
@@ -136,7 +136,7 @@ After running the code, the folder "TestWordsResourceSave Out\_files" is created
 
 The following property was added.
 
-```csharp
+```java
 /**
   * Gets a path to a folder to store external resource files while an assembled document loaded from a non-HTML format is being saved to HTML. The default value is an empty string.
   * <p>
@@ -166,7 +166,7 @@ public void setResourceSaveFolder(String value)
 
 In the following example, the default folder used to store HTML resource files is overridden by an explicitly specified folder.
 
-```csharp
+```java
 String myDir = ...
 DocumentAssembler assembler = new DocumentAssembler();
  

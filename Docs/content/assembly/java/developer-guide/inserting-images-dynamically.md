@@ -16,15 +16,15 @@ You can insert images to your reports dynamically using image tags. To declare a
 2.  Set common image attributes such as frame, size, and others for the textbox, making the textbox look like a blank inserted image.
 3.  Specify an image tag within the textbox using the following syntax.
 
-```csharp
+```java
 <<image [image_expression]>>
 ```
 
 And simply call the assembler method to generate report like following code snippets:
 
-<table class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip=""><tbody><tr><td id="file-insertimagedynamicallyinword_20-3-java-L1" class="blob-num js-line-number" data-line-number="1"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> For complete examples and data files, please go to https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java</span></td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L2" class="blob-num js-line-number" data-line-number="2"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span>Setting up source document template (Email or Word Document)</span></td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L3" class="blob-num js-line-number" data-line-number="3"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">String</span> strDocumentTemplate <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>/Word Templates/DynamicImageDemo.docx<span class="pl-pds">"</span></span>;</td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L4" class="blob-num js-line-number" data-line-number="4"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC4" class="blob-code blob-code-inner js-file-line"></td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L5" class="blob-num js-line-number" data-line-number="5"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span>Setting up destination for reports</span></td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L6" class="blob-num js-line-number" data-line-number="6"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">String</span> strDocumentReport <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>/Word Reports/DynamicImageDemo Out.docx<span class="pl-pds">"</span></span>;</td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L7" class="blob-num js-line-number" data-line-number="7"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC7" class="blob-code blob-code-inner js-file-line"></td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L8" class="blob-num js-line-number" data-line-number="8"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span>Instantiate DocumentAssembler class</span></td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L9" class="blob-num js-line-number" data-line-number="9"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">DocumentAssembler</span> assembler <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">DocumentAssembler</span>();</td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L10" class="blob-num js-line-number" data-line-number="10"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC10" class="blob-code blob-code-inner js-file-line"></td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L11" class="blob-num js-line-number" data-line-number="11"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC11" class="blob-code blob-code-inner js-file-line">assembler<span class="pl-k">.</span>assembleDocument(<span class="pl-smi">CommonUtilities</span><span class="pl-k">.</span>getDataPath(strDocumentTemplate),</td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L12" class="blob-num js-line-number" data-line-number="12"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">CommonUtilities</span><span class="pl-k">.</span>getOutPath(strDocumentReport),</td></tr><tr><td id="file-insertimagedynamicallyinword_20-3-java-L13" class="blob-num js-line-number" data-line-number="13"></td><td id="file-insertimagedynamicallyinword_20-3-java-LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-k">new</span> <span class="pl-smi">DataSourceInfo</span>(<span class="pl-smi">CommonUtilities</span><span class="pl-k">.</span>getImagePath(<span class="pl-s"><span class="pl-pds">"</span>no-photo.jpg<span class="pl-pds">"</span></span>),<span class="pl-s"><span class="pl-pds">"</span>image_expression<span class="pl-pds">"</span></span>));</td></tr></tbody></table>
+{{< gist GroupDocsGists ecbe5e7331f08a3f0bccd81a1ef57995 insertImageDynamicallyInWord_20.3.java >}}
 
-[view raw](https://gist.github.com/GroupDocsGists/ecbe5e7331f08a3f0bccd81a1ef57995/raw/0af1bfaf1c09cb31563f8f9d8d94eeb618f8a49b/insertImageDynamicallyInWord_20.3.java) [insertImageDynamicallyInWord\_20.3.java](https://gist.github.com/GroupDocsGists/ecbe5e7331f08a3f0bccd81a1ef57995#file-insertimagedynamicallyinword_20-3-java) hosted with ❤ by [GitHub](https://github.com)
+
 
 The expression declared within an image tag is used by the assembler to build an image to be inserted. The expression must return a value of one of the following types:
 
@@ -45,31 +45,31 @@ By default, the assembler stretches an image filling a textbox to the size of th
 
 *   To keep the size of the textbox and stretch the image within bounds of the textbox preserving the ratio of the image, use the *keepRatio* switch as follows:
     
-    ```csharp
+    ```java
     <<image [image_expression] -keepRatio>>
     ```
     
 *   To keep the width of the textbox and change its height preserving the ratio of the image, use the fitHeight switch as follows.
     
-    ```csharp
+    ```java
     <<image [image_expression] -fitHeight>>
     ```
     
 *   To keep the height of the textbox and change its width preserving the ratio of the image, use the fitWidth switch as follows.
     
-    ```csharp
+    ```java
     <<image [image_expression] -fitWidth>>
     ```
     
 *   To change the size of the textbox according to the size of the image, use the fitSize switch as follows.
     
-    ```csharp
+    ```java
     <<image [image_expression] -fitSize>>
     ```
     
 *   To change the size of the textbox according to the size of the image without increasing the size of the textbox, use the fitSizeLim switch as follows.
     
-    ```csharp
+    ```java
     <<image [image_expression] -fitSizeLim>>
     ```
     

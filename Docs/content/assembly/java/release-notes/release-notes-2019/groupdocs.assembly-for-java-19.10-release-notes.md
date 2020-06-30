@@ -38,7 +38,7 @@ To access XML data while building a report, you can use facilities of *DataSet*
 
 {{< alert style="warning" >}}For recognition of data types to work, string representations of corresponding attributes and text values of XML elements must be formed using invariant culture settings.{{< /alert >}}
 
-In template documents, if a top-level XML element contains only a sequence of elements of the same type, an *XmlDataSource* instance should be treated in the same way as if it was a *DataTable *instance (see "[Working with *DataTable* and *DataView* Objects](https://docs.groupdocs.com/display/assemblyjava/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-DataTableObjects)" for more information) as shown in the following example.
+In template documents, if a top-level XML element contains only a sequence of elements of the same type, an *XmlDataSource* instance should be treated in the same way as if it was a *DataTable *instance (see "[Working with *DataTable* and *DataView* Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information) as shown in the following example.
 
 #### XML
 
@@ -69,7 +69,7 @@ Average age: <<\[persons.average(p => p.Age)\]>>
 
 #### Source code
 
-```csharp
+```java
 String template_doc_path = ... // Path for template doc
 string report_doc_path = ... // path for report doc
 XmlDataSource dataSource = ... // Loading XML (without schema).
@@ -86,7 +86,7 @@ Average age: 36
 
 {{< alert style="warning" >}}Using of the custom date-time format and the extension method involving arithmetic in the template document becomes possible, because text values of Birth and Age XML elements are automatically converted to Date? and Integer respectively even in the absence of XML schema.{{< /alert >}}
 
-If a top-level XML element contains attributes or nested elements of different types, an *XmlDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects](https://docs.groupdocs.com/display/assemblyjava/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-DataTableObjects)" for more information) as shown in the following example.
+If a top-level XML element contains attributes or nested elements of different types, an *XmlDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information) as shown in the following example.
 
 #### XML
 
@@ -108,7 +108,7 @@ Children:
 
 #### Source code
 
-```csharp
+```java
 String template_doc_path = ... // Path for template doc
 String report_doc_path = ... // path for report doc
 XmlDataSource dataSource = ... // Loading XML (without schema).
@@ -206,7 +206,7 @@ Contracts:
 
 #### Source code
 
-```csharp
+```java
 String template_doc_path = ... // Path for template doc
 String report_doc_path = ... // path for report doc
 XmlDataSource dataSource = ... // Loading XML (without schema).
@@ -244,7 +244,7 @@ To access CSV data while building a report, you can pass a *CsvDataSource* ins
 
 {{< alert style="warning" >}}For recognition of data types to work, string representations of corresponding values must be formed using invariant culture settings.{{< /alert >}}
 
-In template documents, a *CsvDataSource* instance should be treated in the same way as if it was a *DataTable* instance (see "[Working with *DataTable* and *DataView* Objects](https://docs.groupdocs.com/display/assemblyjava/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-DataTableObjects)" for more information) as shown in the following example.
+In template documents, a *CsvDataSource* instance should be treated in the same way as if it was a *DataTable* instance (see "[Working with *DataTable* and *DataView* Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information) as shown in the following example.
 
 #### CSV
 
@@ -261,7 +261,7 @@ Average age: <<\[persons.average(p => p.Column2)\]>>
 
 #### Source code
 
-```csharp
+```java
 String template_doc_path = ... // Path for template doc
 String report_doc_path = ... // path for report doc
 CsvDataSource dataSource = ... // Loading CSV.
@@ -296,7 +296,7 @@ Average age: <<\[persons.average(p => p.Age)\]>>
 
 #### Source code
 
-```csharp
+```java
 String template_doc_path = ... // Path for template doc
 String report_doc_path = ... // path for report doc
 CsvDataLoadOptions options = new CsvDataLoadOptions(true);

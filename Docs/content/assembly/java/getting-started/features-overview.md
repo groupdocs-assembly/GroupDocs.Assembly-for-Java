@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-<table class="sectionMacro" border="0" cellpadding="5" cellspacing="0" width="100%"><tbody><tr><td valign="top" width="50%"><div class="panel" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;"><div class="panelHeader" style="border-bottom-width: 1px; background-color: rgb(176, 196, 222);"><b>Contents Summary</b></div><div class="panelContent"><style type="text/css">div.rbtoc1593026731419 { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }div.rbtoc1593026731419 ul { list-style-type: none; list-style-image: none; margin-left: 0px; }div.rbtoc1593026731419 li { margin-left: 0px; padding-left: 0px; }</style><div class="toc rbtoc1593026731419"><ul class="toc-indentation"><li><span class="TOCOutline">1</span> <a href="#FeaturesOverview-FeaturesOverview">Features Overview</a></li><li><span class="TOCOutline">2</span> <a href="#FeaturesOverview-DataSources">Data Sources</a><ul class="toc-indentation"><li><span class="TOCOutline">2.1</span> <a href="#FeaturesOverview-DataFormats">Data Formats</a></li><li><span class="TOCOutline">2.2</span> <a href="#FeaturesOverview-DataManipulationCapabilities">Data Manipulation Capabilities</a></li><li><span class="TOCOutline">2.3</span> <a href="#FeaturesOverview-ExplicitSupportforMultipleDataSources">Explicit Support for Multiple Data Sources</a></li></ul></li><li><span class="TOCOutline">3</span> <a href="#FeaturesOverview-TemplateFormats,ElementsandSyntax">Template Formats, Elements and Syntax</a><ul class="toc-indentation"><li><span class="TOCOutline">3.1</span> <a href="#FeaturesOverview-TemplateDocumentFormats">Template Document Formats</a><ul class="toc-indentation"><li><span class="TOCOutline">3.1.1</span> <a href="#FeaturesOverview-WordProcessingDocumentFormats">Word Processing Document Formats</a></li><li><span class="TOCOutline">3.1.2</span> <a href="#FeaturesOverview-SpreadsheetDocumentFormats">Spreadsheet Document Formats</a></li><li><span class="TOCOutline">3.1.3</span> <a href="#FeaturesOverview-PresentationDocumentFormats">Presentation Document Formats</a></li><li><span class="TOCOutline">3.1.4</span> <a href="#FeaturesOverview-MoreDocumentFormats">More Document Formats</a></li><li><span class="TOCOutline">3.1.5</span> <a href="#FeaturesOverview-DynamicMergingofTableCells">Dynamic Merging of Table Cells</a></li><li><span class="TOCOutline">3.1.6</span> <a href="#FeaturesOverview-TextualCommentswithinTemplateSyntaxTags">Textual Comments within Template Syntax Tags</a></li><li><span class="TOCOutline">3.1.7</span> <a href="#FeaturesOverview-In-liningofSyntaxErrorMessagesintoTemplates">In-lining&nbsp;of Syntax Error Messages into Templates&nbsp;</a></li></ul></li><li><span class="TOCOutline">3.2</span> <a href="#FeaturesOverview-TemplateElements">Template Elements</a></li><li><span class="TOCOutline">3.3</span> <a href="#FeaturesOverview-TemplateSyntaxFormatsforExpressionResults">Template Syntax Formats for Expression Results</a><ul class="toc-indentation"><li><span class="TOCOutline">3.3.1</span> <a href="#FeaturesOverview-SpecifyingStringFormats">Specifying String Formats</a></li><li><span class="TOCOutline">3.3.2</span> <a href="#FeaturesOverview-SpecifyingNumericFormats">Specifying Numeric Formats</a></li><li><span class="TOCOutline">3.3.3</span> <a href="#FeaturesOverview-VariablesinTemplateDocuments">Variables in Template Documents</a></li></ul></li><li><span class="TOCOutline">3.4</span> <a href="#FeaturesOverview-SupportforOuterDocumentInsertion">Support for Outer Document Insertion</a></li><li><span class="TOCOutline">3.5</span> <a href="#FeaturesOverview-BarcodeImageGeneration">Barcode Image Generation</a></li><li><span class="TOCOutline">3.6</span> <a href="#FeaturesOverview-SupportforAnalogueofMicrosoftWordNEXTField">Support for Analogue of Microsoft Word NEXT Field</a></li><li><span class="TOCOutline">3.7</span> <a href="#FeaturesOverview-SettingBackgroundColorDynamically">Setting Background Color Dynamically</a></li><li><span class="TOCOutline">3.8</span> <a href="#FeaturesOverview-InsertingImagesDynamically">Inserting Images Dynamically</a></li><li><span class="TOCOutline">3.9</span> <a href="#FeaturesOverview-AbilitytoUpdateFields">Ability to Update Fields</a></li><li><span class="TOCOutline">3.10</span> <a href="#FeaturesOverview-AbilitytoCalculateFormulas">Ability to Calculate Formulas</a></li><li><span class="TOCOutline">3.11</span> <a href="#FeaturesOverview-TemplateElementsFormatting">Template Elements Formatting</a></li><li><span class="TOCOutline">3.12</span> <a href="#FeaturesOverview-TemplateSyntax">Template Syntax</a></li><li><span class="TOCOutline">3.13</span> <a href="#FeaturesOverview-ChangingOutputFileFormat">Changing Output File Format&nbsp;</a></li><li><span class="TOCOutline">3.14</span> <a href="#FeaturesOverview-LoadingHTMLandSavingToHTMLwithExternalResourceFiles"><span style="color: rgb(76, 76, 76);">Loading HTML and Saving To HTML with External Resource Files</span></a></li><li><span class="TOCOutline">3.15</span> <a href="#FeaturesOverview-NumberingRestartinNestedNumberedList"><span style="color: rgb(76, 76, 76);">Numbering Restart in Nested Numbered List&nbsp;</span></a></li><li><span class="TOCOutline">3.16</span> <a href="#FeaturesOverview-MeteredLicensing">Metered Licensing</a></li></ul></li></ul></div></div></div></td><td valign="top">&nbsp;</td></tr></tbody></table>
-
 ## Features Overview
 
 GroupDocs.Assembly for Java is an API that allows you to generate documents in popular office and email file formats based upon template documents and data obtained from various sources including databases, XML, JSON, OData and more. The following is the list of salient features which are offered by the GroupDocs.Assembly API:
@@ -72,19 +70,19 @@ A new overload **DocumentAssembler.AssembleDocument** is added in the new releas
 
 #### Word Processing Document Formats
 
-Word Processing Document formats including Microsoft Word Document and OpenOffice document formats are supported. For more details, please visit [Support for Word Processing Document Formats](Supported%2BDocument%2BFormats.html#SupportedDocumentFormats-SupportforWordProcessingDocumentFormats).
+Word Processing Document formats including Microsoft Word Document and OpenOffice document formats are supported. For more details, please visit [Support for Word Processing Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportfor-word-processing-document-formats" >}}).
 
 #### Spreadsheet Document Formats
 
-Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats](Supported%2BDocument%2BFormats.html#SupportedDocumentFormats-SupportforSpreadsheetDocumentFormats).
+Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportfor-spreadsheet-document-formats" >}}).
 
 #### Presentation Document Formats
 
-Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats](Supported%2BDocument%2BFormats.html#SupportedDocumentFormats-SupportforPresentationDocumentFormats).
+Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportfor-presentation-document-formats" >}}).
 
 #### More Document Formats
 
-More Document formats including Email, PDF, HTML, Plain Text, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats](Supported%2BDocument%2BFormats.html#SupportedDocumentFormats-SupportformoreDocumentFormats).
+More Document formats including Email, PDF, HTML, Plain Text, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportformore-document-formats" >}}).
 
 #### Dynamic Merging of Table Cells
 
@@ -94,7 +92,7 @@ You can merge table cells with equal textual contents within your reports dynami
 
 An optional comment providing a human-readable explanation ignored by the engine
 
-```csharp
+```java
 <<tag_name [expression] –switch1 –switch2 ... // optional_comment >>
 ```
 
@@ -148,7 +146,7 @@ Using GroupDocs.Assembly for Java user can also do numeric formatting in templat
 
 API permits users to define variables in template documents as follows:
 
-```csharp
+```java
 <<var [st = "Hello, "]>><<[st]>><<var[st = "World!"]>><<[st]>>
 ```
 
@@ -168,7 +166,7 @@ This feature allows user to implement a new <<next>> tag. The tag should be supp
 
 For [HTML documents]({{< ref "assembly/java/developer-guide/working-with-list-reports-bulleted/bulleted-list-in-html-document.md" >}}), a background color can not be set dynamically using the backColor tag
 
-```csharp
+```java
 <<backColor ["red"]>>text with red background<</backColor>>
 
 ```
@@ -179,7 +177,7 @@ Aside this, you can use the HTML style attribute to achieve this. 
 
 You can insert images to your reports dynamically using **image** tags.
 
-```csharp
+```java
 <<image [image_expression]>>
 ```
 
@@ -221,7 +219,7 @@ Load template documents from html with resources and save assembled Word, Excel,
 
 ### Numbering Restart in Nested Numbered List 
 
-The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band. Please visit [this article](https://docs.groupdocs.com/display/assemblyjava/Numbered+List+in+Word+Processing+Document#NumberedListinWordProcessingDocument-RestartNumberinginNestedNumberedList) for more details
+The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band. Please visit [this article]({{< ref "assembly/java/developer-guide/working-with-list-reports-numbered/numbered-list-in-word-processing-document.md#restart-numberingin-nested-numbered-list" >}}) for more details
 
 ### Metered Licensing
 

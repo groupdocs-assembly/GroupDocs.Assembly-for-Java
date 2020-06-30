@@ -31,13 +31,13 @@ This release of GroupDocs.Assembly brings a new powerful feature: Abilities to c
 
 ## Ability to change the target file format of an assembled document 
 
-Starting from the 18.9 version, GroupDocs.Assembly provides abilities to change target file format of an assembled document using file extension or explicit specifying. Supported output file formats depending on input file formats can be found at [this page](https://docs.groupdocs.com/display/assemblyjava/Introducing+GroupDocs.Assembly+for+Java#IntroducingGroupDocs.AssemblyforJava-SupportedOutputFileFormatsDependingonInputFileFormats).
+Starting from the 18.9 version, GroupDocs.Assembly provides abilities to change target file format of an assembled document using file extension or explicit specifying. Supported output file formats depending on input file formats can be found at [this page]({{< ref "assembly/java/getting-started/introducing-groupdocs.assembly-for-java.md#supported-output-file-formats-dependingon-input-file-formats" >}}).
 
 ### Changing target file format using the file extension
 
 **Java**
 
-```csharp
+```java
 DataSourceInfo dataSourceInfo = new DataSourceInfo(...);
 DocumentAssembler assembler = new DocumentAssembler();
  
@@ -48,7 +48,7 @@ assembler.assembleDocument("template.docx", "result.pdf", dataSourceInfo);
 
 **Java**
 
-```csharp
+```java
 InputStream sourceStream = ...;
 OutputStream targetStream = ...;
  
@@ -62,7 +62,7 @@ assembler.assembleDocument(sourceStream, targetStream, new LoadSaveOptions(FileF
 
 **Java**
 
-```csharp
+```java
 /**
   * Provides information on a single data source object to be used to assemble a document from a template.
   */
@@ -71,7 +71,7 @@ public class DataSourceInfo
 
 **Java**
 
-```csharp
+```java
 /**
   * A utility class providing constants. Specifies the format of a file.
   */
@@ -80,7 +80,7 @@ public final class FileFormat
 
 **Java**
 
-```csharp
+```java
 /**
   * Specifies additional options for loading and saving of a document to be assembled.
   */
@@ -91,7 +91,7 @@ public class LoadSaveOptions
 
 **Java**
 
-```csharp
+```java
 /**
   * Loads a template document from the specified source path, populates the template document with data from the specified single or multiple sources, and stores the result document to the target path using default {@link com.groupdocs.assembly.LoadSaveOptions}.
   * 
@@ -104,7 +104,7 @@ public void assembleDocument(String sourcePath, String targetPath, DataSourceInf
 
 **Java**
 
-```csharp
+```java
 /**
   * Loads a template document from the specified source path, populates the template document with data from the specified single or multiple sources, and stores the result document to the target path using the given {@link com.groupdocs.assembly.LoadSaveOptions}.
   * 
@@ -118,7 +118,7 @@ public void assembleDocument(String sourcePath, String targetPath, LoadSaveOptio
 
 **Java**
 
-```csharp
+```java
 /**
   * Loads a template document from the specified source stream, populates the template document with data from the specified single or multiple sources, and stores the result document to the target stream using default {@link com.groupdocs.assembly.LoadSaveOptions}.
   * 
@@ -131,7 +131,7 @@ public void assembleDocument(InputStream sourceStream, OutputStream targetStream
 
 **Java**
 
-```csharp
+```java
 /**
   * Loads a template document from the specified source stream, populates the template document with data from the specified single or multiple sources, and stores the result document to the target stream using the given {@link com.groupdocs.assembly.LoadSaveOptions}.
   * 
@@ -147,7 +147,7 @@ public void assembleDocument(InputStream sourceStream, OutputStream targetStream
 
 **Java**
 
-```csharp
+```java
 public void assembleDocument(String sourcePath, String targetPath, Object dataSource)
 public void assembleDocument(String sourcePath, String targetPath, Object dataSource, String dataSourceName)
 public void assembleDocument(String sourcePath, String targetPath, Object[] dataSources, String[] dataSourceNames)
@@ -169,7 +169,7 @@ The following table shows how to migrate code from removed members of DocumentAs
 | 
 **Java**
 
-```csharp
+```java
 assembler.assembleDocument(sourcePath, targetPath, dataSource);
 ```
 
@@ -181,7 +181,7 @@ assembler.assembleDocument(sourcePath, targetPath, dataSource);
 
 **Java**
 
-```csharp
+```java
  assembler.assembleDocument(sourcePath, targetPath, new DataSourceInfo(dataSource));
 ```
 
@@ -194,7 +194,7 @@ assembler.assembleDocument(sourcePath, targetPath, dataSource);
 
 **Java**
 
-```csharp
+```java
 assembler.assembleDocument(sourcePath, targetPath, dataSource, dataSourceName);
 ```
 
@@ -206,7 +206,7 @@ assembler.assembleDocument(sourcePath, targetPath, dataSource, dataSourceName);
 
 **Java**
 
-```csharp
+```java
 assembler.assembleDocument(sourcePath, targetPath, new DataSourceInfo(dataSource, dataSourceName));
 ```
 
@@ -219,7 +219,7 @@ assembler.assembleDocument(sourcePath, targetPath, new DataSourceInfo(dataSource
 
 **Java**
 
-```csharp
+```java
 Object[] dataSources = new Object[] { dataSource1, dataSource2 };
 String[] dataSourceNames = new String[] { dataSourceName1, dataSourceName2 };
  
@@ -234,7 +234,7 @@ assembler.assembleDocument(sourcePath, targetPath, dataSources, dataSourceNames)
 
 **Java**
 
-```csharp
+```java
 assembler.assembleDocument(sourcePath, targetPath, new DataSourceInfo(dataSource1, dataSourceName1), new DataSourceInfo(dataSource2, dataSourceName2));
 ```
 
@@ -247,7 +247,7 @@ assembler.assembleDocument(sourcePath, targetPath, new DataSourceInfo(dataSource
 
 **Java**
 
-```csharp
+```java
 assembler.assembleDocument(sourceStream, targetStream, dataSource);
 ```
 
@@ -259,7 +259,7 @@ assembler.assembleDocument(sourceStream, targetStream, dataSource);
 
 **Java**
 
-```csharp
+```java
 assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(dataSource));
 ```
 
@@ -272,7 +272,7 @@ assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(dataSo
 
 **Java**
 
-```csharp
+```java
 assembler.assembleDocument(sourceStream, targetStream, dataSource, dataSourceName);
 ```
 
@@ -284,7 +284,7 @@ assembler.assembleDocument(sourceStream, targetStream, dataSource, dataSourceNam
 
 **Java**
 
-```csharp
+```java
 assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(dataSource, dataSourceName));
 ```
 
@@ -297,7 +297,7 @@ assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(dataSo
 
 **Java**
 
-```csharp
+```java
 Object[] dataSources = new Object[] { dataSource1, dataSource2 };
 String[] dataSourceNames = new String[] { dataSourceName1, dataSourceName2 };
  
@@ -312,7 +312,7 @@ assembler.assembleDocument(sourceStream, targetStream, dataSources, dataSourceNa
 
 **Java**
 
-```csharp
+```java
 assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(dataSource1, dataSourceName1), new DataSourceInfo(dataSource2, dataSourceName2));
 ```
 
