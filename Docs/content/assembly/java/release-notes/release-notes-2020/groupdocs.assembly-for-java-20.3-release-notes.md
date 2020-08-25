@@ -2,7 +2,7 @@
 id: groupdocs-assembly-for-java-20-3-release-notes
 url: assembly/java/groupdocs-assembly-for-java-20-3-release-notes
 title: GroupDocs.Assembly for Java 20.3 Release Notes
-weight: 3
+weight: 100
 description: ""
 keywords: 
 productName: GroupDocs.Assembly for Java

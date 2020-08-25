@@ -91,6 +91,8 @@ To specify a barcode type within a barcode tag, you can use one of the predefine
 | dkix | Dutch KIX barcode |
 | codablockF | Codablock F barcode |
 | codablockFGS1 | GS1 Codablock F barcode |
+| code128GS1UPCA | GS1-128 AI 8102 Coupon Extended barcode |
+| databarGS1UPCA | UPCA & GS1 Databar Coupon barcode |
 
 ### Scaling Barcode Symbols
 
