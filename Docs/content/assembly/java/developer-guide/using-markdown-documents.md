@@ -39,6 +39,9 @@ Since version 19.11, the following Markdown features are supported when saving 
 *   [Inline code spans](https://spec.commonmark.org/0.29/#code-spans)
 *   [Strikethrough text](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#emphasis)
 *   Unordered list (version 20.3 or later)
+### Tables and Autolinks for Markdown support
+{{< alert style="info" >}}This feature is supported by version 20.9 or greater.{{< /alert >}}
+ Since version 20.9, The tables (see [Tables (extension)](https://github.github.com/gfm/#tables-extension-)) and autolinks (see [chapter 6.7 of Markdown specification](https://spec.commonmark.org/0.28/)) are supported when saving assembled Markdown documents to Word Processing formats and saving assembled Word Processing documents and emails to Markdown.
 
 Following sections show that how we can load from and save to Markdown documents:
 
