@@ -74,20 +74,31 @@ Word Processing Document formats including Microsoft Word Document and OpenOffic
 
 #### Spreadsheet Document Formats
 
-Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats]({{< ref "assembly/net/supported-document-formats" >}}).
+Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportfor-spreadsheet-document-formats" >}}).
 
 #### Presentation Document Formats
 
-Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats]({{< ref "assembly/net/supported-document-formats" >}}).
-
-#### Markdown Documents Formats
-Saving of assembled Markdown documents to Word Processing formats and saving of assembled Word Processing documents and emails to Markdown.
-[Using Markdown Documents ](https://docs.groupdocs.com/assembly/net/using-markdown-documents/).
+Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportfor-presentation-document-formats" >}}).
 
 #### More Document Formats
 
-More Document formats including Email, PDF, HTML, Plain Text, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats]({{< ref "assembly/net/supported-document-formats" >}}).
+More Document formats including Email, PDF, HTML, Plain Text, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportformore-document-formats" >}}).
 
+#### Dynamic Merging of Table Cells
+
+You can merge table cells with equal textual contents within your reports dynamically using **cellMerge** tag. For the detail, please visit [Merging Table Cells Dynamically]({{< ref "assembly/java/developer-guide/working-with-table-reports/merging-table-cells-dynamically.md" >}}).
+
+#### Textual Comments within Template Syntax Tags
+
+An optional comment providing a human-readable explanation ignored by the engine
+
+```java
+<<tag_name [expression] –switch1 –switch2 ... // optional_comment >>
+```
+
+#### In-lining of Syntax Error Messages into Templates 
+
+In-lining of syntax error messages into templates instead of exception throwing. For the detail, please visit [Use of In-line Syntax Error Messages into Templates]({{< ref "assembly/java/developer-guide/use-of-in-line-syntax-error-messages-into-templates.md" >}}).
 
 ### Template Elements
 
@@ -210,22 +221,6 @@ Load template documents from html with resources and save assembled Word, Excel,
 
 The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band. Please visit [this article]({{< ref "assembly/java/developer-guide/working-with-list-reports-numbered/numbered-list-in-word-processing-document.md#restart-numberingin-nested-numbered-list" >}}) for more details
 
-### Dynamic Merging of Table Cells
-
-You can merge table cells with equal textual contents within your reports dynamically using **cellMerge** tag. For the detail, please visit [Merging Table Cells Dynamically]({{< ref "assembly/java/developer-guide/working-with-table-reports/merging-table-cells-dynamically.md" >}}).
-
-### Textual Comments within Template Syntax Tags
-
-An optional comment providing a human-readable explanation ignored by the engine
-
-```java
-<<tag_name [expression] –switch1 –switch2 ... // optional_comment >>
-```
-
-### In-lining of Syntax Error Messages into Templates 
-
-In-lining of syntax error messages into templates instead of exception throwing. For the detail, please visit [Use of In-line Syntax Error Messages into Templates]({{< ref "assembly/java/developer-guide/use-of-in-line-syntax-error-messages-into-templates.md" >}}).
- 
 ### Metered Licensing
 
 The GroupDocs.Assembly.Metered public class has been added to provide metered licensing.
