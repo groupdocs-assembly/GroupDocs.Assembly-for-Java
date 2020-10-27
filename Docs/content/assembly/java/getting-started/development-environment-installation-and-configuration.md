@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-# Development Environment, Installation and Configuration
-
 ## Development Environment
 
 ### Operating Systems
@@ -37,7 +35,7 @@ GroupDocs hosts all Java APIs on [GroupDocs Artifactory](https://repository.gro
 ### Specify GroupDocs Repository Configuration
 
 First, you need to specify GroupDocs repository configuration/location in your Maven `pom.xml` as follows:
-
+```
 <repositories>
 	<repository>
 		<id>GroupDocsJavaAPI</id>
@@ -45,11 +43,12 @@ First, you need to specify GroupDocs repository configuration/location in your M
 		<url>http://repository.groupdocs.com/repo/</url>
 	</repository>
 </repositories>
+```
 
 ### Define GroupDocs.Assembly for Java API Dependency
 
 Then define GroupDocs.Assembly for Java API dependency in your `pom.xml` as follows:
-
+```
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>
@@ -57,5 +56,6 @@ Then define GroupDocs.Assembly for Java API dependency in your `pom.xml` as f
         <version>20.3</version> 
     </dependency>
 </dependencies>
+```
 
 After performing above-mentioned steps, GroupDocs.Assembly for Java dependency will finally be added to your Maven project.

@@ -17,13 +17,8 @@ You can easily download GroupDocs.Assembly for evaluation. The evaluation downlo
 | Document | Spreadsheet | Presentation |
 | --- | --- | --- |
 | GroupDocs.Assembly (without a license specified) generates the document reports with full product functionality, but it inserts an evaluation watermark at the top of the document | When a Spreadsheet report is generated it contains an extra worksheet with Evaluation Copyright Warning on it, you can't hide the Evaluation Copyright Warning (the extra worksheet) | When a presentation report is generated using GroupDocs.Assembly, an Evaluation Watermark is injected at the center of each slide |
-| It limits the maximum document size to several hundred paragraphs | When running your program, you can only generate 100 Spreadsheet reports using GroupDocs.Assembly. If your application exceeds this number, an exception will be thrown | 
- |
-| 
-
- | You can't re-specify the script path (e.g in the web.config file) | 
-
- |
+| It limits the maximum document size to several hundred paragraphs | When running your program, you can only generate 100 Spreadsheet reports using GroupDocs.Assembly. If your application exceeds this number, an exception will be thrown |
+| | You can't re-specify the script path (e.g in the web.config file) | |
 
 ## Licensing
 
@@ -49,7 +44,7 @@ Following code snippet shows how to apply license from the stream.
 
 ### Applying Metered License
 
-{{< alert style="warning" >}}Since version 18.9, the Metered licensing security has been improved. Metered licensing is now applicable only in Java runtime version 8u101 or above. Please use other types of licensing if you are using v18.9 or greater in Java 7.{{< /alert >}}{{< alert style="info" >}}You can also set Metered license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to Metered Licensing FAQ section.{{< /alert >}}
+{{< alert style="warning" >}}Since version 18.9, the Metered licensing security has been improved. Metered licensing is now applicable only in Java runtime version 8u101 or above. Please use other types of licensing if you are using v18.9 or greater in Java 7.{{< /alert >}}{{< alert style="info" >}}You can also set Metered license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.{{< /alert >}}
 
 Here are the simple steps to use the `Metered` class.
 
@@ -61,6 +56,6 @@ Here are the simple steps to use the `Metered` class.
 
 Following is the sample code demonstrating how to use `Metered` class.
 
- {{< gist GroupDocsGists f33c57a23b6ea00affe1d69c635678ff >}}
+{{< gist GroupDocsGists f33c57a23b6ea00affe1d69c635678ff >}}
 
 

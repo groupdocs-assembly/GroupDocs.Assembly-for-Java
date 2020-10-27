@@ -168,7 +168,6 @@ For [HTML documents]({{< ref "assembly/java/developer-guide/working-with-list-re
 
 ```java
 <<backColor ["red"]>>text with red background<</backColor>>
-
 ```
 
 Aside this, you can use the HTML style attribute to achieve this. 
