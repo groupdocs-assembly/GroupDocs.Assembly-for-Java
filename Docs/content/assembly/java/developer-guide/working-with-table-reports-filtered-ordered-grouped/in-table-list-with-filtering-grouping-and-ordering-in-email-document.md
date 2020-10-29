@@ -34,7 +34,19 @@ As a report developer, you are required to represent managers' contract informat
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-<table border="0" cellspacing="0" cellpadding="0" width="608" style="width: 456pt; border-collapse: collapse;"><tbody><tr><td width="371" valign="top" style="width: 278pt; border-top-color: white; border-top-style: solid; border-top-width: 1pt; border-right-color: white; border-right-style: solid; border-right-width: 1pt; border-bottom-color: white; border-bottom-style: solid; border-bottom-width: 3pt; border-left-color: white; border-left-style: solid; border-left-width: 1pt; background-color: rgb(91, 155, 213); background-image: initial; padding-top: 0.75pt; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p><b>Manager</b></p></td><td width="237" valign="top" style="width: 178pt; border-top-color: white; border-top-style: solid; border-top-width: 1pt; border-left-color: initial; border-left-style: none; border-left-width: initial; border-bottom-color: white; border-bottom-style: solid; border-bottom-width: 3pt; border-right-color: white; border-right-style: solid; border-right-width: 1pt; background-color: rgb(91, 155, 213); background-image: initial; padding-top: 0.75pt; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p><b>Contract Price</b></p></td></tr><tr><td width="371" valign="top" style="width: 278pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: white; border-right-style: solid; border-right-width: 1pt; border-bottom-color: white; border-bottom-style: solid; border-bottom-width: 1pt; border-left-color: white; border-left-style: solid; border-left-width: 1pt; background-color: rgb(91, 155, 213); background-image: initial; padding-top: 0.75pt; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p><b>&lt;&lt;foreach [in getContracts()</b></p><p><b>.where(c =&gt; c.getDate().getYear() + 1900 == 2015)</b></p><p><b>.groupBy(c =&gt; c.getManager())</b></p><p><b>.orderBy(g =&gt; g.key.getName())]&gt;&gt;&lt;&lt;[key.getName()]&gt;&gt;</b></p></td><td width="237" valign="top" style="width: 178pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial; border-bottom-color: white; border-bottom-style: solid; border-bottom-width: 1pt; border-right-color: white; border-right-style: solid; border-right-width: 1pt; background-color: rgb(210, 222, 239); background-image: initial; padding-top: 0.75pt; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p>&lt;&lt;[sum(c =&gt; c.getPrice())]&gt;&gt;&lt;&lt;/foreach&gt;&gt;</p></td></tr></tbody></table>
+<table class="gd-assembly">
+	<tbody>
+		<tr>
+			<td style="background-color: #5B9BD5"><b>Manager</b></td>
+			<td style="background-color: #5B9BD5"><b>Contract Price</b></td>
+		</tr>
+		<tr>
+			<td style="background-color: #5B9BD5"><b>&lt;&lt;foreach [in getContracts()<br>   .where(c => c.getDate().getYear() + 1900 == 2015)<br>   .groupBy(c => c.getManager())<br>   .orderBy(g => g.key.getName())]>>&lt;&lt;[key.getName()]>></b></td>
+			<td style="background-color: #D2DEEF">&lt;&lt;[sum(c => c.getPrice())]>>&lt;&lt;/foreach>></td>
+		</tr>
+	</tbody>
+</table>
+
 ### Download In-Table List with Filtering, Grouping, and Ordering Template
 
 Please download the sample In-Table List with Filtering, Grouping, and Ordering document we created in this article:

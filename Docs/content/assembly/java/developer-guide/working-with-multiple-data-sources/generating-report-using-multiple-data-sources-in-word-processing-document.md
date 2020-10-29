@@ -37,7 +37,7 @@ We provide support for the following clients:
 
 | **Manager**                                                  | **Total Contract Price**                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **<<foreach [group in contracts**<br />    **.groupBy(c => c.Manager)**<br />    **.orderBy(g => g.key)]>><br /><<[group.key]>>** | <<[group.sum(<br />    c => c.Contract_Price)]>><br /><</foreach>> |
+| **<<foreach [group in contracts**<br />    **.groupBy(c => c.Manager)**<br />    **.orderBy(g => g.key)]>>**<br />**<<[group.key]>>** | <<[group.sum(<br />    c => c.Contract_Price)]>><br /><</foreach>> |
 
 ### Download Template
 

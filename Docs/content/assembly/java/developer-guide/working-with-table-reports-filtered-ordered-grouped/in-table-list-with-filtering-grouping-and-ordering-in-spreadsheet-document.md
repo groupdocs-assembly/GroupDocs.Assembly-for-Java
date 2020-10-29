@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-# In-Table List with Filtering, Grouping, and Ordering in Spreadsheet Document
-
 {{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-TableList with Filtering, Grouping, and Ordering report in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## In-Table List with Filtering, Grouping, and Ordering in Microsoft Excel Document

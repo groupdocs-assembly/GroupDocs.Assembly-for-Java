@@ -45,8 +45,8 @@ The following table describes supported formats of cell and cell range reference
 | --- | --- | --- |
 | Reference to a cell within the same worksheet | cell\_name | A1 |
 | Reference to a cell in another worksheet | worksheet\_name!cell\_name | Sheet1!A1 |
-| Reference to a cell range within the same worksheet | [start\_cell\_name:end\_cell\_name](http://start_cell_nameend_cell_name) | A1:B2 |
-| Reference to a cell range in another worksheet | worksheet\_name![start\_cell\_name:end\_cell\_name](http://start_cell_nameend_cell_name) | Sheet1!A1:B2 |
+| Reference to a cell range within the same worksheet | <u>start\_cell\_name:end\_cell\_name</u> | A1:B2 |
+| Reference to a cell range in another worksheet | worksheet\_name!<u>start\_cell\_name:end\_cell\_name</u> | Sheet1!A1:B2 |
 
 Following is sample syntax, If the insertion of the link to cell A1 is required :
 

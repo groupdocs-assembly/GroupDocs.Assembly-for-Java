@@ -25,7 +25,6 @@ As a report developer, you are required to represent the following key requireme
 We provide support for the following clients:
 <<foreach [in getClients()]>><<[numberOf()]>>. <<[getName()]>>
 <</foreach>>
-
 ```
 
 ### Download Numbered List Template

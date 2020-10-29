@@ -45,7 +45,7 @@ Please download the sample Numbered List document we created in this article:
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist samicheemagroupdocs 598ebf2271841f987e2056918ba0507f >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/){{< /alert >}}{{< gist samicheemagroupdocs 598ebf2271841f987e2056918ba0507f >}}
 
 
 

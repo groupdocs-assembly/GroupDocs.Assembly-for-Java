@@ -411,8 +411,8 @@ public class Person
 | `all(Predicate)` | `persons.all(p => p.getAge < 50)` |
 | `any()` | `persons.any()` |
 | `any(Predicate)` | `persons.any(p => p.getName == "John Smith")` |
-| `average(Selector)` | `persons.average(p => p.getAge)`<br\>The input selector must return a value of any type that has predefined addition and division operators. |
-| `concat(Iterable)` | `persons.concat(otherPersons)`<br\>An implicit reference conversion must exist between types of items of concatenated enumerations. |
+| `average(Selector)` | `persons.average(p => p.getAge)`<br/>The input selector must return a value of any type that has predefined addition and division operators. |
+| `concat(Iterable)` | `persons.concat(otherPersons)`<br/>An implicit reference conversion must exist between types of items of concatenated enumerations. |
 | `contains(Object)` | `persons.contains(otherPersons.first())` |
 | `count()` | `persons.count()` |
 | `count(Predicate)` | `persons.count(p => p.getAge > 30)` |
@@ -421,23 +421,23 @@ public class Person
 | `first(Predicate)` | `persons.first(p => p.getAge > 30)` |
 | `firstOrDefault()` | `persons.firstOrDefault()` |
 | `firstOrDefault(Predicate)` | `persons.firstOrDefault(p => p.getAge > 30)` |
-| `groupBy(Selector)` | `persons.groupBy(p => p.getAge)`<br\>Or<br\>`persons.groupBy(<br\>    p => new<br\>    {<br\>        age = p.getAge,<br\>        count = p.getChildren.count()c    })`<br\>This method returns an enumeration of group objects. Each group has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the Key property. You can treat a group itself as an enumeration of items that the group contains. |
+| `groupBy(Selector)` | `persons.groupBy(p => p.getAge)`<br/>Or<br/>`persons.groupBy(p => new {age = p.getAge, count = p.getChildren.count()c})`<br/>This method returns an enumeration of group objects. Each group has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the Key property. You can treat a group itself as an enumeration of items that the group contains. |
 | `last()` | `persons.last()` |
 | `last(Predicate)` | `persons.last(p => p.getAge > 100)` |
 | `lastOrDefault()` | `persons.lastOrDefault()` |
 | `lastOrDefault(Predicate)` | `persons.lastOrDefault(p => p.getAge > 100)` |
 | `max(ComparableSelector)` | `persons.max(p => p.getAge)` |
 | `min(ComparableSelector)` | `persons.min(p => p.getAge)` |
-| `orderBy(ComparableSelector)` | `persons.orderBy(p => p.getAge)`<br\>Or<br\>`persons.orderBy(p => p.getAge)<br\>    .thenByDescending(p => p.getName)`<br\>Or<br\>`persons.orderBy(p => p.getAge)<br\>    .thenByDescending(p => p.getName)<br\>    .thenBy(p => p.getChildren.count())`<br\>This method returns an enumeration ordered by a single key. To specify additional ordering keys, you can use the following extension methods of an ordered enumeration:<br\><ul><li>- The feature of keyword escaping through the "@" character is not supported.</li><li>- Unicode character escapes are not permitted in identifiers.</li></ul> |
-| `orderByDescending(ComparableSelector)` | `persons.orderByDescending(p => p.getAge)`<br\>Or<br\>`persons.orderByDescending(p => p.getAge)<br\>    .thenByDescending(p => p.getName)`<br\>Or<br\>`persons.orderByDescending(p => p.getAge)<br\>    .thenByDescending(p => p.getName)<br\>    .thenBy(p => p.getChildren.count())`<br\>See the previous note. |
+| `orderBy(ComparableSelector)` | `persons.orderBy(p => p.getAge)`<br/> Or<br/>`persons.orderBy(p => p.getAge).thenByDescending(p => p.getName)`<br/>Or<br/>`persons.orderBy(p => p.getAge).thenByDescending(p => p.getName).thenBy(p => p.getChildren.count())`<br/>This method returns an enumeration ordered by a single key. To specify additional ordering keys, you can use the following extension methods of an ordered enumeration:<br\><ul><li>- The feature of keyword escaping through the "@" character is not supported.</li><li>- Unicode character escapes are not permitted in identifiers.</li></ul> |
+| `orderByDescending(ComparableSelector)` | `persons.orderByDescending(p => p.getAge)`<br/>Or<br/>`persons.orderByDescending(p => p.getAge).thenByDescending(p => p.getName)`<br/>Or<br/>`persons.orderByDescending(p => p.getAge).thenByDescending(p => p.getName).thenBy(p => p.getChildren.count())`<br/>See the previous note. |
 | `single()` | `persons.single()` |
-| `single(Predicate)` | `persons.single(<br\>    p => p.getName == "John Smith")` |
+| `single(Predicate)` | `persons.single(p => p.getName == "John Smith")` |
 | `singleOrDefault()` | `persons.singleOrDefault()` |
-| `singleOrDefault(Predicate)` | `persons.singleOrDefault(<br\>    p => p.getName == "John Smith")` |
+| `singleOrDefault(Predicate)` | `persons.singleOrDefault(p => p.getName == "John Smith")` |
 | `skip(int)` | `persons.skip(10)` |
 | `skipWhile(Predicate)` | `persons.skipWhile(p => p.getAge < 21)` |
-| `sum(Selector)` | `persons.sum(p => p.getChildren.count())`<br\>The input selector must return a value of any type that has a predefined addition operator. |
+| `sum(Selector)` | `persons.sum(p => p.getChildren.count())`<br/>The input selector must return a value of any type that has a predefined addition operator. |
 | `take(int)` | `persons.take(5)` |
 | `takeWhile(Predicate)` | `persons.takeWhile(p => p.getAge < 50)` |
-| `union(Iterable)` | `persons.union(otherPersons)`<br\>An implicit reference conversion must exist between types of items of united enumerations. |
+| `union(Iterable)` | `persons.union(otherPersons)`<br/>An implicit reference conversion must exist between types of items of united enumerations. |
 | `where(Predicate)` | `persons.where(p => p.getAge > 18)` |

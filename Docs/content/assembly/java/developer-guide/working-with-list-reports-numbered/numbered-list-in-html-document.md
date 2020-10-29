@@ -23,9 +23,9 @@ As a report developer, you are required to represent the following key requireme
 
 We provide support for the following clients:
 ```
-		<<foreach \[in getClients()\]>>
+   <<foreach \[in getClients()\]>>
 1.  <<\[getName()\]>>
-		<</foreach>>
+   <</foreach>>
 ```
 
 ### Download Numbered List Template

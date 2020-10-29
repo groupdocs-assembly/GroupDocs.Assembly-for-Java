@@ -73,9 +73,9 @@ or alternative JSON like:
 
 If we use the template like following:
 ```
-<<foreach \[in persons\]>>Name: <<\[Name\]>>, Age: <<\[Age\]>>, Date of Birth: <<\[Birth\]:"dd.MM.yyyy">>
+<<foreach [in persons]>>Name: <<[Name]>>, Age: <<[Age]>>, Date of Birth: <<[Birth]:"dd.MM.yyyy">>
 <</foreach>>
-Average age: <<\[persons.average(p => p.Age)\]>>
+Average age: <<[persons.average(p => p.Age)]>>
 ```
 
 The results will be produced for both pieces of JSON data like:
