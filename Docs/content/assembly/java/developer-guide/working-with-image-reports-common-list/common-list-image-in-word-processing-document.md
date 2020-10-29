@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List Image report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List Image report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Common List in Microsoft Word Document
 
@@ -29,6 +29,12 @@ As a report developer, you are required to represent the following key requireme
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
+```java
+<<foreach [in getManagers()]>> <<image [getPhoto()]>>
+<<[getName()]>>
+<</foreach>>
+```
+
 ### Download Common List Template
 
 Please download the sample Common List document we created in this article:
@@ -38,8 +44,6 @@ Please download the sample Common List document we created in this article:
 ### Generating The Report
 
 {{< gist GroupDocsGists 7cd019cb76fce4150c04affa0f8ebfe6 >}}
-
-
 
 ### ODT Template and Report in Apache OpenOffice
 

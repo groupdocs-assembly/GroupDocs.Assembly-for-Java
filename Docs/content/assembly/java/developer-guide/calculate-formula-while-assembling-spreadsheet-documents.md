@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-## Calculate Formula while Assembling Spreadsheet Documents
+## Calculate Formula
 
 ### The Recipe
 

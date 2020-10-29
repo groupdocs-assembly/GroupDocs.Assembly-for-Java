@@ -10,7 +10,7 @@ hideChildren: False
 ---
 # In-Table List with Filtering, Grouping, and Ordering in HTML Document
 
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-TableList with Filtering, Grouping, and Ordering report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-TableList with Filtering, Grouping, and Ordering report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## In-Table List with Filtering, Grouping, and Ordering in HTML Document
 
@@ -24,11 +24,21 @@ As a report developer, you are required to represent managers' contract informat
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-<<foreach \[in getContracts() .where(c => c.getDate().getYear() + 1900 == 2015) .groupBy(c => c.getManager()) .orderBy(g => g.key.getName())\]>> <</foreach>>
-
-| Manager | Contract Price |
-| --- | --- |
-| **<<\[key.getName()\]>>** | <<\[sum(c => c.getPrice())\]>> |
+<table class="gdassembly">
+	<tbody>
+		<tr>
+			<td colspan="2">&lt;&lt;foreach \[in getContracts() .where(c => c.getDate().getYear() + 1900 == 2015) .groupBy(c => c.getManager()) .orderBy(g => g.key.getName())\]>> &lt;&lt;/foreach>></td>
+		</tr>
+		<tr>
+			<td><b>Manager</b></td>
+			<td><b>Contract Price</b></td>
+		</tr>
+		<tr>
+			<td><b>&lt;&lt;[key.getName()]>></b></td>
+			<td>&lt;&lt;[sum(c => c.getPrice())]>></td>
+		</tr>
+	</tbody>
+</table>
 
 ### Download In-Table List with Filtering, Grouping, and Ordering Template
 

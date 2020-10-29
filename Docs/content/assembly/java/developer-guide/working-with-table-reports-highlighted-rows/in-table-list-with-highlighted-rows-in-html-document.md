@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a In-TableList with Highlighted Rows report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a In-TableList with Highlighted Rows report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## In-Table List with Highlighted Rows in HTML Document
 
@@ -25,12 +25,25 @@ As a report developer, you are required to represent the following key requireme
 
 #### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-<<foreach \[in getContracts()\]>> <</foreach>>
-
-| Client | Contract Price |
-| --- | --- |
-| **<<\[getClient().getName()\]>>** | <<\[getPrice()\]>> |
-| **Total:** | <<\[getContracts().sum(c => c.getPrice())\]>> |
+<table class="gdassembly">
+	<tbody>
+		<tr>
+			<td colspan="2">&lt;&lt;foreach [in getContracts()]>> &lt;&lt;/foreach>></td>
+		</tr>
+		<tr>
+			<td><b>Client</b></td>
+			<td><b>Contract Price</b></td>
+		</tr>
+		<tr>
+			<td><b>&lt;&lt;[getClient().getName()]>></b></td>
+			<td>&lt;&lt;[getPrice()]>></td>
+		</tr>
+		<tr>
+			<td><b>Total:</b></td>
+			<td>&lt;&lt[getContracts().sum(c => c.getPrice())]>></td>
+		</tr>
+	</tbody>
+</table>
 
 #### Download In-Table List with Highlighted Rows Template
 

@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 18.5 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 18.5 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Chart Series Coloring in Spreadsheet Document 
 
@@ -20,9 +20,8 @@ Practising the following steps, you can insert a Column Chart in  MS Excel 201
 2.  Click the "Insert" tab, and then click "Insert Column Chart" icon in the Charts group to view the drop-down list.
 3.  Select the "100% Stacked Column" and press "OK" to insert the chart and Worksheet template to your Worksheet.
 4.  Edit the Worksheet with your data to update the chart. See [Chart Data]({{< ref "assembly/java/developer-guide/working-with-chart-series-coloring/chart-series-coloring-in-spreadsheet-document.md" >}}).
-5.  Save your Document.  
-      
-    
+5.  Save your Document.
+  
 
 ### Reporting Requirement
 
@@ -40,7 +39,6 @@ As a report developer, you are required to share contract price by manager dynam
 ```java
 <Total Contract Prices by Managers<<foreach [m in
 managers]>><<x [m.Manager]>>
-
 ```
 
 #### Legend Entries
@@ -49,7 +47,7 @@ managers]>><<x [m.Manager]>>
 ="Total Contract Price<<y [m.Total_Contract_Price]>><<seriesColor [color]>>"
 ```
 
-{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: Working with GroupDocs.Assembly Engine{{< /alert >}}
+{{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/java/working-with-groupdocs-assembly-engine/){{< /alert >}}
 
 ### Download Template
 
@@ -63,7 +61,7 @@ For a chart with dynamic data, you can set colors of chart series dynamically 
 
 *   Declare a chart with dynamic data in the usual way
 *   For chart series to be colored dynamically, define corresponding color expressions in names of these series using **seriesColor** tags having the following syntax:
-    
+  
     ```java
     <<seriesColor [color_expression]>>
     ```

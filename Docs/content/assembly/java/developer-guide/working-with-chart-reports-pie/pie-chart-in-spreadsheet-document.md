@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Pie Chart report in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Pie Chart report in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Pie Chart in Microsoft Excel Document
 
@@ -37,7 +37,6 @@ As a report developer, you are required to share managers' contract prices dynam
 
 ```java
 Total Contract Price<<foreach [in getManagers()]>><<x [getName()]>>
-
 ```
 
 #### Chart Data
@@ -46,7 +45,6 @@ Total Contract Price<<foreach [in getManagers()]>><<x [getName()]>>
 
 ```java
 ="Total Contract Price<<y [getContracts().sum(c => c.getPrice())]>>"
-
 ```
 
 ### Download Pie Chart Template
@@ -58,8 +56,6 @@ Please download the sample Pie Chart document we created in this article:
 ### Generating The Report
 
 {{< gist GroupDocsGists a8997c78d41078faf2b39601411357b8 >}}
-
-
 
 ## Pie Chart in OpenOffice Spreadsheet Document
 

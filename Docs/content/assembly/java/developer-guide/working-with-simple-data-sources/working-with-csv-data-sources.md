@@ -25,28 +25,28 @@ To access CSV data while building a report, you can pass a *CsvDataSource* ins
 In template documents, a *CsvDataSource* instance should be treated in the same way as if it was a *DataTable* instance (see "[Working with *DataTable* and *DataView* Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information) as shown in the following example.
 
 Suppose we have CSV data like:
-
+```
 John Doe,30,1989-04-01 4:00:00 pm
 Jane Doe,27,1992-01-31 07:00:00 am
 John Smith,51,1968-03-08 1:00:00 pm
+```
 
 By using the template like following:
 
-  
-
+```
 <<foreach \[in persons\]>>Name: <<\[Column1\]>>, Age: <<\[Column2\]>>, Date
 of Birth: <<\[Column3\]:"dd.MM.yyyy">>
 <</foreach>>
 Average age: <<\[persons.average(p => p.Column2)\]>>
-
-  
+```
 
 The results will be produced like:
-
+```
 Name: John Doe, Age: 30, Date of Birth: 01.04.1989
 Name: Jane Doe, Age: 27, Date of Birth: 31.01.1992
 Name: John Smith, Age: 51, Date of Birth: 08.03.1968
 Average age: 36
+```
 
 {{< alert style="warning" >}}Using of the custom date-time format and the extension method involving arithmetic in the template document becomes possible, because text values of Column3 and Column2 are automatically converted to DateTime? and Int32? respectively.{{< /alert >}}
 
@@ -55,31 +55,32 @@ Average age: 36
 By default, *CsvDataSource* uses column names such as "*Column1*", "*Column2*", and so on, as you can see from the previous example. However, *CsvDataSource* can be configured to read column names from the first line of CSV data as shown in the following example.
 
 Suppose we have CSV data like:
-
+```
 Name,Age,Birth
 John Doe,30,1989-04-01 4:00:00 pm
 Jane Doe,27,1992-01-31 07:00:00 am
 John Smith,51,1968-03-08 1:00:00 pm
+```
 
 By using the template like following:
-
+```
 <<foreach \[in persons\]>>Name: <<\[Name\]>>, Age: <<\[Age\]>>, Date of
 Birth: <<\[Birth\]:"dd.MM.yyyy">>
 <</foreach>>
 Average age: <<\[persons.average(p => p.Age)\]>>
+```
 
 The code should be written like:
 
 {{< gist GroupDocsGists ecbe5e7331f08a3f0bccd81a1ef57995 SimpleCsvDS_Demo_19.10.java >}}
 
-
-
 The results will be produced like:
-
+```
 Name: John Doe, Age: 30, Date of Birth: 01.04.1989
 Name: Jane Doe, Age: 27, Date of Birth: 31.01.1992
 Name: John Smith, Age: 51, Date of Birth: 08.03.1968
 Average age: 36
+```
 
 Also, you can use *CsvDataLoadOptions* to customize the following characters playing special roles while loading CSV data:
 

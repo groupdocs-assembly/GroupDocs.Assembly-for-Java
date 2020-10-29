@@ -10,7 +10,7 @@ hideChildren: False
 ---
 {{< alert style="info" >}}This feature is only compatible with GroupDocs.Assembly for Java 19.11 or later releases.{{< /alert >}}
 
-### Simplified working with JSON data sources
+## Simplified working with JSON data sources
 
 To access JSON data while building a report, you can pass a *JsonDataSource* instance to the engine as a data source.
 
@@ -23,13 +23,13 @@ Using of *JsonDataSource* enables you to work with typed values of JSON elemen
 *   Date
 *   String
 
-### Treating the top level arrays or objects having array
+## Treating the top level arrays or objects having array
 
 In template documents, if a top-level JSON element is an array or an object having only one property of an array type, a JsonDataSource instance should be treated in the same way as if it was a DataTable instance (see "[Working with DataTable and DataView Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information) as shown in the following example.
 
 Suppose we have Json data like:
-
-\[ 
+```
+[ 
    { 
       Name:"John Doe",
       Age:30,
@@ -45,12 +45,13 @@ Suppose we have Json data like:
       Age:51,
       Birth:"1968-03-08 1:00:00 pm"
    }
-\]
+]
+```
 
 or alternative JSON like:
-
+```
 { 
-   Persons:\[ 
+   Persons:[ 
       { 
          Name:"John Doe",
          Age:30,
@@ -66,81 +67,89 @@ or alternative JSON like:
          Age:51,
          Birth:"1968-03-08 1:00:00 pm"
       }
-   \]
+   ]
 }
+```
 
 If we use the template like following:
-
+```
 <<foreach \[in persons\]>>Name: <<\[Name\]>>, Age: <<\[Age\]>>, Date of Birth: <<\[Birth\]:"dd.MM.yyyy">>
 <</foreach>>
 Average age: <<\[persons.average(p => p.Age)\]>>
+```
 
 The results will be produced for both pieces of JSON data like:
-
+```
 Name: John Doe, Age: 30, Date of Birth: 01.04.1989
 Name: Jane Doe, Age: 27, Date of Birth: 31.01.1992
 Name: John Smith, Age: 51, Date of Birth: 08.03.1968
 Average age: 36
+```
 
 {{< alert style="warning" >}}Using of the custom date-time format becomes possible, because text values of Birth properties are automatically converted to Date.{{< /alert >}}
 
-### Treating the objects at top level
+## Treating the objects at top level
 
 If a top-level JSON element represents an object, a *JsonDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information). If a top-level JSON object has a single property that is also an object, then this nested object is accessed by the assembler instead. To see how it works, consider the following example.
 
 Suppose we have Json data like:
-
+```
 { 
    Name:"John Doe",
    Age:30,
    Birth:"1989-04-01 4:00:00 pm",
-   Child:\[ 
+   Child:[ 
       "Ann Doe",
       "Charles Doe"
-   \]
+   ]
 }
+```
 
 or alternatively like:
-
+```
 { 
    Person:{ 
       Name:"John Doe",
       Age:30,
       Birth:"1989-04-01 4:00:00 pm",
-      Child:\[ 
+      Child:[ 
          "Ann Doe",
          "Charles Doe"
-      \]
+      ]
    }
 }
+```
 
 If we use the template like following:
-
-Name: <<\[Name\]>>, Age: <<\[Age\]>>, Date of Birth:
-<<\[Birth\]:"dd.MM.yyyy">>
+```
+Name: <<[Name]>>, Age: <<[Age]>>, Date of Birth:
+<<[Birth]:"dd.MM.yyyy">>
 Children:
-<<foreach \[in Child\]>><<\[Child\_Text\]>>
+<<foreach [in Child]>><<[Child_Text]>>
 <</foreach>>
+```
 
 The results will be produced for both pieces of JSON data like:
-
+```
 Name: John Doe, Age: 30, Date of Birth: 01.04.1989
 Children:
 Ann Doe
 Charles Doe
+```
 
 {{< alert style="warning" >}}To reference a JSON object property that is an array of simple-type values, the name of the property (for example, "Child") should be used in a template document, whereas the same name with the "_Text" suffix (for example, "Child_Text") should be used to reference the value of an item of this array.{{< /alert >}}
 
-### The complete example
+## The complete example
 
 The following example sums up typical scenarios involving nested JSON objects and arrays.
 
-#### JSON
+**JSON**
 
-\[ 
+```
+[ 
    { 
       Name:"John Smith",
-      Contract:\[ 
+      Contract:[ 
          { 
             Client:{ 
                Name:"A Company"
@@ -159,11 +168,11 @@ The following example sums up typical scenarios involving nested JSON objects an
             },
             Price:350000
          }
-      \]
+      ]
    },
    { 
       Name:"Tony Anderson",
-      Contract:\[ 
+      Contract:[ 
          { 
             Client:{ 
                Name:"E Corp."
@@ -176,11 +185,11 @@ The following example sums up typical scenarios involving nested JSON objects an
             },
             Price:550000
          }
-      \]
+      ]
    },
    { 
       Name:"July James",
-      Contract:\[ 
+      Contract:[ 
          { 
             Client:{ 
                Name:"G & Co."
@@ -205,26 +214,28 @@ The following example sums up typical scenarios involving nested JSON objects an
             },
             Price:100000
          }
-      \]
+      ]
    }
-\]
+]
+```
 
-#### Template document
+### Template document
 
-<<foreach \[in managers\]>>Manager: <<\[Name\]>>
+```
+<<foreach [in managers]>>Manager: <<[Name]>>
 Contracts:
-<<foreach \[in Contract\]>>- <<\[Client.Name\]>> ($<<\[Price\]>>)
+<<foreach [in Contract]>>- <<[Client.Name]>> ($<<[Price]>>)
 <</foreach>>
 <</foreach>>
+```
 
-#### Source code
+### Source code
 
 {{< gist GroupDocsGists ecbe5e7331f08a3f0bccd81a1ef57995 simpleJsonDS_Demo_19.11.java >}}
 
+### Result document
 
-
-#### Result document
-
+```
 Manager: John Smith
 Contracts:
 - A Company ($1200000)
@@ -240,13 +251,14 @@ Contracts:
 - H Group ($250000)
 - I & Sons ($100000)
 - J Ent. ($100000)
+```
 
-###  Download
+##  Download
 
-#### Data Source Document
+### Data Source Document
 
 *   [ManagerData.json](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/Data/Data%20Sources/JSON%20DataSource/ManagerData.json?raw=true)
 
-#### Template
+### Template
 
 *   [Demo Template.docx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/Data/Source/Word%20Templates/Using%20Spreadsheet%20as%20Table%20of%20Data.docx?raw=true)

@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Bulleted List report in Presentation Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Bulleted List report in Presentation Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Bulleted List in Microsoft PowerPoint Document
 
@@ -33,7 +33,6 @@ As a report developer, you are required to share the following key requirements:
 We provide support for the following clients:
 <<foreach [in getClients()]>><<[getName()]>>
 <</foreach>>
-
 ```
 
 ### Download Bulleted List Template
@@ -45,8 +44,6 @@ Please download the sample Bulleted List document we created in this article:
 ### Generating The Report
 
 {{< gist GroupDocsGists 88b769cf5394a935d690f0cb687d3558 >}}
-
-
 
 ### ODP Template and Report in Apache OpenOffice
 

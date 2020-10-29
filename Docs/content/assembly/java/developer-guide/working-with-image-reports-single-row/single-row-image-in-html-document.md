@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Single Row Image report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Single Row Image report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Single Row Image in HTML Document
 
@@ -23,7 +23,6 @@ As a report developer, you are required to represent information of first single
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
 <table><tbody><tr><td><img height="100" width="100" src="data:image/jpeg;base64,<<[FileUtil.getBytesAsBase64(manager.getPhoto())]>>"></td><td><table><tbody><tr><td><b>Name:</b></td><td><b>&lt;&lt;[manager.getName()]&gt;&gt;</b></td></tr><tr><td><b>Age:</b></td><td>&lt;&lt;[manager.getAge()]&gt;&gt;</td></tr></tbody></table></td></tr></tbody></table>
-
 ### Download Single Row Image Template
 
 Please download the sample template we created in this article:

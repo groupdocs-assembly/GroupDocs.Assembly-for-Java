@@ -8,17 +8,17 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-### Explicit Support for Multiple Data Sources
+## Explicit Support for Multiple Data Sources
 
 Using **DocumentAssembler.assembleDocument** overload user can reference multiple data source objects and their members in the template. Names of all the data sources must be specified and unique.
 
-### Parameters
+## Parameters
 
-#### DataSources
+### DataSources
 
-An array of data source objects like **object\[\] dataSources**.
+An array of data source objects like **object[] dataSources**.
 
-#### DataSourceNames
+### DataSourceNames
 
 An array of names to reference the data source objects within the template like **string\[\] dataSourceNames**.
 

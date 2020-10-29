@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Common List in HTML Document
 
@@ -20,6 +20,12 @@ As a report developer, you are required to share the following key requirements:
 *   Report must be generated in the HTML Document format.
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
+
+```java
+<<foreach [in getManagers()]>> <<image [getPhoto()]>>
+<<[getName()]>>
+<</foreach>>
+```
 
 ### Download Common List Template
 

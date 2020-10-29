@@ -25,7 +25,6 @@ As a report developer, you are required to share the following key requirements:
 
 ```java
 We provide support for the following clients: <<foreach [in getClients()]>><<[indexOf() != 0 ? ", " : ""]>><<[getName()]>><</foreach>>
-
 ```
 
 ### Download In-Paragraph List Template
@@ -36,6 +35,4 @@ Please download the sample Common List document we created in this article:
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist samicheemagroupdocs 3ff4323ee0af247c4d071c002294dff6 >}}
-
-
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/){{< /alert >}}{{< gist samicheemagroupdocs 3ff4323ee0af247c4d071c002294dff6 >}}

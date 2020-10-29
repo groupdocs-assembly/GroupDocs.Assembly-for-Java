@@ -35,11 +35,12 @@ As a report developer, you are required to represent the following key requireme
 
 We provide support for the following clients:
 
-1. <<foreach \[in getClients()\]>><<if \[indexOf() % 2 == 0\]>>      <<\[numberOf()\]>>.    <<\[getName()\]>>
+<ol>
+<li>&lt;&lt;foreach [in getClients()]>>&lt;&lt;if [indexOf() % 2 == 0]>>      &lt;&lt;[numberOf()]>>.    &lt;&lt;[getName()]>></li>
+<li style="background-color: #ffff00">&lt;&lt;else>>      &lt;&lt;[numberOf()]>>.   &lt;&lt;[getName()]>></li>
+</ol>
 
-2. <<else>>      <<\[numberOf()\]>>.    <<\[getName()\]>>
-
-<</if>><</foreach>>
+​		<</if>><</foreach>>
 
 ### Download Multicolored Numbered List Template
 
@@ -49,6 +50,6 @@ Please download the sample Multicolored Numbered List document we created in thi
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist samicheemagroupdocs 533045e35a5ec69a56e3e94092e301b6 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/){{< /alert >}}{{< gist samicheemagroupdocs 533045e35a5ec69a56e3e94092e301b6 >}}
 
 

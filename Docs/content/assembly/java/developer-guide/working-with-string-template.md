@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-## Working with String Template
-
 GroupDocs.Assembly API allows you to use a string as input and output template, instead of document. This feature improves programmability while working with strings instead of documents, the resultant output string can be used as per the application needs. Follow these steps to using a string as input and output template:
 
 *   Initialize **DocumentAssembler**
@@ -18,8 +16,4 @@ GroupDocs.Assembly API allows you to use a string as input and output template, 
 *   Get **targetBytes** using **DocumentAssembler.assembleDocument()**
 *   Get** targetString **using **new String(targetBytes, StandardCharsets.UTF\_8)**
 
-## The Code
-
 {{< gist GroupDocsGists 6af297f6037c73ea88d0947c4dcec6b7 >}}
-
-

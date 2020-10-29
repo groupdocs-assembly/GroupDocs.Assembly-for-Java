@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Column Chart Report with Filtered, Ordered and Grouped Data in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Column Chart Report with Filtered, Ordered and Grouped Data in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Column Chart in Microsoft Excel Document
 
@@ -38,7 +38,6 @@ Total Contract Prices by Quarters<<foreach [in getContracts()
 .where(c => c.getDate().getYear() + 1900 == 2015)
 .groupBy(c => c.getManager())
 .orderBy(g => g.key.getName())]>><<x [key.getName()]>>
-
 ```
 
 #### Chart Data
@@ -50,7 +49,6 @@ Total Contract Prices by Quarters<<foreach [in getContracts()
 ="2nd Quarter<<y [where(c => c.getDate().getMonth() >= 3 && c.getDate().getMonth() <= 5).sum(c => c.getPrice())]>>"
 ="3rd Quarter<<y [where(c => c.getDate().getMonth() >= 6 && c.getDate().getMonth() <= 8).sum(c => c.getPrice())]>>"
 ="4th Quarter<<y [where(c => c.getDate().getMonth() >= 9 && c.getDate().getMonth() <= 11).sum(c => c.getPrice())]>>"
-
 ```
 
 ### Download Template
@@ -62,8 +60,6 @@ Please download the sample Chart with Filtering, Grouping, and Ordering document
 ### Generating The Report
 
 {{< gist GroupDocsGists 90f1cfd555c77ca915ba4284903bc892 >}}
-
-
 
 ## Column Chart in OpenOffice Spreadsheet Document
 

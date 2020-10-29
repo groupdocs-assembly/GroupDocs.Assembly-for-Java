@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 19.5. or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 19.5. or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 # Loading of template documents from HTML with resources
 
@@ -17,8 +17,6 @@ hideChildren: False
 Since version 19.5, when loading an HTML document from a file, its containing folder is used as a base URI to resolve external resource files' relative URIs to absolute ones by default as shown in the following example. The following code snippet shows the way of API usage:
 
 {{< gist GroupDocsGists 381806c98068837063997a0a4a687529 >}}
-
-
 
 The following code snippet shows the default folder used to resolve external resource files' relative URIs are overridden by an explicitly specified folder.
 

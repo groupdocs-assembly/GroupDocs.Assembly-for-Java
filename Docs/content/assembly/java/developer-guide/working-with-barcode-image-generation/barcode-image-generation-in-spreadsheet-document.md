@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Barcode Generation in Microsoft Spreadsheet
 
@@ -19,7 +19,6 @@ hideChildren: False
 
 ```java
 <<barcode [value] -itf6>>
-
 ```
 
 ### Download Template

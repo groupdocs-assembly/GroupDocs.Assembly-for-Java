@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Bubble Chart report in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Bubble Chart report in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Bubble Chart in Microsoft Excel Document
 
@@ -37,7 +37,6 @@ As a report developer, you are required to share your sales/orders dynamically w
 ```java
 Total Contract Prices by Months<<foreach [in getContracts()
 .groupBy(c => c.getDate().getMonth())]>><<x [key + 1]>>
-
 ```
 
 #### Chart Data
@@ -46,7 +45,6 @@ Total Contract Prices by Months<<foreach [in getContracts()
 
 ```java
 ="Total Contract Price<<y [sum(c => c.getPrice())]>><<size [count()]>>"
-
 ```
 
 ### Download Bubble Chart Template
@@ -58,8 +56,6 @@ Please download the sample Bubble Chart document we created in this article:
 ### Generating The Report
 
 {{< gist GroupDocsGists 1b76dbc560b5792fec4d6e809896f7d9 >}}
-
-
 
 ## Bubble Chart in OpenOffice Spreadsheet Document
 

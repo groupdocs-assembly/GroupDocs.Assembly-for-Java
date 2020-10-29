@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Defining Relations Between Document Table Instances
 
@@ -31,15 +31,9 @@ Moreover, The **Relations** property of the **GroupDocs.Assembly.Data.DocumentTa
 
 ## Using Document Table Relations
 
-### The Code
-
 {{< gist GroupDocsGists 4ae828a9377501da26d5db1c51b5cc83 >}}
 
-
-
 ## ColumnNameExtractingDocumentTableLoadHandler
-
-### The Code
 
 {{< gist GroupDocsGists 110dd713ad2133a916048bfca273f644 >}}
 

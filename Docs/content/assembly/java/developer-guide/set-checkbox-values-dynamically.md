@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 20.3 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 20.3 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 You can set checkbox values to either checked or unchecked in your reports dynamically by taking the following steps:
 
@@ -22,8 +22,6 @@ You can set checkbox values to either checked or unchecked in your reports dynam
 The code will look like following snippet:
 
 {{< gist GroupDocsGists ecbe5e7331f08a3f0bccd81a1ef57995 setCheckboxValueDynamicallyInWord_20.3.java >}}
-
-
 
 Here, conditional\_expression defines a condition upon which the value of the checkbox content control is to be set to checked (or unchecked, if the condition is not met). The conditional expression must return a Boolean value.
 

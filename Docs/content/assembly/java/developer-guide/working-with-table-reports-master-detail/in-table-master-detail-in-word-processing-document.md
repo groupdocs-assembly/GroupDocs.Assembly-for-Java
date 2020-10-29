@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-TableMaster-Detail report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-TableMaster-Detail report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## In-Table Master-Detail in Microsoft Word Document
 
@@ -33,7 +33,26 @@ As a report developer, you are required to represent the following key requireme
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-<table class="MsoTableGridLight" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: initial; border-right-style: none; border-right-width: initial; border-bottom-color: initial; border-bottom-style: none; border-bottom-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial;"><tbody><tr><td width="623" valign="top" style="width: 467.25pt; border-top-color: rgb(191, 191, 191); border-top-style: solid; border-top-width: 1pt; border-right-color: rgb(191, 191, 191); border-right-style: solid; border-right-width: 1pt; border-bottom-color: rgb(191, 191, 191); border-bottom-style: solid; border-bottom-width: 1pt; border-left-color: rgb(191, 191, 191); border-left-style: solid; border-left-width: 1pt; padding-top: 0in; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">&nbsp;</p><table class="MsoTable15Grid1Light" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: initial; border-right-style: none; border-right-width: initial; border-bottom-color: initial; border-bottom-style: none; border-bottom-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial;"><tbody><tr><td width="380" valign="top" style="width: 284.7pt; border-top-color: rgb(153, 153, 153); border-top-style: solid; border-top-width: 1pt; border-right-color: rgb(153, 153, 153); border-right-style: solid; border-right-width: 1pt; border-bottom-color: rgb(102, 102, 102); border-bottom-style: solid; border-bottom-width: 1.5pt; border-left-color: rgb(153, 153, 153); border-left-style: solid; border-left-width: 1pt; padding-top: 0in; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><b>Manager/Client</b></p></td><td width="228" valign="top" style="width: 171.25pt; border-top-color: rgb(153, 153, 153); border-top-style: solid; border-top-width: 1pt; border-left-color: initial; border-left-style: none; border-left-width: initial; border-bottom-color: rgb(102, 102, 102); border-bottom-style: solid; border-bottom-width: 1.5pt; border-right-color: rgb(153, 153, 153); border-right-style: solid; border-right-width: 1pt; padding-top: 0in; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><b>Contract Price</b></p></td></tr><tr><td width="380" valign="top" style="width: 284.7pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: rgb(153, 153, 153); border-right-style: solid; border-right-width: 1pt; border-bottom-color: rgb(153, 153, 153); border-bottom-style: solid; border-bottom-width: 1pt; border-left-color: rgb(153, 153, 153); border-left-style: solid; border-left-width: 1pt; padding-top: 0in; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><b>&lt;&lt;foreach [in getManagers()]&gt;&gt;&lt;&lt;[getName()]&gt;&gt;</b></p></td><td width="228" valign="top" style="width: 171.25pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial; border-bottom-color: rgb(153, 153, 153); border-bottom-style: solid; border-bottom-width: 1pt; border-right-color: rgb(153, 153, 153); border-right-style: solid; border-right-width: 1pt; padding-top: 0in; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">&lt;&lt;[getContracts().sum(</p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">&nbsp; c =&gt; c.getPrice())]&gt;&gt;</p></td></tr><tr><td width="380" valign="top" style="width: 284.7pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: rgb(153, 153, 153); border-right-style: solid; border-right-width: 1pt; border-bottom-color: rgb(153, 153, 153); border-bottom-style: solid; border-bottom-width: 1pt; border-left-color: rgb(153, 153, 153); border-left-style: solid; border-left-width: 1pt; padding-top: 0in; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><i>&lt;&lt;foreach [in getContracts()]&gt;&gt;&nbsp; &lt;&lt;[getClient().getName()]&gt;&gt;</i></p></td><td width="228" valign="top" style="width: 171.25pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial; border-bottom-color: rgb(153, 153, 153); border-bottom-style: solid; border-bottom-width: 1pt; border-right-color: rgb(153, 153, 153); border-right-style: solid; border-right-width: 1pt; padding-top: 0in; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">&lt;&lt;[getPrice()]&gt;&gt;&lt;&lt;/foreach&gt;&gt;&lt;&lt;</p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">/foreach&gt;&gt;</p></td></tr><tr><td width="380" valign="top" style="width: 284.7pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-right-color: rgb(153, 153, 153); border-right-style: solid; border-right-width: 1pt; border-bottom-color: rgb(153, 153, 153); border-bottom-style: solid; border-bottom-width: 1pt; border-left-color: rgb(153, 153, 153); border-left-style: solid; border-left-width: 1pt; padding-top: 0in; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><b>Total:</b></p></td><td width="228" valign="top" style="width: 171.25pt; border-top-color: initial; border-top-style: none; border-top-width: initial; border-left-color: initial; border-left-style: none; border-left-width: initial; border-bottom-color: rgb(153, 153, 153); border-bottom-style: solid; border-bottom-width: 1pt; border-right-color: rgb(153, 153, 153); border-right-style: solid; border-right-width: 1pt; padding-top: 0in; padding-right: 5.4pt; padding-bottom: 0in; padding-left: 5.4pt;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">&lt;&lt;[getManagers().sum(</p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">&nbsp; m =&gt; m.getContracts().sum(</p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">&nbsp;&nbsp;&nbsp; c =&gt; c.getPrice()))]&gt;&gt;</p></td></tr></tbody></table><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">&nbsp;</p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">&nbsp;</p></td></tr></tbody></table>
+<table class="iksweb">
+	<tbody>
+		<tr>
+      <td><b>Manager/Client</b></td>
+      <td><b>Contract Price</b></td>
+		</tr>
+		<tr>
+      <td><b>&lt;&lt;foreach [in getManagers()]>>&lt;&lt;[getName()]>></b></td>
+			<td>&lt;&lt;[getContracts().sum(c => c.getPrice())]>></td>
+		</tr>
+		<tr>
+      <td><i>&lt;&lt;foreach [in getContracts()]>><br\>&lt;&lt;[getClient().getName()]>></i></td>
+			<td>&lt;&lt;[getPrice()]>>&lt;&lt;/foreach>>&lt;&lt;/foreach>></td>
+		</tr>
+		<tr>
+      <td><b>Total:</b></td>
+			<td>&lt;&lt;[getManagers().sum(<br\>  m => m.getContracts().sum(<br\>    c => c.getPrice()))]>></td>
+		</tr>
+	</tbody>
+</table>
 
 ### Download In-Table Master-Detail Template
 
@@ -44,8 +63,6 @@ Please download the sample In-Table Master-Detail document we created in this ar
 ### Generating The Report
 
 {{< gist GroupDocsGists 0a3ab37eccadc39a30691c4a2bc4de4f >}}
-
-
 
 ### ODT Template and Report in Apache OpenOffice
 

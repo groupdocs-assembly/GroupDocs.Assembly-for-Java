@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common Master-Detail report in Presentation Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common Master-Detail report in Presentation Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Common Master-Detail in Microsoft PowerPoint Document
 
@@ -18,6 +18,7 @@ Please follow below steps to create Common Master-Detail Template in MS PowerPoi
 
 1.  Create a new Presentation.
 2.  Insert two shapes, one for holding image and other for holding other details.  
+    
     #Save the document.
 
 ### Reporting Requirement
@@ -35,7 +36,6 @@ As a report developer, you are required to represent the information of the mana
 Clients: <<foreach [in getContracts()]>><<[indexOf() != 0 ? ", " : ""]>>
 <<[getClient().getName()]>><</foreach>>
 <</foreach>>
-
 ```
 
 ### Download Common Master-Detail Template
@@ -47,8 +47,6 @@ Please download the sample Common Master-Detail document we created in this arti
 ### Generating The Report
 
 {{< gist GroupDocsGists fbe130505d1b084c64b66835338c3688 >}}
-
-
 
 ### ODP Template and Report in Apache OpenOffice
 

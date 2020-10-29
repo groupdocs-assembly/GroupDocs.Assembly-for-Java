@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Numbered List report in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Numbered List report in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Numbered List in Microsoft Excel Document
 
@@ -38,19 +38,17 @@ As a report developer, you are required to represent the following key requireme
 **In-cell List**
 
 ```java
-"We provide support for the following clients:<<foreach [in getClients()]>>
-<<[numberOf()]>>.         <<[getName()]>><</foreach>>"
-
+"We provide support for the following clients:
+<<foreach [in getClients()]>><<[numberOf()]>>.         <<[getName()]>>
+<</foreach>>"
 ```
 
 **Multiple-cell List**
 
 ```java
 <<foreach [in getClients()]>><<[numberOf()]>>.         <<[getName()]>>
-
-```
-
 <</foreach>>
+```
 
 ### Download Numbered List Template
 
@@ -61,8 +59,6 @@ Please download the sample Numbered List document we created in this article:
 ### Generating The Report
 
 {{< gist GroupDocsGists 19dd8c9db2f1f07b67608a2caac732cf >}}
-
-
 
 ### ODS Template and Report in Apache OpenOffice
 

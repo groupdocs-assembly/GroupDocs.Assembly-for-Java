@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a In-ParagraphList report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a In-ParagraphList report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## In-Paragraph List in Microsoft Word Document
 
@@ -32,7 +32,6 @@ As a report developer, you are required to describe about the clients with the f
 ```java
 We provide support for the following clients: <<foreach [in getClients()]>>
 <<[indexOf() != 0 ? ", " : ""]>><<[getName()]>><</foreach>>
-
 ```
 
 ### Download In-Paragraph List Template
@@ -44,8 +43,6 @@ Please download the sample In-Paragraph List document we created in this article
 ### Generating The Report
 
 {{< gist GroupDocsGists f3761bb8dd9ededf05862d904c90c2c9 >}}
-
-
 
 ### ODT Template and Report in Apache OpenOffice
 

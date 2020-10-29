@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 18.1 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 18.1 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Column Chart in Microsoft Excel Document
 
@@ -40,7 +40,6 @@ As a report developer, you are required to share orders quantity of the customer
 .where(c => c.getDate().getYear() + 1900 == 2015)
 .groupBy(c => c.getManager())
 .orderBy(g => g.key.getName())]>><<x [key.getName()]>>
-
 ```
 
 #### Chart Data
@@ -52,7 +51,6 @@ As a report developer, you are required to share orders quantity of the customer
 ="2nd Quarter<<y [where(c => c.getDate().getMonth() >= 3 && c.getDate().getMonth() <= 5).sum(c => c.getPrice())]>>"
 ="3rd Quarter<<y [where(c => c.getDate().getMonth() >= 6 && c.getDate().getMonth() <= 8).sum(c => c.getPrice())]>>"
 ="4th Quarter<<y [where(c => c.getDate().getMonth() >= 9 && c.getDate().getMonth() <= 11).sum(c => c.getPrice())]>>"
-
 ```
 
 #### Download Template

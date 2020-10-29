@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 19.8 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 19.8 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Markdown Documents (MD) 
 
@@ -61,8 +61,6 @@ The following code snippet demonstrates the saving this MD document to a Word Pr
 
 {{< gist GroupDocsGists a71a5d818455bbb866dc60349138fcd5 saveMdtoWord_UsingExtension_19.8.java >}}
 
-
-
 The resultant word document ([ReadMe Out.docx](https://docs.groupdocs.com/download/attachments/85230860/ReadMe%20Out.docx?version=1&modificationDate=1566999867970&api=v2)) is available for download.
 
 ### Saving an Assembled Word Processing Document or Email to Markdown
@@ -74,8 +72,6 @@ Suppose, we have a Word Processing template([ReadMe.docx](https://docs.groupdocs
  The following code snippet demonstrates the saving this assembled Word Processing document to a Markdown file.
 
 {{< gist GroupDocsGists a71a5d818455bbb866dc60349138fcd5 saveWordOrEmailtoMD_UsingExtension_19.8.java >}}
-
-
 
 The resultant word document ([ReadMe Out.md](https://docs.groupdocs.com/download/attachments/85230860/ReadMe%20Out.md?version=1&modificationDate=1567001143475&api=v2)) is available for download.
 

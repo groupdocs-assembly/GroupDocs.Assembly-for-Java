@@ -8,11 +8,9 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
-## Adding NEXT Field into Template Syntax
-
-### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
+## Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
 **Template Syntax**
 
@@ -20,10 +18,9 @@ hideChildren: False
 We provide support for the following clients:
 •	<<foreach [in getClients()]>><<next>><<[getName()]>>
 <</foreach>>
-
 ```
 
-### The Recipe
+## The Recipe
 
 *   Set up the source document template path
 *   Set up destination report path
@@ -32,7 +29,7 @@ We provide support for the following clients:
 
 ### Download Template
 
-Get the template from here.
+Get the template from here:
 
 *   [Using next.docx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/blob/master/Examples/GroupDocs.Assembly.Examples.Java/Data/Storage/Word%20Templates/Using%20next.docx?raw=true)
 

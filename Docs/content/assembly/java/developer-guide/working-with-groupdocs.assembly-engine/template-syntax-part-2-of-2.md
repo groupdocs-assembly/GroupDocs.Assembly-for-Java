@@ -53,7 +53,6 @@ A data band body is defined between the corresponding opening and closing `fore
 <<foreach ...>>
 data_band_body
 <</foreach>>
-
 ```
 
 You can reference an element of the corresponding sequence in template expressions within a data band body using an iteration variable. At runtime, an iteration variable represents a sequence element for which an iteration is currently being performed. You can declare an iteration variable within the corresponding opening `foreach` tag.
@@ -76,12 +75,11 @@ The complete syntax of a `foreach` tag (including optional elements) is as fol
 <<foreach [variable_type variable_name in sequence_expression]>>
 data_band_body
 <</foreach>>
-
 ```
 
 ### Common Data Bands
 
-{{< alert style="info" >}}See Bulleted List template using Common Data Bands in it.{{< /alert >}}
+{{< alert style="info" >}}See [Bulleted List](https://docs.groupdocs.com/assembly/java/bulleted-list-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine) template using Common Data Bands in it.{{< /alert >}}
 
 A common data band is a data band which body starts and ends within paragraphs that belong to a single story or table cell.
 
@@ -89,7 +87,6 @@ In particular, a common data band can be entirely located within a single paragr
 
 ```java
 The items are: <<foreach [item in items]>><<[item]>>, <</foreach>>and others.
-
 ```
 
 In this case, the engine produces a report as follows.
@@ -104,122 +101,11 @@ When the body of a common data band starts and ends within different paragraphs,
 
 | Template | Report |
 | --- | --- |
-| 
-```java
-prefix <<foreach [item in items]>><<[item]>>¶
-<</foreach>>suffix
-```
-
-
-
- | 
-
-```java
-prefix item1¶
-item2¶
-item3¶
-suffix
-```
-
-
-
- |
-| 
-
-```java
-prefix<<foreach [item in items]>>¶
-<<[item]>><</foreach>> suffix
-```
-
-
-
- | 
-
-```java
-prefix¶
-item1¶
-item2¶
-item3 suffix
-```
-
-
-
- |
-| 
-
-```java
-prefix¶
-<<foreach [item in items]>><<[item]>>¶
-<</foreach>>suffix
-```
-
-
-
- | 
-
-```java
-prefix¶
-item1¶
-item2¶
-item3¶
-suffix
-```
-
-
-
- |
-| 
-
-```java
-prefix<<foreach [item in items]>>¶
-<<[item]>><</foreach>>¶
-suffix
-```
-
-
-
- | 
-
-```java
-prefix¶
-item1¶
-item2¶
-item3¶
-suffix
-```
-
-
-
- |
-| 
-
-```java
-prefix¶
-<<foreach [item in items]>>¶
-<<[item]>>¶
-<</foreach>>¶
-suffix
-```
-
-
-
- | 
-
-```java
-prefix¶
-¶
-item1¶
-¶
-item2¶
-¶
-item3¶
-¶
-suffix
-```
-
-
-
- |
+| `prefix <<foreach [item in items]>><<[item]>>¶`<br/>`<</foreach>>suffix`|`prefix item1¶`<br/>`item2¶`<br/>`item3¶`<br/>`suffix`|
+| `prefix<<foreach [item in items]>>¶`<br/>`<<[item]>><</foreach>> suffix`|`prefix¶`<br/>`item1¶`<br/>`item2¶`<br/>`item3 suffix`|
+| `prefix¶`<br/>`<<foreach [item in items]>><<[item]>>¶`<br/>`<</foreach>>suffix`| `prefix¶`<br/>`item1¶`<br/>`item2¶`<br/>`item3¶`<br/>`suffix`|
+| `prefix<<foreach [item in items]>>¶`<br/>`<<[item]>><</foreach>>¶`<br/>`suffix`|`prefix¶`<br/>`item1¶`<br/>`item2¶`<br/>`item3¶`<br/>`suffix`|
+| `prefix¶`<br/>`<<foreach [item in items]>>¶`<br/>`<<[item]>>¶`<br/>`<</foreach>>¶`<br/>`suffix`|`prefix¶`<br/>`¶`<br/>`item1¶`<br/>`¶`<br/>`item2¶`<br/>`¶`<br/>`item3¶`<br/>`¶`<br/>`suffix`|
 
 While building a report, duplicated paragraph breaks derive common attributes from their template prototypes. In particular, this fact enables you to build numbered or bulleted lists in reports dynamically. For example, given the above declaration of items, you can get a report with their numbered list using the following template.
 
@@ -230,7 +116,6 @@ While building a report, duplicated paragraph breaks derive common attributes fr
 ```java
 1. <<foreach [item in items]>><<[item]>>
 <</foreach>>
-
 ```
 
 In this case, the engine produces a report as follows.
@@ -239,7 +124,6 @@ In this case, the engine produces a report as follows.
 1. item1
 2. item2
 3. item3
-
 ```
 
 #### Dynamic list numbering restart
@@ -264,7 +148,6 @@ public class Service
     public String getName() {...}
     ...
 }
-
 ```
 
 Given that orders is an enumeration of Order instances, you could try to use the following template to output information on several orders in one document.
@@ -276,7 +159,7 @@ Given that orders is an enumeration of Order instances, you could try to use the
 ```
 
 But then, a resultant document would look as follows:
-
+```
 Jane Doe (445 Mount Eden Road Mount Eden Auckland 1024)
      1. Regular Cleaning
      2. Oven Cleaning
@@ -284,6 +167,7 @@ John Smith (43 Vogel Street Roslyn Palmerston North 4414)
      3. Regular Cleaning
      4. Oven Cleaning
      5. Carpet Cleaning
+```
 
 That is, there would be a single numbered list across all orders, which is not applicable for this scenario. However, you can make list numbering to restart for every order by putting a restartNum tag into your template before a corresponding foreach tag as follows:
 
@@ -291,81 +175,37 @@ That is, there would be a single numbered list across all orders, which is not a
 <<foreach [order in orders]>><<[order.getClientName()]>> (<<[order.getClientAddress()]>>)
 1. <<restartNum>><<foreach [service in order.getServices()]>><<[service.getName()]>>
 <</foreach>><</foreach>>
-
 ```
 
 {{< alert style="warning" >}}When using with a data band, it is required to put a restartNum tag before a corresponding foreach tag in the same numbered paragraph.{{< /alert >}}
 
 Then, a resultant document looks as follows:
-
+```
 Jane Doe (445 Mount Eden Road Mount Eden Auckland 1024)
-
-1.  Regular Cleaning
-2.  Oven Cleaning
+   1.  Regular Cleaning
+   2.  Oven Cleaning
 
 John Smith (43 Vogel Street Roslyn Palmerston North 4414)
-
-1.  Regular Cleaning
-2.  Oven Cleaning
-3.  Carpet Cleaning
-    
+   1.  Regular Cleaning
+   2.  Oven Cleaning
+   3.  Carpet Cleaning
+```
 
 {{< alert style="warning" >}}You can use a restartNum tag without a data band to dynamically restart list numbering for a containing paragraph, if needed; for example, the tag can be used to restart list numbering for a document inserted dynamically.{{< /alert >}}
 
 ### Table-Row Data Bands
 
-{{< alert style="info" >}}See In-Table List With Alternate Content template using Table-Row Data Bands in it.{{< /alert >}}
+{{< alert style="info" >}}See [In-Table List With Alternate Content](https://docs.groupdocs.com/assembly/net/in-table-list-with-alternate-content-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine) template using Table-Row Data Bands in it.{{< /alert >}}
 
 A table-row data band is a data band which body occupies single or multiple rows of a single document table. The body of such a band starts at the beginning of the first occupied row and ends at the end of the last occupied row as follows.
 
 <table class="confluenceTable"><tbody><tr><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td></tr><tr><td class="confluenceTd"><p><code>&lt;&lt;foreach ...</code>&gt;&gt; ...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td></tr><tr><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td></tr><tr><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p>...</p></td><td class="confluenceTd"><p><code>... &lt;&lt;/foreach&gt;&gt;</code></p></td></tr><tr><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td><td class="confluenceTd"><p>&nbsp;</p></td></tr></tbody></table>
-
-  
 The most common use case of a table-row data band is the building of a document table that represents a list of items. You can use a template like the following one to achieve this.
 
 | Client | Manager | Contract Price |
 | --- | --- | --- |
-| 
-```java
-<<foreach [
-    c in ds.Contracts
-]>><<[c.Clients.Name]>>
-```
-
-
-
- | 
-
-```java
-<<[c.Managers.Name]>>
-```
-
-
-
- | 
-
-```java
-<<[c.Price]>><</
-foreach>>
-```
-
-
-
- |
-| Total: | 
-
- | 
-
-```java
-<<[ds
-    .Contracts
-    .sum(c =>
-        c.Price)]>>
-```
-
-
-
- |
+| `<<foreach [c in ds.Contracts]>><<[c.Clients.Name]>>`|`<<[c.Managers.Name]>>`|`<<[c.Price]>><</foreach>>`|
+| Total: | |`<<[ds<br/>    .Contracts<br/>    .sum(c =><br/>        c.Price)]>>`|
 
 In this case, the engine produces a report as follows.
 
@@ -380,65 +220,15 @@ In this case, the engine produces a report as follows.
 | H Group | July James | 250000 |
 | I & Sons | July James | 100000 |
 | J Ent. | July James | 100000 |
-| Total: | 
- | 4300000 |
+| Total: ||4300000|
 
 To populate a document table with a master-detail data, you can use nested table-row data bands like in the following template.
 
 | Manager/Client | Contract Price |
 | --- | --- |
-| 
-```java
-<<foreach [
-    m in ds.Managers
-]>><<[m.Name]>>
-```
-
-
-
- | 
-
-```java
-<<[m.Contracts.sum(
-    c => c.Price)]>>
-```
-
-
-
- |
-| 
-
-```java
-<<foreach [
-    c in m.Contracts
-]>> <<[c.Clients.Name]>>
-```
-
-
-
- | 
-
-```java
-<<[c.Price]>><</
-foreach>><</
-foreach>>
-```
-
-
-
- |
-| Total: | 
-
-```java
-<<[ds
-    .Contracts
-    .sum(c =>
-        c.Price)]>>
-```
-
-
-
- |
+| `<<foreach [m in ds.Managers]>><<[m.Name]>>`|`<<[m.Contracts.sum(c => c.Price)]>>`|
+| `<<foreach [c in m.Contracts]>> <<[c.Clients.Name]>>`|`<<[c.Price]>><</foreach>><</foreach>>`|
+| Total: |`<<[ds<br/>    .Contracts<br/>    .sum(c =><br/>        c.Price)]>>`|
 
 In this case, the engine produces a report as follows.
 
@@ -462,45 +252,19 @@ You can normally use common data bands nested to table-row data bands as well li
 
 | Manager | Clients |
 | --- | --- |
-| 
-```java
-<<foreach [
-    m in ds.Managers
-]>><<[m.Name]>>
-```
-
-
-
- | 
-
-```java
-<<foreach [
-    c in m.Contracts
-]>><<[c.Clients.Name]>>
-<</foreach>><</foreach>>
-```
-
-
-
- |
+| `<<foreach [m in ds.Managers]>><<[m.Name]>>`|`<<foreach [c in m.Contracts]>><<[c.Clients.Name]>> <</foreach>><</foreach>>`|
 
 In this case, the engine produces a report as follows.
 
 | Manager | Clients |
 | --- | --- |
-| John Smith | A Company  
-B Ltd.  
-C & D |
-| Tony Anderson | E Corp.  
-F & Partners |
-| July James | G & Co.  
-H Group  
-I & Sons  
-J Ent. |
+| John Smith | A Company<br/>B Ltd.<br/>C & D |
+| Tony Anderson | E Corp.<br/>F & Partners |
+| July James | G & Co.<br/>H Group<br/>I & Sons<br/>J Ent. |
 
 ### Extension Methods of Iteration Variables
 
-{{< alert style="info" >}}See Multicolored Numbered Listtemplate using Extension Methods of Iteration Variable in it.{{< /alert >}}
+{{< alert style="info" >}}See [Multicolored Numbered List](https://docs.groupdocs.com/assembly/net/multicolored-numbered-list-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine) template using Extension Methods of Iteration Variable in it.{{< /alert >}}
 
 GroupDocs.Assembly Engine provides special extension methods for iteration variables of any type. You can normally use these extension methods in template expressions. The following list describes the extension methods.
 
@@ -513,14 +277,12 @@ The items are: <<foreach [
     item in items]>><<[item.indexOf() != 0
         ? ", "
         : ""]>><<[item]>><</foreach>>.
-
 ```
 
 In this case, the engine produces a report as follows.
 
 ```java
 The items are: item1, item2, item3.
-
 ```
 
 *   `numberOf()`
@@ -529,24 +291,7 @@ Returns the one-based index of a sequence item that is represented by the corres
 
 | No. | Item |
 | --- | --- |
-| 
-```java
-<<foreach [item
-in items]>><<[
-item.numberOf()]>>
-```
-
-
-
- | 
-
-```java
-<<[item]>><</foreach>>
-```
-
-
-
- |
+| `<<foreach [item in items]>><<[item.numberOf()]>>`|`<<[item]>><</foreach>>`|
 
 In this case, the engine produces a report as follows.
 
@@ -568,10 +313,9 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
 4.  Add a title to the chart, if missing.
 5.  Add an opening foreach tag to the chart title.
 6.  Depending on the type of the chart, add x tags to the chart title or chart series' names as follows.
-    
+  
     ```java
     <<x [x_value_expression]>>
-    
     ```
     
     1.  For a scatter or bubble chart, you can go one of the following ways:
@@ -580,40 +324,36 @@ GroupDocs.Assembly Engine enables you to use charts to represent your sequential
             An x-value expression for a scatter or bubble chart must return a numeric value.
     2.  For a chart of another type, add a single x tag to the chart title after the corresponding foreach tag. In this case, an x-value expression must return a numeric, date, or string value.
 7.  For a chart of any type, add y tags to chart series' names as follows.
-    
+  
     ```java
     <<y [y_value_expression]>>
-    
     ```
     
     An y-value expression must return a numeric value.
     
 8.  For a bubble chart, add size tags to chart series' names as follows.
-    
+  
     ```java
     <<size [bubble_size_expression]>>
-    
     ```
     
     A bubble-size expression must return a numeric value.
     
 9.  For a chart with dynamic data, you can select which series to include into it dynamically based upon conditions. In particular, this feature is useful when you need to restrict access to sensitive data in chart series for some users of your application. To use the feature, do the following steps:
-    
+  
     1.  Declare a chart with dynamic data in the usual way
     2.  For series to be removed from the chart based upon conditions dynamically, define the conditions in names of these series using removeif tags having the following syntax
     
     ```java
     <<removeif [conditional_expression]>>
-    
     ```
     
     A conditional expression must return a Boolean value.
-    
 
-**Note:** A closing foreach tag is not used for a chart.  
+**Note:** A closing foreach tag is not used for a chart.
 While composing expressions for x, y, and size tags, you can normally reference an iteration variable declared at the corresponding foreach tag in a chart title in the same way as if you intended to output results of expressions within a data band.
 
-**Note:** You can normally use charts with dynamic data within data bands.  
+**Note:** You can normally use charts with dynamic data within data bands.
 During runtime, a chart with a foreach tag in its title is processed by the engine as follows:
 
 1.  A sequence expression declared at the foreach tag is evaluated and iterated.
@@ -635,17 +375,16 @@ During runtime, a chart with a foreach tag in its title is processed by the engi
         public float getPrice { ... }
         ...
     }
-    
     ```
     
-Given that managers is an enumeration of Manager instances, you can use the following template to represent total contract prices achieved by managers in a [column chart]({{< ref "assembly/java/developer-guide/working-with-chart-reports-filtered-ordered-grouped/_index.md" >}}).
-    
+    Given that managers is an enumeration of Manager instances, you can use the following template to represent total contract prices achieved by managers in a [column chart]({{< ref "assembly/java/developer-guide/working-with-chart-reports-filtered-ordered-grouped/_index.md" >}}).
+        
 
 ## Enumeration Extension Methods
 
 ### The Enumeration
 
-GroupDocs.Assembly Engine enables you to perform common manipulations on a sequential data through the engine's built-in extension methods for `Iterable`. These extension methods mimic some extension methods of [IEnumerable<T>](http://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx) providing the same signatures and behavior features. Thus, you can group, sort, and perform other sequential data manipulations in template expressions in a familiar way.
+GroupDocs.Assembly Engine enables you to perform common manipulations on a sequential data through the engine's built-in extension methods for `Iterable`. These extension methods mimic some extension methods of [IEnumerable&lt;T>](http://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx) providing the same signatures and behavior features. Thus, you can group, sort, and perform other sequential data manipulations in template expressions in a familiar way.
 
 ### The Enumeration Extension
 
@@ -665,338 +404,40 @@ public class Person
     public Iterable<Person> getChildren { ... }
     ...
 }
-
 ```
 
 | Extension Method | Examples and Notes |
 | --- | --- |
-| `all(Predicate)` | 
-```java
-persons.all(p => p.getAge < 50)
-```
-
-
-
- |
-| `any()` | 
-
-```java
-persons.any()
-```
-
-
-
- |
-| `any(Predicate)` | 
-
-```java
-persons.any(p => p.getName == "John Smith")
-```
-
-
-
- |
-| `average(Selector)` | 
-
-```java
-persons.average(p => p.getAge)
-```
-
-The input selector must return a value of any type that has predefined addition and division operators. |
-| `concat(Iterable)` | 
-
-```java
-persons.concat(otherPersons)
-```
-
-An implicit reference conversion must exist between types of items of concatenated enumerations. |
-| `contains(Object)` | 
-
-```java
-persons.contains(otherPersons.first())
-```
-
-
-
- |
-| `count()` | 
-
-```java
-persons.count()
-```
-
-
-
- |
-| `count(Predicate)` | 
-
-```java
-persons.count(p => p.getAge > 30)
-```
-
-
-
- |
-| `distinct()` | 
-
-```java
-persons.distinct()
-```
-
-
-
- |
-| `first()` | 
-
-```java
-persons.first()
-```
-
-
-
- |
-| `first(Predicate)` | 
-
-```java
-persons.first(p => p.getAge > 30)
-```
-
-
-
- |
-| `firstOrDefault()` | 
-
-```java
-persons.firstOrDefault()
-```
-
-
-
- |
-| `firstOrDefault(Predicate)` | 
-
-```java
-persons.firstOrDefault(p => p.getAge > 30)
-```
-
-
-
- |
-| `groupBy(Selector)` | 
-
-```java
-persons.groupBy(p => p.getAge)
-```
-
-Or
-
-```java
-persons.groupBy(
-    p => new
-    {
-        age = p.getAge,
-        count = p.getChildren.count()
-    })
-```
-
-This method returns an enumeration of group objects. Each group has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the Key property. You can treat a group itself as an enumeration of items that the group contains. |
-| `last()` | 
-
-```java
-persons.last()
-```
-
-
-
- |
-| `last(Predicate)` | 
-
-```java
-persons.last(p => p.getAge > 100)
-```
-
-
-
- |
-| `lastOrDefault()` | 
-
-```java
-persons.lastOrDefault()
-```
-
-
-
- |
-| `lastOrDefault(Predicate)` | 
-
-```java
-persons.lastOrDefault(p => p.getAge > 100)
-```
-
-
-
- |
-| `max(ComparableSelector)` | 
-
-```java
-persons.max(p => p.getAge)
-```
-
-
-
- |
-| `min(ComparableSelector)` | 
-
-```java
-persons.min(p => p.getAge)
-```
-
-
-
- |
-| `orderBy(ComparableSelector)` | 
-
-```java
-persons.orderBy(p => p.getAge)
-```
-
-Or
-
-```java
-persons.orderBy(p => p.getAge)
-    .thenByDescending(p => p.getName)
-```
-
-Or
-
-```java
-persons.orderBy(p => p.getAge)
-    .thenByDescending(p => p.getName)
-    .thenBy(p => p.getChildren.count())
-```
-
-This method returns an enumeration ordered by a single key. To specify additional ordering keys, you can use the following extension methods of an ordered enumeration:
-
-*   `thenBy(ComparableSelector)`
-*   `thenByDescending(ComparableSelector)`
-
- |
-| `orderByDescending(ComparableSelector)` | 
-
-```java
-persons.orderByDescending(p => p.getAge)
-```
-
-Or
-
-```java
-persons.orderByDescending(p => p.getAge)
-    .thenByDescending(p => p.getName)
-```
-
-Or
-
-```java
-persons.orderByDescending(p => p.getAge)
-    .thenByDescending(p => p.getName)
-    .thenBy(p => p.getChildren.count())
-```
-
-See the previous note. |
-| `single()` | 
-
-```java
-persons.single()
-```
-
-
-
- |
-| `single(Predicate)` | 
-
-```java
-persons.single(
-    p => p.getName == "John Smith")
-```
-
-
-
- |
-| `singleOrDefault()` | 
-
-```java
-persons.singleOrDefault()
-```
-
-
-
- |
-| `singleOrDefault(Predicate)` | 
-
-```java
-persons.singleOrDefault(
-    p => p.getName == "John Smith")
-```
-
-
-
- |
-| `skip(int)` | 
-
-```java
-persons.skip(10)
-```
-
-
-
- |
-| `skipWhile(Predicate)` | 
-
-```java
-persons.skipWhile(p => p.getAge < 21)
-```
-
-
-
- |
-| `sum(Selector)` | 
-
-```java
-persons.sum(p => p.getChildren.count())
-```
-
-The input selector must return a value of any type that has a predefined addition operator. |
-| `take(int)` | 
-
-```java
-persons.take(5)
-```
-
-
-
- |
-| `takeWhile(Predicate)` | 
-
-```java
-persons.takeWhile(p => p.getAge < 50)
-```
-
-
-
- |
-| `union(Iterable)` | 
-
-```java
-persons.union(otherPersons)
-```
-
-An implicit reference conversion must exist between types of items of united enumerations. |
-| `where(Predicate)` | 
-
-```java
-persons.where(p => p.getAge > 18)
-```
-
-
-
- |
+| `all(Predicate)` | `persons.all(p => p.getAge < 50)` |
+| `any()` | `persons.any()` |
+| `any(Predicate)` | `persons.any(p => p.getName == "John Smith")` |
+| `average(Selector)` | `persons.average(p => p.getAge)`<br\>The input selector must return a value of any type that has predefined addition and division operators. |
+| `concat(Iterable)` | `persons.concat(otherPersons)`<br\>An implicit reference conversion must exist between types of items of concatenated enumerations. |
+| `contains(Object)` | `persons.contains(otherPersons.first())` |
+| `count()` | `persons.count()` |
+| `count(Predicate)` | `persons.count(p => p.getAge > 30)` |
+| `distinct()` | `persons.distinct()` |
+| `first()` | `persons.first()` |
+| `first(Predicate)` | `persons.first(p => p.getAge > 30)` |
+| `firstOrDefault()` | `persons.firstOrDefault()` |
+| `firstOrDefault(Predicate)` | `persons.firstOrDefault(p => p.getAge > 30)` |
+| `groupBy(Selector)` | `persons.groupBy(p => p.getAge)`<br\>Or<br\>`persons.groupBy(<br\>    p => new<br\>    {<br\>        age = p.getAge,<br\>        count = p.getChildren.count()c    })`<br\>This method returns an enumeration of group objects. Each group has a unique key defined by the input selector and contains items of the source enumeration associated with this key. You can access the key of a group instance using the Key property. You can treat a group itself as an enumeration of items that the group contains. |
+| `last()` | `persons.last()` |
+| `last(Predicate)` | `persons.last(p => p.getAge > 100)` |
+| `lastOrDefault()` | `persons.lastOrDefault()` |
+| `lastOrDefault(Predicate)` | `persons.lastOrDefault(p => p.getAge > 100)` |
+| `max(ComparableSelector)` | `persons.max(p => p.getAge)` |
+| `min(ComparableSelector)` | `persons.min(p => p.getAge)` |
+| `orderBy(ComparableSelector)` | `persons.orderBy(p => p.getAge)`<br\>Or<br\>`persons.orderBy(p => p.getAge)<br\>    .thenByDescending(p => p.getName)`<br\>Or<br\>`persons.orderBy(p => p.getAge)<br\>    .thenByDescending(p => p.getName)<br\>    .thenBy(p => p.getChildren.count())`<br\>This method returns an enumeration ordered by a single key. To specify additional ordering keys, you can use the following extension methods of an ordered enumeration:<br\><ul><li>- The feature of keyword escaping through the "@" character is not supported.</li><li>- Unicode character escapes are not permitted in identifiers.</li></ul> |
+| `orderByDescending(ComparableSelector)` | `persons.orderByDescending(p => p.getAge)`<br\>Or<br\>`persons.orderByDescending(p => p.getAge)<br\>    .thenByDescending(p => p.getName)`<br\>Or<br\>`persons.orderByDescending(p => p.getAge)<br\>    .thenByDescending(p => p.getName)<br\>    .thenBy(p => p.getChildren.count())`<br\>See the previous note. |
+| `single()` | `persons.single()` |
+| `single(Predicate)` | `persons.single(<br\>    p => p.getName == "John Smith")` |
+| `singleOrDefault()` | `persons.singleOrDefault()` |
+| `singleOrDefault(Predicate)` | `persons.singleOrDefault(<br\>    p => p.getName == "John Smith")` |
+| `skip(int)` | `persons.skip(10)` |
+| `skipWhile(Predicate)` | `persons.skipWhile(p => p.getAge < 21)` |
+| `sum(Selector)` | `persons.sum(p => p.getChildren.count())`<br\>The input selector must return a value of any type that has a predefined addition operator. |
+| `take(int)` | `persons.take(5)` |
+| `takeWhile(Predicate)` | `persons.takeWhile(p => p.getAge < 50)` |
+| `union(Iterable)` | `persons.union(otherPersons)`<br\>An implicit reference conversion must exist between types of items of united enumerations. |
+| `where(Predicate)` | `persons.where(p => p.getAge > 18)` |

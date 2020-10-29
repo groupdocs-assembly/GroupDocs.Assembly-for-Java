@@ -33,11 +33,12 @@ As a report developer, you are required to represent the following key requireme
 
 We provide support for the following clients:
 
-1. <<foreach \[in getClients()\]>><<if \[indexOf() % 2 == 0\]>><<\[getName()\]>>
+<ol>
+<li>&lt;&lt;foreach [in getClients()]>>&lt;&lt;if [indexOf() % 2 == 0]>>&lt;&lt;[getName()]>></li>
+<li style="background-color: #ceffbc">&lt;&lt;else>>&lt;&lt;[getName()]>></li>
+</ol>
 
-2. <<else>><<\[getName()\]>>
-
-<</if>><</foreach>>
+​		<</if>><</foreach>>
 
 ### Download Multicolored Numbered List Template
 
@@ -47,7 +48,7 @@ Please download the sample Multicolored Numbered List document we created in thi
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs 12b6ec3b323811a352fe887de98e37b7 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](){{< /alert >}}{{< gist atirtahirgroupdocs 12b6ec3b323811a352fe887de98e37b7 >}}
 
 
 

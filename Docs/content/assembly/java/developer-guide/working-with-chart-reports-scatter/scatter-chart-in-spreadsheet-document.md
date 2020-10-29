@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Scatter Chart report in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Scatter Chart report in Spreadsheet Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Scatter Chart in Microsoft Excel Document
 
@@ -38,7 +38,6 @@ As a report developer, you are required to show contract prices by month with th
 ```java
 Total Contract Prices by Months<<foreach [in getContracts()
 .groupBy(c => c.getDate().getMonth())]>>
-
 ```
 
 #### Chart Data
@@ -47,7 +46,6 @@ Total Contract Prices by Months<<foreach [in getContracts()
 
 ```java
 ="Total Contract Price<<x [key + 1]>><<y [sum(c => c.getPrice())]>>"
-
 ```
 
 ### Download Scatter Chart Template
@@ -59,8 +57,6 @@ Please download the sample Scatter Chart document we created in this article:
 ### Generating The Report
 
 {{< gist GroupDocsGists 9f23eb8da0d619df8b7c873b6bbd482c >}}
-
-
 
 ## Scatter Chart in OpenOffice Spreadsheet Document
 

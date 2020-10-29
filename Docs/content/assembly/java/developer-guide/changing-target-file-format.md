@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 18.9. or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 18.9. or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 # Changing Target File Format
 
@@ -25,8 +25,6 @@ Supported output file formats depending on input file formats can be found at [
 ### Changing Target File Format using File Extension
 
 {{< gist GroupDocsGists 3d8ce601fa438c84ff9a760aee18a7b5 >}}
-
-
 
 ### Changing Target File Format using Explicit Specifying
 

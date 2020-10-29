@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common Master-Detail Image report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common Master-Detail Image report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Common Master-Detail Image in Microsoft Word Document
 
@@ -37,7 +37,6 @@ As a report developer, you are required to represent the information of the mana
 Clients: <<foreach [in getContracts()]>><<[indexOf() != 0 ? ", " : ""]>><<[getClient().getName()]>><</foreach>>
  
 <</foreach>>
-
 ```
 
 ### Download Common Master-DetailTemplate
@@ -49,8 +48,6 @@ Please download the sample Common Master-Detail document we created in this arti
 ### Generating The Report
 
 {{< gist GroupDocsGists ba824939d097cefaa3ba6ee6de30f9d5 >}}
-
-
 
 ### ODT Template and Report in Apache OpenOffice
 

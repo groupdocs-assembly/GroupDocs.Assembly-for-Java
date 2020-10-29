@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-## Updating Fields while Assembling Word Processing Document
+## Updating Fields
 
 ### The Recipe
 

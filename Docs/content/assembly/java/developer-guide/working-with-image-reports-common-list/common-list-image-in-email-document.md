@@ -27,7 +27,6 @@ As a report developer, you are required to share the following key requirements:
 ```java
 <<foreach [in getManagers()]>><<[getName()]>>
 <</foreach>>
-
 ```
 
 ### Download Common List Template

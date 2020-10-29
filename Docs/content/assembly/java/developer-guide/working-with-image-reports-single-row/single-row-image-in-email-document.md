@@ -28,7 +28,6 @@ As a report developer, you are required to represent information of first single
 ```java
 Name:	<<[manager.getName()]>>
 Age:	<<[manager.getAge()]>>
-
 ```
 
 ### Download Single Row Image Template
@@ -39,6 +38,6 @@ Please download the sample template we created in this article:
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist samicheemagroupdocs e39e429b95be8b91f06b1a7716d748e1 >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/){{< /alert >}}{{< gist samicheemagroupdocs e39e429b95be8b91f06b1a7716d748e1 >}}
 
 

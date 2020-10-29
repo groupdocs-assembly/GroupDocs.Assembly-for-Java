@@ -38,7 +38,6 @@ As a report developer, you are required to represent the information of the mana
 Clients: <<foreach [in getContracts()]>><<[indexOf() != 0 ? ", " : ""]>>
 <<[getClient().getName()]>><</foreach>>
 <</foreach>>
-
 ```
 
 ### Download Common Master-Detail Template
@@ -49,6 +48,4 @@ Please download the sample Common Master-Detail document we created in this arti
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist samicheemagroupdocs c55506d4b7d27cd6d0d29db308fe9d54 >}}
-
-
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/){{< /alert >}}{{< gist samicheemagroupdocs c55506d4b7d27cd6d0d29db308fe9d54 >}}

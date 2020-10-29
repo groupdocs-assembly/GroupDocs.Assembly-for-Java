@@ -29,7 +29,6 @@ We provide support for the following clients:
 <li &lt;&lt;if [indexOf() % 2 == 0]&gt;&gt;style="background-color:#FFF8DC"&lt;&lt;/if&gt;&gt;>&lt;&lt;[getName()]&gt;&gt;</li>
 &lt;&lt;/foreach&gt;&gt;
 </ol>
-
 ```
 
 ### Download Multicolored Numbered List Template
@@ -40,6 +39,6 @@ Please download the sample template we created in this article:
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs c511abcfb4a85dba94fb95091a6e014a >}}
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs c511abcfb4a85dba94fb95091a6e014a >}}
 
 

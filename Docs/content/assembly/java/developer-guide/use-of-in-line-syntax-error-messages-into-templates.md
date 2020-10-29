@@ -8,9 +8,9 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 19.3 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}{{< alert style="info" >}}This version provide the ability to display inline template syntax errors in generated, Word Processing, Presentation, Spreadsheets, Emails and Plain Text documents .{{< /alert >}}
+{{< alert style="info" >}}This feature is supported by version 19.3 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}{{< alert style="info" >}}This version provide the ability to display inline template syntax errors in generated, Word Processing, Presentation, Spreadsheets, Emails and Plain Text documents .{{< /alert >}}
 
-## Use of In-line Syntax Error Messages into Templates
+## Use of In-line Syntax Error Messages
 
 By default, Document Assembler throws an exception when encounters a template syntax error. Such an exception provides information on a reason of the error and specifies a tag or expression part where the error is encountered. In most cases, this information is enough to find a place in a template causing the error and fix it.
 
@@ -28,7 +28,6 @@ By default, such a template causes the engine to throw an exception while buildi
 
 ```java
 <<var [name] Error! An assignment operator is expected. >>
-
 ```
 
 {{< alert style="warning" >}}Only messages describing errors in template syntax can be in-lined, messages describing errors encountered during expression's evaluation cannot be appeared.{{< /alert >}}
@@ -37,13 +36,9 @@ When DocumentAssemblyOptions.INLINE\_ERROR\_MESSAGES is applied, a Boolean value
 
 {{< gist GroupDocsGists 5de10b3f197d01029e4370d87304ba82 >}}
 
+{{< alert style="warning" >}}In this article the Word Processing document template file has been used. Therefore, the process for the other file formats is same.{{< /alert >}}  
 
-
-{{< alert style="warning" >}}In this article the Word Processing document template file has been used. Therefore, the process for the other file formats is same.{{< /alert >}}
-
-  
-
-### Download Demo File
+## Download Demo File
 
 Please download the sample demo document files:
 

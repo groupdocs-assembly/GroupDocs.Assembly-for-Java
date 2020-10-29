@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List report in Text Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List report in Text Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Laye](https://docs.groupdocs.com/assembly/java/the-business-layer/)r.{{< /alert >}}
 
 ## Common List in Text Document
 
@@ -26,7 +26,6 @@ As a report developer, you are required to share the following key requirements:
 ```java
 <<foreach [in getManagers()]>><<[getName()]>>
 <</foreach>>
-
 ```
 
 ### Download Common List Template

@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List Image report in Presentation Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Common List Image report in Presentation Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Common List in Microsoft PowerPoint Document
 
@@ -34,7 +34,6 @@ As a report developer, you are required to represent the following key requireme
 ```java
 <<foreach [in getManagers()]>><<[getName()]>>
 <</foreach>>
-
 ```
 
 ### Download Template
@@ -46,8 +45,6 @@ Please download the sample Common List document we created in this article:
 ### Generating The Report
 
 {{< gist GroupDocsGists 4e08200953c3248b654b62ce0b72ad56 >}}
-
-
 
 ### ODP Template and Report in Apache OpenOffice
 

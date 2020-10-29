@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Loading Multiple DocumentTable Objects
 
@@ -36,39 +36,21 @@ Moreover, following properties of the **GroupDocs.Assembly.Data.DocumentTable** 
 
 ## Loading DocumentTableSet using Default Options
 
-### The Code
-
 {{< gist GroupDocsGists a9f1b1ea045eff6e7004b46256c9e26c >}}
-
-
 
 ## Loading DocumentTableSet using Custom Options
 
-### The Code
-
 {{< gist GroupDocsGists 3b0816c688566c74b9ca36b5de92b129 >}}
-
-
 
 ## Using DocumentTableSet as Data Source
 
-### The Code
-
 {{< gist GroupDocsGists 707671eb240c923a431ba23be6869c84 >}}
-
-
 
 ## CustomDocumentTableLoadHandler
 
-### The Code
-
 {{< gist GroupDocsGists 5d1dc2b3d63082d2e07439a8ce58ba59 >}}
 
-
-
 ## ColumnNameExtractingDocumentTableLoadHandler
-
-### The Code
 
 {{< gist GroupDocsGists edfa4d2ffc4b2aff4da49dc86dc08e63 >}}
 

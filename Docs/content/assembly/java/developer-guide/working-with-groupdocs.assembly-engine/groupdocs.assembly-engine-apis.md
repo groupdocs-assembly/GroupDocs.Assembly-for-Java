@@ -21,9 +21,7 @@ To build a report from a template, you can use one of the [com.groupdocs.assembl
 | Parameter | Description |
 | --- | --- |
 | document | A template document. At runtime, this document instance is populated with a data from the specified source and becomes a ready report. |
-| dataSource | An object providing a data to populate the specified template. The object must be of one of the following types:  
-• A traditional mail merge data source (see "Working with Traditional Mail Merge Data Sources" for more information)  
-• An object of a custom visible type (see "Working with Types" for more information) |
+| dataSource | An object providing a data to populate the specified template. The object must be of one of the following types:<br\><ul><li>A traditional mail merge data source (see "Working with Traditional Mail Merge Data Sources" for more information)</li><li>An object of a custom visible type (see "Working with Types" for more information)</li></ul> |
 | dataSourceName | The identifier of the specified data source object within the specified template. You can omit this identifier, if the template uses the [contextual object member access](https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-UsingContextualObjectMemberAccess) when dealing with the data source. |
 
 Given a template to be populated with a data from a [DataSet](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly.system.data/DataSet) instance that is identified as "ds" within the template, you can use the following code to build the corresponding report.
@@ -38,7 +36,6 @@ DataSet ds = ........
 
 DocumentAssembler assembler = new DocumentAssembler();
 assembler.assembleDocument(strDocumentTemplate, strDocumentReport, new DataSourceInfo(ds, "ds"));
-
 ```
 
 Given a visible `Person` class defined in your application and a template to be populated with a data about a single Person instance using the contextual object member access, you can use the following code to build the corresponding report.
@@ -53,7 +50,6 @@ Person person = ........
 
 DocumentAssembler assembler = new DocumentAssembler();
 assembler.assembleDocument(strDocumentTemplate, strDocumentReport, new DataSourceInfo(person, "PersonDS"));
-
 ```
 
 ### Setting up Known External Types
@@ -68,7 +64,6 @@ Consider the following example. Given an ImageUtil class declared at your applic
 DocumentAssembler assembler = new DocumentAssembler;
 assembler.knownTypes.add(typeof(ImageUtil));
 assembler.assembleDocument(...);
-
 ```
 
 ### Optimizing Reflection Calls
@@ -92,7 +87,7 @@ If you do not specify the type of an enumeration item in a `foreach` statement
 1.  If the enumeration represents a [DataTable](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly.system.data/DataTable) instance, then the item represents its row.
 2.  Otherwise, if the enumeration represents child rows of a DataTable row, then the item represents a child row.
 3.  Otherwise, if the enumeration implements generic Iterable<T>, then the item type is a type argument corresponding to T. Note, that in some cases it is impossible to extract type arguments at runtime due to the Java [Type Erasure](http://docs.oracle.com/javase/tutorial/java/generics/erasure.html) feature. That is why, the engine is capable to extract the item type only if one of the following conditions is met:
-    
+  
     *   The enumeration expression represents an invocation of a type member which return type is a parameterized type like Iterable<String>, ArrayList<Integer>, and so forth.
     *   The type of the enumeration implements or extends a parameterized type like Iterable<String>, ArrayList<Integer>, and so forth.
 4.  Otherwise, the item type is Object.

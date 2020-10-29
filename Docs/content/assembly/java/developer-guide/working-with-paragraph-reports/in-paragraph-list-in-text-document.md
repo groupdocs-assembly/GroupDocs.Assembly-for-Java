@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-ParagraphList report in Text Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-ParagraphList report in Text Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## In-Paragraph List in Text Document
 
@@ -24,7 +24,6 @@ As a report developer, you are required to share the following key requirements:
 
 ```java
 We provide support for the following clients: <<foreach [in getClients()]>><<[indexOf() != 0 ? ", " : ""]>><<[getName()]>><</foreach>>
-
 ```
 
 ### Download In-Paragraph List Template

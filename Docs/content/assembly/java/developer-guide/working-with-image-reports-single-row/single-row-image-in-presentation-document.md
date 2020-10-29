@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Single Row Image report in Presentation Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Single Row Image report in Presentation Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## Single Row in Microsoft PowerPoint Document
 
@@ -37,7 +37,6 @@ As a report developer, you are required to represent information of first single
 ```java
 Name:	<<[manager.getName()]>>
 Age:	<<[manager.getAge()]>>
-
 ```
 
 ### Download Single Row Template
@@ -49,8 +48,6 @@ Please download the sample Single Row document we created in this article:
 ### Generating The Report
 
 {{< gist GroupDocsGists f20a9bbba651eb9e04988200853531e1 >}}
-
-
 
 ### ODP Template and Report in Apache OpenOffice
 

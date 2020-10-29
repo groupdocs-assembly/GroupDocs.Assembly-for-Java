@@ -8,21 +8,21 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This feature is supported by version 18.7. or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
-
-## Inserting Hyperlinks Dynamically
+{{< alert style="info" >}}This feature is supported by version 18.7. or greater{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 Using GroupDocs.Assembly, you can insert hyperlinks to your reports dynamically using link tags. The syntax of a link tag is defined as follows:
 
-<table class="confluenceTable"><tbody><tr><td class="confluenceTd"><div class="container" title="Hint: double-click to select code"><div class="line number1 index0 alt2"><code class="java plain">&lt;&lt;link [uri_expression][display_text_expression]&gt;&gt;</code></div></div></td></tr></tbody></table>
+```
+<<link [uri_expression][display_text_expression]>>
+```
 
 Here, **uri\_expression** defines URI for a hyperlink to be inserted dynamically. This expression is mandatory and must return a non-empty value. In turn, **display\_text\_expression** defines text to be displayed for the hyperlink. This expression is optional. If it is omitted or returns an empty value, then during runtime, a value of **uri\_expression** is used as display text as well. Values of both **uri\_expression** and **display\_text\_expression** can be of any types. During runtime, **Object.ToString()** is invoked to get textual representations of these expressions’ values, which is useful for expressions of types like Uri, for example, while building a report, **uri\_expression** and **display\_text\_expression** are evaluated and their results are used to construct a hyperlink that replaces the corresponding link tag then.
 
-### Dynamic insertion of links to bookmarks 
+## Dynamic insertion of links to bookmarks 
 
 {{< alert style="info" >}}This feature is supported by version 19.11. or greater{{< /alert >}}
 
-#### Insertion of links for Word Processing documents and Emails
+### Insertion of links for Word Processing documents and Emails
 
 You can also insert links to bookmarks to your reports dynamically using link tags. The syntax of a link tag is defined as follows:
 
@@ -33,9 +33,9 @@ You can also insert links to bookmarks to your reports dynamically using link ta
 
 Here, **uri\_or\_bookmark\_expression** defines URI or the name of a bookmark within the same document for a hyperlink to be inserted dynamically. This expression is mandatory and must return a non-empty value.In turn, **display\_text\_expression** defines text to be displayed for the hyperlink. This expression is optional. If it is omitted or returns an empty value, then during runtime, a value of **uri\_or\_bookmark\_expression** is used as display text as well.
 
-{{< alert style="warning" >}}Values of both uri_or_bookmark_expression and display_text_expression can be of any types. During runtime, Object.ToString() is invoked to get textual representations of these expressions’ values, which is useful for expressions of types like Uri, for example. While building a report, uri_or_bookmark_expression and display_text_expression are evaluated and their results are used to construct a hyperlink that replaces the corresponding link tag then. If uri_or_bookmark_expression returns the name of a bookmark in the same document, then the hyperlink navigates to the bookmark. Otherwise, the hyperlink navigates to a corresponding external resource.A link tag cannot be used within a chart.{{< /alert >}}
+{{< alert style="warning" >}}<ul><li>Values of both uri_or_bookmark_expression and display_text_expression can be of any types. During runtime, Object.ToString() is invoked to get textual representations of these expressions’ values, which is useful for expressions of types like Uri, for example. While building a report, uri_or_bookmark_expression and display_text_expression are evaluated and their results are used to construct a hyperlink that replaces the corresponding link tag then. If uri_or_bookmark_expression returns the name of a bookmark in the same document, then the hyperlink navigates to the bookmark. Otherwise, the hyperlink navigates to a corresponding external resource.</li><li>A link tag cannot be used within a chart.</li></ul>{{< /alert >}}
 
-#### Insertion of links to cells for Spreadsheet documents
+### Insertion of links to cells for Spreadsheet documents
 
 For Spreadsheet documents, behavior of link tags is changed as follows. If an expression defined within a link tag is evaluated to a cell or cell range reference during runtime, then the tag is replaced with a link to the corresponding cell or cell range.
 
@@ -54,7 +54,7 @@ Following is sample syntax, If the insertion of the link to cell A1 is required 
 <<link ["A1"] ["Home"]>>
 ```
 
-#### Insertion of links to slides for Presentation documents
+### Insertion of links to slides for Presentation documents
 
 For Presentation documents, behavior of link tags is changed as follows. If an expression defined within a link tag is evaluated to a "SlideN" value, where N is a one-based index of a slide within the same Presentation document, then the tag is replaced with a link to the corresponding slide during run time.
 
@@ -70,8 +70,6 @@ See the example of the syntax as follows:
 
 {{< gist GroupDocsGists f1decf3faf5c8fcdb81fccf94fc8cad7 >}}
 
-
-
 #### Download
 
 *   [Dynamic Hyperlink.docx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/Data/Source/Word%20Templates/Dynamic%20Hyperlink.docx)
@@ -79,8 +77,6 @@ See the example of the syntax as follows:
 ### Presentation Documents 
 
 {{< gist GroupDocsGists 61ee36879c73580e94bc28e785939d97 >}}
-
-
 
 #### Download
 
@@ -90,8 +86,6 @@ See the example of the syntax as follows:
 
 {{< gist GroupDocsGists 96fca37e49981d71d65800819e4a5646 >}}
 
-
-
 #### Download
 
 *   [Dynamic Hyperlink.xlsx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET/blob/master/Examples/Data/Source/Spreadsheet%20Templates/Dynamic%20Hyperlink.xlsx)
@@ -99,8 +93,6 @@ See the example of the syntax as follows:
 ### Email Documents 
 
 {{< gist GroupDocsGists 4b28e8a55eb2ca6a05630e60caa8ea61 >}}
-
-
 
 #### Download
 

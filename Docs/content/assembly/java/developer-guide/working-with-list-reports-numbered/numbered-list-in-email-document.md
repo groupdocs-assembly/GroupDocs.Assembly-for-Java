@@ -35,7 +35,6 @@ As a report developer, you are required to represent the following key requireme
 We provide support for the following clients:
 1<<foreach [in getClients()]>><<[numberOf()]>>. <<[getName()]>>
 <</foreach>>
-
 ```
 
 ### Download Numbered List Template
@@ -54,14 +53,12 @@ Please download the sample Numbered List document we created in this article:
 
 {{< alert style="info" >}}This feature is supported by version 19.7 or greater.{{< /alert >}}
 
-  
+
 The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band.
 
 Assume that we are picking *Order* and *Service* classes as defined in the following *Custom Objects* of our business use case.
 
 {{< gist GroupDocsGists ffcdf1d202f0e706b98796c722e438e3 >}}
-
-
 
 Given that orders is an enumeration of Order instances, you could try to use the following template to output information on several orders in one document.
 
@@ -72,7 +69,7 @@ Given that orders is an enumeration of Order instances, you could try to use the
 ```
 
 The generated report will look as follows:
-
+```
 A Company (Manager: John Smith)
 	1.	Regular Cleaning
 	2.	Oven Cleaning
@@ -90,17 +87,18 @@ F & Partners (Manager: Tony Anderson)
 	10.	Regular Cleaning
 	11.	Oven Cleaning
 	12.	Carpet Cleaning
+```
 
 However, there would be a single numbered list across all orders, which is not applicable for this scenario. Hence, you can make the list numbering to restart for every order by putting a *<<restartNum>>* tag into your template before a corresponding *<<foreach>>* tag as follows:
 
 ```java
-<<foreach [in getContracts()]>><<[getClient().getName()]>> (Manager: <<[getManager().getName()]>>)
+<<foreach [in getContracts()]>><<[getClient().getName()]>> (Manager:<<[getManager().getName()]>>)
 1.  <<restartNum>><<foreach [service in getServices()]>><<[service.getName()]>>
 <</foreach>><</foreach>>
 ```
 
  Then, the generated report will look as follows:
-
+```
 A Company (Manager: John Smith)
 	1.	Regular Cleaning
 	2.	Oven Cleaning
@@ -118,6 +116,7 @@ F & Partners (Manager: Tony Anderson)
 	1.	Regular Cleaning
 	2.	Oven Cleaning
 	3.	Carpet Cleaning
+```
 
 Download Numbered List Template
 

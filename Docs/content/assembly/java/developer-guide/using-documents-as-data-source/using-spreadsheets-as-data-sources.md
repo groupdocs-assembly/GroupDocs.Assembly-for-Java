@@ -8,9 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
-
-## Using Spreadsheets as Data Sources
+{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 Following classes are added in **[GroupDocs.Assembly.Data](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly.system.data/package-frame)** namespace:
 

@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-TableList WithAlternateContent report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in The Business Layer.{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate In-TableList WithAlternateContent report in HTML Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
 ## In-Table List With Alternate Content in HTML Document
 
@@ -23,13 +23,28 @@ As a report developer, you are required to represent your clients and their pric
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
-<<if \[!getContracts().any()\]>> <<else>><<foreach \[in getContracts()\]>> <</foreach>> <</if>>
-
-| Client | Contract Price |
-| --- | --- |
-| **No data** |
-| **<<\[getClient().getName()\]>>** | <<\[getPrice()\]>> |
-| **Total:** | <<\[getContracts().sum(c => c.getPrice())\]>> |
+<table class="gdassembly">
+	<tbody>
+		<tr>
+			<td colspan="2">&lt;&lt;if [!getContracts().any()]>> &lt;&lt;else>>&lt;&lt;foreach [in getContracts()]>> &lt;&lt;/foreach>> &lt;&lt;/if>></td>
+		</tr>
+		<tr>
+			<td><b>Client</b></td>
+			<td><b>Contract Price</b></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><b>No data</b></td>
+		</tr>
+		<tr>
+			<td><b>&lt;&lt;[getClient().getName()]>></b></td>
+			<td>&lt;&lt;[getPrice()]>></td>
+		</tr>
+		<tr>
+			<td><b>Total:</b></td>
+			<td>&lt;&lt;[getContracts().sum( c => c.getPrice())]>></td>
+		</tr>
+	</tbody>
+</table>
 
 ### Download In-Paragraph List Template
 

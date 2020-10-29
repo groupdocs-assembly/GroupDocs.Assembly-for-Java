@@ -33,11 +33,12 @@ As a report developer, you are required to represent the following key requireme
 
 We provide support for the following clients:
 
-1. <<foreach \[in getClients()\]>><<if \[indexOf() % 2 == 0\]>><<\[getName()\]>>
+<ol>
+<li>&lt;&lt;foreach [in getClients()]>>&lt;&lt;if [indexOf() % 2 == 0]>>&lt;&lt;[getName()]>></li>
+<li style="background-color: #ceffbc">&lt;&lt;else>>&lt;&lt;[getName()]>></li>
+</ol>
 
-2. <<else>><<\[getName()\]>>
-
-<</if>><</foreach>>
+​		<</if>><</foreach>>
 
 ### Download Multicolored Numbered List Template
 
@@ -47,9 +48,7 @@ Please download the sample Multicolored Numbered List document we created in thi
 
 ### Generating The Report
 
-{{< alert style="info" >}}The code uses some of the objects defined in: The Business Layer{{< /alert >}}{{< gist atirtahirgroupdocs d6c0fde163b9edd0cc9dda4bcd01843a >}}
-
-
+{{< alert style="info" >}}The code uses some of the objects defined in: [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/){{< /alert >}}{{< gist atirtahirgroupdocs d6c0fde163b9edd0cc9dda4bcd01843a >}}
 
 ### ODS Template and Report in Apache OpenOffice
 
