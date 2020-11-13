@@ -19,7 +19,7 @@ Practising the following steps, you can insert a Column Chart in MS Word 2013:
 1.  Click in the document where you want to insert the chart, click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
 2.  Select "Column" in the sidebar, you will see a gallery of charts.
 3.  Select the "100% Stacked Column" and press "OK" to insert the chart and Worksheet template to your document.
-4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)]({{< ref "assembly/java/developer-guide/working-with-chart-reports-filtered-ordered-grouped/column-chart-in-word-processing-document.md" >}}).
+4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)](https://docs.groupdocs.com/assembly/java/column-chart-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
 5.  Save your Document.
 
 ### Reporting Requirement

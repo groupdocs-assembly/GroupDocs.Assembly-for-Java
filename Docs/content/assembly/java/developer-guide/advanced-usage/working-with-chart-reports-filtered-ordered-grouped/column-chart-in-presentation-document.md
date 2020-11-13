@@ -20,7 +20,7 @@ Please follow below steps to create a column chart in MS PowerPoint 2013:
 2.  Click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
 3.  Select "Column" in the sidebar, you will see a gallery of charts.
 4.  Select the "100% Stacked Column" and press "OK" to insert the chart and Worksheet template to your document.
-5.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)]({{< ref "assembly/java/developer-guide/working-with-chart-reports-filtered-ordered-grouped/column-chart-in-presentation-document.md" >}}).
+5.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)](https://docs.groupdocs.com/assembly/java/column-chart-in-presentation-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
 6.  Save your Document.
 
 ### Reporting Requirement

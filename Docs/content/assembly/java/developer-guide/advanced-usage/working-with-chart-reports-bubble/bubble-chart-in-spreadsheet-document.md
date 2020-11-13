@@ -20,7 +20,7 @@ Please follow below steps to create a Bubble Chart in MS Excel 2013:
 2.  Click in the workbook where you want to insert the chart, click the "Insert" tab, and then click "Insert Scatter Chart Icon" in the charts group.
 3.  A drop-down with charts will appear, select the "Bubble" and press "OK" to insert the chart.
 4.  Click on the chart you just inserted, then click the "Select Data" icon in Data group.
-5.  Add legend entries. See [Chart Data]({{< ref "assembly/java/developer-guide/working-with-chart-reports-bubble/bubble-chart-in-spreadsheet-document.md" >}})
+5.  Add legend entries. See [Chart Data](https://docs.groupdocs.com/assembly/java/bubble-chart-in-spreadsheet-document/#reporting-requirement).
 6.  Save your Document.
 
 ### Reporting Requirement

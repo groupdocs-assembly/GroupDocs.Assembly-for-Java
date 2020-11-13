@@ -19,7 +19,7 @@ Please following below steps to create Scatter Chart in MS PowerPoint 2013:
 1.  Click in the document where you want to insert the chart, click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
 2.  Select "XY (Scatter)".
 3.  Preview "Scatter" and press OK to insert the chart and Worksheet template to your document.
-4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)]({{< ref "assembly/java/developer-guide/working-with-chart-reports-scatter/scatter-chart-in-presentation-document.md" >}})
+4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)](https://docs.groupdocs.com/assembly/java/scatter-chart-in-presentation-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
 5.  Save the template.
 
 ### Reporting Requirement

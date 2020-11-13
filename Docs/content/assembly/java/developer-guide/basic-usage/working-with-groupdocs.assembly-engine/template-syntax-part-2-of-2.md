@@ -377,7 +377,7 @@ During runtime, a chart with a foreach tag in its title is processed by the engi
     }
     ```
     
-    Given that managers is an enumeration of Manager instances, you can use the following template to represent total contract prices achieved by managers in a [column chart]({{< ref "assembly/java/developer-guide/working-with-chart-reports-filtered-ordered-grouped/_index.md" >}}).
+    Given that managers is an enumeration of Manager instances, you can use the following template to represent total contract prices achieved by managers in a [column chart](https://docs.groupdocs.com/assembly/java/working-with-chart-reports-filtered-ordered-grouped/).
         
 
 ## Enumeration Extension Methods

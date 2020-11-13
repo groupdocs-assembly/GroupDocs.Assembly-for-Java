@@ -57,19 +57,19 @@ The following table describes lexical tokens that you can use in template expres
 | **Keyword** | Only the following tokens are reserved as keywords: `true`, `false`, `null`, `new`, and `in` |
 | **Identifier** |<ul><br/>	<li>The feature of keyword escaping through the "@" character is not supported.</li><br/>	<li>Unicode character escapes are not permitted in identifiers.</li><br/></ul>|
 | **Literal** | <ul><br/>	<li>32-bit Unicode character escapes are not supported</li><br/>	<li>Unsigned integer and decimal literals are not permitted</li><br/></ul>|
-| **Operator** | See [Using Operators]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md" >}}) |
+| **Operator** | See [Using Operators](https://docs.groupdocs.com/assembly/java/template-syntax-part-1-of-2/#using-operators) |
 
 You can use the following identifiers that are not preceded by a member access operator in template expressions:
 
 *   The name of a passed data source object
-*   The name of an iteration variable within its scope (see [Outputting Sequential Data]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}) for more information)
+*   The name of an iteration variable within its scope (see [Outputting Sequential Data](https://docs.groupdocs.com/assembly/java/template-syntax-part-2-of-2/#outputting-sequential-data) for more information)
 *   The name of a lambda function parameter within the scope of the lambda function
-*   A fully or partially qualified name of a type that is known by the engine (see [Setting up Known External Types]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/groupdocs.assembly-engine-apis.md#settingup-known-external-types" >}}) for more information)
+*   A fully or partially qualified name of a type that is known by the engine (see [Setting up Known External Types](https://docs.groupdocs.com/assembly/java/groupdocs-assembly-engine-apis/#setting-up-known-external-types) for more information)
 *   The name of a member of an object that is determined as follows:
     *   Inside a data band body, the object is resolved to the innermost iteration variable.
     *   Outside a data band body, the object is resolved to a passed data source.
 
-The feature of the omitting of an object identifier while accessing the object's members is also known as the contextual object member access. See [Using Contextual Object Member Access]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md" >}}) for more information.
+The feature of the omitting of an object identifier while accessing the object's members is also known as the contextual object member access. See [Using Contextual Object Member Access](https://docs.groupdocs.com/assembly/java/template-syntax-part-1-of-2/#using-contextual-object-member-access) for more information.
 
 ### Using Types
 
@@ -81,7 +81,7 @@ However, you can use the identifier of a visible type in template expressions on
 *   The type does not represent an array.
 *   The type is not an open or closed generic type.
 
-Also, the engine enables you to use anonymous types in template expressions. Such types are useful while composing expressions with grouping by multiple keys. See [Enumeration Extension Methods]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for the examples.
+Also, the engine enables you to use anonymous types in template expressions. Such types are useful while composing expressions with grouping by multiple keys. See [Enumeration Extension Methods](https://docs.groupdocs.com/assembly/java/template-syntax-part-2-of-2/#enumeration-extension-methods) for the examples.
 
 #### Type Members
 
@@ -105,8 +105,8 @@ The engine supports the following features when dealing with functional members:
 
 GroupDocs.Assembly Engine enables you to use the following built-in extension methods in template expressions:
 
-*   Extension methods mimicking the ones for `IEnumerable<T>` (see [Enumeration Extension Methods]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for more information)
-*   Extension methods for iteration variables (see [Extension Methods of Iteration Variables]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#extension-methodsof-iteration-variables" >}}) for more information)
+*   Extension methods mimicking the ones for `IEnumerable<T>` (see [Enumeration Extension Methods](https://docs.groupdocs.com/assembly/java/template-syntax-part-2-of-2/#enumeration-extension-methods) for more information)
+*   Extension methods for iteration variables (see [Extension Methods of Iteration Variables](https://docs.groupdocs.com/assembly/java/template-syntax-part-2-of-2/#extension-methods-of-iteration-variables) for more information)
 
 ### Using Operators
 
@@ -146,7 +146,7 @@ Also, the engine enables you to use lifted operators in template expressions. In
 
 ### Using Lambda Functions
 
-GroupDocs.Assembly Engine enables you to use lambda functions only as arguments of built-in enumeration extension methods in template expressions. See [Enumeration Extension Methods]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for more information.
+GroupDocs.Assembly Engine enables you to use lambda functions only as arguments of built-in enumeration extension methods in template expressions. See [Enumeration Extension Methods](https://docs.groupdocs.com/assembly/java/template-syntax-part-2-of-2/#enumeration-extension-methods) for more information.
 
 You can use both explicit and implicit lambda function signatures in template expressions. If you do not specify the type of a parameter of a lambda function explicitly, the type is determined implicitly by the engine depending on the type of the corresponding enumeration.
 
@@ -166,9 +166,9 @@ ds.Persons
 
 #### DataTable Objects
 
-GroupDocs.Assembly Engine enables you to treat [`DataTable`](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly.system.data/DataTable) objects in template expressions as enumerations of their rows. That is, you can use template expressions evaluated to such objects in `foreach` tags (see [Outputting Sequential Data]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#outputting-sequential-data" >}}) for more information).
+GroupDocs.Assembly Engine enables you to treat [`DataTable`](https://apireference.groupdocs.com/java/assembly/com.groupdocs.assembly.system.data/DataTable) objects in template expressions as enumerations of their rows. That is, you can use template expressions evaluated to such objects in `foreach` tags (see [Outputting Sequential Data](https://docs.groupdocs.com/assembly/java/template-syntax-part-2-of-2/#outputting-sequential-data) for more information).
 
-Also, you can normally apply enumeration extension methods (see [Enumeration Extension Methods]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-2-of-2.md#enumeration-extension-methods" >}}) for more information) to `DataTable` objects in template expressions. For example, given that persons is a `DataTable` instance, you can count its rows using the following syntax.
+Also, you can normally apply enumeration extension methods (see [Enumeration Extension Methods](https://docs.groupdocs.com/assembly/java/template-syntax-part-2-of-2/#enumeration-extension-methods) for more information) to `DataTable` objects in template expressions. For example, given that persons is a `DataTable` instance, you can count its rows using the following syntax.
 
 ```java
 persons.count()
@@ -392,3 +392,4 @@ In case, the corresponding enumeration is empty, the engine produces a report as
 {{< alert style="info" >}}**Note:** If tags denoting boundaries of a template option are contained within a single table cell, the option is considered to be a common template option, rather than a table-row one. That is, the option is considered to occupy contents within the cell, rather than the whole row. That is why, a single-cell alternate content in the previous example is located between an opening if and else tags, rather than between an else and closing if tags.{{< /alert >}}
 
 A typical template for LINQ Reporting Engine is composed of common document contents and tags that describe the template’s structure and data bindings. You can form these tags using just running text that can occupy multiple paragraphs to be more descriptive.
+

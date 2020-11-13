@@ -20,7 +20,7 @@ Please follow below steps to create Pie Chart in MS PowerPoint 2013:
 2.  Click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
 3.  Select "Pie".
 4.  Preview "Pie" and press OK to insert the chart and Worksheet template to your document.
-5.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)]({{< ref "assembly/java/developer-guide/working-with-chart-reports-pie/pie-chart-in-presentation-document.md" >}})
+5.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)](https://docs.groupdocs.com/assembly/java/pie-chart-in-presentation-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
 6.  Save the template.
 
 ### Reporting Requirement

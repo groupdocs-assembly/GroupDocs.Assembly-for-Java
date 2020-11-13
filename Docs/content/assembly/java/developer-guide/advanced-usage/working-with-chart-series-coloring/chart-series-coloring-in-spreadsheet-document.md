@@ -19,7 +19,7 @@ Practising the following steps, you can insert a Column Chart in  MS Excel 201
 1.  Create a new Workbook.
 2.  Click the "Insert" tab, and then click "Insert Column Chart" icon in the Charts group to view the drop-down list.
 3.  Select the "100% Stacked Column" and press "OK" to insert the chart and Worksheet template to your Worksheet.
-4.  Edit the Worksheet with your data to update the chart. See [Chart Data]({{< ref "assembly/java/developer-guide/working-with-chart-series-coloring/chart-series-coloring-in-spreadsheet-document.md" >}}).
+4.  Edit the Worksheet with your data to update the chart. See [Chart Data](https://docs.groupdocs.com/assembly/java/chart-series-coloring-in-spreadsheet-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
 5.  Save your Document.
   
 

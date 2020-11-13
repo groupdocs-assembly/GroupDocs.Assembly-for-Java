@@ -19,7 +19,7 @@ Please follow below steps to create Bubble Chart in MS PowerPoint 2013:
 1.  Add a new presentation slide, click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
 2.  Select "X Y(Scatter)" in the sidebar, you will see a gallery of charts.
 3.  Select the "Bubble" and press "OK" to insert the chart and Worksheet template to your document.
-4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)]({{< ref "assembly/java/developer-guide/working-with-chart-reports-bubble/bubble-chart-in-presentation-document.md" >}})
+4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)](https://docs.groupdocs.com/assembly/java/bubble-chart-in-presentation-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
 5.  Save your Document.
 
 ### Reporting Requirement

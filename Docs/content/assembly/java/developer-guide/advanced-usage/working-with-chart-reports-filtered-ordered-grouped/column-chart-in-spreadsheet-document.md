@@ -19,7 +19,7 @@ Following below steps, you can create column chart in MS Excel 2013:
 1.  Create a new Workbook.
 2.  Click the "Insert" tab, and then click "Insert Column Chart" icon in the Charts group to view the drop-down list.
 3.  Select the "100% Stacked Column" and press "OK" to insert the chart and Worksheet template to your Worksheet.
-4.  Edit the Worksheet with your data to update the chart. See [Chart Data]({{< ref "assembly/java/developer-guide/working-with-chart-reports-filtered-ordered-grouped/column-chart-in-spreadsheet-document.md" >}}).
+4.  Edit the Worksheet with your data to update the chart. See [Chart Data](https://docs.groupdocs.com/assembly/java/column-chart-in-spreadsheet-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
 5.  Save your Document.
 
 ### Reporting Requirement
