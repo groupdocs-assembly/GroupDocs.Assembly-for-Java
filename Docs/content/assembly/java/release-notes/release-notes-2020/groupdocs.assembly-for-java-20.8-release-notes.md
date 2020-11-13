@@ -35,8 +35,8 @@ From now, the following identifiers can be used to generate GS1-128 AI 8102 Coup
 | code128GS1UPCA | GS1-128 AI 8102 Coupon Extended barcode |
 | databarGS1UPCA | UPCA & GS1 Databar Coupon barcode |
 
-For more information on dynamic insertion of barcodes, see [Barcodes Syntax and Properties]({{< ref "assembly/java/developer-guide/working-with-barcode-image-generation/barcodes-syntax-and-properties.md" >}}).
+For more information on dynamic insertion of barcodes, see [Barcodes Syntax and Properties](https://docs.groupdocs.com/assembly/java/barcodes-syntax-and-properties/).
 
 ### Improved barcode scaling
 
-Starting from this version, barcode scaling is supported for the most of barcode types. For more information on scaling of barcodes, see [Scaling Barcode Symbols]({{< ref "assembly/java/developer-guide/working-with-barcode-image-generation/barcodes-syntax-and-properties.md#scaling-barcode-symbols" >}}).
+Starting from this version, barcode scaling is supported for the most of barcode types. For more information on scaling of barcodes, see [Scaling Barcode Symbols](https://docs.groupdocs.com/assembly/java/barcodes-syntax-and-properties/#scaling-barcode-symbols).

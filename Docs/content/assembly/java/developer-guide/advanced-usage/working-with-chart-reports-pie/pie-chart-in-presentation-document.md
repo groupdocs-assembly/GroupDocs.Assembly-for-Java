@@ -1,26 +1,27 @@
 ---
-id: pie-chart-in-word-processing-document
-url: assembly/java/pie-chart-in-word-processing-document
-title: Pie Chart in Word Processing Document
-weight: 1
+id: pie-chart-in-presentation-document
+url: assembly/java/pie-chart-in-presentation-document
+title: Pie Chart in Presentation Document
+weight: 3
 description: ""
 keywords: 
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Pie Chart report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Pie Chart report in Presentation Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
-## Pie Chart in Microsoft Word Document
+## Pie Chart in Microsoft PowerPoint Document
 
 ### Creating a Pie Chart
 
-Please follow below steps to can create Pie Chart in MS Word 2013.
+Please follow below steps to create Pie Chart in MS PowerPoint 2013:
 
-1.  Click in the document where you want to insert the chart, click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
-2.  Select "Pie".
-3.  Preview "Pie" and press OK to insert the chart and Worksheet template to your document.
-4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)]({{< ref "assembly/java/developer-guide/working-with-chart-reports-pie/pie-chart-in-word-processing-document.md" >}})
-5.  Save the template.
+1.  Add a new presentation slide.
+2.  Click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
+3.  Select "Pie".
+4.  Preview "Pie" and press OK to insert the chart and Worksheet template to your document.
+5.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)](https://docs.groupdocs.com/assembly/java/pie-chart-in-presentation-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
+6.  Save the template.
 
 ### Reporting Requirement
 
@@ -28,7 +29,7 @@ As a report developer, you are required to share managers' contract prices dynam
 
 *   Report must show information on a Pie Chart.
 *   It must indicate manager name with value (price of the contract).
-*   Report must be generated in the Word Processing Document.
+*   Report must be generated in the Presentation Document.
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
@@ -45,12 +46,12 @@ Total Contract Price<<foreach [in getManagers()]>><<x [getName()]>>
 
 Please download the sample Pie Chart document we created in this article:
 
-*   [Pie Chart.docx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/blob/master/Examples/GroupDocs.Assembly.Examples.Java/Data/Storage/Word%20Templates/Pie%20Chart.docx?raw=true)
+*   [Pie Chart.pptx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/blob/master/Examples/GroupDocs.Assembly.Examples.Java/Data/Storage/Presentation%20Templates/Pie%20Chart.pptx?raw=true)
 
 ### Generating The Report
 
-{{< gist GroupDocsGists f255d5a88a017636d67d2853a2b695eb >}}
+{{< gist GroupDocsGists b344e5c858da2e199934baf7038aee66 >}}
 
-## Pie Chart in OpenOffice Document
+## Pie Chart in OpenOffice Presentation Document
 
 To be investigated.

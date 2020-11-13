@@ -25,7 +25,7 @@ Using of *JsonDataSource* enables you to work with typed values of JSON elemen
 
 ## Treating the top level arrays or objects having array
 
-In template documents, if a top-level JSON element is an array or an object having only one property of an array type, a JsonDataSource instance should be treated in the same way as if it was a DataTable instance (see "[Working with DataTable and DataView Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information) as shown in the following example.
+In template documents, if a top-level JSON element is an array or an object having only one property of an array type, a JsonDataSource instance should be treated in the same way as if it was a DataTable instance (see "[Working with DataTable and DataView Objects](https://docs.groupdocs.com/assembly/java/template-syntax-part-1-of-2/#using-data-sources)" for more information) as shown in the following example.
 
 Suppose we have Json data like:
 ```
@@ -90,7 +90,7 @@ Average age: 36
 
 ## Treating the objects at top level
 
-If a top-level JSON element represents an object, a *JsonDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information). If a top-level JSON object has a single property that is also an object, then this nested object is accessed by the assembler instead. To see how it works, consider the following example.
+If a top-level JSON element represents an object, a *JsonDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects](https://docs.groupdocs.com/assembly/java/template-syntax-part-1-of-2/#using-data-sources)" for more information). If a top-level JSON object has a single property that is also an object, then this nested object is accessed by the assembler instead. To see how it works, consider the following example.
 
 Suppose we have Json data like:
 ```

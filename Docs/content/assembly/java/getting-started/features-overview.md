@@ -62,7 +62,7 @@ Following is the detail given about how the features are offered with their usag
 
 ### Explicit Support for Multiple Data Sources
 
-A new overload **DocumentAssembler.AssembleDocument** is added in the new release. Using this overload user can reference multiple data source objects and their members in the template. Overload accepts an array of data source names and an array of data sources. Learn more about support of multiple data sources in [this]({{< ref "assembly/java/developer-guide/working-with-multiple-data-sources/_index.md" >}}) article.
+A new overload **DocumentAssembler.AssembleDocument** is added in the new release. Using this overload user can reference multiple data source objects and their members in the template. Overload accepts an array of data source names and an array of data sources. Learn more about support of multiple data sources in [this](https://docs.groupdocs.com/assembly/java/working-with-multiple-data-sources/) article.
 
 ## Template Formats, Elements and Syntax
 
@@ -70,23 +70,23 @@ A new overload **DocumentAssembler.AssembleDocument** is added in the new releas
 
 #### Word Processing Document Formats
 
-Word Processing Document formats including Microsoft Word Document and OpenOffice document formats are supported. For more details, please visit [Support for Word Processing Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportfor-word-processing-document-formats" >}}).
+Word Processing Document formats including Microsoft Word Document and OpenOffice document formats are supported. For more details, please visit [Support for Word Processing Document Formats](https://docs.groupdocs.com/assembly/java/supported-document-formats/#supported-file-formats).
 
 #### Spreadsheet Document Formats
 
-Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportfor-spreadsheet-document-formats" >}}).
+Spreadsheet Document formats including Microsoft Excel Workbook and OpenOffice spreadsheet document formats are supported. For more details, please visit [Support for Spreadsheet Document Formats](https://docs.groupdocs.com/assembly/java/supported-document-formats/#supported-file-formats).
 
 #### Presentation Document Formats
 
-Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportfor-presentation-document-formats" >}}).
+Presentation Document formats including Microsoft PowerPoint Presentation and OpenOffice presentation document formats are supported. For more details, please visit [Support for Presentation Document Formats](https://docs.groupdocs.com/assembly/java/supported-document-formats/#supported-file-formats).
 
 #### More Document Formats
 
-More Document formats including Email, PDF, HTML, Plain Text, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats]({{< ref "assembly/java/getting-started/supported-document-formats.md#supportformore-document-formats" >}}).
+More Document formats including Email, PDF, HTML, Plain Text, Epub and XPS document formats will be supported in the future releases. For more details, please visit [Support for more Document Formats](https://docs.groupdocs.com/assembly/java/supported-document-formats/#supported-file-formats).
 
 #### Dynamic Merging of Table Cells
 
-You can merge table cells with equal textual contents within your reports dynamically using **cellMerge** tag. For the detail, please visit [Merging Table Cells Dynamically]({{< ref "assembly/java/developer-guide/working-with-table-reports/merging-table-cells-dynamically.md" >}}).
+You can merge table cells with equal textual contents within your reports dynamically using **cellMerge** tag. For the detail, please visit [Merging Table Cells Dynamically](https://docs.groupdocs.com/assembly/java/merging-table-cells-dynamically/).
 
 #### Textual Comments within Template Syntax Tags
 
@@ -98,7 +98,7 @@ An optional comment providing a human-readable explanation ignored by the engine
 
 #### In-lining of Syntax Error Messages into Templates 
 
-In-lining of syntax error messages into templates instead of exception throwing. For the detail, please visit [Use of In-line Syntax Error Messages into Templates]({{< ref "assembly/java/developer-guide/use-of-in-line-syntax-error-messages-into-templates.md" >}}).
+In-lining of syntax error messages into templates instead of exception throwing. For the detail, please visit [Use of In-line Syntax Error Messages into Templates](https://docs.groupdocs.com/assembly/java/use-of-in-line-syntax-error-messages-into-templates/).
 
 ### Template Elements
 
@@ -164,7 +164,7 @@ This feature allows user to implement a new <<next>> tag. The tag should be supp
 
 ### Setting Background Color Dynamically
 
-For [HTML documents]({{< ref "assembly/java/developer-guide/working-with-list-reports-bulleted/bulleted-list-in-html-document.md" >}}), a background color can not be set dynamically using the backColor tag
+For [HTML documents](https://docs.groupdocs.com/assembly/java/bulleted-list-in-html-document/), a background color can not be set dynamically using the backColor tag
 
 ```java
 <<backColor ["red"]>>text with red background<</backColor>>
@@ -213,12 +213,12 @@ GroupDocs.Assembly provides a powerful feature to change the target file format 
 
 Load template documents from html with resources and save assembled Word, Excel, PowerPoint & emails to html with resources. Please visit the following articles for the detail:
 
-*   [Loading of template documents from HTML with resources]({{< ref "assembly/java/developer-guide/loading-and-saving-with-external-resource-files/loading-of-template-documents-from-html-with-resources.md" >}})
-*   [Saving to HTML with External Resource Files]({{< ref "assembly/java/developer-guide/loading-and-saving-with-external-resource-files/saving-to-html-with-external-resource-files.md" >}})
+*   [Loading of template documents from HTML with resources](https://docs.groupdocs.com/assembly/java/loading-of-template-documents-from-html-with-resources/)
+*   [Saving to HTML with External Resource Files](https://docs.groupdocs.com/assembly/java/saving-to-html-with-external-resource-files/)
 
 ### Numbering Restart in Nested Numbered List 
 
-The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band. Please visit [this article]({{< ref "assembly/java/developer-guide/working-with-list-reports-numbered/numbered-list-in-word-processing-document.md#restart-numberingin-nested-numbered-list" >}}) for more details
+The GroupDocs.Assembly engine allows restart list numbering within your documents dynamically using *<<restartNum>>* tags. In particular, this feature is useful when working with a nested numbered list within a data band. Please visit [this article](https://docs.groupdocs.com/assembly/java/numbered-list-in-word-processing-document/#restart-numbering-in-nested-numbered-list) for more details
 
 ### Metered Licensing
 

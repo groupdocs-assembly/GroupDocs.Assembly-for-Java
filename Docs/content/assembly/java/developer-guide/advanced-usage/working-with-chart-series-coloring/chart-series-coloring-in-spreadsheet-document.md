@@ -1,8 +1,8 @@
 ---
-id: chart-series-coloring-in-word-processing-document
-url: assembly/java/chart-series-coloring-in-word-processing-document
-title: Chart Series Coloring in Word Processing Document
-weight: 1
+id: chart-series-coloring-in-spreadsheet-document
+url: assembly/java/chart-series-coloring-in-spreadsheet-document
+title: Chart Series Coloring in Spreadsheet Document
+weight: 3
 description: ""
 keywords: 
 productName: GroupDocs.Assembly for Java
@@ -10,17 +10,18 @@ hideChildren: False
 ---
 {{< alert style="info" >}}This feature is supported by version 18.5 or greater.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
-## Chart Series Coloring in Word Processing Document
+## Chart Series Coloring in Spreadsheet Document 
 
 ### Creating a Column Chart
 
-Practising the following steps, you can insert a Column Chart in MS Word 2013:
+Practising the following steps, you can insert a Column Chart in  MS Excel 2013:
 
-1.  Click in the document where you want to insert the chart, click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box
-2.  Select "Column" in the sidebar, you will see a gallery of charts
-3.  Select the "100% Stacked Column" and press "OK" to insert the chart and Worksheet template to your document
-4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)]({{< ref "assembly/java/developer-guide/working-with-chart-series-coloring/chart-series-coloring-in-word-processing-document.md" >}})
-5.  Save your Document
+1.  Create a new Workbook.
+2.  Click the "Insert" tab, and then click "Insert Column Chart" icon in the Charts group to view the drop-down list.
+3.  Select the "100% Stacked Column" and press "OK" to insert the chart and Worksheet template to your Worksheet.
+4.  Edit the Worksheet with your data to update the chart. See [Chart Data](https://docs.groupdocs.com/assembly/java/chart-series-coloring-in-spreadsheet-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
+5.  Save your Document.
+  
 
 ### Reporting Requirement
 
@@ -28,8 +29,8 @@ As a report developer, you are required to share contract price by manager dynam
 
 *   The report must show the  name of the manager
 *   The report must show the total contract price for each manager 
-*   Series color to be used in chart series 
-*   The Report must be generated in the Word Processing Document
+*   Series color to be used in chart series 
+*   The report must be generated in the Spreadsheet Document
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
@@ -40,14 +41,11 @@ As a report developer, you are required to share contract price by manager dynam
 managers]>><<x [m.Manager]>>
 ```
 
-#### Chart Data (Excel)
+#### Legend Entries
 
-|   | Total Contract Price<<y [m.Total_Contract_Price]>><<seriesColor [color]>> |
-| --- | --- |
-| Category 1 | 4.3 |
-| Category 2 | 2.5 |
-| Category 3 | 3.5 |
-| Category 4 | 4.5 |
+```java
+="Total Contract Price<<y [m.Total_Contract_Price]>><<seriesColor [color]>>"
+```
 
 {{< alert style="success" >}}For detailed technical information about syntax, expressions and report generation by the engine, please visit: [Working with GroupDocs.Assembly Engine](https://docs.groupdocs.com/assembly/java/working-with-groupdocs-assembly-engine/){{< /alert >}}
 
@@ -55,7 +53,7 @@ managers]>><<x [m.Manager]>>
 
 Please download the sample Dynamic Chart Series Color document we created in this article:
 
-*   [Chart Template.docx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/blob/master/Examples/GroupDocs.Assembly.Examples.Java/Data/Storage/Word%20Templates/Dynamic%20Chart%20Series%20Color.docx) (Template for CustomObject and JSON examples) 
+*   [Chart Template.xlsx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/blob/master/Examples/GroupDocs.Assembly.Examples.Java/Data/Storage/Spreadsheet%20Templates/Dynamic%20Chart%20Series%20Color.xlsx) (Template for CustomObject and JSON examples) 
 
 ### Generating The Report
 
@@ -77,6 +75,6 @@ A color expression must return a value of one of the following types:
 
 Following code snippet generates the report:
 
-{{< gist GroupDocsGists 589a697fc7c7371d408a52bb32d94740 >}}
+{{< gist GroupDocsGists e1c86f03ae3aff341f15c3e7d777b91d >}}
 
 

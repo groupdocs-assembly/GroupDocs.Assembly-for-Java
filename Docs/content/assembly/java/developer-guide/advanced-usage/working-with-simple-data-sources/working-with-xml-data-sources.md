@@ -22,7 +22,7 @@ To access XML data while building a report, you can use facilities of *DataSet*
 
 ### Treating the top-level XML element contains only a sequence of elements of the same type
 
-In template documents, if a top-level XML element contains only a sequence of elements of the same type, an *XmlDataSource* instance should be treated in the same way as if it was a *DataTable *instance (see "[Working with *DataTable* and *DataView* Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information).
+In template documents, if a top-level XML element contains only a sequence of elements of the same type, an *XmlDataSource* instance should be treated in the same way as if it was a *DataTable* instance (see "[Working with *DataTable* and *DataView* Objects](https://docs.groupdocs.com/assembly/java/template-syntax-part-1-of-2/#using-data-sources)" for more information).
 
 Suppose we have XML data like:
 ```
@@ -64,7 +64,7 @@ Average age: 36
 
 ### Treating the top-level XML element contains attributes or nested elements of different types
 
-If a top-level XML element contains attributes or nested elements of different types, an *XmlDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects]({{< ref "assembly/java/developer-guide/working-with-groupdocs.assembly-engine/template-syntax-part-1-of-2.md#data-table-objects" >}})" for more information) as shown in the following example.
+If a top-level XML element contains attributes or nested elements of different types, an *XmlDataSource* instance should be treated in template documents in the same way as if it was a *DataRow* instance (see "[Working with *DataRow* and *DataRowView* Objects](https://docs.groupdocs.com/assembly/java/template-syntax-part-1-of-2/#using-data-sources)" for more information) as shown in the following example.
 
 Suppose we have XML data like:
 ```

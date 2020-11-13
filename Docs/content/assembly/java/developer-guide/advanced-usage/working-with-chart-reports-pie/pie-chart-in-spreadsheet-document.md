@@ -20,7 +20,7 @@ Please follow below steps to create Pie Chart in MS Excel 2013.
 2.  Click in the workbook where you want to insert the chart, click the "Insert" tab, and then click "Pie Chart Icon" in the charts group.
 3.  A drop-down with charts will appear, select the "Pie" and press "OK" to insert the chart.
 4.  Click on the chart you just inserted, then click the "Change Data" icon in Data group.
-5.  Now add legend entries. See [Chart Data]({{< ref "assembly/java/developer-guide/working-with-chart-reports-pie/pie-chart-in-spreadsheet-document.md" >}})
+5.  Now add legend entries. See [Chart Data](https://docs.groupdocs.com/assembly/java/pie-chart-in-spreadsheet-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
 6.  Save your Document.
 
 ### Reporting Requirement

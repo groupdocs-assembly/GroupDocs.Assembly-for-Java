@@ -1,25 +1,25 @@
 ---
-id: bubble-chart-in-presentation-document
-url: assembly/java/bubble-chart-in-presentation-document
-title: Bubble Chart in Presentation Document
-weight: 3
+id: bubble-chart-in-word-processing-document
+url: assembly/java/bubble-chart-in-word-processing-document
+title: Bubble Chart in Word Processing Document
+weight: 1
 description: ""
 keywords: 
 productName: GroupDocs.Assembly for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Bubble Chart report in Presentation Document.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
+{{< alert style="info" >}}In this article, we will use GroupDocs.Assembly to generate a Bubble Chart report in Word Processing Document format.{{< /alert >}}{{< alert style="info" >}}The code uses some of the objects defined in [The Business Layer](https://docs.groupdocs.com/assembly/java/the-business-layer/).{{< /alert >}}
 
-## Bubble Chart in Microsoft PowerPoint Document
+## Bubble Chart in Microsoft Word Document
 
 ### Creating a Bubble Chart
 
-Please follow below steps to create Bubble Chart in MS PowerPoint 2013:
+Please follow below steps to create bubble chart in MS Word 2013:
 
-1.  Add a new presentation slide, click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
+1.  Click in the document where you want to insert the chart, click the "Insert" tab, and then click "Chart" in the illustrations group to open the "Insert Chart" dialog box.
 2.  Select "X Y(Scatter)" in the sidebar, you will see a gallery of charts.
 3.  Select the "Bubble" and press "OK" to insert the chart and Worksheet template to your document.
-4.  Edit the Worksheet with your data to update the chart. See [Chart Data (Excel)]({{< ref "assembly/java/developer-guide/working-with-chart-reports-bubble/bubble-chart-in-presentation-document.md" >}})
+4.  Right click chart and select 'Edit Data' to provide chart data. See [Chart Data (Excel)](https://docs.groupdocs.com/assembly/java/bubble-chart-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine).
 5.  Save your Document.
 
 ### Reporting Requirement
@@ -27,7 +27,7 @@ Please follow below steps to create Bubble Chart in MS PowerPoint 2013:
 As a report developer, you are required to share your sales/orders dynamically with the following key requirements:
 
 *   Retrieve total Contract Prices by Months.
-*   Report must be generated in the Presentation Document.
+*   Report must be generated in the Word Processing Document.
 
 ### Adding Syntax to be evaluated by GroupDocs.Assembly Engine
 
@@ -45,12 +45,12 @@ Total Contract Prices by Months<<foreach [in getContracts()
 
 Please download the sample Bubble Chart document we created in this article:
 
-*   [Bubble Chart.pptx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/blob/master/Examples/GroupDocs.Assembly.Examples.Java/Data/Storage/Presentation%20Templates/Bubble%20Chart.pptx?raw=true)
+*   [Bubble Chart.docx](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-Java/blob/master/Examples/GroupDocs.Assembly.Examples.Java/Data/Storage/Word%20Templates/Bubble%20Chart.docx?raw=true)
 
 ### Generating The Report
 
-{{< gist GroupDocsGists da6e26176a44307898d4616ecadd621b >}}
+{{< gist GroupDocsGists 25ca4f457bde680504eb2c9cfbb2b8db >}}
 
-## Bubble Chart in OpenOffice Presentation Document
+## Bubble Chart in OpenOffice Document
 
 To be investigated.
