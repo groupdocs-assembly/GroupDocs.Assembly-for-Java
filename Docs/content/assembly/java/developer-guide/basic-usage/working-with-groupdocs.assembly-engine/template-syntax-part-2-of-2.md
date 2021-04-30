@@ -61,10 +61,10 @@ An opening `foreach` tag defines a `foreach` statement enclosed by brackets.
 
 | Element | Optional? | Remarks |
 | --- | --- | --- |
-| **Iteration Variable Type** | Yes | You can specify the type of an iteration variable explicitly. This type must be known by the engine (see [Setting up Known External Types](https://docs.groupdocs.com/display/assemblynet/GroupDocs.Assembly+Engine+APIs#GroupDocs.AssemblyEngineAPIs-SettingupKnownExternalTypes) for more information).  
+| **Iteration Variable Type** | Yes | You can specify the type of an iteration variable explicitly. This type must be known by the engine (see [Setting up Known External Types](https://docs.groupdocs.com/assembly/java/groupdocs-assembly-engine-apis/#setting-up-known-external-types) for more information).  
 If you do not specify the type explicitly, it is determined implicitly by the engine depending on the type of the corresponding sequence. |
 | **Iteration Variable Name** | Yes | You can specify the name of an iteration variable to use it while accessing the variable's members. The name must be unique within the scope of the corresponding `foreach` tag.  
-If you do not specify the name, you can access the variable's members using the contextual object member access syntax (see [Using Contextual Object](https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-UsingContextualObjectMemberAccess) Member Access" for more information). |
+If you do not specify the name, you can access the variable's members using the contextual object member access syntax (see [Using Contextual Object](https://docs.groupdocs.com/assembly/java/template-syntax-part-1-of-2/#using-contextual-object-member-access) Member Access" for more information). |
 | **"in" Keyword** | No | 
  |
 | **Sequence Expression** | No | A sequence expression must return an [Iterable](http://docs.oracle.com/javase/7/docs/api/java/lang/Iterable.html) implementor. |
@@ -108,6 +108,54 @@ When the body of a common data band starts and ends within different paragraphs,
 | `prefix¶`<br/>`<<foreach [item in items]>>¶`<br/>`<<[item]>>¶`<br/>`<</foreach>>¶`<br/>`suffix`|`prefix¶`<br/>`¶`<br/>`item1¶`<br/>`¶`<br/>`item2¶`<br/>`¶`<br/>`item3¶`<br/>`¶`<br/>`suffix`|
 
 While building a report, duplicated paragraph breaks derive common attributes from their template prototypes. In particular, this fact enables you to build numbered or bulleted lists in reports dynamically. For example, given the above declaration of items, you can get a report with their numbered list using the following template.
+
+### Merging Table Cells Dynamically
+
+You can merge table cells with equal textual contents within your reports dynamically using `cellMerge` tags. Syntax of a `cellMerge` tag is defined as follows.
+
+```
+<<cellMerge>>
+```
+
+By default, a `cellMerge` tag causes a cell merging operation only in a vertical direction during runtime. However, you can alter this behavior in the following ways:
+
+- To merge cells only in a horizontal direction, use the `horz` switch as follows.
+  `<<cellMerge -horz>>`
+
+- To merge cells in both – vertical and horizontal – directions, use the `both` switch as follows.
+  `<<cellMerge -both>>`
+
+For two or more successive table cells to be merged dynamically in either direction by the engine, the following requirements must be met:
+
+- Each of the cells must contain a `cellMerge` tag denoting a cell merging operation in the same direction (or directions).
+- Each of the cells must not be already merged in another direction. This requirement does not apply when a `both` switch is used.
+- The cells must have equal textual contents ignoring leading and trailing whitespaces.
+
+Consider the following template.
+
+| **...** | **...**                       | **...** |
+| ------- | ----------------------------- | ------- |
+| **...** | **<<cellMerge>><<[value1]>>** | **...** |
+| **...** | **<<cellMerge>><<[value2]>>** | **...** |
+| **...** | **...**                       | **...** |
+
+If `value1` and `value2` have the same value, say “Hello”, table cells containing `cellMerge` tags are successfully merged during runtime and a result report looks as follows then.
+
+| **...** | **...**   | **...** |
+| ------- | --------- | ------- |
+| **...** | **Hello** | **...** |
+| **...** | **...**   |         |
+| **...** | **...**   | **...** |
+
+If `value1` and `value2` have different values, say “Hello” and “World”, table cells containing `cellMerge` tags are not merged during runtime and a result report looks as follows then.
+
+| **...** | **...**   | **...** |
+| ------- | --------- | ------- |
+| **...** | **Hello** | **...** |
+| **...** | **World** | **...** |
+| **...** | **...**   | **...** |
+
+**Note –** A `cellMerge` tag can be normally used within a table data band.
 
 ### Numbered Lists
 
@@ -195,7 +243,7 @@ John Smith (43 Vogel Street Roslyn Palmerston North 4414)
 
 ### Table-Row Data Bands
 
-{{< alert style="info" >}}See [In-Table List With Alternate Content](https://docs.groupdocs.com/assembly/net/in-table-list-with-alternate-content-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine) template using Table-Row Data Bands in it.{{< /alert >}}
+{{< alert style="info" >}}See [In-Table List With Alternate Content](https://docs.groupdocs.com/assembly/java/in-table-list-with-alternate-content-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine) template using Table-Row Data Bands in it.{{< /alert >}}
 
 A table-row data band is a data band which body occupies single or multiple rows of a single document table. The body of such a band starts at the beginning of the first occupied row and ends at the end of the last occupied row as follows.
 
@@ -264,7 +312,7 @@ In this case, the engine produces a report as follows.
 
 ### Extension Methods of Iteration Variables
 
-{{< alert style="info" >}}See [Multicolored Numbered List](https://docs.groupdocs.com/assembly/net/multicolored-numbered-list-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine) template using Extension Methods of Iteration Variable in it.{{< /alert >}}
+{{< alert style="info" >}}See [Multicolored Numbered List](https://docs.groupdocs.com/assembly/java/multicolored-numbered-list-in-word-processing-document/#adding-syntax-to-be-evaluated-by-groupdocsassembly-engine) template using Extension Methods of Iteration Variable in it.{{< /alert >}}
 
 GroupDocs.Assembly Engine provides special extension methods for iteration variables of any type. You can normally use these extension methods in template expressions. The following list describes the extension methods.
 
@@ -390,7 +438,7 @@ GroupDocs.Assembly Engine enables you to perform common manipulations on a seque
 
 Below table describes the built-in extension methods. The following notation conventions are used within the table:
 
-*   `Selector` stands for a lambda function returning a value and taking an enumeration item as its single argument. See [Using Lambda Functions](https://docs.groupdocs.com/display/assemblynet/Template+Syntax+-+Part+1+of+2#TemplateSyntax-Part1of2-UsingLambdaFunctions) for more information.
+*   `Selector` stands for a lambda function returning a value and taking an enumeration item as its single argument. See [Using Lambda Functions](https://docs.groupdocs.com/assembly/java/template-syntax-part-1-of-2/#using-lambda-functions) for more information.
 *   `ComparableSelector` stands for `Selector` returning [IComparable](http://msdn.microsoft.com/en-US/library/system.icomparable(v=vs.110).aspx).
 *   `Predicate` stands for `Selector` returning a Boolean value.
 
