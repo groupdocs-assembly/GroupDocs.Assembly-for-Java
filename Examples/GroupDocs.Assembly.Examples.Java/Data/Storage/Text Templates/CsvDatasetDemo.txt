@@ -1,4 +1,0 @@
-<<foreach [in persons]>>Name: <<[Name]>>, Age: <<[Age]>>, Date of Birth: <<[Birth]:"dd.MM.yyyy">>
-<</foreach>>
-Average age: <<[persons.average(p => p.Age)]>>
-

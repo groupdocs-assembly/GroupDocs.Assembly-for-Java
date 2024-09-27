@@ -1,0 +1,30 @@
+package com.groupdocs.examples.assembly;
+
+import com.groupdocs.assembly.License;
+import com.groupdocs.examples.assembly.utils.LicenseUtils;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import java.io.InputStream;
+import java.nio.file.Paths;
+
+public class TestsSetUp {
+    @BeforeSuite
+    public void setUp() throws Exception {
+        try (final InputStream licenseStream = LicenseUtils.createLicenseStream()) {
+            if (licenseStream == null) {
+                throw new RuntimeException("License was NOT set!");
+            }
+            final License license = new License();
+            license.setLicense(licenseStream);
+            System.out.println("License was set successfully!");
+        }
+    }
+
+    @AfterSuite
+    public void tearDown() {
+        System.out.println("============================================");
+        System.out.println("Test report path " + Paths.get("target/surefire-reports/index.html").toAbsolutePath());
+        System.out.println("============================================");
+    }
+}

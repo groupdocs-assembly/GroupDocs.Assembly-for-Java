@@ -1,2 +1,0 @@
-Name:	John Smith
-Age:	37
