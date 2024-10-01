@@ -6,7 +6,7 @@
     <!-- Project information -->
     <groupId>com.groupdocs.examples</groupId>
     <artifactId>groupdocs-assembly-examples</artifactId>
-    <version>24.9</version>
+    <version>24.9.1</version>
     <packaging>jar</packaging>
 
     <name>GroupDocs.Assembly for Java Examples</name>
@@ -126,7 +126,6 @@
                 <version>3.5.0</version>
                 <configuration>
                     <includes>
-                        <include>com.groupdocs.examples.assembly.TestsSetUp</include>
                         <include>**/*Tests.java</include>
                     </includes>
                     <systemPropertyVariables>

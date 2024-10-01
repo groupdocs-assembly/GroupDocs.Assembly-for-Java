@@ -1,6 +1,5 @@
 package com.groupdocs.examples.assembly.utils.businessentities;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Contract {

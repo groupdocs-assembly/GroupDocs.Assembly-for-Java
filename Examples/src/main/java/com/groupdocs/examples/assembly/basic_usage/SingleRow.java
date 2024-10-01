@@ -4,6 +4,7 @@ import com.groupdocs.assembly.DataSourceInfo;
 import com.groupdocs.assembly.DocumentAssembler;
 import com.groupdocs.examples.assembly.utils.AssemblyUtils;
 import com.groupdocs.examples.assembly.utils.DataStorage;
+import com.groupdocs.examples.assembly.utils.FailureRegister;
 import com.groupdocs.examples.assembly.utils.FilesUtils;
 import com.groupdocs.examples.assembly.utils.businessentities.Manager;
 
@@ -18,7 +19,8 @@ public class SingleRow {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(manager, "manager"));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -31,7 +33,8 @@ public class SingleRow {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(manager, "manager"));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -44,7 +47,8 @@ public class SingleRow {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(manager, "manager"));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -59,7 +63,8 @@ public class SingleRow {
             assembler.getKnownTypes().add(AssemblyUtils.class);
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(manager, "manager"));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -72,7 +77,8 @@ public class SingleRow {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(manager, "manager"));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -92,7 +98,8 @@ public class SingleRow {
                     new DataSourceInfo(getDataSourceDetails.getSubject(), dataSourceNames.getSubject()),
                     new DataSourceInfo(getDataSourceDetails.getManager(), dataSourceNames.getManager()));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;

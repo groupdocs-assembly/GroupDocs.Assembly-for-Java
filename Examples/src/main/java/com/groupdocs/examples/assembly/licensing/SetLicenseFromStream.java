@@ -1,6 +1,7 @@
 package com.groupdocs.examples.assembly.licensing;
 
 import com.groupdocs.assembly.License;
+import com.groupdocs.examples.assembly.utils.FailureRegister;
 import com.groupdocs.examples.assembly.utils.LicenseUtils;
 
 import java.io.InputStream;
@@ -31,8 +32,8 @@ public class SetLicenseFromStream {
                 );
             }
         } catch (Exception e) {
-            System.out.println("License was NOT set.");
-            throw new RuntimeException(e);
+            System.err.println("License was NOT set.");
+            FailureRegister.getInstance().registerFailedSample(e);
         }
     }
 }

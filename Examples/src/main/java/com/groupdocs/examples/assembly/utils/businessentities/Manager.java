@@ -1,6 +1,6 @@
 package com.groupdocs.examples.assembly.utils.businessentities;
 
-import com.groupdocs.examples.assembly.utils.FilesUtils;
+import com.groupdocs.examples.assembly.SampleFiles;
 
 //ExStart:BusinessEntities
 public class Manager {
@@ -30,15 +30,15 @@ public class Manager {
     }
 
     public String getPhoto() {
-        return FilesUtils.makeFilesPath("BusinessEntities/no-photo.jpg").toString();
+        return SampleFiles.NO_PHOTO_JPG.toString();
     }
 
     public String getOuterDoc() {
-        return FilesUtils.makeFilesPath("BusinessEntities/OuterDoc.docx").toString();
+        return SampleFiles.OUTER_DOC_DOCX.toString();
     }
 
     public String getNestedOuterDoc() {
-        return FilesUtils.makeFilesPath("BusinessEntities/NestedOuterDocument.docx").toString();
+        return SampleFiles.NESTED_OUTER_DOCUMENT_DOCX.toString();
     }
 
     public Iterable<Contract> getContracts() {

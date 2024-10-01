@@ -2,6 +2,7 @@ package com.groupdocs.examples.assembly.utils;
 
 import com.groupdocs.assembly.DocumentTable;
 import com.groupdocs.assembly.DocumentTableOptions;
+import com.groupdocs.examples.assembly.SampleFiles;
 import com.groupdocs.examples.assembly.utils.businessentities.Client;
 import com.groupdocs.examples.assembly.utils.businessentities.Contract;
 import com.groupdocs.examples.assembly.utils.businessentities.Manager;
@@ -63,7 +64,7 @@ public class DataStorage {
 
     public static DocumentTable excelData() throws Exception {
         //ExStart:excelData
-        Path dataFilePath = FilesUtils.makeFilesPath("DataSources/ExcelDataSource/Contracts_Data.xlsx");
+        Path dataFilePath = SampleFiles.CONTRACTS_DATA_XLSX;
         // Set extracting of column names from the first row.
         DocumentTableOptions options = new DocumentTableOptions();
         options.setFirstRowContainsColumnNames(true);
@@ -92,7 +93,7 @@ public class DataStorage {
     //Importing word processing table into presentation
     public static DocumentTable importingWordProcessingTableIntoPresentation() throws Exception {
         //ExStart:ImportingWordProcessingTableIntoPresentation
-        Path dataFilePath = FilesUtils.makeFilesPath("DataSources/WordDataSource/Managers_Data.docx");
+        Path dataFilePath = SampleFiles.MANAGERS_DATA_DOCX;
 
         // Do not extract column names from the first row, so that the first row to be treated as a data row.
         // Limit the largest row index, so that only the first four data rows to be loaded.
@@ -213,7 +214,7 @@ public class DataStorage {
         }
     }
 
-    public Iterable<Manager> getManagers() {
+    public List<Manager> getManagers() {
         return mManagers;
     }
 

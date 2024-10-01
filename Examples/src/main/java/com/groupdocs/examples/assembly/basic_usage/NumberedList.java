@@ -3,6 +3,7 @@ package com.groupdocs.examples.assembly.basic_usage;
 import com.groupdocs.assembly.DataSourceInfo;
 import com.groupdocs.assembly.DocumentAssembler;
 import com.groupdocs.examples.assembly.utils.DataStorage;
+import com.groupdocs.examples.assembly.utils.FailureRegister;
 import com.groupdocs.examples.assembly.utils.FilesUtils;
 
 import java.nio.file.Path;
@@ -15,7 +16,8 @@ public class NumberedList {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -27,7 +29,8 @@ public class NumberedList {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -39,7 +42,8 @@ public class NumberedList {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -51,7 +55,8 @@ public class NumberedList {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -63,7 +68,8 @@ public class NumberedList {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -83,7 +89,8 @@ public class NumberedList {
                     new DataSourceInfo(getDataSourceDetails.getSubject(), dataSourceNames.getSubject()),
                     new DataSourceInfo(getDataSourceDetails.getManager(), dataSourceNames.getManager()));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -95,7 +102,8 @@ public class NumberedList {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -107,7 +115,8 @@ public class NumberedList {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;

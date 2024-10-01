@@ -45,7 +45,8 @@ public class LicenseUtils {
                 return Files.newInputStream(Paths.get(licensePath));
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
     }
 
@@ -96,7 +97,8 @@ public class LicenseUtils {
                 return licFileOptional.get().toAbsolutePath().normalize().toString();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
 
         System.err.println("\nNone of license sources was provided:\n" +

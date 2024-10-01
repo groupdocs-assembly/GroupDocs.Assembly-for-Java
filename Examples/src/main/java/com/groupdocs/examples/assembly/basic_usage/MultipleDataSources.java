@@ -3,6 +3,7 @@ package com.groupdocs.examples.assembly.basic_usage;
 import com.groupdocs.assembly.DataSourceInfo;
 import com.groupdocs.assembly.DocumentAssembler;
 import com.groupdocs.examples.assembly.utils.DataStorage;
+import com.groupdocs.examples.assembly.utils.FailureRegister;
 import com.groupdocs.examples.assembly.utils.FilesUtils;
 
 import java.nio.file.Path;
@@ -17,7 +18,8 @@ public class MultipleDataSources {
                     new DataSourceInfo(new DataStorage(), null), new DataSourceInfo(DataStorage.excelData(), "contracts"));
 
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -30,7 +32,8 @@ public class MultipleDataSources {
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo(new DataStorage(), null), new DataSourceInfo(DataStorage.excelData(), "contracts"));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
@@ -43,7 +46,8 @@ public class MultipleDataSources {
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo(new DataStorage(), null), new DataSourceInfo(DataStorage.excelData(), "contracts"));
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            FailureRegister.getInstance().registerFailedSample(e);
+            return null;
         }
         System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
