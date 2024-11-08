@@ -194,10 +194,10 @@ If none of these properties are set, the default locations will be used:
 ## Resources
 
 + **Website:** [groupdocs.com](http://groupdocs.com)
-+ **Product Home:** [GroupDocs.Annotation for Java](https://products.groupdocs.com/annotation/java/)
-+ **Product API:** [API of GroupDocs.Annotation for Java](https://reference.groupdocs.com/annotation/java/)
-+ **Download:** [Download GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/)
-+ **Documentation:** [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
-+ **Forum:** [GroupDocs.Annotation for Java Forum](https://forum.groupdocs.com/c/annotation/10)
-+ **Blog:** [GroupDocs.Annotation for Java Blog](https://blog.groupdocs.com/categories/groupdocs.annotation-product-family/)
++ **Product Home:** [GroupDocs.Assembly for Java](https://products.groupdocs.com/assembly/java/)
++ **Product API:** [API of GroupDocs.Assembly for Java](https://reference.groupdocs.com/assembly/java/)
++ **Download:** [Download GroupDocs.Assembly for Java](https://releases.groupdocs.com/assembly/java/)
++ **Documentation:** [GroupDocs.Assembly for Java Documentation](https://docs.groupdocs.com/assembly/java/)
++ **Forum:** [GroupDocs.Assembly for Java Forum](https://forum.groupdocs.com/c/assembly/15)
++ **Blog:** [GroupDocs.Assembly for Java Blog](https://blog.groupdocs.com/categories/groupdocs.assembly-product-family/)
 
