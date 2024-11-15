@@ -23,11 +23,11 @@ public class AdditionalActions {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -36,11 +36,11 @@ public class AdditionalActions {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -49,11 +49,11 @@ public class AdditionalActions {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -64,11 +64,11 @@ public class AdditionalActions {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new LoadSaveOptions(newFileFormat), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -80,11 +80,11 @@ public class AdditionalActions {
             int mode = 1;
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo(new DataStorage(), "orders"), new DataSourceInfo(mode, "mode"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -95,11 +95,11 @@ public class AdditionalActions {
             String title = "Total Order Quantity by Quarters";
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo(new DataStorage(), "orders"), new DataSourceInfo(title, "title"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -118,11 +118,11 @@ public class AdditionalActions {
                     new DataSourceInfo(getDataSourceDetails.getSubject(), dataSourceNames.getSubject()),
                     new DataSourceInfo(getDataSourceDetails.getManager(), dataSourceNames.getManager()),
                     new DataSourceInfo(getDataSourceDetails.getTitle(), dataSourceNames.getTitle()));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -134,11 +134,11 @@ public class AdditionalActions {
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo(new DataStorage(), "orders"),
                     new DataSourceInfo(color, "color"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -164,11 +164,11 @@ public class AdditionalActions {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo("Hello!", "value"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -184,11 +184,11 @@ public class AdditionalActions {
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo("GroupDocs.Assembly for Java", "product"),
                     new DataSourceInfo(description, "description"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -204,11 +204,11 @@ public class AdditionalActions {
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo("GroupDocs.Assembly for Java", "product"),
                     new DataSourceInfo(description, "description"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -228,11 +228,11 @@ public class AdditionalActions {
             DataSourceInfo dataSourceInfo2 = new DataSourceInfo(description, "description");
 
             assembler.assembleDocument(inputStream, targetStream, new LoadSaveOptions(FileFormat.MARKDOWN), dataSourceInfo1, dataSourceInfo2);
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 }

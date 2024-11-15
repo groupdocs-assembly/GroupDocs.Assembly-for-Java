@@ -37,11 +37,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo(table, "managers"), new DataSourceInfo(color1, "color1"), new DataSourceInfo(color2, "color2"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -70,11 +70,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo(table, "managers"), new DataSourceInfo(color1, "color1"), new DataSourceInfo(color2, "color2"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -102,11 +102,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
             DocumentAssembler.setUseReflectionOptimization(false);
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(table, "managers"), new DataSourceInfo(color, "color"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -115,11 +115,11 @@ public class DynamicContent {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -128,11 +128,11 @@ public class DynamicContent {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -141,11 +141,11 @@ public class DynamicContent {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -158,11 +158,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
             //Call AssembleDocument to assemble document
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(uriExpression, "uriExpression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -175,11 +175,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
             //Call AssembleDocument to assemble document
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(uriExpression, "uriExpression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -192,11 +192,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
             //Call AssembleDocument to assemble document
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(uriExpression, "uriExpression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -209,11 +209,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
             //Call AssembleDocument to assemble document
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(uriExpression, "uriExpression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -226,11 +226,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(bookmark_expression, "bookmark_expression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -243,11 +243,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(bookmark_expression, "bookmark_expression"), new DataSourceInfo(displayTextExpression, "displayTextExpression"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -257,11 +257,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(dataSourceFile.toString(), "image_expression"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -271,11 +271,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(dataSourceFile.toString(), "document_expression"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -285,11 +285,11 @@ public class DynamicContent {
             DocumentAssembler assembler = new DocumentAssembler();
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(enable, "conditional_expression"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 }

@@ -16,11 +16,11 @@ public class CommonMasterDetail {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -29,11 +29,11 @@ public class CommonMasterDetail {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -42,11 +42,11 @@ public class CommonMasterDetail {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -57,11 +57,11 @@ public class CommonMasterDetail {
             // This is needed solely for images in HTML documents (Look at 'Resources/SampleFiles/Templates/HtmlTemplates/Common_Master-Detail.html' file).
             assembler.getKnownTypes().add(AssemblyUtils.class);
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -70,11 +70,11 @@ public class CommonMasterDetail {
         try {
             DocumentAssembler assembler = new DocumentAssembler();
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(new DataStorage(), null));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -91,11 +91,11 @@ public class CommonMasterDetail {
                     new DataSourceInfo(getDataSourceDetails.getCC(), dataSourceNames.getCC()),
                     new DataSourceInfo(getDataSourceDetails.getSubject(), dataSourceNames.getSubject()),
                     new DataSourceInfo(getDataSourceDetails.getManager(), dataSourceNames.getManager()));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 }

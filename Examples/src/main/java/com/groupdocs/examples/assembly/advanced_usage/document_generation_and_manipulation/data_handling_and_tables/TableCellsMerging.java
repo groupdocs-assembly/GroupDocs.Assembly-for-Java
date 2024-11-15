@@ -20,11 +20,11 @@ public class TableCellsMerging {
             //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new LoadSaveOptions(FileFormat.PDF), new DataSourceInfo(manager, "manager"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -36,11 +36,11 @@ public class TableCellsMerging {
             //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new LoadSaveOptions(FileFormat.PDF), new DataSourceInfo(manager, "manager"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -52,11 +52,11 @@ public class TableCellsMerging {
             //Call AssembleDocument to Merging Cells Dynamically Report in PDF format
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new LoadSaveOptions(FileFormat.PDF), new DataSourceInfo(manager, "manager"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -74,11 +74,11 @@ public class TableCellsMerging {
                     new DataSourceInfo(getDataSourceDetails.getCC(), dataSourceNames.getCC()),
                     new DataSourceInfo(getDataSourceDetails.getSubject(), dataSourceNames.getSubject()),
                     new DataSourceInfo(getDataSourceDetails.getManager(), dataSourceNames.getManager()));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 }

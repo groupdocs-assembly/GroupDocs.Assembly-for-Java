@@ -30,11 +30,11 @@ public class DataOperations {
             // This is needed solely for images in HTML documents.
             assembler.getKnownTypes().add(AssemblyUtils.class);
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), new DataSourceInfo(table, "table"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -45,11 +45,11 @@ public class DataOperations {
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     new DataSourceInfo("It should be a jeep image.", "value"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -64,11 +64,11 @@ public class DataOperations {
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(),
                     loadSaveOptions, new DataSourceInfo("It should be a sport car image.", "value"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -83,11 +83,11 @@ public class DataOperations {
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), loadSaveOptions,
                     new DataSourceInfo("Hello!", "value"));
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -104,11 +104,11 @@ public class DataOperations {
 
             //Assemble document
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), dataSourceInfo);
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -126,11 +126,11 @@ public class DataOperations {
             DocumentAssembler assembler = new DocumentAssembler();
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), dataSourceInfo);
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 
@@ -147,11 +147,11 @@ public class DataOperations {
             DocumentAssembler assembler = new DocumentAssembler();
 
             assembler.assembleDocument(inputFile.toString(), outputPath.toString(), dataSourceInfo);
+
+            System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
-            return null;
         }
-        System.out.println("\nDocument saved successfully.\nCheck output: " + outputPath.getParent());
         return outputPath;
     }
 }

@@ -18,8 +18,8 @@ import com.groupdocs.examples.assembly.utils.LicenseUtils;
 public class SetLicenseFromFile {
 
     public static void run() {
-        final String licensePath = LicenseUtils.obtainLicensePath();
         try {
+            final String licensePath = LicenseUtils.obtainLicensePath();
             if (!LicenseUtils.isUrl(licensePath)) {
 
                 License license = new License();
@@ -36,8 +36,8 @@ public class SetLicenseFromFile {
                 );
             }
         } catch (Exception e) {
-            System.err.println("License was NOT set.");
             FailureRegister.getInstance().registerFailedSample(e);
+            System.err.println("License was NOT set.");
         }
     }
 }

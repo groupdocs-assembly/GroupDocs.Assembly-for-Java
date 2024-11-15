@@ -1,16 +1,21 @@
 package com.groupdocs.examples.assembly;
 
 import com.groupdocs.assembly.License;
+import com.groupdocs.examples.assembly.utils.FailureRegister;
 import com.groupdocs.examples.assembly.utils.LicenseUtils;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.InputStream;
 import java.nio.file.Paths;
+import java.util.Locale;
 
 public class TestsSetUp {
     @BeforeSuite
     public void setUp() throws Exception {
+        Locale.setDefault(Locale.US);
+        FailureRegister.getInstance().setThrowExceptionsImmediately(true);
+
         try (final InputStream licenseStream = LicenseUtils.createLicenseStream()) {
             if (licenseStream == null) {
                 throw new RuntimeException("License was NOT set!");

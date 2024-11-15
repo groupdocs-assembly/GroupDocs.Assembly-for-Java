@@ -32,8 +32,8 @@ public class SetLicenseFromStream {
                 );
             }
         } catch (Exception e) {
-            System.err.println("License was NOT set.");
             FailureRegister.getInstance().registerFailedSample(e);
+            System.err.println("License was NOT set.");
         }
     }
 }
