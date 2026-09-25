@@ -1,0 +1,68 @@
+Message-ID: <354b627d74fe4076b4ea82bb070e3ac3>
+From: "Example Sender" <sender@example.com>
+Subject: Single Row
+To: "Named Recipient" <named@example.com>, unnamed@example.com
+Cc: cc@example.com
+X-Unsent: 1
+Date: Thu, 10 Aug 2017 18:22:23 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--_=_NextPart1_637a226d-21a4-4d67-8fe5-c6739c4d7ae2"
+
+This is a multi-part message in MIME format.
+
+----_=_NextPart1_637a226d-21a4-4d67-8fe5-c6739c4d7ae2
+Content-Type: multipart/alternative; boundary="--_=_NextPart0_589f5ef9-7b66-4d4d-91cf-71e9f2518c42"
+
+
+----_=_NextPart0_589f5ef9-7b66-4d4d-91cf-71e9f2518c42
+Content-Type: text/plain; charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+
+NOTE: Dynamic inserting of images is not supported yet=2E
+Name:
+John Smith
+Age:
+37
+=20
+
+----_=_NextPart0_589f5ef9-7b66-4d4d-91cf-71e9f2518c42
+Content-Type: text/html; charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DKOI8-R" /><meta http-equiv=3D"Content-Style-Type" content=3D"text/css" /=
+><meta name=3D"generator" content=3D"Aspose=2EWords for Java 26=2E3=2E0" />=
+<title></title></head><body style=3D"font-family:'Times New Roman'; font-si=
+ze:12pt"><div><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt=
+"><span style=3D"font-family:Calibri; color:#ff0000">NOTE: Dynamic insertin=
+g of images is not supported yet=2E</span></p><table cellspacing=3D"0" cell=
+padding=3D"0" style=3D"border-collapse:collapse"><tr><td style=3D"width:49=
+=2E8pt; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><p=
+ style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"=
+font-family:Calibri; font-weight:bold">Name:</span><span style=3D"font-fami=
+ly:Calibri; font-weight:bold">&#xa0;</span></p></td><td style=3D"width:434=
+=2E15pt; padding-right:5=2E4pt; padding-left:5=2E4pt; vertical-align:top"><=
+p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=
+=3D"font-family:Calibri; font-weight:bold">John Smith</span><span style=3D"=
+font-family:Calibri; font-weight:bold">&#xa0;</span></p></td></tr><tr><td s=
+tyle=3D"width:49=2E8pt; padding-right:5=2E4pt; padding-left:5=2E4pt; vertic=
+al-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt=
+"><span style=3D"font-family:Calibri; font-weight:bold">Age:</span><span st=
+yle=3D"font-family:Calibri; font-weight:bold">&#xa0;</span></p></td><td sty=
+le=3D"width:434=2E15pt; padding-right:5=2E4pt; padding-left:5=2E4pt; vertic=
+al-align:top"><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt=
+"><span style=3D"font-family:Calibri">37</span><span style=3D"font-family:C=
+alibri">&#xa0;</span></p></td></tr></table><p style=3D"margin-top:0pt; marg=
+in-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">&#xa0;</=
+span></p></div></body></html>
+----_=_NextPart0_589f5ef9-7b66-4d4d-91cf-71e9f2518c42--
+
+----_=_NextPart1_637a226d-21a4-4d67-8fe5-c6739c4d7ae2
+Content-Type: application/octet-stream; name="ExampleAttachment.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="ExampleAttachment.txt"
+
+U3ViamVjdDogU2luZ2xlIFJvdw==
+----_=_NextPart1_637a226d-21a4-4d67-8fe5-c6739c4d7ae2--
+
