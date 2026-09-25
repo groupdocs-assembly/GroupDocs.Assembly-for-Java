@@ -1,5 +1,10 @@
 package com.groupdocs.assembly.examples;
 
+import com.groupdocs.assembly.*;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+
 public class MainClass {
 	public static void main(String[] args) throws Throwable {
 		// Apply license
@@ -45,7 +50,7 @@ public class MainClass {
 		// Generate chart with filtering grouping and ordering in presentation
 		// format
 		// GenerateReport.generateChartWithFilteringGroupingAndOrdering("presentation");
-		//GenerateReport.generateChartWithFilteringGroupingAndOrdering("email");
+		// GenerateReport.generateChartWithFilteringGroupingAndOrdering("email");
 		// endregion
 
 		// region Generating Common List Report
@@ -59,7 +64,7 @@ public class MainClass {
 		// GenerateReport.generateCommonList("html");
 		// Generate a common list report in text format 
 		// GenerateReport.generateCommonList("txt");
-		//GenerateReport.generateCommonList("email");
+		// GenerateReport.generateCommonList("email");
 		// endregion
 
 		// region Generating Common Master-Detail Report
@@ -69,11 +74,11 @@ public class MainClass {
 		// GenerateReport.generateCommonMasterDetail("spreadsheet");
 		// Generate common master detail report in presentation format
 		// GenerateReport.generateCommonMasterDetail("presentation");
-		//Generate common master detail report in html format
-		 //GenerateReport.generateCommonMasterDetail("html");
+		// Generate common master detail report in html format
+		// GenerateReport.generateCommonMasterDetail("html");
 		// Generate common master detail report in text format
-		//GenerateReport.generateCommonMasterDetail("txt");
-		//GenerateReport.generateCommonMasterDetail("email");
+		// GenerateReport.generateCommonMasterDetail("txt");
+		// GenerateReport.generateCommonMasterDetail("email");
 		// endregion
 
 		// region Generating In-Paragraph List Report
@@ -85,9 +90,9 @@ public class MainClass {
 		// GenerateReport.generateInParagraphList("presentation");
 		// Generate in paragraph list report in html format
 		// GenerateReport.generateInParagraphList("html");
-		 // Geneerate in paragraph list report in text format
-		//GenerateReport.generateInParagraphList("txt");
-		//GenerateReport.generateInParagraphList("email");
+		// Geneerate in paragraph list report in text format
+		// GenerateReport.generateInParagraphList("txt");
+		// GenerateReport.generateInParagraphList("email");
 		// endregion
 
 		// region Generating In-Table with Alternate Content Report
@@ -101,8 +106,8 @@ public class MainClass {
 		// format
 		// GenerateReport.generateInTableListWithAlternateContent("presentation");
 		// Generate in table list with alternate content report in html format
-		//GenerateReport.generateInTableListWithAlternateContent("html"); 
-		//GenerateReport.generateInTableListWithAlternateContent("email"); 
+		// GenerateReport.generateInTableListWithAlternateContent("html");
+		// GenerateReport.generateInTableListWithAlternateContent("email");
 		// endregion
 
 		// region Generating In-Table List with Filtering, Grouping, and
@@ -117,8 +122,8 @@ public class MainClass {
 		// presentation format
 		// GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("presentation");
 		// Generate in table list with filtering, grouping and order report in html format
-		//GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("html");
-		//GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("email");
+		// GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("html");
+		// GenerateReport.generateInTableListWithFilteringGroupingAndOrdering("email");
 		// endregion
 
 		// region In-Table List with Highlighted Rows
@@ -131,20 +136,20 @@ public class MainClass {
 		// Generate In-Table List with Highlighted Rows report in presentation format
 		// GenerateReport.generateInTableListWithHighlightedRows("presentation");
 		// Generate In-Table List with Highlighted Rows report in html format
-		//GenerateReport.generateInTableListWithHighlightedRows("html");
-		//GenerateReport.generateInTableListWithHighlightedRows("email");
+		// GenerateReport.generateInTableListWithHighlightedRows("html");
+		// GenerateReport.generateInTableListWithHighlightedRows("email");
 		// endregion
 
 		// region In-Table List
 		// Generate in table lsit report in document format
-		 //GenerateReport.generateInTableList("document");
+		// GenerateReport.generateInTableList("document");
 		// Generate in table list report in spreadsheet format
 		// GenerateReport.generateInTableList("spreadsheet");
 		// Generate in table list report in presentation format
 		// GenerateReport.generateInTableList("presentation");
 		// Generate in table list report in html format
-		//GenerateReport.generateInTableList("html");
-		//GenerateReport.generateInTableList("email");
+		// GenerateReport.generateInTableList("html");
+		// GenerateReport.generateInTableList("email");
 		// endregion
 
 		// region In-Table Master-Detail
@@ -155,8 +160,8 @@ public class MainClass {
 		// Generate In-Table Master-Detail report in presentation format
 		// GenerateReport.generateInTableMasterDetail("presentation");
 		// Generate In-Table Master-Detail report in html format
-		 //GenerateReport.generateInTableMasterDetail("html");
-		//GenerateReport.generateInTableMasterDetail("email");
+		// GenerateReport.generateInTableMasterDetail("html");
+		// GenerateReport.generateInTableMasterDetail("email");
 		// endregion
 
 		// region Multicolored Numbered List
@@ -168,25 +173,25 @@ public class MainClass {
 		// GenerateReport.generateMulticoloredNumberedList("presentation");
 		// Generate Multicolored numbered list report in html format
 		// GenerateReport.generateMulticoloredNumberedList("html");
-		//GenerateReport.generateMulticoloredNumberedList("email");
+		// GenerateReport.generateMulticoloredNumberedList("email");
 		// endregion
 
 		// region Numbered List
 		// Generate Numbered List report in document format
-		//GenerateReport.generateNumberedList("document");
+		// GenerateReport.generateNumberedList("document");
 		// Generate Numbered list report in spreadsheet format
 		// GenerateReport.generateNumberedList("spreadsheet");
 		// Generate Numbered list report in presentation format
 		// GenerateReport.generateNumberedList("presentation");
 		// Generate Numbered list report in html format
-		//GenerateReport.generateNumberedList("html");
+		// GenerateReport.generateNumberedList("html");
 		// Generate Numbered list report in text format
-		//GenerateReport.generateNumberedList("txt");
-		//GenerateReport.generateNumberedList("email");
-		//Generate a Nested Numbered List Report with restartNum in Documents
-		//GenerateReport.generateNumberedListWithRestart_Documents();
-		//Generate a Nested Numbered List Report with restartNum in Emails
-		//GenerateReport.generateNumberedListWithRestart_Emails();
+		// GenerateReport.generateNumberedList("txt");
+		// GenerateReport.generateNumberedList("email");
+		// Generate a Nested Numbered List Report with restartNum in Documents
+		// GenerateReport.generateNumberedListWithRestart_Documents();
+		// Generate a Nested Numbered List Report with restartNum in Emails
+		// GenerateReport.generateNumberedListWithRestart_Emails();
 		// endregion
 
 		// region Pie Chart
@@ -426,13 +431,200 @@ public class MainClass {
 		//GenerateReport.insertDocumentDynamicallyInWord();
 		
 		//Set checkbox value dynamically in Word document
-		GenerateReport.setCheckboxValueDynamicallyInWord(true);
-		
-		
-		
-		
-		/*#endRegion*/
-		System.out.println("All Done..");
+		////GenerateReport.setCheckboxValueDynamicallyInWord(true);
+
+
+		// region Examples ported from GroupDocs.Assembly for .NET
+
+		// Presentation and spreadsheet template format conversions
+		//GenerateReport.potToPptx();
+		//GenerateReport.otpToPptx();
+		//GenerateReport.pptxToPot();
+		//GenerateReport.pptxToOtp();
+		//GenerateReport.pptxToPotAsStream();
+		//GenerateReport.pptxToOtpAsStream();
+		//GenerateReport.xltToXlsx();
+		//GenerateReport.xlsxToXlt();
+
+		// Scale a barcode image within its containing shape
+		//GenerateReport.barcodeScale();
+
+		// Set combo box / drop down list values dynamically
+		//GenerateReport.comboBoxDropDownValues("ComboBox");
+		//GenerateReport.comboBoxDropDownValues("Dropdown");
+
+		// In-Table List with a Running (Progressive) Total in email format
+		//GenerateReport.inTableListWithTotalEmail();
+
+		// Markdown templates
+		//GenerateReport.markdownTables();
+		//GenerateReport.markdownAutolinks();
+		//GenerateReport.markdownInlineLinks();
+		//GenerateReport.markdownInlineImages();
+
+		// Assemble with an explicit OOXML compliance level
+		//GenerateReport.assembleWithOoxmlCompliance();
+
+		// Call a custom function registered through the assembler's known types
+		//GenerateReport.assembleUsingCustomKnownTypeFunction();
+
+		// Generate a report lazily and recursively
+		//GenerateReport.lazilyAndRecursively();
+
+		// endregion
+
+		String data = "{\n" +
+				"    \"ok\": \"without this key 'ok', 'ko' is well parsed\",\n" +
+				"    \"ko\": {}\n" +
+				"}\n";
+
+		final ByteArrayInputStream dataStream = new ByteArrayInputStream(data.getBytes());
+		final JsonDataLoadOptions options = new JsonDataLoadOptions();
+		options.setAlwaysGenerateRootObject(true);
+		options.setSimpleValueParseMode(JsonSimpleValueParseMode.STRICT);
+		DataSourceInfo dataSourceInfo = new DataSourceInfo(new JsonDataSource(dataStream, options));
+
+
+
+
+
+//		final String data = "{}";
+//		final ByteArrayInputStream dataStream = new ByteArrayInputStream(data.getBytes());
+//		final JsonDataLoadOptions options = new JsonDataLoadOptions();
+//		options.setAlwaysGenerateRootObject(true);
+//		options.setSimpleValueParseMode(JsonSimpleValueParseMode.STRICT);
+//		JsonDataSource dataSource = new JsonDataSource(dataStream, options);
+//
+//		/*#endRegion*/
+//		System.out.println("All Done..");
+
+
+//		String fileInputPath="C:\\Users\\alsem\\Downloads\\groupdoc2\\groupdoc\\src\\test\\resources\\templates\\Presentation.pptx";
+//		String fileOutputPath="C:\\Users\\alsem\\Downloads\\groupdoc2\\groupdoc\\src\\test\\resources\\output\\Presentation_out.pptx";
+//		String dataSource="C:\\Users\\alsem\\Downloads\\groupdoc2\\groupdoc\\src\\test\\resources\\data\\introduction.json" ;
+//
+//		//JsonDataLoadOptions options = new JsonDataLoadOptions();
+//		//options.setAlwaysGenerateRootObject(true);
+//
+//		JsonDataSource json = new JsonDataSource(dataSource);//,options);
+//		//DataSourceInfo dataSourceInfo = new DataSourceInfo(json);
+//
+//		DataSourceInfo dataSourceInfo = new DataSourceInfo(json,"test");
+//
+//		DocumentAssembler documentAssembler = new DocumentAssembler();
+//		documentAssembler.assembleDocument(fileInputPath,fileOutputPath,dataSourceInfo);
+
+//		String inFile = "C:\\Users\\alsem\\Downloads\\Arial.docx";
+//		String outFile = "C:\\Users\\alsem\\Downloads\\Arial.pdf";
+//		String customFontsDir = "C:\\Users\\alsem\\Downloads\\custom_fonts_dir";
+
+
+//		string fontsPath = AssemblyTestUtil.GetTestSourcePath("Fonts");
+//		string inFile = Path.Combine(fontsPath, "ASSEMBLYJAVA-256/Arial.docx");
+//		Assert.That(File.Exists(inFile));
+//
+//		string outFile = AssemblyTestUtil.GetTestOutPath(inFile).Replace(".docx", ".pdf");
+//		//string outFile = Path.Combine(outPath, "ASSEMBLYJAVA-256/Arial.docx");
+//
+//		string fileJsonIn = Path.Combine(AssemblyTestUtil.GetTestSourcePath("Regression"), "assemblyjava-253/introduction.json");
+//		Assert.That(File.Exists(fileJsonIn));
+//
+//		var customFontsDir = AssemblyTestUtil.GetTestSourcePath("Fonts/ASSEMBLYJAVA-256/custom_fonts_dir");
+//		Assert.That(Directory.Exists(customFontsDir), $"Directory not found: {customFontsDir}");
+
+//		FolderFontSource fontSource = new FolderFontSource(customFontsDir, SearchOption.TOP_FOLDER_ONLY);
+//		FontSettings.setFontSources(fontSource);
+
+//		using (var modelContent = File.OpenRead(inFile))
+//		{
+//			using (mFileStream = File.OpenWrite(outFile))
+//			{
+//				DocumentAssemblerUtil.Assemble(modelContent, /*File.ReadAllText(fileJsonIn)*/"",
+//						mFileStream,
+//						DocumentAssemblerUtil.SupportedType.Pdf);
+//			}
+//		}
+
+//		try (InputStream modelContent = new FileInputStream(inFile);
+//			 OutputStream mFileStream = new FileOutputStream(outFile)) {
+//
+//			DocumentAssemblerUtil.assemble(
+//					modelContent,
+//					"", // вместо File.readAllText(fileJsonIn)
+//					mFileStream,
+//					SupportedType.Pdf
+//			);
+//
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+
+	}
+
+	public static class DocumentAssemblerUtil {
+
+		private static final DocumentAssembler assembler = new DocumentAssembler();
+		private static final String DEFAULT_DATA = "{}";
+
+		public static void assemble(
+				InputStream modelContent,
+				String data,
+				OutputStream output,
+				SupportedType outputFormat
+		) {
+			DataSourceInfo dataSourceInfo = initDataSourceInfo(data);
+			LoadSaveOptions loadSaveOptions = new LoadSaveOptions(supportedTypeToFileFormat(outputFormat));
+
+			boolean result;
+			try {
+				result = assembler.assembleDocument(modelContent, output, loadSaveOptions, dataSourceInfo);
+			} catch (Exception ex) {
+				throw new RuntimeException("Erreur lors de la génération du document", ex);
+			}
+
+			if (!result) {
+				throw new RuntimeException("La génération du document avec Assembly est en erreur");
+			}
+		}
+
+		private static int supportedTypeToFileFormat(SupportedType type) {
+			if (type == null) {
+				return FileFormat.UNSPECIFIED;
+			}
+
+			switch (type) {
+				case Docx:
+					return FileFormat.DOCX;
+				case Pdf:
+					return FileFormat.PDF;
+				case Xlsx:
+					return FileFormat.XLSX;
+				case Text:
+					return FileFormat.TEXT;
+				default:
+					return FileFormat.UNSPECIFIED;
+			}
+		}
+
+		private static DataSourceInfo initDataSourceInfo(String data) {
+			try {
+				String dataValue = (data != null && !data.isEmpty()) ? data : DEFAULT_DATA;
+				byte[] dataBytes = dataValue.getBytes(StandardCharsets.UTF_8);
+
+				try (InputStream dataStream = new ByteArrayInputStream(dataBytes)) {
+					JsonDataLoadOptions options = new JsonDataLoadOptions();
+					options.setAlwaysGenerateRootObject(true);
+					options.setSimpleValueParseMode(JsonSimpleValueParseMode.STRICT);
+
+					return new DataSourceInfo(new JsonDataSource(dataStream, options));
+				}
+			} catch (Exception ex) {
+				throw new RuntimeException("Erreur lors de l'initialisation de la source de données", ex);
+			}
+		}
+
+
+
 	}
 
 }

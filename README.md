@@ -40,5 +40,11 @@ GroupDocs.Assembly for Java requires J2SE 7.0 (1.7), J2SE 8.0 (1.8) or above. Pl
 
 GroupDocs hosts all Java APIs on [GroupDocs Artifact Repository](https://artifact.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-assembly), so simply [configure](https://docs.groupdocs.com/assembly/java/installation/) your Maven project to fetch the dependencies automatically.
 
+On JDK 17 and later, run the examples with `--add-opens java.base/java.lang=ALL-UNNAMED`. Without it the template engine cannot reflect over the data objects and every example that uses a POJO data source fails with `Can not resolve method ... on type ...`. JDK 8 and 11 need no extra flags.
+
+```
+java --add-opens java.base/java.lang=ALL-UNNAMED -cp <classpath> com.groupdocs.assembly.examples.MainClass
+```
+
 
 [Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/assembly/java) | [Documentation](https://docs.groupdocs.com/assembly/java/) | [Demos](https://products.groupdocs.app/assembly/family) | [API Reference](https://apireference.groupdocs.com/java/assembly) | [Examples](https://github.com/groupdocs-assembly/GroupDocs.assembly-for-Java/tree/master/Examples) | [Blog](https://blog.groupdocs.com/category/assembly/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/assembly) | [Temporary License](https://purchase.groupdocs.com/temporary-license)

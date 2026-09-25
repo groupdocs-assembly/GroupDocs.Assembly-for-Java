@@ -10,6 +10,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.UUID;
 
 import javax.xml.crypto.Data;
 
@@ -25,6 +26,8 @@ import com.groupdocs.assembly.DocumentTableSet;
 import com.groupdocs.assembly.FileFormat;
 import com.groupdocs.assembly.JsonDataSource;
 import com.groupdocs.assembly.LoadSaveOptions;
+import com.groupdocs.assembly.JsonDataLoadOptions;
+import com.groupdocs.assembly.OoxmlCompliance;
 import com.groupdocs.assembly.examples.BusinessEntities.Manager;
 import com.groupdocs.assembly.examples.DataStorage.EmailDataSourcesNames;
 import com.groupdocs.assembly.examples.DataStorage.EmailDataSourcesObjects;
@@ -1323,8 +1326,9 @@ public class GenerateReport {
 				//Instantiate DocumentAssembler class
 				DocumentAssembler assembler = new DocumentAssembler();
 				//Call AssembleDocument to generate   Report in open document format
-				assembler.assembleDocument("D:\\Word Templates\\Barcode.docx", "D:\\Word Reports\\Barcode_report.docx",  
-				new DataSourceInfo( new DataStorage().getManagers().iterator().next(), "value"));
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/Barcode.docx"),
+						CommonUtilities.getOutPath("/Word Reports/Barcode_report.docx"),
+						new DataSourceInfo( new DataStorage().getManagers().iterator().next(), "value"));
 
 			} catch (Exception exp) {
 				System.out.println("Exception: " + exp.getMessage());
@@ -2729,7 +2733,7 @@ public class GenerateReport {
 				  
 				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
 						CommonUtilities.getOutPath(strDocumentReport),
-						new DataSourceInfo(CommonUtilities.getImagePath("no-photo.jpg"),"image_expression"));
+						new DataSourceInfo(CommonUtilities.getImagePath("/no-photo.jpg"),"image_expression"));
 				
 				//ExEnd:insertImageDynamicallyInWord_20.3
 
@@ -2760,7 +2764,7 @@ public class GenerateReport {
 				  
 				assembler.assembleDocument(CommonUtilities.getDataPath(strDocumentTemplate),
 						CommonUtilities.getOutPath(strDocumentReport),
-						new DataSourceInfo(CommonUtilities.getOuterDoc("OuterDoc.docx"),"document_expression"));
+						new DataSourceInfo(CommonUtilities.getOuterDoc("/OuterDoc.docx"),"document_expression"));
 				
 				//ExEnd:insertDocumentDynamicallyInWord_20.3
 
@@ -2803,4 +2807,549 @@ public class GenerateReport {
 	        
 	    }
 		
+
+		/*#region-Examples ported from GroupDocs.Assembly for .NET*/
+
+		/**
+		 * Saving a template POT presentation document to an assembled Presentation document.
+		 * Feature is supported by version 20.6 or greater
+		 */
+		public static void potToPptx()
+	    {
+			try
+			{
+				//ExStart:PotToPptx
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Presentation Templates/Conversion Template.pot"),
+						CommonUtilities.getOutPath("/Presentation Reports/PotToPptx.pptx"),
+						new DataSourceInfo("GroupDocs.Assembly for Java", "product"));
+				//ExEnd:PotToPptx
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving a template OTP presentation document to an assembled Presentation document.
+		 * Feature is supported by version 20.6 or greater
+		 */
+		public static void otpToPptx()
+	    {
+			try
+			{
+				//ExStart:OtpToPptx
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Presentation Templates/Conversion Template.otp"),
+						CommonUtilities.getOutPath("/Presentation Reports/OtpToPptx.pptx"),
+						new DataSourceInfo("GroupDocs.Assembly for Java", "product"));
+				//ExEnd:OtpToPptx
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving an assembled Presentation document to a template POT presentation document.
+		 * Feature is supported by version 20.6 or greater
+		 */
+		public static void pptxToPot()
+	    {
+			try
+			{
+				//ExStart:PptxToPot
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Presentation Templates/Conversion Template.pptx"),
+						CommonUtilities.getOutPath("/Presentation Reports/PptxToPot.pot"),
+						new DataSourceInfo("GroupDocs.Assembly for Java", "product"));
+				//ExEnd:PptxToPot
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving an assembled Presentation document to a template OTP presentation document.
+		 * Feature is supported by version 20.6 or greater
+		 */
+		public static void pptxToOtp()
+	    {
+			try
+			{
+				//ExStart:PptxToOtp
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Presentation Templates/Conversion Template.pptx"),
+						CommonUtilities.getOutPath("/Presentation Reports/PptxToOtp.otp"),
+						new DataSourceInfo("GroupDocs.Assembly for Java", "product"));
+				//ExEnd:PptxToOtp
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving an assembled Presentation document to a template POT presentation document using streams.
+		 * Feature is supported by version 20.6 or greater
+		 */
+		public static void pptxToPotAsStream()
+	    {
+			try
+			{
+				//ExStart:PptxToPotAsStream
+				InputStream templateStream = new FileInputStream(
+						CommonUtilities.getDataPath("/Presentation Templates/Conversion Template.pptx"));
+				try
+				{
+					OutputStream resultStream = new FileOutputStream(
+							CommonUtilities.getOutPath("/Presentation Reports/PptxToPotAsStream.pot"));
+					try
+					{
+						DocumentAssembler assembler = new DocumentAssembler();
+
+						assembler.assembleDocument(templateStream, resultStream, new LoadSaveOptions(FileFormat.POT),
+								new DataSourceInfo("GroupDocs.Assembly for Java", "product"));
+					}
+					finally
+					{
+						resultStream.close();
+					}
+				}
+				finally
+				{
+					templateStream.close();
+				}
+				//ExEnd:PptxToPotAsStream
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving an assembled Presentation document to a template OTP presentation document using streams.
+		 * Feature is supported by version 20.6 or greater
+		 */
+		public static void pptxToOtpAsStream()
+	    {
+			try
+			{
+				//ExStart:PptxToOtpAsStream
+				InputStream templateStream = new FileInputStream(
+						CommonUtilities.getDataPath("/Presentation Templates/Conversion Template.pptx"));
+				try
+				{
+					OutputStream resultStream = new FileOutputStream(
+							CommonUtilities.getOutPath("/Presentation Reports/PptxToOtpAsStream.otp"));
+					try
+					{
+						DocumentAssembler assembler = new DocumentAssembler();
+
+						assembler.assembleDocument(templateStream, resultStream, new LoadSaveOptions(FileFormat.OTP),
+								new DataSourceInfo("GroupDocs.Assembly for Java", "product"));
+					}
+					finally
+					{
+						resultStream.close();
+					}
+				}
+				finally
+				{
+					templateStream.close();
+				}
+				//ExEnd:PptxToOtpAsStream
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Loading an XLT spreadsheet and saving it to the XLSX format.
+		 * Feature is supported by version 20.12 or greater
+		 */
+		public static void xltToXlsx()
+	    {
+			try
+			{
+				//ExStart:XltToXlsx
+				InputStream templateStream = new FileInputStream(
+						CommonUtilities.getDataPath("/Spreadsheet Templates/Conversion Template.xlt"));
+				try
+				{
+					OutputStream resultStream = new FileOutputStream(
+							CommonUtilities.getOutPath("/Spreadsheet Reports/XltToXlsx.xlsx"));
+					try
+					{
+						DocumentAssembler assembler = new DocumentAssembler();
+
+						assembler.assembleDocument(templateStream, resultStream, new LoadSaveOptions(FileFormat.XLSX),
+								new DataSourceInfo("GroupDocs.Assembly for Java", "product"));
+					}
+					finally
+					{
+						resultStream.close();
+					}
+				}
+				finally
+				{
+					templateStream.close();
+				}
+				//ExEnd:XltToXlsx
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Loading an XLSX spreadsheet and saving it to the XLT format.
+		 * Feature is supported by version 20.12 or greater
+		 */
+		public static void xlsxToXlt()
+	    {
+			try
+			{
+				//ExStart:XlsxToXlt
+				InputStream templateStream = new FileInputStream(
+						CommonUtilities.getDataPath("/Spreadsheet Templates/Conversion Template.xlsx"));
+				try
+				{
+					OutputStream resultStream = new FileOutputStream(
+							CommonUtilities.getOutPath("/Spreadsheet Reports/XlsxToXlt.xlt"));
+					try
+					{
+						DocumentAssembler assembler = new DocumentAssembler();
+
+						assembler.assembleDocument(templateStream, resultStream, new LoadSaveOptions(FileFormat.XLT),
+								new DataSourceInfo("GroupDocs.Assembly for Java", "product"));
+					}
+					finally
+					{
+						resultStream.close();
+					}
+				}
+				finally
+				{
+					templateStream.close();
+				}
+				//ExEnd:XlsxToXlt
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Changing the scaling of a barcode image within its containing shape while saving the document.
+		 */
+		public static void barcodeScale()
+	    {
+			try
+			{
+				//ExStart:SetBarcodeScale
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.getBarcodeSettings().setBaseXDimension(assembler.getBarcodeSettings().getBaseXDimension() * 0.5f);
+				assembler.getBarcodeSettings().setBaseYDimension(assembler.getBarcodeSettings().getBaseYDimension() * 0.5f);
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/Barcode.docx"),
+						CommonUtilities.getOutPath("/Word Reports/BarcodeScale_report.docx"),
+						new DataSourceInfo(new DataStorage().getManagers().iterator().next(), "value"));
+				//ExEnd:SetBarcodeScale
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Setting the values of drop down list or combo box items dynamically in a Word document.
+		 * Feature is supported by version 21.3 or greater
+		 *
+		 * @param element either "ComboBox" or "Dropdown"
+		 */
+		public static void comboBoxDropDownValues(String element)
+	    {
+			try
+			{
+				//ExStart:ComboBoxDropDownValues
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/" + element + ".docx"),
+						CommonUtilities.getOutPath("/Word Reports/" + element + " Out.docx"),
+						new DataSourceInfo("Green apple", "choice_one"),
+						new DataSourceInfo("Yellow banana", "choice_two"),
+						new DataSourceInfo("Red cherry", "choice_three"),
+						new DataSourceInfo("Apple", "choice_one_display_name"),
+						new DataSourceInfo("Banana", "choice_two_display_name"),
+						new DataSourceInfo("Cherry", "choice_three_display_name"));
+				//ExEnd:ComboBoxDropDownValues
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Generating an In-Table List with a Running (Progressive) Total report in email format.
+		 */
+		public static void inTableListWithTotalEmail()
+	    {
+			try
+			{
+				//ExStart:InTableListWithTotalEmail
+				String srcDocument = "/Email Templates/In-Table List with Running (Progressive) Total.msg";
+				String docReport = "/Email Reports/In-Table List with Running (Progressive) Total.msg";
+
+				EmailDataSourcesObjects getDataSourceDetails =
+						DataStorage.emailDataSourceObject("In-Table List with Running (Progressive) Total.msg", ".msg");
+				EmailDataSourcesNames dataSourceNames = DataStorage.emailDataSourceName(".msg");
+
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport),
+						new DataSourceInfo(getDataSourceDetails.getDataSource(), dataSourceNames.getDataSource()),
+						new DataSourceInfo(getDataSourceDetails.getSender(), dataSourceNames.getSender()),
+						new DataSourceInfo(getDataSourceDetails.getRecipients(), dataSourceNames.getRecipients()),
+						new DataSourceInfo(getDataSourceDetails.getCC(), dataSourceNames.getCC()),
+						new DataSourceInfo(getDataSourceDetails.getSubject(), dataSourceNames.getSubject()));
+				//ExEnd:InTableListWithTotalEmail
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving Markdown tables to a Word document.
+		 * Feature is supported by version 20.9 or greater
+		 */
+		public static void markdownTables()
+	    {
+			try
+			{
+				//ExStart:MarkdownTables
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Markdown Templates/Tables.md"),
+						CommonUtilities.getOutPath("/Word Reports/Markdown Tables Out.docx"),
+						new DataSourceInfo("Lettuce", "product_1_name"),
+						new DataSourceInfo("Carrot", "product_2_name"),
+						new DataSourceInfo("35", "product_1_quantity"),
+						new DataSourceInfo("47", "product_2_quantity"));
+				//ExEnd:MarkdownTables
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving Markdown autolinks to a Word document.
+		 * Feature is supported by version 20.9 or greater
+		 */
+		public static void markdownAutolinks()
+	    {
+			try
+			{
+				//ExStart:MarkdownAutolinks
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Markdown Templates/Autolinks.md"),
+						CommonUtilities.getOutPath("/Word Reports/Markdown Autolinks Out.docx"),
+						new DataSourceInfo("<https://forum.groupdocs.com/>", "url"));
+				//ExEnd:MarkdownAutolinks
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving Markdown inline links to a Word document.
+		 * Feature is supported by version 20.11 or greater
+		 */
+		public static void markdownInlineLinks()
+	    {
+			try
+			{
+				//ExStart:MarkdownInlineLinks
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Markdown Templates/Inline Links.md"),
+						CommonUtilities.getOutPath("/Word Reports/Markdown Inline Links Out.docx"),
+						new DataSourceInfo("GroupDocs forums", "link_text"),
+						new DataSourceInfo("https://forum.groupdocs.com/", "link"));
+				//ExEnd:MarkdownInlineLinks
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving Markdown inline images to a Word document.
+		 * Feature is supported by version 20.11 or greater
+		 */
+		public static void markdownInlineImages()
+	    {
+			try
+			{
+				//ExStart:MarkdownInlineImages
+				// Ensure that the relative image URI points to an existing image next to the output document.
+				File imgDirectory = new File(CommonUtilities.getOutPath("/Markdown Reports/images"));
+				if (!imgDirectory.exists())
+				{
+					imgDirectory.mkdirs();
+				}
+
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Markdown Templates/Inline Image.md"),
+						CommonUtilities.getOutPath("/Markdown Reports/Markdown Inline Images Out.docx"),
+						new DataSourceInfo("GroupDocs Logo", "alt_text"),
+						new DataSourceInfo(CommonUtilities.getImagePath("/Logo.jpg"), "image_URI"));
+				//ExEnd:MarkdownInlineImages
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Assembling a document with an explicitly specified OOXML compliance level.
+		 */
+		public static void assembleWithOoxmlCompliance()
+	    {
+			try
+			{
+				//ExStart:AssembleWithOoxmlCompliance
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				// Create LoadSaveOptions with an explicit OOXML compliance level.
+				LoadSaveOptions options = new LoadSaveOptions(FileFormat.DOCX);
+				options.setOoxmlCompliance(OoxmlCompliance.STRICT);
+
+				assembler.assembleDocument(
+						CommonUtilities.getDataPath("/Word Templates/Working With Table Row Data Bands.docx"),
+						CommonUtilities.getOutPath("/Word Reports/OoxmlCompliance Out.docx"),
+						options,
+						new DataSourceInfo(DataStorage.excelData(), "ds"));
+				//ExEnd:AssembleWithOoxmlCompliance
+			}
+			catch (Throwable exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Calling a custom static function registered through the assembler's known types, using values
+		 * taken from a JSON data source.
+		 *
+		 * NOTE: the .NET counterpart passes the whole 'root' object node to the function as a single
+		 * DataRow. The Java engine does not resolve a known-type method whose parameter is a DataRow
+		 * (see LIBRARY-BUG-REPORTS.md), so the columns are passed individually instead.
+		 */
+		public static void assembleUsingCustomKnownTypeFunction()
+	    {
+			try
+			{
+				//ExStart:AssembleUsingCustomKnownTypeFunction
+				// A single JSON object exposed under the "root" node.
+				String json = "{\n"
+						+ "  \"root\": {\n"
+						+ "    \"title\": \"Ms\",\n"
+						+ "    \"firstName\": \"Jane\",\n"
+						+ "    \"lastName\": \"Doe\",\n"
+						+ "    \"manager\": { \"firstName\": \"John\", \"lastName\": \"Smith\" }\n"
+						+ "  }\n"
+						+ "}";
+
+				// The columns of the 'root' object node are passed to the custom function.
+				String sourceString = "Contact: "
+						+ "<<[ContactFunctions.formatName(root.title, root.firstName, root.lastName)]>>";
+
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.getKnownTypes().add(ContactFunctions.class);
+
+				JsonDataLoadOptions options = new JsonDataLoadOptions();
+				options.setAlwaysGenerateRootObject(true);
+
+				ByteArrayInputStream jsonStream = new ByteArrayInputStream(json.getBytes(StandardCharsets.UTF_8));
+				ByteArrayInputStream sourceStream =
+						new ByteArrayInputStream(sourceString.getBytes(StandardCharsets.UTF_8));
+				ByteArrayOutputStream targetStream = new ByteArrayOutputStream();
+
+				JsonDataSource dataSource = new JsonDataSource(jsonStream, options);
+				assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(dataSource));
+
+				System.out.println(new String(targetStream.toByteArray(), StandardCharsets.UTF_8).trim());
+				//ExEnd:AssembleUsingCustomKnownTypeFunction
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Generating a report lazily and recursively over an object graph whose properties are looked up
+		 * by name.
+		 */
+		public static void lazilyAndRecursively()
+	    {
+			try
+			{
+				//ExStart:LazilyAndRecursively
+				DynamicEntity entity = new DynamicEntity(UUID.randomUUID());
+
+				// NOTE: the .NET counterpart uses indexer syntax such as root["Name"]. The Java template
+				// engine does not resolve indexers on Java types, so the lookups are written as calls.
+				String sourceString = "Name: <<[root.getProperty(\"Name\")]>>\r\n"
+						+ "Login: <<[root.getEntities().getEntity(\"Account\").getProperty(\"Login\")]>>\r\n"
+						+ "<<foreach [child in root.getChildren().getEntities(\"Children\")]>>"
+						+ "Child: <<[child.getProperty(\"Name\")]>>\r\n<</foreach>>";
+
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				ByteArrayInputStream sourceStream =
+						new ByteArrayInputStream(sourceString.getBytes(StandardCharsets.UTF_8));
+				ByteArrayOutputStream targetStream = new ByteArrayOutputStream();
+
+				assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(entity, "root"));
+
+				System.out.println(new String(targetStream.toByteArray(), StandardCharsets.UTF_8).trim());
+				//ExEnd:LazilyAndRecursively
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/*#endregion-Examples ported from GroupDocs.Assembly for .NET*/
+
 }

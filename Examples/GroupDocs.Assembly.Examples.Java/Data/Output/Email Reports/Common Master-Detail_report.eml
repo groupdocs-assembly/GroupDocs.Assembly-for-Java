@@ -7,56 +7,72 @@ X-Unsent: 1
 Date: Thu, 10 Aug 2017 18:22:23 +0000
 MIME-Version: 1.0
 Content-Type: multipart/mixed;
- boundary="--_=_NextPart1_28c138d8-aad0-490c-bd9d-2c4776b62a6a"
+ boundary="--_=_NextPart1_7aba07a8-9c33-4885-a14d-f30b7dbb8121"
 
 This is a multi-part message in MIME format.
 
-----_=_NextPart1_28c138d8-aad0-490c-bd9d-2c4776b62a6a
-Content-Type: text/html; charset="us-ascii"
+----_=_NextPart1_7aba07a8-9c33-4885-a14d-f30b7dbb8121
+Content-Type: multipart/alternative; boundary="--_=_NextPart0_b53ed5fb-6f92-4742-9a57-c14ce56f9f19"
+
+
+----_=_NextPart0_b53ed5fb-6f92-4742-9a57-c14ce56f9f19
+Content-Type: text/plain; charset="koi8-r"
+Content-Transfer-Encoding: quoted-printable
+
+NOTE: Dynamic inserting of images is not supported yet=2E
+John Smith
+Clients: A Company, B Ltd=2E, C & D
+=20
+Tony Anderson
+Clients: E Corp=2E, F & Partners
+=20
+July James
+Clients: G & Co=2E, H Group, I & Sons, J Ent=2E
+=20
+
+
+----_=_NextPart0_b53ed5fb-6f92-4742-9a57-c14ce56f9f19
+Content-Type: text/html; charset="koi8-r"
 Content-Transfer-Encoding: quoted-printable
 
 <html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
-=3Dkoi8-r" /><meta http-equiv=3D"Content-Style-Type" content=3D"text/css" /=
-><meta name=3D"generator" content=3D"Aspose=2EWords for Java 17=2E5" /><tit=
-le></title></head><body><div><p style=3D"margin-top:0pt; margin-bottom:0pt;=
- font-size:11pt"><span style=3D"font-family:Calibri; color:#ff0000">NOTE: D=
-ynamic inserting of images is not supported yet=2E</span></p><p style=3D"ma=
-rgin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family=
-:Calibri; font-weight:bold">John Smith</span></p><p style=3D"margin-top:0pt=
-; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; fo=
-nt-weight:bold">Clients: </span><span style=3D"font-family:Calibri; font-we=
-ight:bold">A Company</span><span style=3D"font-family:Calibri; font-weight:=
-bold">, </span><span style=3D"font-family:Calibri; font-weight:bold">B Ltd=
-=2E</span><span style=3D"font-family:Calibri; font-weight:bold">, </span><s=
-pan style=3D"font-family:Calibri; font-weight:bold">C &amp; D</span></p><p =
-style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"=
-font-family:Calibri">&#xa0;</span></p><p style=3D"margin-top:0pt; margin-bo=
-ttom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weight:b=
-old">Tony Anderson</span></p><p style=3D"margin-top:0pt; margin-bottom:0pt;=
- font-size:11pt"><span style=3D"font-family:Calibri; font-weight:bold">Clie=
-nts: </span><span style=3D"font-family:Calibri; font-weight:bold">E Corp=2E<=
-/span><span style=3D"font-family:Calibri; font-weight:bold">, </span><span =
-style=3D"font-family:Calibri; font-weight:bold">F &amp; Partners</span></p>=
-<p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=
-=3D"font-family:Calibri">&#xa0;</span></p><p style=3D"margin-top:0pt; margi=
-n-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weig=
-ht:bold">July James</span></p><p style=3D"margin-top:0pt; margin-bottom:0pt=
-; font-size:11pt"><span style=3D"font-family:Calibri; font-weight:bold">Cli=
-ents: </span><span style=3D"font-family:Calibri; font-weight:bold">G &amp; =
-Co=2E</span><span style=3D"font-family:Calibri; font-weight:bold">, </span>=
-<span style=3D"font-family:Calibri; font-weight:bold">H Group</span><span s=
-tyle=3D"font-family:Calibri; font-weight:bold">, </span><span style=3D"font=
--family:Calibri; font-weight:bold">I &amp; Sons</span><span style=3D"font-f=
-amily:Calibri; font-weight:bold">, </span><span style=3D"font-family:Calibr=
-i; font-weight:bold">J Ent=2E</span></p><p style=3D"margin-top:0pt; margin-=
-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri">&#xa0;</spa=
-n></p><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span =
-style=3D"font-family:Calibri">&#xa0;</span></p></div></body></html>
-----_=_NextPart1_28c138d8-aad0-490c-bd9d-2c4776b62a6a
+=3DKOI8-R" /><meta http-equiv=3D"Content-Style-Type" content=3D"text/css" /=
+><meta name=3D"generator" content=3D"Aspose=2EWords for Java 26=2E3=2E0" />=
+<title></title></head><body style=3D"font-family:'Times New Roman'; font-si=
+ze:12pt"><div><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt=
+"><span style=3D"font-family:Calibri; color:#ff0000">NOTE: Dynamic insertin=
+g of images is not supported yet=2E</span></p><p style=3D"margin-top:0pt; m=
+argin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-=
+weight:bold">John Smith</span><span style=3D"font-family:Calibri; font-weig=
+ht:bold">&#xa0;</span></p><p style=3D"margin-top:0pt; margin-bottom:0pt; fo=
+nt-size:11pt"><span style=3D"font-family:Calibri; font-weight:bold">Clients=
+: A Company, B Ltd=2E, C &amp; D</span><span style=3D"font-family:Calibri">=
+&#xa0;</span></p><p style=3D"margin-top:0pt; margin-bottom:0pt; font-size:1=
+1pt"><span style=3D"font-family:Calibri">&#xa0;</span></p><p style=3D"margi=
+n-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Ca=
+libri; font-weight:bold">Tony Anderson</span><span style=3D"font-family:Cal=
+ibri; font-weight:bold">&#xa0;</span></p><p style=3D"margin-top:0pt; margin=
+-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; font-weigh=
+t:bold">Clients: E Corp=2E, F &amp; Partners</span><span style=3D"font-fami=
+ly:Calibri">&#xa0;</span></p><p style=3D"margin-top:0pt; margin-bottom:0pt;=
+ font-size:11pt"><span style=3D"font-family:Calibri">&#xa0;</span></p><p st=
+yle=3D"margin-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"fo=
+nt-family:Calibri; font-weight:bold">July James</span><span style=3D"font-f=
+amily:Calibri; font-weight:bold">&#xa0;</span></p><p style=3D"margin-top:0p=
+t; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Calibri; f=
+ont-weight:bold">Clients: G &amp; Co=2E, H Group, I &amp; Sons, J Ent=2E</s=
+pan><span style=3D"font-family:Calibri">&#xa0;</span></p><p style=3D"margin=
+-top:0pt; margin-bottom:0pt; font-size:11pt"><span style=3D"font-family:Cal=
+ibri">&#xa0;</span></p><p style=3D"margin-top:0pt; margin-bottom:0pt; font-=
+size:11pt"><span style=3D"font-family:Calibri">&#xa0;</span></p></div></bod=
+y></html>
+----_=_NextPart0_b53ed5fb-6f92-4742-9a57-c14ce56f9f19--
+
+----_=_NextPart1_7aba07a8-9c33-4885-a14d-f30b7dbb8121
 Content-Type: application/octet-stream; name="ExampleAttachment.txt"
 Content-Transfer-Encoding: base64
-Content-Disposition: attachment
+Content-Disposition: attachment; filename="ExampleAttachment.txt"
 
 U3ViamVjdDogQ29tbW9uIE1hc3Rlci1EZXRhaWw=
-----_=_NextPart1_28c138d8-aad0-490c-bd9d-2c4776b62a6a--
+----_=_NextPart1_7aba07a8-9c33-4885-a14d-f30b7dbb8121--
 
