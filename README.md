@@ -42,15 +42,15 @@ GroupDocs hosts all Java APIs on [GroupDocs Artifact Repository](https://artifac
 
 ### Running on JDK 17 and later
 
-Starting with 26.9, GroupDocs.Assembly for Java runs on JDK 17, 21 and later as is - no JVM flags and no code changes are needed.
+Starting with 26.9.1, GroupDocs.Assembly for Java runs on JDK 17, 21 and later as is - no JVM flags and no code changes are needed.
 
-Earlier versions fail on JDK 17 and later for every template that takes its data from a plain Java object:
+Earlier versions, 26.9 included, fail on JDK 17 and later for every template that takes its data from a plain Java object:
 
 ```
 Can not resolve method 'getCustomer' on type 'class Order'.
 ```
 
-The engine generates a data binder per type at run time. Before 26.9 it defined that class by calling `ClassLoader.defineClass` reflectively, and since JDK 16 that call is refused because `java.base/java.lang` is closed, so the binder was never built and the engine reported the method as missing. 26.9 defines the binder through `MethodHandles.Lookup`, which needs no access to JDK internals. JDK 8 and 11 were never affected.
+The engine generates a data binder per type at run time. Before 26.9.1 it defined that class by calling `ClassLoader.defineClass` reflectively, and since JDK 16 that call is refused because `java.base/java.lang` is closed, so the binder was never built and the engine reported the method as missing. 26.9.1 defines the binder through `MethodHandles.Lookup`, which needs no access to JDK internals. JDK 8 and 11 were never affected.
 
 If you have to stay on an earlier version, use one of these workarounds:
 
@@ -70,7 +70,7 @@ If you have to stay on an earlier version, use one of these workarounds:
 
   It has to be repeated in every launcher, container image and IDE run configuration.
 
-| JDK | 26.9 | earlier, as is | earlier, `setUseReflectionOptimization(false)` | earlier, `--add-opens` |
+| JDK | 26.9.1 | earlier, as is | earlier, `setUseReflectionOptimization(false)` | earlier, `--add-opens` |
 |---|---|---|---|---|
 | 8, 11 | works | works | works | works |
 | 17, 19, 21 | works | fails | works | works |
