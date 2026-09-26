@@ -40,11 +40,40 @@ GroupDocs.Assembly for Java requires J2SE 7.0 (1.7), J2SE 8.0 (1.8) or above. Pl
 
 GroupDocs hosts all Java APIs on [GroupDocs Artifact Repository](https://artifact.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-assembly), so simply [configure](https://docs.groupdocs.com/assembly/java/installation/) your Maven project to fetch the dependencies automatically.
 
-On JDK 17 and later, run the examples with `--add-opens java.base/java.lang=ALL-UNNAMED`. Without it the template engine cannot reflect over the data objects and every example that uses a POJO data source fails with `Can not resolve method ... on type ...`. JDK 8 and 11 need no extra flags.
+### Running on JDK 17 and later
+
+Starting with 26.9.1, GroupDocs.Assembly for Java runs on JDK 17, 21 and later as is - no JVM flags and no code changes are needed.
+
+Earlier versions, 26.9 included, fail on JDK 17 and later for every template that takes its data from a plain Java object:
 
 ```
-java --add-opens java.base/java.lang=ALL-UNNAMED -cp <classpath> com.groupdocs.assembly.examples.MainClass
+Can not resolve method 'getCustomer' on type 'class Order'.
 ```
+
+The engine generates a data binder per type at run time. Before 26.9.1 it defined that class by calling `ClassLoader.defineClass` reflectively, and since JDK 16 that call is refused because `java.base/java.lang` is closed, so the binder was never built and the engine reported the method as missing. 26.9.1 defines the binder through `MethodHandles.Lookup`, which needs no access to JDK internals. JDK 8 and 11 were never affected.
+
+If you have to stay on an earlier version, use one of these workarounds:
+
+- **Turn the binder generation off** - one line before the first report, no launcher changes:
+
+  ```java
+  DocumentAssembler.setUseReflectionOptimization(false);
+  ```
+
+  The engine then binds through the reflection API directly. Dynamic class generation pays off on large collections of data items and costs more than plain reflection on small ones, so measure it if your reports are big. On those versions this also avoids `IncompatibleClassChangeError: Found interface ..., but class was expected` for collections whose element type is an interface.
+
+- **Open the package to the JVM**, which keeps the generated binders:
+
+  ```
+  java --add-opens java.base/java.lang=ALL-UNNAMED -cp <classpath> com.groupdocs.assembly.examples.MainClass
+  ```
+
+  It has to be repeated in every launcher, container image and IDE run configuration.
+
+| JDK | 26.9.1 | earlier, as is | earlier, `setUseReflectionOptimization(false)` | earlier, `--add-opens` |
+|---|---|---|---|---|
+| 8, 11 | works | works | works | works |
+| 17, 19, 21 | works | fails | works | works |
 
 
 [Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/assembly/java) | [Documentation](https://docs.groupdocs.com/assembly/java/) | [Demos](https://products.groupdocs.app/assembly/family) | [API Reference](https://apireference.groupdocs.com/java/assembly) | [Examples](https://github.com/groupdocs-assembly/GroupDocs.assembly-for-Java/tree/master/Examples) | [Blog](https://blog.groupdocs.com/category/assembly/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/assembly) | [Temporary License](https://purchase.groupdocs.com/temporary-license)

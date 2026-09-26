@@ -3352,4 +3352,311 @@ public class GenerateReport {
 
 		/*#endregion-Examples ported from GroupDocs.Assembly for .NET*/
 
+		/*#region-OpenDocument templates (ported from GroupDocs.Assembly for .NET)*/
+
+		/**
+		 * Generating a bulleted list report from an OpenDocument template.
+		 *
+		 * @param extension one of "odt", "ods" or "odp"
+		 */
+		public static void generateBulletedListOpenDocument(String extension)
+	    {
+			try
+			{
+				//ExStart:BulletedListOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/OpenDocument Templates/Bulleted List." + extension),
+						CommonUtilities.getOutPath("/OpenDocument Reports/Bulleted List_report." + extension),
+						new DataSourceInfo(CustomerOrderDataLayer.getAllDataFromXml(), "ds"));
+				//ExEnd:BulletedListOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Generating a common list report from an OpenDocument template.
+		 *
+		 * @param extension one of "odt", "ods" or "odp"
+		 */
+		public static void generateCommonListOpenDocument(String extension)
+	    {
+			try
+			{
+				//ExStart:CommonListOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/OpenDocument Templates/Common List." + extension),
+						CommonUtilities.getOutPath("/OpenDocument Reports/Common List_report." + extension),
+						new DataSourceInfo(CustomerOrderDataLayer.populateData(), "customers"));
+				//ExEnd:CommonListOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Generating an in-paragraph list report from an OpenDocument template.
+		 *
+		 * @param extension one of "odt", "ods" or "odp"
+		 */
+		public static void generateInParagraphListOpenDocument(String extension)
+	    {
+			try
+			{
+				//ExStart:InParagraphListOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/OpenDocument Templates/In-Paragraph List." + extension),
+						CommonUtilities.getOutPath("/OpenDocument Reports/In-Paragraph List_report." + extension),
+						new DataSourceInfo(CustomerOrderDataLayer.getProductsData(), "products"));
+				//ExEnd:InParagraphListOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Generating a numbered list report from an OpenDocument template.
+		 *
+		 * @param extension one of "odt", "ods" or "odp"
+		 */
+		public static void generateNumberedListOpenDocument(String extension)
+	    {
+			try
+			{
+				//ExStart:NumberedListOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/OpenDocument Templates/Numbered List." + extension),
+						CommonUtilities.getOutPath("/OpenDocument Reports/Numbered List_report." + extension),
+						new DataSourceInfo(CustomerOrderDataLayer.getProductsData(), "products"));
+				//ExEnd:NumberedListOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Generating an in-table list report with filtering, grouping, and ordering from an OpenDocument
+		 * template.
+		 *
+		 * @param extension either "odt" or "ods"
+		 */
+		public static void generateInTableListWithFilteringGroupingAndOrderingOpenDocument(String extension)
+	    {
+			try
+			{
+				//ExStart:InTableListWithFilteringOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(
+						CommonUtilities.getDataPath("/OpenDocument Templates/In-Table List with Filtering, Grouping, and Ordering." + extension),
+						CommonUtilities.getOutPath("/OpenDocument Reports/In-Table List with Filtering, Grouping, and Ordering_report." + extension),
+						new DataSourceInfo(CustomerOrderDataLayer.getOrdersData(), "orders"));
+				//ExEnd:InTableListWithFilteringOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Generating an in-table list report with highlighted rows from an OpenDocument template.
+		 *
+		 * @param extension either "odt" or "ods"
+		 */
+		public static void generateInTableListWithHighlightedRowsOpenDocument(String extension)
+	    {
+			try
+			{
+				//ExStart:InTableListWithHighlightedRowsOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(
+						CommonUtilities.getDataPath("/OpenDocument Templates/In-Table List with Highlighted Rows." + extension),
+						CommonUtilities.getOutPath("/OpenDocument Reports/In-Table List with Highlighted Rows_report." + extension),
+						new DataSourceInfo(CustomerOrderDataLayer.getOrdersData(), "orders"));
+				//ExEnd:InTableListWithHighlightedRowsOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Generating an in-table master-detail report from an OpenDocument template.
+		 *
+		 * @param extension either "odt" or "ods"
+		 */
+		public static void generateInTableMasterDetailOpenDocument(String extension)
+	    {
+			try
+			{
+				//ExStart:InTableMasterDetailOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/OpenDocument Templates/In-Table Master-Detail." + extension),
+						CommonUtilities.getOutPath("/OpenDocument Reports/In-Table Master-Detail_report." + extension),
+						new DataSourceInfo(CustomerOrderDataLayer.populateData(), "customers"));
+				//ExEnd:InTableMasterDetailOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Generating a report from multiple data sources using an OpenDocument template.
+		 *
+		 * @param extension one of "odt", "ods" or "odp"
+		 */
+		public static void generateReportUsingMultipleDSOpenDocument(String extension)
+	    {
+			try
+			{
+				//ExStart:MultipleDataSourcesOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/OpenDocument Templates/Multiple DS." + extension),
+						CommonUtilities.getOutPath("/OpenDocument Reports/Multiple DS_report." + extension),
+						new DataSourceInfo(CustomerOrderDataLayer.getAllDataFromXml(), "ds"),
+						new DataSourceInfo(CustomerOrderDataLayer.getProductsData(), "products"));
+				//ExEnd:MultipleDataSourcesOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Inserting a document dynamically into an OpenDocument Text document.
+		 * Feature is supported by version 20.3 or greater
+		 */
+		public static void insertDocumentDynamicallyInOpenDocument()
+	    {
+			try
+			{
+				//ExStart:InsertDocumentDynamicallyInOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/OpenDocument Templates/DynamicDocInsert.odt"),
+						CommonUtilities.getOutPath("/OpenDocument Reports/DynamicDocInsert Out.odt"),
+						new DataSourceInfo(CommonUtilities.getOuterDoc("/OuterDoc.docx"), "document_expression"),
+						new DataSourceInfo(CustomerOrderDataLayer.getCustomerData(), "customer"));
+				//ExEnd:InsertDocumentDynamicallyInOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Formatting numbers and text with template syntax in an OpenDocument Text document.
+		 */
+		public static void templateSyntaxFormattingOpenDocument()
+	    {
+			try
+			{
+				//ExStart:TemplateSyntaxFormattingOpenDocument
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/OpenDocument Templates/Numeric Format.odt"),
+						CommonUtilities.getOutPath("/OpenDocument Reports/Numeric Format_report.odt"),
+						new DataSourceInfo(CustomerOrderDataLayer.getOrdersData(), "orders"));
+				//ExEnd:TemplateSyntaxFormattingOpenDocument
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/*#endregion-OpenDocument templates (ported from GroupDocs.Assembly for .NET)*/
+
+		/**
+		 * Generating an in-table list report with a running (progressive) total.
+		 *
+		 * @param documentFormat one of "document", "spreadsheet", "presentation" or "html"
+		 */
+		public static void generateInTableListWithRunningTotal(String documentFormat)
+	    {
+			String srcDocument;
+			String docReport;
+			if (documentFormat == "document") {
+				srcDocument = "/Word Templates/In-Table List with Running (Progressive) Total.docx";
+				docReport = "/Word Reports/In-Table List with Running (Progressive) Total_report.docx";
+			} else if (documentFormat == "spreadsheet") {
+				srcDocument = "/Spreadsheet Templates/In-Table List with Running (Progressive) Total.xlsx";
+				docReport = "/Spreadsheet Reports/In-Table List with Running (Progressive) Total_report.xlsx";
+			} else if (documentFormat == "presentation") {
+				srcDocument = "/Presentation Templates/In-Table List with Running (Progressive) Total.pptx";
+				docReport = "/Presentation Reports/In-Table List with Running (Progressive) Total_report.pptx";
+			} else if (documentFormat == "html") {
+				srcDocument = "/Html Templates/In-Table List with Running (Progressive) Total.html";
+				docReport = "/Html Reports/In-Table List with Running (Progressive) Total_report.html";
+			} else {
+				return;
+			}
+
+			try
+			{
+				//ExStart:InTableListWithRunningTotal
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+						CommonUtilities.getOutPath(docReport),
+						new DataSourceInfo(CustomerOrderDataLayer.getOrdersData(), "orders"));
+				//ExEnd:InTableListWithRunningTotal
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Saving an assembled Markdown document with lists to a Word Processing format using file
+		 * extension.
+		 * Feature is supported by version 19.8 or greater
+		 *
+		 * @param template either "List" or "Ordered List"
+		 */
+		public static void saveMdListToWord(String template)
+	    {
+			try
+			{
+				//ExStart:saveMdListToWord
+				String description = "GroupDocs.Assembly for Java is a class library that enables you to generate documents in popular " +
+						"office and email file formats based upon template documents and data obtained from various sources " +
+						"including databases, XML, JSON, OData, objects of custom Java types, external documents, and more.";
+
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Markdown Templates/" + template + ".md"),
+						CommonUtilities.getOutPath("/Word Reports/" + template + " Out.docx"),
+						new DataSourceInfo("GroupDocs.Assembly for Java", "product"),
+						new DataSourceInfo(description, "description"));
+				//ExEnd:saveMdListToWord
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
 }

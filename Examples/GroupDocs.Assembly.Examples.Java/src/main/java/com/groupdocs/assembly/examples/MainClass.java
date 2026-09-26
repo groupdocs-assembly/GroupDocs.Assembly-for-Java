@@ -473,6 +473,44 @@ public class MainClass {
 
 		// endregion
 
+		// region OpenDocument templates (ported from GroupDocs.Assembly for .NET)
+		// Each report is generated from an OpenDocument Text (odt), Spreadsheet (ods) or
+		// Presentation (odp) template.
+		//GenerateReport.generateBulletedListOpenDocument("odt");
+		//GenerateReport.generateBulletedListOpenDocument("ods");
+		//GenerateReport.generateBulletedListOpenDocument("odp");
+		//GenerateReport.generateCommonListOpenDocument("odt");
+		//GenerateReport.generateCommonListOpenDocument("ods");
+		//GenerateReport.generateCommonListOpenDocument("odp");
+		//GenerateReport.generateInParagraphListOpenDocument("odt");
+		//GenerateReport.generateInParagraphListOpenDocument("ods");
+		//GenerateReport.generateInParagraphListOpenDocument("odp");
+		//GenerateReport.generateNumberedListOpenDocument("odt");
+		//GenerateReport.generateNumberedListOpenDocument("ods");
+		//GenerateReport.generateNumberedListOpenDocument("odp");
+		//GenerateReport.generateInTableListWithFilteringGroupingAndOrderingOpenDocument("odt");
+		//GenerateReport.generateInTableListWithFilteringGroupingAndOrderingOpenDocument("ods");
+		//GenerateReport.generateInTableListWithHighlightedRowsOpenDocument("odt");
+		//GenerateReport.generateInTableListWithHighlightedRowsOpenDocument("ods");
+		//GenerateReport.generateInTableMasterDetailOpenDocument("odt");
+		//GenerateReport.generateInTableMasterDetailOpenDocument("ods");
+		//GenerateReport.generateReportUsingMultipleDSOpenDocument("odt");
+		//GenerateReport.generateReportUsingMultipleDSOpenDocument("ods");
+		//GenerateReport.generateReportUsingMultipleDSOpenDocument("odp");
+		//GenerateReport.insertDocumentDynamicallyInOpenDocument();
+		//GenerateReport.templateSyntaxFormattingOpenDocument();
+		// endregion
+
+		// In-Table List with a Running (Progressive) Total
+		//GenerateReport.generateInTableListWithRunningTotal("document");
+		//GenerateReport.generateInTableListWithRunningTotal("spreadsheet");
+		//GenerateReport.generateInTableListWithRunningTotal("presentation");
+		//GenerateReport.generateInTableListWithRunningTotal("html");
+
+		// Markdown lists to Word
+		//GenerateReport.saveMdListToWord("List");
+		//GenerateReport.saveMdListToWord("Ordered List");
+
 		String data = "{\n" +
 				"    \"ok\": \"without this key 'ok', 'ko' is well parsed\",\n" +
 				"    \"ko\": {}\n" +
