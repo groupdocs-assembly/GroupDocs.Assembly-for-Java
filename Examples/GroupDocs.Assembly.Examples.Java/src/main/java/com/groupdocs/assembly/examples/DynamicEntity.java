@@ -8,16 +8,25 @@ import java.util.UUID;
  * An entity whose properties are fetched by name rather than declared, so a report can be generated
  * lazily and recursively over an object graph of unknown shape.
  *
- * NOTE: the .NET counterpart of this example exposes the lookups as C# indexers, which lets a
- * template write {@code root["Name"]}. The Java template engine does not resolve an indexer on a
- * Java type (see LIBRARY-BUG-REPORTS.md), so here the same lookups are exposed as ordinary methods
- * and the template calls {@code root.getProperty("Name")} instead.
+ * A template reads a property with indexer syntax, e.g. {@code root["Name"]}: the engine resolves
+ * an indexer on a Java type through its {@code get(String)} method. The related and child entities
+ * are exposed as public fields, because the engine resolves member access such as
+ * {@code root.Entities} against a field, not against a {@code getEntities()} getter (see
+ * LIBRARY-BUG-REPORTS.md, bug 11).
  */
 public class DynamicEntity {
 
+	/**
+	 * Provides access to individual related entities by their names.
+	 */
+	public final ReferencedEntities Entities;
+
+	/**
+	 * Provides access to enumerations of related entities by their names.
+	 */
+	public final ChildEntities Children;
+
 	private final UUID mId;
-	private final ReferencedEntities mEntities;
-	private final ChildEntities mChildren;
 
 	public DynamicEntity(UUID id) {
 		// In this example we use UUID to represent an entity identifier. In a real-life application
@@ -25,33 +34,19 @@ public class DynamicEntity {
 		mId = id;
 
 		// In this example we simply initialize the fields in the constructor. In a real-life
-		// application these fields can be initialized lazily at the corresponding getters, if needed.
-		mEntities = new ReferencedEntities(this);
-		mChildren = new ChildEntities(this);
+		// application the lookups below can fetch their data lazily, when they are first called.
+		Entities = new ReferencedEntities(this);
+		Children = new ChildEntities(this);
 	}
 
 	/**
 	 * Gets a property value by its name.
 	 */
-	public String getProperty(String propertyName) {
+	public String get(String propertyName) {
 		// In this example we simply return a property name as its value. In a real-life application
 		// a real property value should be returned. This value can be cached using for example a
 		// Map, or fetched every time the property is requested.
 		return propertyName + " Value";
-	}
-
-	/**
-	 * Provides access to individual related entities by their names.
-	 */
-	public ReferencedEntities getEntities() {
-		return mEntities;
-	}
-
-	/**
-	 * Provides access to enumerations of related entities by their names.
-	 */
-	public ChildEntities getChildren() {
-		return mChildren;
 	}
 
 	public static class ReferencedEntities {
@@ -63,8 +58,9 @@ public class DynamicEntity {
 			mRootEntity = rootEntity;
 		}
 
-		public DynamicEntity getEntity(String propertyName) {
-			// In this example we simply return the root entity.
+		public DynamicEntity get(String propertyName) {
+			// In this example we simply return the root entity. In a real-life application an entity
+			// corresponding to propertyName for the given root entity should be returned.
 			return mRootEntity;
 		}
 	}
@@ -76,8 +72,9 @@ public class DynamicEntity {
 			mRootEntity = rootEntity;
 		}
 
-		public Iterable<DynamicEntity> getEntities(String propertyName) {
-			// In this example we simply return the root entity three times.
+		public Iterable<DynamicEntity> get(String propertyName) {
+			// In this example we simply return the root entity three times. In a real-life application
+			// the entities corresponding to propertyName for the given root entity should be returned.
 			return Arrays.asList(mRootEntity, mRootEntity, mRootEntity);
 		}
 	}

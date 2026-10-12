@@ -3079,6 +3079,32 @@ public class GenerateReport {
 	    }
 
 		/**
+		 * Changing the resolution of barcode images while saving the document. The same resolution in DPI
+		 * is applied along both the X and Y axes.
+		 * Feature is supported by version 26.10 or greater
+		 *
+		 * @param resolution the barcode image resolution in DPI, e.g. 72 or 1600
+		 */
+		public static void barcodeResolution(float resolution)
+	    {
+			try
+			{
+				//ExStart:BarcodeResolution
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.getBarcodeSettings().setResolution(resolution);
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/Barcode.docx"),
+						CommonUtilities.getOutPath("/Word Reports/BarcodeResolution_" + (int) resolution + "dpi.docx"),
+						new DataSourceInfo(new DataStorage().getManagers().iterator().next(), "value"));
+				//ExEnd:BarcodeResolution
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
 		 * Setting the values of drop down list or combo box items dynamically in a Word document.
 		 * Feature is supported by version 21.3 or greater
 		 *
@@ -3266,18 +3292,16 @@ public class GenerateReport {
 	    }
 
 		/**
-		 * Calling a custom static function registered through the assembler's known types, using values
-		 * taken from a JSON data source.
-		 *
-		 * NOTE: the .NET counterpart passes the whole 'root' object node to the function as a single
-		 * DataRow. The Java engine does not resolve a known-type method whose parameter is a DataRow
-		 * (see LIBRARY-BUG-REPORTS.md), so the columns are passed individually instead.
+		 * Calling a custom static function, registered through the assembler's known types, that takes a
+		 * single DataRow parameter. When a JSON data source is used, an object node such as 'root' is
+		 * passed to the function as one DataRow.
+		 * Feature is supported by version 26.10 or greater
 		 */
-		public static void assembleUsingCustomKnownTypeFunction()
+		public static void assembleUsingCustomDataRowFunction()
 	    {
 			try
 			{
-				//ExStart:AssembleUsingCustomKnownTypeFunction
+				//ExStart:AssembleUsingCustomDataRowFunction
 				// A single JSON object exposed under the "root" node.
 				String json = "{\n"
 						+ "  \"root\": {\n"
@@ -3288,9 +3312,8 @@ public class GenerateReport {
 						+ "  }\n"
 						+ "}";
 
-				// The columns of the 'root' object node are passed to the custom function.
-				String sourceString = "Contact: "
-						+ "<<[ContactFunctions.formatName(root.title, root.firstName, root.lastName)]>>";
+				// 'root' is passed to the custom function as a single DataRow.
+				String sourceString = "Contact: <<[ContactFunctions.formatName(root)]>>";
 
 				DocumentAssembler assembler = new DocumentAssembler();
 				assembler.getKnownTypes().add(ContactFunctions.class);
@@ -3307,7 +3330,7 @@ public class GenerateReport {
 				assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(dataSource));
 
 				System.out.println(new String(targetStream.toByteArray(), StandardCharsets.UTF_8).trim());
-				//ExEnd:AssembleUsingCustomKnownTypeFunction
+				//ExEnd:AssembleUsingCustomDataRowFunction
 			}
 			catch (Exception exp)
 			{
@@ -3317,7 +3340,8 @@ public class GenerateReport {
 
 		/**
 		 * Generating a report lazily and recursively over an object graph whose properties are looked up
-		 * by name.
+		 * by name, using indexer syntax such as root["Name"] in the template.
+		 * Feature is supported by version 26.10 or greater
 		 */
 		public static void lazilyAndRecursively()
 	    {
@@ -3326,12 +3350,38 @@ public class GenerateReport {
 				//ExStart:LazilyAndRecursively
 				DynamicEntity entity = new DynamicEntity(UUID.randomUUID());
 
-				// NOTE: the .NET counterpart uses indexer syntax such as root["Name"]. The Java template
-				// engine does not resolve indexers on Java types, so the lookups are written as calls.
-				String sourceString = "Name: <<[root.getProperty(\"Name\")]>>\r\n"
-						+ "Login: <<[root.getEntities().getEntity(\"Account\").getProperty(\"Login\")]>>\r\n"
-						+ "<<foreach [child in root.getChildren().getEntities(\"Children\")]>>"
-						+ "Child: <<[child.getProperty(\"Name\")]>>\r\n<</foreach>>";
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/Lazy and Recursive.docx"),
+						CommonUtilities.getOutPath("/Word Reports/Lazy and Recursive Out.docx"),
+						new DataSourceInfo(entity, "root"));
+				//ExEnd:LazilyAndRecursively
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Filtering an interface-typed collection using a Boolean flag declared on a base interface, which
+		 * shows that members inherited from base interfaces are resolved.
+		 * Feature is supported by version 26.10 or greater
+		 */
+		public static void assembleUsingInterfaceDataModel()
+	    {
+			try
+			{
+				//ExStart:AssembleUsingInterfaceDataModel
+				FeatureEntities.FeatureList featureList = new FeatureEntities.FeatureList("Release 2026");
+				featureList.getItems().add(new FeatureEntities.FeatureItem("Legacy import", true, "Import"));
+				featureList.getItems().add(new FeatureEntities.FeatureItem("Cloud sync", false, "Sync"));
+				featureList.getItems().add(new FeatureEntities.FeatureItem("Dark theme", false, "UI"));
+
+				// '!i.getDisabled()' reads a Boolean property inherited from the IToggleable base interface.
+				String sourceString = "Enabled features in <<[features.getName()]>>:\r\n"
+						+ "<<foreach [item in features.getItems().where(i => !i.getDisabled())]>>"
+						+ "- <<[item.getTitle()]>> (<<[item.getCategory()]>>)\r\n<</foreach>>";
 
 				DocumentAssembler assembler = new DocumentAssembler();
 
@@ -3339,10 +3389,10 @@ public class GenerateReport {
 						new ByteArrayInputStream(sourceString.getBytes(StandardCharsets.UTF_8));
 				ByteArrayOutputStream targetStream = new ByteArrayOutputStream();
 
-				assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(entity, "root"));
+				assembler.assembleDocument(sourceStream, targetStream, new DataSourceInfo(featureList, "features"));
 
 				System.out.println(new String(targetStream.toByteArray(), StandardCharsets.UTF_8).trim());
-				//ExEnd:LazilyAndRecursively
+				//ExEnd:AssembleUsingInterfaceDataModel
 			}
 			catch (Exception exp)
 			{
