@@ -449,6 +449,10 @@ public class MainClass {
 		// Scale a barcode image within its containing shape
 		//GenerateReport.barcodeScale();
 
+		// Change the resolution of barcode images
+		//GenerateReport.barcodeResolution(72);
+		//GenerateReport.barcodeResolution(1600);
+
 		// Set combo box / drop down list values dynamically
 		//GenerateReport.comboBoxDropDownValues("ComboBox");
 		//GenerateReport.comboBoxDropDownValues("Dropdown");
@@ -465,8 +469,11 @@ public class MainClass {
 		// Assemble with an explicit OOXML compliance level
 		//GenerateReport.assembleWithOoxmlCompliance();
 
-		// Call a custom function registered through the assembler's known types
-		//GenerateReport.assembleUsingCustomKnownTypeFunction();
+		// Call a custom function, registered through the assembler's known types, that takes a DataRow
+		//GenerateReport.assembleUsingCustomDataRowFunction();
+
+		// Filter an interface-typed collection by a flag declared on a base interface
+		//GenerateReport.assembleUsingInterfaceDataModel();
 
 		// Generate a report lazily and recursively
 		//GenerateReport.lazilyAndRecursively();
