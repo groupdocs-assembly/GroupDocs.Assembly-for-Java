@@ -1,6 +1,7 @@
 package com.groupdocs.assembly.examples;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -28,53 +29,51 @@ public class CustomerOrderDataLayer {
 	/**
 	 * Initializes customer, product and order information.
 	 */
-	public static Customer[] populateData() {
+	public static List<Customer> populateData() {
 		Customer jane = new Customer("Jane Doe", "+9211874", "Flat # 1, Kiyani Plaza ISB", "123456789qwertyu0025");
-		jane.Order = new Order[] {
+		jane.setOrder(Arrays.asList(
 				new Order(jane, new Product("Lumia 525"), 170, 5, date(2015, 1, 1),
-						new Service("Regular Cleaning"), new Service("Oven Cleaning")) };
+						new Service("Regular Cleaning"), new Service("Oven Cleaning"))));
 
 		Customer john = new Customer("John Smith", "+458789", "Quette House, Park Road, ISB", "123456789qwertyu0025");
-		john.Order = new Order[] {
+		john.setOrder(Arrays.asList(
 				new Order(john, new Product("Lenovo G50"), 480, 2, date(2015, 2, 1),
 						new Service("Regular Cleaning"), new Service("Oven Cleaning"), new Service("Carpet Cleaning")),
 				new Order(john, new Product("Pavilion G6"), 400, 1, date(2015, 10, 1),
 						new Service("Regular Cleaning"), new Service("Carpet Cleaning")),
 				new Order(john, new Product("Nexus 5"), 320, 3, date(2015, 6, 1),
-						new Service("Oven Cleaning")) };
+						new Service("Oven Cleaning"))));
 
-		return new Customer[] { jane, john };
+		return Arrays.asList(jane, john);
 	}
 
 	/**
 	 * Returns the orders of all customers.
 	 */
-	public static Order[] getOrdersData() {
+	public static List<Order> getOrdersData() {
 		List<Order> orders = new ArrayList<Order>();
 		for (Customer customer : populateData()) {
-			for (Order order : customer.Order) {
-				orders.add(order);
-			}
+			orders.addAll(customer.getOrder());
 		}
-		return orders.toArray(new Order[orders.size()]);
+		return orders;
 	}
 
 	/**
 	 * Returns the products of all orders.
 	 */
-	public static Product[] getProductsData() {
+	public static List<Product> getProductsData() {
 		List<Product> products = new ArrayList<Product>();
 		for (Order order : getOrdersData()) {
-			products.add(order.Product);
+			products.add(order.getProduct());
 		}
-		return products.toArray(new Product[products.size()]);
+		return products;
 	}
 
 	/**
 	 * Returns a single customer (the second one, as in the .NET examples).
 	 */
 	public static Customer getCustomerData() {
-		return populateData()[1];
+		return populateData().get(1);
 	}
 
 	/**
@@ -90,10 +89,7 @@ public class CustomerOrderDataLayer {
 		DataTable orders = dataSet.getTables().get("Orders");
 		DataTable productOrders = dataSet.getTables().get("ProductOrders");
 		DataTable products = dataSet.getTables().get("Products");
-
-		// NOTE: the .NET counterpart renames the "Products" table to "Product" here. The Java template
-		// engine keeps resolving a renamed table by its original name only (see
-		// LIBRARY-BUG-REPORTS.md), so the table keeps the name "Products".
+		products.setTableName("Product");
 
 		// The photo paths stored in Customers.xml are relative to the .NET build output folder;
 		// point them at the local images folder instead.
