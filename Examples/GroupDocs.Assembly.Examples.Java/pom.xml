@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>com.groupdocs</groupId>
 			<artifactId>groupdocs-assembly</artifactId>
-			<version>26.10</version>
+			<version>26.10.1</version>
 		</dependency>
 	</dependencies>
 	<build>
