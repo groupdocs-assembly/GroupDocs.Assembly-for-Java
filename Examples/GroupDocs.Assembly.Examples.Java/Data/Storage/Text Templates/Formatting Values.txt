@@ -1,0 +1,6 @@
+Customer: <<[order.Customer]:upper>> (<<[order.Customer]:caps>>)
+Order date: <<[order.Date]:"dd MMMM yyyy">>, delivery on <<[order.DeliveryDate]:"EEEE">>
+Total: <<[order.Total]:"#,##0.00">>, items: <<[order.Items]>> (<<[order.Items]:cardinal>>)
+Visit: <<[order.Visit]:ordinal>> (<<[order.Visit]:ordinalText>>), section <<[order.Visit]:roman>>, appendix <<[order.Visit]:alphabetic>>
+Code: 0x<<[order.Code]:hex>>
+Note: <<[order.Note]:firstCap>>

@@ -1,0 +1,10 @@
+<<var [orders = customers.selectMany(c => c.Order)]>>Orders: <<[orders.count()]>>, units sold: <<[orders.sum(o => o.ProductQuantity)]>>
+Revenue: <<[orders.sum(o => o.Price * o.ProductQuantity)]:"#,##0.00">>
+Average price: <<[orders.average(o => o.Price)]:"#,##0.00">>, highest: <<[orders.max(o => o.Price)]:"#,##0.00">>, lowest: <<[orders.min(o => o.Price)]:"#,##0.00">>
+
+Customers by revenue:
+<<foreach [c in customers.orderByDescending(c => c.Order.sum(o => o.Price * o.ProductQuantity))]>><<[c.CustomerName.trim()]>>: <<[c.Order.count()]>> orders, <<[c.Order.sum(o => o.Price * o.ProductQuantity)]:"#,##0.00">>
+<</foreach>>
+Units by product:
+<<foreach [g in orders.groupBy(o => o.Product.ProductName).orderBy(g => g.key)]>><<[g.key]>>: <<[g.sum(o => o.ProductQuantity)]>>
+<</foreach>>

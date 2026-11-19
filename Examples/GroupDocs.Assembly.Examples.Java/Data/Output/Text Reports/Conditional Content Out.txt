@@ -1,0 +1,4 @@
+Order 1: 1 350,00, free delivery
+Order 2: 600,00, 5% discount
+Order 3: 160,00, standard delivery
+Orders with free delivery: 1.

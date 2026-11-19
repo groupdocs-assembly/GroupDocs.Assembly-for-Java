@@ -1,0 +1,2 @@
+Customer: <<[customer.Name]>>
+Fax: <<[customer.Fax]>>

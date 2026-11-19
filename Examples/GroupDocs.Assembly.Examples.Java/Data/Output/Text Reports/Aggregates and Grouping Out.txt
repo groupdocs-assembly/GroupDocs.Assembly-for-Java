@@ -1,0 +1,15 @@
+Orders: 5, units sold: 11
+Revenue: 4 240,00
+Average price: 400,00, highest: 480,00, lowest: 320,00
+
+Customers by revenue:
+Ali Ahmed: 3 orders, 2 320,00
+Atir Tahir: 2 orders, 1 920,00
+
+Units by product:
+Lenovo 12: 2
+Lenovo G50: 2
+Nexus 5: 3
+Pavilion G6: 1
+www 5: 3
+

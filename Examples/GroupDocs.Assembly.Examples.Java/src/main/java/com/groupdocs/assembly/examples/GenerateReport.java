@@ -9,7 +9,11 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.UUID;
 
 import javax.xml.crypto.Data;
@@ -28,6 +32,8 @@ import com.groupdocs.assembly.JsonDataSource;
 import com.groupdocs.assembly.LoadSaveOptions;
 import com.groupdocs.assembly.JsonDataLoadOptions;
 import com.groupdocs.assembly.OoxmlCompliance;
+import com.groupdocs.assembly.PreviewFormats;
+import com.groupdocs.assembly.PreviewOptions;
 import com.groupdocs.assembly.examples.BusinessEntities.Manager;
 import com.groupdocs.assembly.examples.DataStorage.EmailDataSourcesNames;
 import com.groupdocs.assembly.examples.DataStorage.EmailDataSourcesObjects;
@@ -2107,6 +2113,44 @@ public class GenerateReport {
 	}
 
 	/**
+	 * Supports removal of paragraphs becoming empty after template syntax tags are removed or replaced with empty values for Spreadsheet documents.
+	 * In a spreadsheet, a paragraph is a line of text in a cell.
+	 * This feature is supported by version 26.11 or higher
+	 */
+	public static void emptyParagraphInSpreadsheet() {
+		String srcDocument = "/Spreadsheet Templates/Empty Paragraph.xlsx";
+		String docReport = "/Spreadsheet Reports/Empty Paragraph.xlsx";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.setOptions(DocumentAssemblyOptions.REMOVE_EMPTY_PARAGRAPHS);
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport),
+					new DataSourceInfo("dummy", "dummy"));
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
+
+	/**
+	 * Supports removal of paragraphs becoming empty after template syntax tags are removed or replaced with empty values for plain text documents.
+	 * In plain text, a paragraph is a line of text.
+	 * This feature is supported by version 26.11 or higher
+	 */
+	public static void emptyParagraphInText() {
+		String srcDocument = "/Text Templates/Empty Paragraph.txt";
+		String docReport = "/Text Reports/Empty Paragraph.txt";
+		try {
+			DocumentAssembler assembler = new DocumentAssembler();
+			assembler.setOptions(DocumentAssemblyOptions.REMOVE_EMPTY_PARAGRAPHS);
+			assembler.assembleDocument(CommonUtilities.getDataPath(srcDocument),
+					CommonUtilities.getOutPath(docReport),
+					new DataSourceInfo("dummy", "dummy"));
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+		}
+	}
+
+	/**
 	 * This method inserts nested external documents in word document
 	 */
     public static void insertNestedExternalDocumentsInWord() {
@@ -3708,5 +3752,434 @@ public class GenerateReport {
 				System.out.println("Exception: " + exp.getMessage());
 			}
 	    }
+
+
+		/*#region-Examples ported from GroupDocs.Assembly for .NET 26.11*/
+
+		/**
+		 * Checking a template against a JSON Schema instead of the data: members declared in the schema can
+		 * be used even if they are empty, null or missing in the data, and value types come from the schema.
+		 * Feature is supported by version 26.11 or greater
+		 */
+		public static void assembleFromJsonWithSchema()
+	    {
+			try
+			{
+				//ExStart:AssembleFromJsonWithSchema
+				// Customer.json has no payment cards ("Cards": []) and no loyalty data ("Loyalty": null). Without
+				// the schema, the template fails on customer.Cards.first().Type even though that branch is not
+				// rendered. The schema also keeps "Account": "00042" a string, it is not turned into the number 42.
+				JsonDataSource dataSource = new JsonDataSource(CommonUtilities.JsonDataFile + "/Customer.json",
+						CommonUtilities.JsonDataFile + "/Customer.schema.json");
+
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/Json Schema.docx"),
+						CommonUtilities.getOutPath("/Word Reports/Json Schema Out.docx"),
+						new DataSourceInfo(dataSource, "customer"));
+				//ExEnd:AssembleFromJsonWithSchema
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Using templates written for typed objects on the same data loaded from JSON: $id/$ref references
+		 * of Json.NET, members of dates, grouping by a nested object and Booleans as conditions.
+		 * Feature is supported by version 26.11 or greater
+		 */
+		public static void useFileDataLikeTypedObjects()
+	    {
+			try
+			{
+				//ExStart:UseFileDataLikeTypedObjects
+				// Customers.json: every order refers to its customer with "$ref".
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/Customer Orders.docx"),
+						CommonUtilities.getOutPath("/Word Reports/Customer Orders Out.docx"),
+						new DataSourceInfo(new JsonDataSource(CommonUtilities.JsonDataFile + "/Customers.json"), "customers"));
+
+				// Grouping by a nested object and Booleans as conditions, with a text template.
+				String json = "{ \"Orders\": ["
+						+ "{ \"Number\": 1, \"Paid\": true,  \"Customer\": { \"Name\": \"Quayside Bistro\" } },"
+						+ "{ \"Number\": 2, \"Paid\": false, \"Customer\": { \"Name\": \"Harbor Lane Provisions\" } },"
+						+ "{ \"Number\": 3, \"Paid\": null,  \"Customer\": { \"Name\": \"Quayside Bistro\" } } ] }";
+				String template = "<<foreach [g in ds.Orders.groupBy(o => o.Customer)]>>"
+						+ "<<[g.key.Name]>>: <<[g.count()]>> order(s), paid: <<[g.count(o => o.Paid)]>>\r\n"
+						+ "<<foreach [o in g]>>  #<<[o.Number]>> <<[o.Paid ? \"paid\" : \"due\"]>>\r\n<</foreach>>"
+						+ "<</foreach>>";
+
+				JsonDataLoadOptions options = new JsonDataLoadOptions();
+				options.setAlwaysGenerateRootObject(true);
+
+				String report = CommonUtilities.getOutPath("/Text Reports/Orders by Customer Out.txt");
+				InputStream templateStream = new ByteArrayInputStream(template.getBytes(StandardCharsets.UTF_8));
+				InputStream dataStream = new ByteArrayInputStream(json.getBytes(StandardCharsets.UTF_8));
+				OutputStream reportStream = new FileOutputStream(report);
+				try
+				{
+					assembler.assembleDocument(templateStream, reportStream,
+							new DataSourceInfo(new JsonDataSource(dataStream, options), "ds"));
+				}
+				finally
+				{
+					reportStream.close();
+				}
+
+				System.out.println(new String(Files.readAllBytes(Paths.get(report)), StandardCharsets.UTF_8));
+				//ExEnd:UseFileDataLikeTypedObjects
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Handling template errors: a member missing in data fails the assembly by default, gives an empty
+		 * value with ALLOW_MISSING_MEMBERS, and with INLINE_ERROR_MESSAGES a template error does not throw -
+		 * assembleDocument returns false and the report shows the error next to the tag.
+		 */
+		public static void handleTemplateErrors()
+	    {
+			try
+			{
+				//ExStart:HandleTemplateErrors
+				// "Missing Member.txt" prints customer.Fax, which the data does not have.
+				String missingMember = CommonUtilities.getDataPath("/Text Templates/Missing Member.txt");
+				String missingMemberReport = CommonUtilities.getOutPath("/Text Reports/Missing Member Out.txt");
+
+				try
+				{
+					new DocumentAssembler().assembleDocument(missingMember, missingMemberReport,
+							new DataSourceInfo(customerData(), "customer"));
+				}
+				catch (Exception ex)
+				{
+					System.out.println("Default options: " + ex.getMessage());
+				}
+
+				DocumentAssembler lenient = new DocumentAssembler();
+				lenient.setOptions(DocumentAssemblyOptions.ALLOW_MISSING_MEMBERS);
+				lenient.assembleDocument(missingMember, missingMemberReport, new DataSourceInfo(customerData(), "customer"));
+				System.out.println("ALLOW_MISSING_MEMBERS:\n"
+						+ new String(Files.readAllBytes(Paths.get(missingMemberReport)), StandardCharsets.UTF_8));
+
+				// "Syntax Error.txt" has a tag without its closing ">>".
+				String syntaxErrorReport = CommonUtilities.getOutPath("/Text Reports/Syntax Error Out.txt");
+				DocumentAssembler inline = new DocumentAssembler();
+				inline.setOptions(DocumentAssemblyOptions.INLINE_ERROR_MESSAGES);
+				boolean success = inline.assembleDocument(CommonUtilities.getDataPath("/Text Templates/Syntax Error.txt"),
+						syntaxErrorReport, new DataSourceInfo(customerData(), "customer"));
+				System.out.println("INLINE_ERROR_MESSAGES, success = " + success + ":\n"
+						+ new String(Files.readAllBytes(Paths.get(syntaxErrorReport)), StandardCharsets.UTF_8));
+				//ExEnd:HandleTemplateErrors
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		private static JsonDataSource customerData() throws Exception
+		{
+			return new JsonDataSource(new ByteArrayInputStream(
+					"{ \"Name\": \"Quayside Bistro\", \"Total\": 1234.5 }".getBytes(StandardCharsets.UTF_8)));
+		}
+
+		/**
+		 * Controlling external resources whose references come from data: http, https, ftp and UNC
+		 * resources are skipped by default; a whitelist allows trusted hosts, and a handler sees every
+		 * decision and can provide the content itself.
+		 * Feature is supported by version 26.11 or greater
+		 */
+		public static void controlExternalResources()
+	    {
+			try
+			{
+				//ExStart:ControlExternalResources
+				// The image URI comes from data, so it is skipped by default and the image is left empty.
+				String photoUri = "https://images.example.com/photos/no-photo.jpg";
+
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/DynamicImageDemo.docx"),
+						CommonUtilities.getOutPath("/Word Reports/ControlExternalResources Skipped.docx"),
+						new DataSourceInfo(photoUri, "image_expression"));
+
+				// Allow a trusted host and see every decision. The handler can also provide the content itself,
+				// here from a local file, so the example needs no network access.
+				LoadSaveOptions options = new LoadSaveOptions();
+				options.getWhitelistedResources().add("images.example.com");
+				options.setExternalResourceHandler(new LocalImageHandler(CommonUtilities.getImagePath("/no-photo.jpg")));
+
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/DynamicImageDemo.docx"),
+						CommonUtilities.getOutPath("/Word Reports/ControlExternalResources Provided.docx"),
+						options, new DataSourceInfo(photoUri, "image_expression"));
+				//ExEnd:ControlExternalResources
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Rendering the pages of an assembled document to images.
+		 * Feature is supported by version 26.11 or greater
+		 */
+		public static void generateDocumentPreview()
+	    {
+			try
+			{
+				//ExStart:GenerateDocumentPreview
+				final File previewFolder = new File(CommonUtilities.getOutPath("/Preview Reports"));
+				previewFolder.mkdirs();
+
+				DocumentAssembler assembler = new DocumentAssembler();
+
+				ByteArrayOutputStream report = new ByteArrayOutputStream();
+				InputStream template = new FileInputStream(CommonUtilities.getDataPath("/Word Templates/Customer Orders.docx"));
+				try
+				{
+					assembler.assembleDocument(template, report,
+							new DataSourceInfo(new JsonDataSource(CommonUtilities.JsonDataFile + "/Customers.json"), "customers"));
+				}
+				finally
+				{
+					template.close();
+				}
+
+				// A stream is created for every page and released when the page is written.
+				PreviewOptions previewOptions = new PreviewOptions(
+						pageNumber -> new FileOutputStream(new File(previewFolder, "Customer Orders page" + pageNumber + ".png")),
+						(pageNumber, pageStream) -> pageStream.close());
+				previewOptions.setPreviewFormat(PreviewFormats.PNG);
+				previewOptions.setResolution(120); // Dots per inch, 96 by default.
+
+				assembler.generatePreview(new ByteArrayInputStream(report.toByteArray()), previewOptions);
+				//ExEnd:GenerateDocumentPreview
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Inserting HTML content from data with the -html switch of an expression tag. A tag ending its
+		 * paragraph leaves no empty paragraph after HTML ending with a block element.
+		 * Feature is supported by version 26.11 or greater
+		 */
+		public static void insertHtmlDynamically()
+	    {
+			try
+			{
+				//ExStart:InsertHtmlDynamically
+				ShopEntities.ProductInfo product = new ShopEntities.ProductInfo(
+						"Wireless keyboard K-200",
+						"<p>A compact <b>wireless keyboard</b> for daily work.</p>"
+								+ "<ul><li>Bluetooth 5.1</li><li>Battery life: 12 months</li></ul>"
+								+ "<p>Compatible with Windows and macOS.</p>",
+						"<i>prices exclude VAT</i>");
+
+				// The template has "<<[product.Description] -html>>" as a whole paragraph and
+				// "Price note: <<[product.Note] -html>>" with inline HTML.
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/Inserting HTML.docx"),
+						CommonUtilities.getOutPath("/Word Reports/Inserting HTML Out.docx"),
+						new DataSourceInfo(product, "product"));
+				//ExEnd:InsertHtmlDynamically
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Inserting an image from a relative path in data: the path is resolved against the folder of the
+		 * template, or against LoadSaveOptions.getResourceLoadBaseUri() for a template loaded from a stream.
+		 * Feature is supported by version 26.11 or greater
+		 */
+		public static void insertImageFromRelativePath()
+	    {
+			try
+			{
+				//ExStart:InsertImageFromRelativePath
+				// Templates are in Data/Storage/Word Templates, images in Data/Images.
+				String relativePath = "../../Images/no-photo.jpg";
+				String templatePath = CommonUtilities.getDataPath("/Word Templates/DynamicImageDemo.docx");
+
+				// A template loaded from a file: the path is resolved against the folder of the template.
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(templatePath,
+						CommonUtilities.getOutPath("/Word Reports/Image From Relative Path Out.docx"),
+						new DataSourceInfo(relativePath, "image_expression"));
+
+				// A template loaded from a stream has no folder: set it with setResourceLoadBaseUri.
+				LoadSaveOptions options = new LoadSaveOptions();
+				options.setResourceLoadBaseUri(new File(templatePath).getParent());
+
+				InputStream template = new FileInputStream(templatePath);
+				OutputStream report = new FileOutputStream(
+						CommonUtilities.getOutPath("/Word Reports/Image From Relative Path Stream Out.docx"));
+				try
+				{
+					assembler.assembleDocument(template, report, options, new DataSourceInfo(relativePath, "image_expression"));
+				}
+				finally
+				{
+					report.close();
+					template.close();
+				}
+				//ExEnd:InsertImageFromRelativePath
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Inserting images into table cells of a presentation: an image tag in a table cell makes the image
+		 * the picture fill of the cell, including cells of rows repeated by foreach. With -fitHeight, a row
+		 * grows to show the image keeping its aspect ratio.
+		 * Feature is supported by version 26.11 or greater
+		 */
+		public static void insertImageIntoTableCell()
+	    {
+			try
+			{
+				//ExStart:InsertImageIntoTableCell
+				ShopEntities.ProductPhoto[] products = {
+						new ShopEntities.ProductPhoto("Logo", CommonUtilities.getImagePath("/Logo.jpg")),
+						new ShopEntities.ProductPhoto("No photo", CommonUtilities.getImagePath("/no-photo.jpg")) };
+
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Presentation Templates/Image in Table Cell.pptx"),
+						CommonUtilities.getOutPath("/Presentation Reports/Image in Table Cell Out.pptx"),
+						new DataSourceInfo(products, "products"));
+				//ExEnd:InsertImageIntoTableCell
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Setting background colors from hex strings ("#RRGGBB", "#RGB" or "#AARRGGBB") as well as from
+		 * color names.
+		 * Feature is supported by version 26.11 or greater
+		 */
+		public static void setBackColorFromHexString()
+	    {
+			try
+			{
+				//ExStart:SetBackColorFromHexString
+				ShopEntities.OrderStatus[] statuses = {
+						new ShopEntities.OrderStatus("Paid", "#C6EFCE"),
+						new ShopEntities.OrderStatus("Pending", "#FFEB9C"),
+						new ShopEntities.OrderStatus("Overdue", "#F00"),
+						new ShopEntities.OrderStatus("Cancelled", "LightGray") };
+
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Word Templates/Hex Color.docx"),
+						CommonUtilities.getOutPath("/Word Reports/Hex Color Out.docx"),
+						new DataSourceInfo(statuses, "statuses"));
+				//ExEnd:SetBackColorFromHexString
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Totals, averages, sorting and grouping in a template: count, sum, average, max, min,
+		 * orderByDescending and groupBy over JSON data, with an intermediate collection kept in a var tag.
+		 */
+		public static void useAggregatesAndGrouping()
+	    {
+			try
+			{
+				//ExStart:UseAggregatesAndGrouping
+				String report = CommonUtilities.getOutPath("/Text Reports/Aggregates and Grouping Out.txt");
+
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Text Templates/Aggregates and Grouping.txt"), report,
+						new DataSourceInfo(new JsonDataSource(CommonUtilities.JsonDataFile + "/Customers.json"), "customers"));
+
+				System.out.println(new String(Files.readAllBytes(Paths.get(report)), StandardCharsets.UTF_8));
+				//ExEnd:UseAggregatesAndGrouping
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Formatting numbers, dates and text in expression tags: java.text format patterns and the switches
+		 * upper, caps, firstCap, cardinal, ordinal, ordinalText, roman, alphabetic and hex. Format patterns
+		 * use the default locale.
+		 */
+		public static void formatValues()
+	    {
+			try
+			{
+				//ExStart:FormatValues
+				ShopEntities.OrderInfo order = new ShopEntities.OrderInfo("quayside bistro",
+						new GregorianCalendar(2026, Calendar.NOVEMBER, 13).getTime(), 1234.5, 3, 4, 255,
+						"deliver to the back door");
+
+				String report = CommonUtilities.getOutPath("/Text Reports/Formatting Values Out.txt");
+
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Text Templates/Formatting Values.txt"), report,
+						new DataSourceInfo(order, "order"));
+
+				System.out.println(new String(Files.readAllBytes(Paths.get(report)), StandardCharsets.UTF_8));
+				//ExEnd:FormatValues
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/**
+		 * Choosing content with if, elseif and else tags, and keeping an intermediate result in a variable of
+		 * a var tag.
+		 */
+		public static void useConditionsAndVariables()
+	    {
+			try
+			{
+				//ExStart:UseConditionsAndVariables
+				ShopEntities.OrderLine[] orders = {
+						new ShopEntities.OrderLine(1, 450, 3),
+						new ShopEntities.OrderLine(2, 120, 5),
+						new ShopEntities.OrderLine(3, 80, 2) };
+
+				String report = CommonUtilities.getOutPath("/Text Reports/Conditional Content Out.txt");
+
+				// <<var [total = o.Price * o.Quantity]>> computes the total once per order; if, elseif and else
+				// choose the delivery terms.
+				DocumentAssembler assembler = new DocumentAssembler();
+				assembler.assembleDocument(CommonUtilities.getDataPath("/Text Templates/Conditional Content.txt"), report,
+						new DataSourceInfo(orders, "orders"));
+
+				System.out.println(new String(Files.readAllBytes(Paths.get(report)), StandardCharsets.UTF_8));
+				//ExEnd:UseConditionsAndVariables
+			}
+			catch (Exception exp)
+			{
+				System.out.println("Exception: " + exp.getMessage());
+			}
+	    }
+
+		/*#endregion-Examples ported from GroupDocs.Assembly for .NET 26.11*/
 
 }

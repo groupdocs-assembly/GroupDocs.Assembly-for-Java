@@ -1,0 +1,6 @@
+Customer: QUAYSIDE BISTRO (Quayside Bistro)
+Order date: 13 ноября 2026, delivery on понедельник
+Total: 1 234,50, items: 3 (Three)
+Visit: 4th (Fourth), section IV, appendix D
+Code: 0xFF
+Note: Deliver to the back door

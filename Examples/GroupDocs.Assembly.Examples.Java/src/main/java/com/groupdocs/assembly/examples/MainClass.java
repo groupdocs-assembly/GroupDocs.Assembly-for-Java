@@ -366,6 +366,12 @@ public class MainClass {
 
 		//Working with email documents
 		//GenerateReport.emptyParagraphInEmail();
+
+		//Working with spreadsheet documents
+		//GenerateReport.emptyParagraphInSpreadsheet();
+
+		//Working with plain text documents
+		//GenerateReport.emptyParagraphInText();
 		 
 		
          // Merging table cells dynamically in Word Processing
@@ -517,6 +523,21 @@ public class MainClass {
 		// Markdown lists to Word
 		//GenerateReport.saveMdListToWord("List");
 		//GenerateReport.saveMdListToWord("Ordered List");
+
+		// region Examples ported from GroupDocs.Assembly for .NET 26.11
+		//GenerateReport.assembleFromJsonWithSchema();
+		//GenerateReport.useFileDataLikeTypedObjects();
+		//GenerateReport.handleTemplateErrors();
+		//GenerateReport.controlExternalResources();
+		//GenerateReport.generateDocumentPreview();
+		//GenerateReport.insertHtmlDynamically();
+		//GenerateReport.insertImageFromRelativePath();
+		//GenerateReport.insertImageIntoTableCell();
+		//GenerateReport.setBackColorFromHexString();
+		//GenerateReport.useAggregatesAndGrouping();
+		//GenerateReport.formatValues();
+		//GenerateReport.useConditionsAndVariables();
+		// endregion
 
 		String data = "{\n" +
 				"    \"ok\": \"without this key 'ok', 'ko' is well parsed\",\n" +
