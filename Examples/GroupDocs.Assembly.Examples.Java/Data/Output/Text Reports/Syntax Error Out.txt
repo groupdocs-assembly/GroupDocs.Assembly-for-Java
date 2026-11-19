@@ -1,0 +1,2 @@
+Customer: <<[customer.Name]>>
+Total: <<[customer.Total]:"N2"> Error! Character '>' is unexpected. 

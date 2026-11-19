@@ -1,0 +1,9 @@
+Prefix
+<<[""]>>
+Suffix
+
+Prefix
+<<if [false]>>
+Text to be removed
+<</if>>
+Suffix

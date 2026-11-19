@@ -1,0 +1,2 @@
+<<foreach [o in orders]>><<var [total = o.Price * o.Quantity]>>Order <<[o.Number]>>: <<[total]:"#,##0.00">><<if [total >= 1000]>>, free delivery<<elseif [total >= 500]>>, 5% discount<<else>>, standard delivery<</if>>
+<</foreach>><<if [!orders.any(o => o.Price * o.Quantity >= 1000)]>>No order qualifies for free delivery.<<else>>Orders with free delivery: <<[orders.count(o => o.Price * o.Quantity >= 1000)]>>.<</if>>
